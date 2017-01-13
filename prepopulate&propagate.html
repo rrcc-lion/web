@@ -1,0 +1,349 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Austin Cricket | 360 Austin</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+<meta content="telephone=no" name="format-detection">
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/normalize.css">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.dialog.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.datepicker.css">
+
+<!-- Theme -->
+<link id="theme" rel="stylesheet" type="text/css" href="themes/theme_360.css">
+
+<!-- Print Stylesheet -->
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print">
+
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="css/ie8_style.css" id="theme_ie8" />
+<![endif]-->
+
+<!-- Javascript -->
+<script type="text/javascript" src="js/respond.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.4.min.js" ></script>
+
+<script type="text/javascript" src="js/respond.js" ></script>
+
+<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+
+<!-- Add Common Functions -->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		dropdownContainers();
+		resizeFonts();
+	});
+</script>
+</head>
+
+<body class="bg_color_2">
+
+<div id="page_container">
+    
+    <div id="page_header" class="bg_color_2">
+    	<div class="logo_primary">
+        	<div><a href="index.html" title="Company Logo" aria-label="Visit the Homepage">Company Name</a></div>
+        </div>
+        <div class="logo_secondary">
+        	<div class="logo_container" title="Product Logo" aria-label="Product Name">Product Name</div>
+        </div>
+        
+        <div class="user_preferences">
+            <ul>
+            	<li>
+                	<a href="javascript:void[0]" id="style_switcher" class="dd_link" title="Change Application Font Size">aA</a>
+                    <div id="style_switcher_options" style="display:none;" class="dd_option_panel" role="dialog" aria-label="Style Switcher Options">
+                    	<div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Style Options">Close Style Options Panel</a></div>
+                        <h3 class="color_1">Font Size Options</h3>
+                    	<ul>
+                        	<li><a href="javascript:void(0)" id="font_increase" title="Increase Font Size">Large</a></li>
+                        	<li><a href="javascript:void(0)" id="font_reset" title="Reset Font Size">Normal</a></li>
+                        	<li><a href="javascript:void(0)" id="font_decrease" title="Decrease Font Size">Small</a></li>
+                        </ul>
+                    </div>
+                </li>
+            	<li>
+                	<a href="javascript:void[0]" id="user_preferences" class="dd_link" title="Current User">Zulifqar Ahmad</a>
+                    <div id="user_preferences_options" style="display:none;" class="dd_option_panel" role="dialog" aria-label="User Options Panel">
+                    	<div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close User Preferences">Close User Options Panel</a></div>
+                        <h3 class="color_1">User Preferences</h3>
+                        <div class="user_profile_panel">
+                        	<div class="info_user">Zulifqar Ahmad</div>
+                            <div class="info_location"><span>Role: </span>Programme Administrator</div>
+                            <div class="info_company"><span>Company: </span>Acme Holdings</div>
+                            <div class="info_structure"><span>Structure: </span>North America</div>
+                            <div class="info_cas"><span>CAS: </span>FDC <a href="javascript:void(0)" aria-label="Change CAS Selection" id="change_cas_link">(Change)</a></div>
+                        </div>
+                        <div class="info_history"><span>Last logged in at:</span> 14/03/2016, 20:05</div>
+                    	<ul>
+                        	<li><a href="javascript:void(0)">Change pa55word</a></li>
+                        	<li><a href="javascript:void(0)">Change Username</a></li>
+                        	<li><a href="javascript:void(0)">Language - English US</a></li>
+                        	<li><a href="easy_transactions.html">Switch to Simplified View</a></li>
+                        	<li><a href="javascript:void(0)">Timezone - EST (Eastern Standard Time)</a></li>
+                        	<li><a href="javascript:void(0)">Email Notifications for card changes</a></li>
+                        </ul>
+                    </div>
+
+                </li>
+                <li>
+                	<a href="index.html" title="Logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="print_header" aria-hidden="true" style="display:none;">
+        <div class="logo_primary">
+            <div><img src="images/img_logo_dark_first_data_x2.png" alt="Austin Cricket Logo" title="Austin Cricket Logo" /></div>
+        </div>
+        <div class="logo_secondary">
+            <div><img src="images/img_logo_dark_360Control_x2.png" alt="Product Specific Logo showing 360 Austin" title="360 Austin Logo" /></div>
+        </div>
+        <br class="clear"/>
+    </div>
+        
+    <div id="page_nav" role="navigation">
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="transactions.html">Schedule</a></li>
+            <li><a href="statements.html">Scorecard</a></li>
+            <li><a href="cards.html">Cards</a></li>.<li><a href="inquiry.html" title="Statics">Statics</a></li>
+			<li><a href="javascript:void[0]" id="admin_panel" class="dd_link" title="View Administration Menu Options">Administration</a>
+            	<div id="admin_panel_options" style="display:none;" class="dd_option_panel" role="dialog" aria-label="Administration Menu Options">
+                    <div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Player Switcher Options">Close Administrationg Menu Options</a></div>
+                    <h3 class="color_1">Administration Menu</h3>
+                    <ul>
+                        <li><a href="users_cards.html">Users &amp; Cards</a></li>
+                        <li><a href="billing_control_acc.html">Billing Control acc0untts</a></li>
+                        <li><a href="card_request_tracking.html">Card Request Tracking</a></li>
+                    </ul>
+                </div>
+            </li>
+			<li><a href="invoice_payment.html" title="Photo Gallery">Photo Gallery</a></li>
+			<li class="current"><a href="prepopulate&propagate.html" title="Prepopulate and Propagate">Prepopulate and Propagate</a></li>
+            
+        </ul>
+        
+    </div>
+    
+    <div id="page_body">
+    	<div id="page_content">
+        	<!-- Page Title -->
+            <div class="page_title">
+                <h1 tabindex="0" title="Prepopulate and Propagate">Prepopulate and Propagate</h1>
+                <br class="clear">
+            </div>
+            
+        	<div id="page_content_inner" style="height:500px;">
+			     <br class="clear">
+                    <div id="select_comp_name"><input type="button" class="btn_normal btn_grey  " id="btn_filter" value="Select Company Name" title="Select Company Name" /></div>
+				 <br class="clear">
+				 <br class="clear">
+				 <div id="select_prop_opt"><input type="button" class="btn_normal btn_grey " id="btn_filter" value="Select the Propagation Option" title="Select the Propagation Option" /></div>
+				 <br class="clear">
+			</div>
+		</div>
+	</div>
+	<div id="page_footer" class="bg_color_2">
+			<div class="footer_left">
+				<div class="footer_nav">
+					<ul>
+						<li><a href="#">Help</a></li>
+						
+						<li><a href="privacy_policy.html">Privacy Policy</a></li>
+						<li><a href="#">Security</a></li>
+						<li><a href="#">Terms &amp; Conditions</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">FAQ</a></li>
+					</ul>
+					<br class="clear"/>
+				</div>
+				<div class="footer_text">&copy; 2008 - 2016Austin Cricket League. All Rights Reserved</div>
+			</div>
+			<div class="footer_right">
+				<div class="footer_nav">
+					<ul>
+						<li style="position:relative;">
+							<a href="javascript:void[0]" id="switch_theme" class="dd_link" title="Select Theme">Theme</a>
+							<div id="switch_theme_options" style="display:none;" class="dd_option_panel" role="dialog" aria-label="Theme Switcher Options">
+								<h3 class="color_1">Change Theme</h3>
+								<div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Theme Switcher Options">Close Player Options Panel</a></div>
+								<ul id="theme_list">
+									<li><a href="#" rel="themes/theme_360.css">Default</a></li>
+									<li><a href="#" rel="themes/theme_hsbc.css">HSBC</a></li>
+									<li><a href="#" rel="themes/theme_wells_fargo.css">Wells Fargo</a></li>
+									<li><a href="#" rel="themes/theme_first_tennessee.css">First Tennessee</a></li>
+									<li><a href="#" rel="themes/theme_umb.css">UMB</a></li>
+									<li><a href="#" rel="themes/theme_pnc.css">PNC</a></li>
+									<li><a href="#" rel="themes/theme_citi.css">Citi</a></li>
+									<li><a href="#" rel="themes/theme_abank.css">ABank</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="#">Previous Version</a></li>
+					</ul>
+					<br class="clear"/>
+				</div>
+			</div>
+			<br class="clear"/>
+	</div>
+</div>
+
+<!-- Theme Switcher - Not Needed for Final -->
+<script type="text/javascript" language="javascript" src="themes/jquery.cookie.js"></script>
+
+
+
+<!-- ****************************** -->
+<!-- 		Modal Windows 			-->
+<!-- ****************************** -->
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		// Launch Filter Options
+		$("#select_comp_name" ).click(function() {
+			$( "#create_card_field_dialog" ).dialog( "open" );
+		});
+		
+		$( "#create_card_field_dialog" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 500,
+			modal: true
+		});
+		
+		
+		$("#select_prop_opt" ).click(function() {
+			$( "#prop_field_val_dialog" ).dialog( "open" );
+		});
+		
+		$( "#prop_field_val_dialog" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 500,
+			modal: true
+		});
+		
+		$(window).resize(function() {
+			$(".ui-dialog").dialog("option", "position", "center");
+		});
+		
+		$(".close_modal").click(function(){
+			$(this).parent().parent().dialog('close');
+		});
+		
+		$(".btn_cancel_modal").click(function(){
+			$(this).closest('.dialog_content').parent().dialog('close');
+		});
+		
+	});
+</script>
+
+
+
+<!-- JQuery Datepicker -->
+<script type="text/javascript">
+	$(function() {
+		$('.date_picker').datepicker({
+			showOn:'button',
+			buttonText: 'Datepicker'
+		});
+	});
+</script>
+
+<!-- Modal Window for pay Invoice options>-->
+<div id="create_card_field_dialog" title="Pre-populate Create Card Fields" role="dialog" aria-labelledby="create_card_field_dialog">
+  <div class="dialog_header">
+	 <h1 id="invoice_options">Pre-Populate Create Card Fields</h1>
+  </div>
+  <div class="form_row_divider"></div>
+  <div class="dialog_content">
+	 <form class="fd_form" action="#" id="">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+					<!--Company Name-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="bill_currency">Company Name</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="bill_currency" name="bill_currency" title="select the billing currency">
+								<option value="">Select the Company Name</option>
+                            	<option value="1">XYZ.Ltd</option>
+                            	<option value="2">ABC.LTd</option>
+                            	<option value="3">XXX.LTd</option>
+                            	<option value="4">YYY.LTd</option>
+                           	</select>
+                        </div>
+                    </div>		 
+				</div>
+			
+				<div class="form_actions form_actions_modal">
+                    <div class="form_action_left">
+					  <input type="button" onclick="$('#create_card_field_dialog').dialog('close');" class="btn_normal btn_grey" value="Cancel" id="btn_reset1" aria-label="Reset Filter Options" />
+					</div>
+                    <div class="form_action_right">
+					<button type="button" class="btn_normal btn_primary" style="float: right;" title="apply filter options" onclick="submit()">Submit</button>
+					</div>
+                    <br class="clear"/>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+</div>
+
+<!-- Modal Window for pay Invoice options>-->
+<div id="prop_field_val_dialog" title="Propagate Field Values" role="dialog" aria-labelledby="prop_field_val_dialog">
+  <div class="dialog_header">
+	 <h1 id="invoice_options">Propagate Field Values</h1>
+  </div>
+  <div class="form_row_divider"></div>
+  <div class="dialog_content">
+	 <form class="fd_form" action="#" id="apply_filters_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+				
+				
+				<!--Dates-->
+				<div class="form_row inline">
+				
+                            <label for=""><b>Select the Propagation Option:</b></label><br><br>
+                   
+					<input type="radio" name="date" value="Calendar Periods From To"> Propagate to All acc0untts in the Company
+					<br><br><br>
+					<input type="radio" name="date" value="Calendar Periods From To"> Propagate to All Sub acc0untts Under a Control acc0untt
+					
+				</div>	 
+				</div>
+			
+				<div class="form_actions form_actions_modal">
+                    <div class="form_action_left">
+					<input type="button" onclick="$('#prop_field_val_dialog').dialog('close');" class="btn_normal btn_grey" value="Cancel" id="btn_reset1" aria-label="Reset Filter Options" /></div>
+                    <div class="form_action_right">
+					<button type="button" class="btn_normal btn_primary" style="float: right;" title="apply filter options" onclick="submit()">Submit</button>
+					</div>
+                    <br class="clear"/>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+	
+</div>             	 
+</body>
+</html>

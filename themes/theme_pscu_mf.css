@@ -1,0 +1,285 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/****** DEFAULT COLOURS ******/
+.color_1 {color:#00549F !important;} /* Light Blue */
+.color_2 {color:#2278BB !important;} /* Dark Blue */
+.color_3 {color:#FFFFFF !important;} /* Dark Blue */
+
+.bg_color_1 {background-color:#00549F;} /* Light Blue */
+.bg_color_2 {background-color:#2278BB;} /* Dark Blue */
+.bg_color_3 {background-color:#FFFFCC;} /* used for hover */
+.bg_color_4 {background-color:#e3e3e3;} /* Lighter Grey */
+.bg_color_5 {background-color:#C7EAFB;} /* Used for Module Header */
+.bg_color_6 {background-color:#f0f0f0;} /* Used for the bg of a header on an edit module */
+
+
+/* Hyperlink Styles */
+a:link, a:visited {
+	color:#333333;
+	text-decoration:none;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+/******* BUTTONS *******/
+/* Primary Button - Call to Action */
+.btn_primary {
+	background-color:#00549F;
+	color:#FFFFFF;
+	border-color:#00549F;
+}
+
+/* Secondary Postive Button */
+.btn_secondary {
+	background-color:#2278BB;
+	color:#FFFFFF;
+	border-color:#2278BB;
+}
+
+/* Negative / Cancel / Back Button */
+.btn_grey {
+	background-color:#e3e3e3;
+	color:#454545;
+	border-color:#e3e3e3;
+}
+
+
+/******* LOGOS *******/
+/* Primary Logo */
+#page_header .logo_primary > div a {
+	background-color:transparent;
+    background-image: url('images/pscu_mf/logo_pscu_mf_x2.png'); /* this is the retina ready version of the logo. A retina ready logo will be twice the size of what the logo should normally be. e.g. A normal image might be 30px by 120px, whereas a retina image would be 60px by 240px and then resized to be the correct height and width using CSS */ 
+	background-image:  url('images/pscu_mf/logo_pscu_mf.png')\9; /* This is the non-retina version of the logo - don't forget to put the "\9" at the end of the tag so that IE8 can view it */
+	background-position:0px 0px; /* This is the position of the placement of the logo. "0px" "0px" is the same as saying "top" "left" */
+	background-repeat:no-repeat; /* Don't repeat the background image */
+	width:145px; /* Specifiy the width of the image */
+	height: 40px; /* Specify the height of the image */
+	background-size:145px 40px; /* Here you set what the width and the height of the 'normal' image size should be. */
+	margin-top:-5px;
+}
+
+/* Not Logged in - Primary Logo */
+.not_logged_in #page_header .logo_primary > div a {
+	background-color:transparent;
+    background-image: url('images/pscu_mf/logo_pscu_mf_x2.png'); 
+	background-image:  url('images/pscu_mf/logo_pscu_mf.png')\9; 
+	background-position:0px 0px; 
+	background-repeat:no-repeat; 
+	width:145px; 
+	height: 40px; 
+	background-size:145px 40px;
+	margin-top:-5px; 
+}
+	
+
+/* Secondary Logo */
+#page_header .logo_secondary>.logo_container {
+	background-color:transparent;
+	background-image: url("images/pscu_mf/img_logo_dark_first_data_powered_x2.png");
+	background-image: url("images/pscu_mf/img_logo_dark_first_data_powered.png")\9;
+	background-position:0px 0px;
+	background-repeat:no-repeat;
+	background-size:100px 30px;
+	width:100px;
+	height:30px;
+}
+
+/* Update these values to place the secondary logo elsewhere on the page */
+#page_header .logo_secondary {
+	border-left:1px solid #e3e3e3; /* Add in a line alongside the product name */
+	float:right; /* Place the logo either to the right of the logo by setting the value to "Left" or on the right of the page by setting the value to "Right" */
+	display:block;
+}
+
+/******* PAGE HEADER / FOOTER & CENTER LOGO *******/
+/* Page background Color */
+#page_body {
+	background-color: #F3F3F3;
+}
+
+/* Page background Color when you are not logged in and there is no nav on the page - This is mainly for the horses on wells fargo theme*/
+#page_body.no_nav {
+	background-color: #F3F3F3;
+	background-image:none;
+	background-image:none;
+	background-position: right bottom;
+	background-size:0px 0px;
+	background-repeat:no-repeat;
+}
+
+
+/* Body Background Colour */
+body.bg_color_2	{
+	background-color:#00549F; /* This will override the default background color set at the top of the page */
+	background-image:none; /* Set this to none if there is no background image in the header */
+	background-repeat:repeat;
+}
+
+/* Body Background Colour for Easy View */
+body.bg_color_4.easy_view {
+	background-color:#e3e3e3;
+}
+
+
+/* 360 Austin Center logo and header background colour */
+#page_header.bg_color_2 {
+	background-color:#FFFFFF;
+	background-position: left bottom;
+	background-repeat:no-repeat;
+	background-size: auto auto;
+	color:#454545; /* Color of the text in the header bar */
+	box-shadow:0px 1px 0px rgba(255,255,255,0.1); /* Add a bottom shadow to the header bar - This is important when the header bar is the same background colour as the body and it provides distinction */
+	border-bottom:1px solid #657281\9; /* Add a border bottom for IE8 browsers */
+}
+
+
+/* Page Footer */
+#page_footer.bg_color_2 {
+	background-color:#00549F;
+	background-image: none; /* Set this to none if there is no background image in the footer */
+	background-repeat:repeat;
+}
+
+
+/******* NAVIGATION *******/
+/* Navigation Background */
+#page_nav {
+	background-color: #00549F;
+}
+
+/* Default Navigation Links */
+#page_nav ul li a {
+	color:#FFFFFF;
+}
+
+/* Hover and Selected Navigation Links */	
+#page_nav ul li.current a,
+#page_nav ul li a:hover {
+	color:#FFFFFF; 
+	background-color:#2278BB;
+}
+
+/* Header Bar Navigation colour */
+#page_header .user_preferences > ul > li > a		{
+	color:#00549F;
+}
+
+#page_header .user_preferences > ul > li > a.active	{
+	color:#00549F; 
+	background-color:transparent;
+}
+
+
+/******* SIDE PANEL ON EASY VIEW AND CARDS SCREEN *******/
+/* Easy View Side Panel */
+#page_slider_nav.bg_color_1 {
+	background-color:#FFFFFF;
+}
+
+/* Easy View Header Background Colour */
+.easy_view #page_header	{
+	border-bottom:1px solid #e3e3e3;
+}
+
+/* Easy View Side Panel Header */
+.easy_view #page_slider_nav .col_easy_nav {
+	color:#454545;
+}
+
+/* Easy View Side Panel headings */
+.easy_view #page_slider_nav .col_easy_nav h3,
+.card_view #page_slider_nav .col_easy_nav h3 {
+	background-color:#00549F; 
+	color:#FFFFFF; 
+	background-image:none;
+}
+
+/* Easy View Side Panel each nav item*/
+.easy_view #page_slider_nav .col_easy_nav ul li	{
+	border-bottom:1px solid #e3e3e3;
+}
+
+/* Easy View Side Panel Hyperlinks*/
+.easy_view #page_slider_nav .col_easy_nav ul li a {
+	color:#454545;
+}
+
+/* Easy View Side Panel Hyperlink Active */
+.easy_view #page_slider_nav .col_easy_nav ul li a.active {
+	background-color: #e8e8e8;
+	color: #454545;
+}
+
+
+/******* EASY VIEW MODULES - THESE ARE THE BLOCKS OF INFORMATION ON THE EASY VIEW PAGES AND STATEMENT SCREENS *******/
+/* Module Headers */
+.module_header.bg_color_5 {
+	background-color:#A7D3F4; /*c7eafb*/
+	color:#454545;
+}
+
+/* Back Button Styling */
+.back_btn.bg_color_2 {
+	background-color:#00549F ;
+}
+
+/* Background color for Statement Table Header */
+table.grid_overview_table thead tr > th {
+	background-color: #F2F2F2;
+	color:#454545;
+}
+
+
+/******* DASHBOARD *******/
+/* Custom Styling for Dashboard Portlets */
+.dash_column .portlet {
+	border:0px solid #e3e3e3;
+}
+
+
+/******* ICONS *******/
+/* Change Icon to grey instead of blue default */
+.form_help_text {
+	background-color:transparent;
+	background-image:url("../images/icon_info_x2.png");
+	background-image:url("../images/icon_info.png")/9;
+	background-position: left 7px;
+	background-repeat:no-repeat;
+	background-size:12px 12px;
+}
+
+/* Change iconset to grey instead of blue */				
+.info_icon {
+	background-image:url("../images/icon_info_x2.png");
+	background-image:url("../images/icon_info.png")/9;
+}
+
+.btn_nav_prev,
+.btn_nav_next,
+.grid_controls #grid_pagination ul li a.pag_next_btn,
+.grid_controls #grid_pagination ul li a.pag_prev_btn {
+	background-image: url("../images/icon_pag_dark_x2.png");
+	background-image: url("../images/icon_pag_dark.png")\9;
+}
+
+.drawer_panel h4 a {
+	background-image:url("../images/icon_drawers_arrow_light_x2.png");
+	background-image:url("../images/icon_drawers_arrow_light.png")\9;
+	color:#FFFFFF !important;
+	background-color:#2278BB;
+}
+
+02ADC7
+
+
+/******* COMMENT STYLING *******/
+ul.comments li .comment_by {color:#00549F !important;}
+
+
+/******* INNER BORDERS *******/
+/* Place a border around the contents of a page if the background color of the page is to similar to the background color of the contents */
+#page_body #page_content_inner 						{border:0px solid #e3e3e3;}
+.easy_view #page_body #page_content_inner 			{border:0px solid #e3e3e3;}

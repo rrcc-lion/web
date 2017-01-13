@@ -1,0 +1,168 @@
+/* Background Image Size Overrides for IE8 */
+
+#page_header .user_preferences .dd_option_panel .dd_close_panel a 		{background:url(../images/icon_dd_close_btn.png) center center no-repeat;}
+.dd_option_panel .dd_close_panel a 										{background:url(../images/icon_dd_close_btn.png) center center no-repeat;}
+.message_status.success 												{background-image:url(../images/icon_message_success.png);}
+.message_status.failure 												{background-image:url(../images/icon_message_failure.png);}
+.form_help_text 														{background:url(../images/icon_info.png) left 9px no-repeat;}
+.btn_arrow_left 														{background-image:url(../images/icon_btn_arrow_white.png);}
+.fd_form .form_container .form_row .form_select select 					{background:#FFFFFF url(../images/icob_dd_arrow_dark.png) right center no-repeat;}
+.fd_form .form_container .form_row.inline>.form_select select 			{background:#FFFFFF url(../images/icob_dd_arrow_dark.png) right center no-repeat;}
+.grid_controls #row_count_selector .row_select select 					{background:#FFFFFF url(../images/icob_dd_arrow_dark.png) right center no-repeat;}
+.grid_controls #row_count_selector .row_select select, select.selectbox {background:#FFFFFF url(../images/icob_dd_arrow_dark.png) right center no-repeat;}
+#page_header .user_preferences .user_profile_panel 						{background:#efefef url(../images/icon_user_profile.png) 10px 10px no-repeat;}
+.page_title .find_container #find_input_container input#btn_find 		{background:transparent url(../images/icon_search.png) center center no-repeat;}
+.find_container #find_input_container input#btn_find			 		{background:transparent url(../images/icon_search.png) center center no-repeat;}
+.page_title .card_switcher>a 											{background:url(../images/icob_dd_arrow_dark.png) right center no-repeat;}
+#applied_filters ul li .filter_item .remove_filter_btn 					{background:transparent url(../images/icon_dd_close_btn.png) center center no-repeat;}
+#applied_filters ul 													{background:url(../images/icon_filter_dark.png) 0px 7px no-repeat;}
+.btn_icon 																{background-image:url(../images/icon_sprite_dark.png);}
+#grid_detail_link input 												{background-image:url(../images/icon_toggle_switch.png);}
+.btn_trans_toggle 														{background:url(../images/icon_transaction_toggle.png);}
+.drawer_panel h4 a 														{background-image:url(../images/icon_drawers_arrow_blue.png);}
+.grid_panel_inner .grid_panel_header ul>li>a.trans_options 				{background-image:url(../images/icon_sprite_trans_details.png);}
+a.tam_drawer_toggle, .drawer_toggle_icon								{background-image:url(../images/icon_transaction_toggle.png);}
+.info_icon 																{background:url(../images/icon_info.png);}
+.btn_icon_approve 														{background-image:url(../images/icon_sprite_light.png);}
+.grid_controls #grid_pagination ul li a.pag_prev_btn 					{background-image:url(../images/icon_pag_blue.png);}
+.grid_controls #grid_pagination ul li a.pag_next_btn 					{background-image:url(../images/icon_pag_blue.png);}
+.dialog_close a.close_modal 											{background-image:url(../images/icon_dd_close_btn.png);}
+#settings_list_table .sort_container input.dragger 						{background-image:url(../images/icon_draggable.png);}
+input#switch_to_range_btn 												{background-image:url(../images/icon_swap_view_cal.png);}
+input#switch_to_period_btn 												{background-image:url(../images/icon_swap_view_select.png);}
+.fd_form .form_container .form_row .form_date ul li button 				{background-image:url(../images/icon_datepicker.png);}
+.additive_filters ul li .filter_item .remove_filter_btn 				{background:transparent url(../images/icon_dd_close_btn.png) center center no-repeat;}
+#page_slide_toggle a span 												{background-image: url(../images/icon_slider_nav_blue.png);}
+#page_slide_toggle a.isOpen span 										{background-image: url(../images/icon_slider_nav_light.png);}
+.btn_launch_transaction 												{background-image:url(../images/icon_launch_arrow.png);}
+.btn_action_icon 														{background-image:url(../images/icon_launch_arrow.png);}
+ul.line_item_list li a 													{background:url(../images/icon_launch_arrow.png) right 10px no-repeat;}
+ul.line_item_list li a .item_icon 										{background:url(../images/icon_line_split_item.png) 0px 0px no-repeat;}
+.back_btn 																{background-image:url(../images/icon_back_arrow_white.png);}
+.btn_nav_prev 															{background-image: url(../images/icon_pag_blue.png);}
+.btn_nav_next 															{background-image: url(../images/icon_pag_blue.png);}
+.fd_form .form_container .form_row.inline .form_date_input button 		{background-image:url(../images/icon_datepicker.png);}
+.dialog_header.success h1 												{background-image:url(../images/icon_message_success.png);}
+.dialog_header.failure h1 												{background-image:url(../images/icon_message_failure.png);}
+.edit_icon 																{background-image:url(../images/icon_edit_pen.png);}
+ul.generic_list>li>a 													{background:url(../images/icon_launch_arrow.png) right center no-repeat;}
+ul.generic_list.statement>li>a .statement_period 						{background:url(../images/icon_statement.png) left center no-repeat;}
+.fd_form .form_container .form_row .form_date_input button 				{background-image:url(../images/icon_datepicker.png);}
+.alert_msg 																{background:url(../images/icon_alert.png) 0px 2px no-repeat;}
+
+ul.output_list>li a.output_container 									{background:url(../images/icon_launch_arrow.png) right center  no-repeat;}
+
+ul.output_list>li .output_container.output_excel.output_new .output_icon 		{background-image: url(../images/icon_output_excel_unread.png);}
+ul.output_list>li .output_container.output_quickbooks.output_new .output_icon 	{background-image: url(../images/icon_output_quickbooks_unread.png);}
+ul.output_list>li .output_container.output_quicken.output_new .output_icon 		{background-image: url(../images/icon_output_quicken_unread.png);}
+ul.output_list>li .output_container.output_pdf.output_new .output_icon 			{background-image: url(../images/icon_output_pdf_unread.png);}
+ul.output_list>li .output_container.output_excel .output_icon 					{background-image: url(../images/icon_output_excel_read.png);}
+ul.output_list>li .output_container.output_quickbooks .output_icon 				{background-image: url(../images/icon_output_quickbooks_read.png);}
+ul.output_list>li .output_container.output_quicken .output_icon 				{background-image: url(../images/icon_output_quicken_read.png);}
+ul.output_list>li .output_container.output_pdf .output_icon 					{background-image: url(../images/icon_output_pdf_read.png);}
+
+
+
+.btn_toggle_addendum {
+	background:url(../images/icon_transaction_toggle.png) 0px 0px no-repeat;
+}
+
+.btn_toggle_addendum.isOpen {
+	background:url(../images/icon_transaction_toggle.png) 0px -20px no-repeat;
+}
+
+
+
+
+
+/* Show border around dropdown box as box-shadow isn't supported in IE8 */
+.dd_option_panel {
+	border:1px solid #e3e3e3;
+}
+
+.fd_form .form_container input[type="text"] {
+	line-height:30px;
+}
+
+
+
+
+
+
+
+
+/*	
+	
+	#page_body #page_content #page_content_inner #grid_panel_table {
+		padding:10px 10px 5px;	
+	}
+	
+	#page_body #page_content #page_content_inner #grid_panel_details .grid_panel_inner {
+		padding:10px;
+	}
+	
+	#page_body {
+		padding:10px;
+	}
+	
+	#page_nav {
+		height:40px;
+	}
+	
+	#page_nav ul {
+		margin-left:0px;
+	}
+	
+	#page_nav ul li a {
+		padding:10px;
+	}
+	
+	#page_header {
+		padding:10px;
+	}
+	
+	.grid_controls {
+		margin-top:10px;
+	}
+	
+	.receipt_panel {
+		padding:0px 10px 1px;
+	}
+	
+	#page_nav {
+		margin-top:50px;
+	}
+
+	table.grid_table tbody td {
+		padding:1px 5px;
+	}
+	
+	#grid_detail_link {
+		top:10px;
+	}
+	
+	.dash_column .portlet .portlet_content {
+		padding:10px;
+	}
+	
+	.dash_column .portlet .portlet_header {
+		padding:0px 0px 0px 10px;
+	}
+	
+	#page_body.no_nav {
+		margin-top: 50px;
+	}
+	
+	.module_block .module_header {
+		padding: 5px;
+	}
+	
+	.column_container {
+		margin: 0px;
+	}
+	
+	#page_body #page_content #page_content_inner #table_container {
+		padding:10px 10px 5px;	
+	}
+	
+	*/

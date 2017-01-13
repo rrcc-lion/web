@@ -1,0 +1,614 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Austin Cricket | 360 Austin</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+<meta content="telephone=no" name="format-detection">
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/normalize.css">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.dialog.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.datepicker.css">
+
+<!-- Theme -->
+<link id="theme" rel="stylesheet" type="text/css" href="themes/theme_360.css">
+
+<!-- Print Stylesheet -->
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print">
+
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="css/ie8_style.css" id="theme_ie8" />
+<![endif]-->
+
+<!-- Javascript -->
+<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.4.min.js" ></script>
+
+<script type="text/javascript" src="js/respond.js" ></script>
+
+<!-- Add Common Functions -->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		dropdownContainers();
+		resizeFonts();
+	});
+</script>
+
+
+</head>
+
+<body class="bg_color_2">
+
+<div id="page_container">
+    
+    <div id="page_header" class="bg_color_2">
+    	<div class="logo_primary">
+        	<div><a href="index.html" title="Company Logo" aria-label="Visit the Homepage">Company Name</a></div>
+        </div>
+        <div class="logo_secondary">
+        	<div class="logo_container" title="Product Logo" aria-label="Product Name">Product Name</div>
+        </div>
+        
+        <div class="user_preferences">
+            <ul>
+            	<li>
+                	<a href="javascript:void[0]" id="style_switcher" class="dd_link" title="Change Application Font Size">aA</a>
+                    <div id="style_switcher_options" style="display:none;" class="dd_option_panel">
+                    	<div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Style Options">Close Style Options Panel</a></div>
+                        <h3 class="color_1">Font Size Options</h3>
+                    	<ul>
+                        	<li><a href="javascript:void(0)" id="font_increase" title="Increase Font Size">Large</a></li>
+                        	<li><a href="javascript:void(0)" id="font_reset" title="Reset Font Size">Normal</a></li>
+                        	<li><a href="javascript:void(0)" id="font_decrease" title="Decrease Font Size">Small</a></li>
+                        </ul>
+                    </div>
+                </li>
+            	<li>
+                	<a href="javascript:void[0]" id="user_preferences" class="dd_link" title="Current User">Zulifqar Ahmad</a>
+                    <div id="user_preferences_options" style="display:none;" class="dd_option_panel">
+                    	<div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close User Preferences">Close User Options Panel</a></div>
+                        <h3 class="color_1">User Preferences</h3>
+                        <div class="user_profile_panel">
+                        	<div class="info_user">Zulifqar Ahmad</div>
+                            <div class="info_location"><span>Role: </span>Programme Administrator</div>
+                            <div class="info_company"><span>Company: </span>Acme Holdings</div>
+                            <div class="info_structure"><span>Structure: </span>North America</div>
+                            <div class="info_cas"><span>CAS: </span>FDC <a href="javascript:void(0)" aria-label="Change CAS Selection" id="change_cas_link">(Change)</a></div>
+                        </div>
+                        <div class="info_history"><span>Last logged in at:</span> 14/03/2016, 20:05</div>
+                    	<ul>
+                        	<li><a href="javascript:void(0)">Change pa55word</a></li>
+                        	<li><a href="javascript:void(0)">Change Username</a></li>
+                        	<li><a href="javascript:void(0)">Language - English US</a></li>
+                        	<li><a href="easy_transactions.html">Switch to Simplified View</a></li>
+                        	<li><a href="javascript:void(0)">Timezone - EST (Eastern Standard Time)</a></li>
+                        	<li><a href="javascript:void(0)">Email Notifications for card changes</a></li>
+                        </ul>
+                    </div>
+
+                </li>
+                <li>
+                	<a href="index.html" title="Logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="print_header" aria-hidden="true" style="display:none;">
+        <div class="logo_primary">
+            <div><img src="images/img_logo_dark_first_data_x2.png" alt="Austin Cricket Logo" title="Austin Cricket Logo" /></div>
+        </div>
+        <div class="logo_secondary">
+            <div><img src="images/img_logo_dark_360Control_x2.png" alt="Product Specific Logo showing 360 Austin" title="360 Austin Logo" /></div>
+        </div>
+        <br class="clear"/>
+    </div>
+        
+    <div id="page_nav" role="navigation">
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="transactions.html">Schedule</a></li>
+            <li class="current"><a href="statements.html">Scorecard</a></li>
+            <li><a href="cards.html">Cards</a></li>
+			<li><a href="inquiry.html" title="Statics">Statics</a></li>
+			<li><a href="javascript:void[0]" id="admin_panel" class="dd_link" title="View Administration Menu Options">Administration</a>
+            	<div id="admin_panel_options" style="display:none;" class="dd_option_panel" role="dialog" aria-label="Administration Menu Options">
+                    <div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Player Switcher Options">Close Administrationg Menu Options</a></div>
+                    <h3 class="color_1">Administration Menu</h3>
+                    <ul>
+                        <li><a href="users_cards.html">Users &amp; Cards</a></li>
+                        <li><a href="billing_control_acc.html">Billing Control acc0untts</a></li>
+                        <li><a href="card_request_tracking.html">Card Request Tracking</a></li>
+                    </ul>
+                </div>
+            </li>
+			<li><a href="invoice_payment.html" title="Photo Gallery">Photo Gallery</a></li>
+        </ul>
+    </div>
+    
+    <div id="page_body">
+    	<div id="page_content">
+        	<!-- Page Title -->
+            <div class="page_title">
+                <h1>Scorecard</h1>
+                
+                <div class="card_switcher">
+                    <a href="javascript:void[0]" id="switch_cardholder" class="dd_link" title="Current User">All Members</a>
+                    <div id="switch_cardholder_options" style="display:none;" class="dd_option_panel">
+                        <div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Player Switcher Options">Close Player Options Panel</a></div>
+                        <ul class="card_list">
+                            <li><a href="#all_cardholders">All Members</a></li>
+                            <li><div class="line_divider"></div></li>
+                            <li><a href="#my_card_1">My Card - 8379</a></li>
+                            <li><a href="#my_card_2">My Card - 7384</a></li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <!-- Search and Filters -->
+                <div class="find_container">
+                    <div id="find_input_container">
+                        <form action="#" id="search_form">
+                            <span class="hidden_label"><label for="find_input">Search</label></span>
+                            <input type="text" id="find_input" class="search_input" name="find_input" aria-invalid="false" />
+                            <input type="submit" title="Submit Search Query Button" value="Search" id="btn_find" />
+                        </form>
+                    </div>
+                </div>
+                <br class="clear">
+            </div>
+            
+
+        	<div id="page_content_inner">
+            	<div id="table_container" role="main">
+            		<div id="grid_container" tabindex="-1" >
+                        <table id="grid_table" class="grid_table" aria-label="Scorecard">
+                            <caption>Scorecard</caption>
+                            <thead>
+                                <tr>
+                                    <th id="col_embossed_name">Embossed Name </th>
+                                    <th id="col_card">Card Number</th>
+                                    <th id="col_billing_acc">Billing acc0untt </th>
+                                    <th id="col_card_status">Card Status </th>
+                                    <th id="col_entity">Entity / Level </th>
+                                    <th id="col_user">User </th>
+                                    <th id="col_company">Company </th>
+                                    <th id="col_closing_bal" class="text_right">Closing Balance </th>
+                                    <th id="col_action"> </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="active">
+                                    <td>Thomas Haynes</td>
+                                    <td>************3873</td>
+                                    <td>Billing Control acc0untt 1</td>
+                                    <td>Active</td>
+                                    <td>HQ</td>
+                                    <td>Thomas Haynes</td>
+                                    <td>Brunswick Corporation PTY Ltd.</td>
+                                    <td class="value_cell">43,360.00 <span class="currency">USD</span></td>
+                                    <td><input type="button" class="btn_action_icon" aria-label="View Statement Row Detials for Thomas Haynes" value="View" onclick="window.location='statement_details.html'" /></td>
+                                </tr>
+                                <tr class="active">
+                                    <td>Tammy Billington</td>
+                                    <td>************3244</td>
+                                    <td>Billing Control acc0untt 1</td>
+                                    <td>Active</td>
+                                    <td>HQ</td>
+                                    <td>Tammy Billington</td>
+                                    <td>Brunswick Corporation PTY Ltd.</td>
+                                    <td class="value_cell">7,560.12 <span class="currency">USD</span></td>
+                                    <td><input type="button" class="btn_action_icon" aria-label="View Statement Row Detials for Tammy Billington" value="View" onclick="window.location='statement_details.html'" /></td>
+                                </tr>
+                                <tr class="active">
+                                    <td>Mark Butterworth</td>
+                                    <td>************3244</td>
+                                    <td>Billing Control acc0untt 1</td>
+                                    <td>Active</td>
+                                    <td>HQ</td>
+                                    <td>Mark Butterworth</td>
+                                    <td>Brunswick Corporation PTY Ltd.</td>
+                                    <td class="value_cell">4,534.03 <span class="currency">USD</span></td>
+                                    <td><input type="button" class="btn_action_icon" aria-label="View Statement Row Detials for Mark Butterworth" value="View" onclick="window.location='statement_details.html'" /></td>
+                                </tr>
+                                <tr class="active">
+                                    <td>James Starke</td>
+                                    <td>************3244</td>
+                                    <td>Billing Control acc0untt 1</td>
+                                    <td>Active</td>
+                                    <td>HQ</td>
+                                    <td>James Starke</td>
+                                    <td>Brunswick Corporation PTY Ltd.</td>
+                                    <td class="value_cell">12,342.30 <span class="currency">USD</span></td>
+                                    <td><input type="button" class="btn_action_icon" aria-label="View Statement Row Detials for James Starke" value="View" onclick="window.location='statement_details.html'" /></td>
+                                </tr>
+                                <tr class="active">
+                                    <td>Peter Brunswick</td>
+                                    <td>************3244</td>
+                                    <td>Billing Control acc0untt 1</td>
+                                    <td>Active</td>
+                                    <td>HQ</td>
+                                    <td>Peter Brunswick</td>
+                                    <td>Brunswick Corporation PTY Ltd.</td>
+                                    <td class="value_cell">1,360.34 <span class="currency">USD</span></td>
+                                    <td><input type="button" class="btn_action_icon" aria-label="View Statement Row Detials for Peter Brunswick" value="View" onclick="window.location='statement_details.html'" /></td>
+                                </tr>
+                                <tr class="active">
+                                    <td>Tammy Billington</td>
+                                    <td>************3244</td>
+                                    <td>Billing Control acc0untt 1</td>
+                                    <td>Active</td>
+                                    <td>HQ</td>
+                                    <td>Tammy Billington</td>
+                                    <td>Brunswick Corporation PTY Ltd.</td>
+                                    <td class="value_cell">7,560.12 <span class="currency">USD</span></td>
+                                    <td><input type="button" class="btn_action_icon" aria-label="View Statement Row Detials for Tammy Billington" value="View" onclick="window.location='statement_details.html'" /></td>
+                                </tr>
+                                <tr class="inactive">
+                                    <td>Mark Butterworth</td>
+                                    <td>************3244</td>
+                                    <td>Billing Control acc0untt 1</td>
+                                    <td>Inactive</td>
+                                    <td>HQ</td>
+                                    <td>Mark Butterworth</td>
+                                    <td>Brunswick Corporation PTY Ltd.</td>
+                                    <td class="value_cell">4,534.03 <span class="currency">USD</span></td>
+                                    <td><input type="button" class="btn_action_icon" aria-label="View Statement Row Detials for Mark Butterworth" value="View" onclick="window.location='statement_details.html'" /></td>
+                                </tr>
+                                <tr class="active">
+                                    <td>James Starke</td>
+                                    <td>************3244</td>
+                                    <td>Billing Control acc0untt 1</td>
+                                    <td>Active</td>
+                                    <td>HQ</td>
+                                    <td>James Starke</td>
+                                    <td>Brunswick Corporation PTY Ltd.</td>
+                                    <td class="value_cell">12,342.30 <span class="currency">USD</span></td>
+                                    <td><input type="button" class="btn_action_icon" aria-label="View Statement Row Detials for James Starke" value="View" onclick="window.location='statement_details.html'" /></td>
+                                </tr>
+                                <tr class="closed">
+                                    <td>Peter Brunswick</td>
+                                    <td>************3244</td>
+                                    <td>Billing Control acc0untt 1</td>
+                                    <td>Closed</td>
+                                    <td>HQ</td>
+                                    <td>Peter Brunswick</td>
+                                    <td>Brunswick Corporation PTY Ltd.</td>
+                                    <td class="value_cell">1,360.34 <span class="currency">USD</span></td>
+                                    <td><input type="button" class="btn_action_icon" aria-label="View Statement Row Detials for Peter Brunswick" value="View"  onclick="window.location='statement_details.html'" /></td>
+                                </tr>
+                                <tr class="active">
+                                    <td>Melanie Noels</td>
+                                    <td>************3873</td>
+                                    <td>Billing Control acc0untt 1</td>
+                                    <td>Active</td>
+                                    <td>HQ</td>
+                                    <td>Melanie Noels</td>
+                                    <td>Brunswick Corporation PTY Ltd.</td>
+                                    <td class="value_cell">23,360.00 <span class="currency">USD</span></td>
+                                    <td><input type="button" class="btn_action_icon" aria-label="View Statement Row Detials for Melanie Noels" value="View" onclick="window.location='statement_details.html'" /></td>
+                                </tr>
+                                <tr class="active">
+                                    <td>Tammy Billington</td>
+                                    <td>************3244</td>
+                                    <td>Billing Control acc0untt 1</td>
+                                    <td>Active</td>
+                                    <td>HQ</td>
+                                    <td>Tammy Billington</td>
+                                    <td>Brunswick Corporation PTY Ltd.</td>
+                                    <td class="value_cell">7,560.12 <span class="currency">USD</span></td>
+                                    <td><input type="button" class="btn_action_icon" aria-label="View Statement Row Detials for Tammy Billington" value="View" onclick="window.location='statement_details.html'" /></td>
+                                </tr>
+                                <tr class="active">
+                                    <td>Mark Butterworth</td>
+                                    <td>************3244</td>
+                                    <td>Billing Control acc0untt 1</td>
+                                    <td>Active</td>
+                                    <td>HQ</td>
+                                    <td>Mark Butterworth</td>
+                                    <td>Brunswick Corporation PTY Ltd.</td>
+                                    <td class="value_cell">4,534.03 <span class="currency">USD</span></td>
+                                    <td><input type="button" class="btn_action_icon" aria-label="View Statement Row Detials for Mark Butterworth" value="View" onclick="window.location='statement_details.html'" /></td>
+                                </tr>
+                                <tr class="active">
+                                    <td>James Starke</td>
+                                    <td>************3244</td>
+                                    <td>Billing Control acc0untt 1</td>
+                                    <td>Active</td>
+                                    <td>HQ</td>
+                                    <td>James Starke</td>
+                                    <td>Brunswick Corporation PTY Ltd.</td>
+                                    <td class="value_cell">12,342.30 <span class="currency">USD</span></td>
+                                    <td><input type="button" class="btn_action_icon" aria-label="View Statement Row Detials for James Starke" value="View" onclick="window.location='statement_details.html'" /></td>
+                                </tr>
+                                <tr class="closed">
+                                    <td>Peter Brunswick</td>
+                                    <td>************3244</td>
+                                    <td>Billing Control acc0untt 1</td>
+                                    <td>Closed</td>
+                                    <td>HQ</td>
+                                    <td>Peter Brunswick</td>
+                                    <td>Brunswick Corporation PTY Ltd.</td>
+                                    <td class="value_cell">1,360.34 <span class="currency">USD</span></td>
+                                    <td><input type="button" class="btn_action_icon" aria-label="View Statement Row Detials for Peter Brunswick" value="View"  onclick="window.location='statement_details.html'" /></td>
+                                </tr>
+                                <tr class="active">
+                                    <td>Tammy Billington</td>
+                                    <td>************3244</td>
+                                    <td>Billing Control acc0untt 1</td>
+                                    <td>Active</td>
+                                    <td>HQ</td>
+                                    <td>Tammy Billington</td>
+                                    <td>Brunswick Corporation PTY Ltd.</td>
+                                    <td class="value_cell">7,560.12 <span class="currency">USD</span></td>
+                                    <td><input type="button" class="btn_action_icon" aria-label="View Statement Row Detials for Tammy Billington" value="View" onclick="window.location='statement_details.html'" /></td>
+                                </tr>
+                                <tr class="active">
+                                    <td>Mark Butterworth</td>
+                                    <td>************3244</td>
+                                    <td>Billing Control acc0untt 1</td>
+                                    <td>Active</td>
+                                    <td>HQ</td>
+                                    <td>Mark Butterworth</td>
+                                    <td>Brunswick Corporation PTY Ltd.</td>
+                                    <td class="value_cell">4,534.03 <span class="currency">USD</span></td>
+                                    <td><input type="button" class="btn_action_icon" aria-label="View Statement Row Detials for Mark Butterworth" value="View" onclick="window.location='statement_details.html'" /></td>
+                                </tr>
+                                <tr class="active">
+                                    <td>James Starke</td>
+                                    <td>************3244</td>
+                                    <td>Billing Control acc0untt 1</td>
+                                    <td>Active</td>
+                                    <td>HQ</td>
+                                    <td>James Starke</td>
+                                    <td>Brunswick Corporation PTY Ltd.</td>
+                                    <td class="value_cell">12,342.30 <span class="currency">USD</span></td>
+                                    <td><input type="button" class="btn_action_icon" aria-label="View Statement Row Detials for James Starke" value="View" onclick="window.location='statement_details.html'" /></td>
+                                </tr>
+                                <tr class="active">
+                                    <td>Peter Brunswick</td>
+                                    <td>************3244</td>
+                                    <td>Billing Control acc0untt 1</td>
+                                    <td>Active</td>
+                                    <td>HQ</td>
+                                    <td>Peter Brunswick</td>
+                                    <td>Brunswick Corporation PTY Ltd.</td>
+                                    <td class="value_cell">1,360.34 <span class="currency">USD</span></td>
+                                    <td><input type="button" class="btn_action_icon" aria-label="View Statement Row Detials for Peter Brunswick" value="View" onclick="window.location='statement_details.html'" /></td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                        
+                    </div>
+                    
+                    <!-- Grid Footer Items -->
+                    <div class="grid_controls">
+                    	<div id="row_count_selector">
+                        	<div class="row_label">
+                        		<label for="row_count" title="Select how many Rows to display in the Schedule Details table">Show</label>
+                            </div>
+                            <div class="row_select">
+                            	<select id="row_count" name="row_count" style="width:60px;">
+                                	<option value="10">10</option>
+                                	<option value="20" selected="selected">20</option>
+                                	<option value="50">50</option>
+                                	<option value="100">100</option>
+                                </select>
+                            </div>
+                            <div class="row_result">
+                            	1-20 of 500+
+                            </div>
+                        </div>
+                        <div id="grid_pagination">
+                        	<ul>
+                            	<li><a href="#pag_prev" class="pag_prev_btn">Previous Page</a></li>
+                            	<li><span class="pag_current" title="Current Results Page is 1">1</span></li>
+                            	<li><a href="#pag_2" title="View Results Page 2">2</a></li>
+                            	<li><a href="#pag_3" title="View Results Page 3">3</a></li>
+                            	<li><span class="pag_divider">...</span></li>
+                            	<li><a href="#pag_25" title="View Results Page 25">25</a></li>
+                            	<li><a href="#pag_next" class="pag_next_btn">Next Page</a></li>
+                            </ul>
+                            <input type="button" class="btn_normal btn_grey" value="500 More" title="Load 500 More Results" />
+                        </div>
+                        
+                        <div id="grid_actions"></div>
+                        <br class="clear"/>
+                    </div>
+                </div>
+        	</div>
+        </div>
+    </div>
+    
+        
+    <div id="page_footer" class="bg_color_2">
+    	<div class="footer_left">
+        	<div class="footer_nav">
+                <ul>
+                    <li><a href="#">Help</a></li>
+                    
+                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <br class="clear"/>
+            </div>
+            <div class="footer_text">&copy; 2008 - 2016Austin Cricket League. All Rights Reserved</div>
+        </div>
+        <div class="footer_right">
+        	<div class="footer_nav">
+                <ul>
+					<li>
+					<div class="card_switcher">
+                	<a href="javascript:void[0]" id="switcher_theme" class="dd_link" title="Change Application Theme">Theme</a>
+                    <div id="switcher_theme_options" style="display:none;" class="dd_option_panel">
+					    <h3 class="color_1">Change Theme</h3>
+                    	<div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Style Options">Close Style Options Panel</a></div>
+                    	<ul id="theme_list">
+						
+								<li><a href="#" rel="themes/theme_360.css" style="color:black;">Default</a></li>
+								<li><a href="#" rel="themes/theme_abank.css" style="color:black;">ABank</a></li>
+								<li><a href="#" rel="themes/theme_atb.css" style="color:black;">ATB Financial</a></li>
+                                <li><a href="#" rel="themes/theme_becu.css" style="color:black;">BECU</a></li>
+                                <li><a href="#" rel="themes/theme_boi.css" style="color:black;">Bank of Ireland</a></li>
+                                <li><a href="#" rel="themes/theme_cnh_can.css" style="color:black;">CNH CAN</a></li>
+                                <li><a href="#" rel="themes/theme_cnh_us.css" style="color:black;">CNH US</a></li>
+								<li><a href="#" rel="themes/theme_citi.css" style="color:black;">Citi</a></li>
+                                <li><a href="#" rel="themes/theme_coop.css" style="color:black;">Co-operative Bank</a></li>
+                                <li><a href="#" rel="themes/theme_first_niagra.css" style="color:black;">First Niagra</a></li>
+								<li><a href="#" rel="themes/theme_first_tennessee.css" style="color:black;">First Tennessee</a></li>
+								<li><a href="#" rel="themes/theme_firstbank.css" style="color:black;">First Bank</a></li>
+								<li><a href="#" rel="themes/theme_hertfordshire.css" style="color:black;">Hertfordshire</a></li>
+								<li><a href="#" rel="themes/theme_home_depot_can.css" style="color:black;">Home Depot CAN</a></li>
+								<li><a href="#" rel="themes/theme_home_depot_us.css" style="color:black;">Home Depot US</a></li>
+								<li><a href="#" rel="themes/theme_hsbc.css" style="color:black;">HSBC</a></li>
+								<li><a href="#" rel="themes/theme_pnc.css" style="color:black;">PNC</a></li>
+								<li><a href="#" rel="themes/theme_pscu.css" style="color:black;">PSCU</a></li>
+								<li><a href="#" rel="themes/theme_pscu_mf.css" style="color:black;">PSCU MF</a></li>
+								<li><a href="#" rel="themes/theme_pscu_usf.css" style="color:black;">PSCU USF</a></li>
+								<li><a href="#" rel="themes/theme_santander.css" style="color:black;">Santander</a></li>
+								<li><a href="#" rel="themes/theme_saudi_hollandi.css" style="color:black;">Saudi Hollandi</a></li>
+								<li><a href="#" rel="themes/theme_tmg.css" style="color:black;">TMG Atira Credit</a></li>
+								<li><a href="#" rel="themes/theme_tmg_desjardins.css" style="color:black;">TMG Desjardins Bank</a></li>
+								<li><a href="#" rel="themes/theme_tmg_moo.css" style="color:black;">TMG Mutual of Omaha Bank</a></li>
+								<li><a href="#" rel="themes/theme_umb.css" style="color:black;">UMB</a></li>
+								<li><a href="#" rel="themes/theme_vantiv.css" style="color:black;">Vantiv</a></li>
+								<li><a href="#" rel="themes/theme_vantiv_ft.css" style="color:black;">Vantiv FT</a></li>
+								<li><a href="#" rel="themes/theme_vantiv_maj.css" style="color:black;">Vantiv MAJ</a></li>
+								<li><a href="#" rel="themes/theme_vantiv_pub.css" style="color:black;">Vantiv PUB</a></li>
+								<li><a href="#" rel="themes/theme_viseca.css" style="color:black;">Viseca</a></li>
+								<li><a href="#" rel="themes/theme_wells_fargo.css" style="color:black;">Wells Fargo</a></li>
+								
+                        </ul>
+                    </div>
+
+                </li>
+                    <li><a href="#">Previous Version</a></li>
+                </ul>
+                <br class="clear"/>
+            </div>
+        </div>
+        <br class="clear"/>
+    </div>
+    
+</div>
+
+<!-- Theme Switcher - Not Needed for Final -->
+<script type="text/javascript" language="javascript" src="themes/jquery.cookie.js"></script>
+<script type="text/javascript">
+	if($.cookie("css")) {
+		$("link#theme").attr("href",$.cookie("css"));
+	}
+	  
+	$(document).ready(function() { 
+		if(window.location.hash) {
+			var hash = window.location.hash.substr(1);
+			console.log(hash);
+			var path = 'themes/theme_' + hash + '.css';
+			alert(path);
+			console.log(path);
+		} else {
+		  	var path = $.cookie("css",path);
+		}
+		$("link#theme").attr("href",path);
+		$.cookie("css",path, {expires: 365, path: '/'});
+		return false;
+	});
+	
+	$(document).ready(function() { 
+		$("#theme_list li a").click(function() { 
+			$("link#theme").attr("href",$(this).attr('rel'));
+			$.cookie("css",$(this).attr('rel'), {expires: 365, path: '/'});
+			return false;
+		});
+		
+	});
+</script>
+
+
+<!-- ****************************** -->
+<!-- 		Modal Windows 			-->
+<!-- ****************************** -->
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		// Change CAS Dialog Box
+		$("#change_cas_link" ).click(function() {
+			$( "#change_cas_dialog" ).dialog( "open" );
+		});
+		
+		$( "#change_cas_dialog" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 400,
+			modal: true
+		});
+		
+		$(".close_modal").click(function(){
+			$(this).parent().parent().dialog('close');
+		});
+		
+		$(".btn_cancel_modal").click(function(){
+			$(this).closest('.dialog_content').parent().dialog('close');
+		});
+	});
+</script>
+
+<!-- Change CAS -->
+<div id="change_cas_dialog" title="Cost Allocation System" role="dialog" aria-labelledby="listCASTitle" aria-describedby="listCASDesc">
+	<div class="dialog_header">
+	    <h1 id="listCASTitle">Change Cost Allocation System</h1>
+    </div>
+    <div id="listCASDesc" class="dialog_desc">This Dialog allows you to view the receipt linked to a transaction.</div>
+    <div class="dialog_content">
+     <form class="fd_form" action="#" id="change_cas_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+                	<div class="form_row">
+                    	<div class="form_label"><label for="change_cas_select">Change CAS</label></div>
+                        <div class="form_select">
+                            <select class="selectbox" id="change_cas_select">
+                                <option value="option_1">UK Oracle</option>
+                                <option value="option_2">US Debit</option>
+                                <option value="option_3">US FDC</option>
+                                <option value="option_4" selected="selected">US FDR</option>
+                                <option value="option_5">US I-Procure</option>
+                                <option value="option_6">US Merchant Srvs</option>
+                                <option value="option_7">US Payment Srvs</option>
+                                <option value="option_8">US Telecheck</option>
+                                <option value="option_9">UK-lexpenses</option>
+                            </select>
+                            <br class="clear"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="button" class="btn_normal btn_grey btn_cancel_modal" value="Cancel" id="btn_cancel_cas" aria-label="Cancel Cost Allocation System Update" /></div>
+                    <div class="form_action_right"><input type="button" class="btn_normal btn_primary" value="Update CAS" id="btn_update_cas" aria-label="Update Cost Allocation System"  /></div>
+                    <br class="clear"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+</div>
+
+
+
+                                	
+ 
+</body>
+</html>
+

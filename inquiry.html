@@ -1,0 +1,1623 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Austin Cricket | 360 Austin</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+<meta content="telephone=no" name="format-detection">
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/normalize.css">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.dialog.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.datepicker.css">
+
+<!-- Theme -->
+<link id="theme" rel="stylesheet" type="text/css" href="themes/theme_360.css">
+
+<!-- Print Stylesheet -->
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print">
+
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="css/ie8_style.css" id="theme_ie8" />
+<![endif]-->
+
+<!-- Javascript -->
+<script type="text/javascript" src="js/respond.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.4.min.js" ></script>
+
+<script type="text/javascript" src="js/respond.js" ></script>
+
+<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+
+<!-- Add Common Functions -->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		dropdownContainers();
+		resizeFonts();
+	});
+</script>
+</head>
+
+<body class="bg_color_2">
+
+<div id="page_container">
+    
+    <div id="page_header" class="bg_color_2">
+    	<div class="logo_primary">
+        	<div><a href="index.html" title="Company Logo" aria-label="Visit the Homepage">Company Name</a></div>
+        </div>
+        <div class="logo_secondary">
+        	<div class="logo_container" title="Product Logo" aria-label="Product Name">Product Name</div>
+        </div>
+        
+        <div class="user_preferences">
+            <ul>
+            	<li>
+                	<a href="javascript:void[0]" id="style_switcher" class="dd_link" title="Change Application Font Size">aA</a>
+                    <div id="style_switcher_options" style="display:none;" class="dd_option_panel" role="dialog" aria-label="Style Switcher Options">
+                    	<div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Style Options">Close Style Options Panel</a></div>
+                        <h3 class="color_1">Font Size Options</h3>
+                    	<ul>
+                        	<li><a href="javascript:void(0)" id="font_increase" title="Increase Font Size">Large</a></li>
+                        	<li><a href="javascript:void(0)" id="font_reset" title="Reset Font Size">Normal</a></li>
+                        	<li><a href="javascript:void(0)" id="font_decrease" title="Decrease Font Size">Small</a></li>
+                        </ul>
+                    </div>
+                </li>
+            	<li>
+                	<a href="javascript:void[0]" id="user_preferences" class="dd_link" title="Current User">Zulifqar Ahmad</a>
+                    <div id="user_preferences_options" style="display:none;" class="dd_option_panel" role="dialog" aria-label="User Options Panel">
+                    	<div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close User Preferences">Close User Options Panel</a></div>
+                        <h3 class="color_1">User Preferences</h3>
+                        <div class="user_profile_panel">
+                        	<div class="info_user">Zulifqar Ahmad</div>
+                            <div class="info_location"><span>Role: </span>Programme Administrator</div>
+                            <div class="info_company"><span>Company: </span>Acme Holdings</div>
+                            <div class="info_structure"><span>Structure: </span>North America</div>
+                            <div class="info_cas"><span>CAS: </span>FDC <a href="javascript:void(0)" aria-label="Change CAS Selection" id="change_cas_link">(Change)</a></div>
+                        </div>
+                        <div class="info_history"><span>Last logged in at:</span> 14/03/2016, 20:05</div>
+                    	<ul>
+                        	<li><a href="javascript:void(0)">Change pa55word</a></li>
+                        	<li><a href="javascript:void(0)">Change Username</a></li>
+                        	<li><a href="javascript:void(0)">Language - English US</a></li>
+                        	<li><a href="easy_transactions.html">Switch to Simplified View</a></li>
+                        	<li><a href="javascript:void(0)">Timezone - EST (Eastern Standard Time)</a></li>
+                        	<li><a href="javascript:void(0)">Email Notifications for card changes</a></li>
+                        </ul>
+                    </div>
+
+                </li>
+                <li>
+                	<a href="index.html" title="Logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="print_header" aria-hidden="true" style="display:none;">
+        <div class="logo_primary">
+            <div><img src="images/img_logo_dark_first_data_x2.png" alt="Austin Cricket Logo" title="Austin Cricket Logo" /></div>
+        </div>
+        <div class="logo_secondary">
+            <div><img src="images/img_logo_dark_360Control_x2.png" alt="Product Specific Logo showing 360 Austin" title="360 Austin Logo" /></div>
+        </div>
+        <br class="clear"/>
+    </div>
+        
+    <div id="page_nav" role="navigation">
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="transactions.html">Schedule</a></li>
+            <li><a href="statements.html">Scorecard</a></li>
+            <li><a href="cards.html">Cards</a></li>
+			
+			<li class="current"><a href="inquiry.html" title="Statics">Statics</a></li>
+			<li><a href="javascript:void[0]" id="admin_panel" class="dd_link" title="View Administration Menu Options">Administration</a>
+            	<div id="admin_panel_options" style="display:none;" class="dd_option_panel" role="dialog" aria-label="Administration Menu Options">
+                    <div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Player Switcher Options">Close Administrationg Menu Options</a></div>
+                    <h3 class="color_1">Administration Menu</h3>
+                    <ul>
+                        <li><a href="users_cards.html">Users &amp; Cards</a></li>
+                        <li><a href="billing_control_acc.html">Billing Control acc0untts</a></li>
+                        <li><a href="card_request_tracking.html">Card Request Tracking</a></li>
+                    </ul>
+                </div>
+            </li>
+			<li><a href="invoice_payment.html" title="Photo Gallery">Photo Gallery</a></li>
+            
+        </ul>
+        
+    </div>
+    
+    <div id="page_body">
+    	<div id="page_content">
+        	<!-- Page Title -->
+            <div class="page_title">
+                <h1 tabindex="0" title="Player Activity Statics">Player Activity Statics</h1>
+                
+                <div class="card_switcher">
+                    <a href="javascript:void[0]" id="switch_cardholder" class="dd_link" title="Select Statics">Select Statics</a>
+                    <div id="switch_cardholder_options" style="display:none;" class="dd_option_panel" role="dialog" aria-label="Select Statics Panel">
+                        <div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Select Statics Panel">Close Select Statics Panel</a></div>
+                        
+                        <ul class="card_list">
+                            
+     
+                            <li><a href="javascript:void[0]" id="cai_link" tabindex="0" title="Player Activity Statics">Player Activity Statics</a></li>
+                            <li><a href="javascript:void[0]" id="dci_link" tabindex="0" title="Delinquent Player Statics">Delinquent Player Statics</a></li>
+                        <li><a href="javascript:void[0]" id="msi_link" tabindex="0" title="Merchant Spend Statics">Merchant Spend Statics</a></li>
+						<li><a href="javascript:void[0]" id="cssi_link" tabindex="0" title="Card Spend Summary Statics">Card Spend Summary Statics</a></li>
+						<li><a href="javascript:void[0]" id="icri_link" tabindex="0" title="Inactive Cards Report Statics">Inactive Cards Report Statics</a></li>
+						<li><a href="javascript:void[0]" id="mcc_link" tabindex="0" title="MCC Merchant Statics">MCC Merchant Statics</a></li>
+						<li><a href="javascript:void[0]" id="mcg_link" tabindex="0" title="MCG Merchant Statics">MCG Merchant Statics</a></li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <!--Filters -->
+                <div class="find_container">
+                    <div id="filter_input"><input type="button" class="btn_normal btn_grey btn_icon btn_icon_filter" id="btn_filter" value="Filters" title="Apply Filters" /></div>
+                </div>
+                <br class="clear">
+            </div>
+            
+
+        	<div id="page_content_inner">
+				<div id="table_container" role="main">
+					
+					<!-- Viewpoint -->
+                    <div>
+                    	<ul>
+                        	<li>
+								<span title="viewpoint" tabindex="0">Viewpoint:</span>
+                                <span title="head quarter" tabindex="0">CITY OF MILFORD ></span>
+                             
+                            </li>
+                        </ul>
+                        <br class="clear">
+                    </div>
+					
+					<div id="table_container" tabindex="-1" style="height:300px;">
+                        <table id="grid_table" class="grid_table" aria-label="Player Activity Statics">
+                            <caption>Player Activity Statics</caption>
+                            <thead>
+                                <tr>
+                                   
+									<th><span title="Card holder" tabindex="0">CARDHOLDER</span><a href="#" class="sortswitch" title="Sort by card holder"><img src="images/icon_sort_indicator.png" alt="Sort Ascending / Descending Icon"></a></th>
+									<th><span title="Card Number" tabindex="0">CARD Number</span><a href="#" class="sortswitch" title="Sort by Card Number"><img src="images/icon_sort_indicator.png" alt="Sort Ascending / Descending Icon"></a></th>
+									<th><span title="Number of Schedule" tabindex="0">Number OF TRANSACTIONs</span><a href="#" class="sortswitch" title="Sort by Number of Schedule"><img src="images/icon_sort_indicator.png" alt="Sort Ascending / Descending Icon"></a></th>
+									<th><span title="Average Value" tabindex="0">AVERAGE VALUE</span><a href="#" class="sortswitch" title="Sort by average value"><img src="images/icon_sort_indicator.png" alt="Sort Ascending / Descending Icon"></a></th>
+									<th><span title="Top Scorers" tabindex="0">TOTAL SPEND</span><a href="#" class="sortswitch" title="Sort by total spend"><img src="images/icon_sort_indicator.png" alt="Sort Ascending / Descending Icon"></a></th>
+									<th><span title="Currency Code" tabindex="0">CURRENCY CODE</span><a href="#" class="sortswitch" title="Sort by currency code"><img src="images/icon_sort_indicator.png" alt="Sort Ascending / Descending Icon"></a></th>
+                                    
+									
+                                </tr>
+                            </thead>
+							<tr class="parent" style="height:200px;">
+									
+									
+                                    
+                                </tr>
+                            
+                        </table>
+						
+						 
+                    </div>
+					<!-- Grid Footer Items -->
+                    <div class="grid_controls">
+                    	
+                        
+                        <div id="grid_actions">
+                        	<ul>
+                     
+                                <li><input type="button" aria-label="Ouput Schedule Rows into a specific output format" value="Output" id="btn_list_output" class="btn_normal btn_grey btn_icon btn_icon_output" /></li>
+                                <li><input type="button" aria-label="Print the existing Schedule Rows" value="Print" id="btn_list_print" class="btn_normal btn_grey btn_icon btn_icon_print" /></li>
+                              
+                           	</ul>
+                        </div>
+                        <br class="clear"/>
+                    </div>
+					
+					
+                </div>
+			</div>
+		</div>
+	</div>
+	<div id="page_footer" class="bg_color_2">
+			<div class="footer_left">
+				<div class="footer_nav">
+					<ul>
+						<li><a href="#">Help</a></li>
+						
+						<li><a href="privacy_policy.html">Privacy Policy</a></li>
+						<li><a href="#">Security</a></li>
+						<li><a href="#">Terms &amp; Conditions</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">FAQ</a></li>
+					</ul>
+					<br class="clear"/>
+				</div>
+				<div class="footer_text">&copy; 2008 - 2016Austin Cricket League. All Rights Reserved</div>
+			</div>
+			<div class="footer_right">
+				<div class="footer_nav">
+					<ul>
+					<li>
+					<div class="card_switcher">
+                	<a href="javascript:void[0]" id="switcher_theme" class="dd_link" title="Change Application Theme">Theme</a>
+                    <div id="switcher_theme_options" style="display:none;" class="dd_option_panel">
+					    <h3 class="color_1">Change Theme</h3>
+                    	<div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Style Options">Close Style Options Panel</a></div>
+                    	<ul id="theme_list">
+						
+								<li><a href="#" rel="themes/theme_360.css" style="color:black;">Default</a></li>
+								<li><a href="#" rel="themes/theme_abank.css" style="color:black;">ABank</a></li>
+								<li><a href="#" rel="themes/theme_atb.css" style="color:black;">ATB Financial</a></li>
+                                <li><a href="#" rel="themes/theme_becu.css" style="color:black;">BECU</a></li>
+                                <li><a href="#" rel="themes/theme_boi.css" style="color:black;">Bank of Ireland</a></li>
+                                <li><a href="#" rel="themes/theme_cnh_can.css" style="color:black;">CNH CAN</a></li>
+                                <li><a href="#" rel="themes/theme_cnh_us.css" style="color:black;">CNH US</a></li>
+								<li><a href="#" rel="themes/theme_citi.css" style="color:black;">Citi</a></li>
+                                <li><a href="#" rel="themes/theme_coop.css" style="color:black;">Co-operative Bank</a></li>
+                                <li><a href="#" rel="themes/theme_first_niagra.css" style="color:black;">First Niagra</a></li>
+								<li><a href="#" rel="themes/theme_first_tennessee.css" style="color:black;">First Tennessee</a></li>
+								<li><a href="#" rel="themes/theme_firstbank.css" style="color:black;">First Bank</a></li>
+								<li><a href="#" rel="themes/theme_hertfordshire.css" style="color:black;">Hertfordshire</a></li>
+								<li><a href="#" rel="themes/theme_home_depot_can.css" style="color:black;">Home Depot CAN</a></li>
+								<li><a href="#" rel="themes/theme_home_depot_us.css" style="color:black;">Home Depot US</a></li>
+								<li><a href="#" rel="themes/theme_hsbc.css" style="color:black;">HSBC</a></li>
+								<li><a href="#" rel="themes/theme_pnc.css" style="color:black;">PNC</a></li>
+								<li><a href="#" rel="themes/theme_pscu.css" style="color:black;">PSCU</a></li>
+								<li><a href="#" rel="themes/theme_pscu_mf.css" style="color:black;">PSCU MF</a></li>
+								<li><a href="#" rel="themes/theme_pscu_usf.css" style="color:black;">PSCU USF</a></li>
+								<li><a href="#" rel="themes/theme_santander.css" style="color:black;">Santander</a></li>
+								<li><a href="#" rel="themes/theme_saudi_hollandi.css" style="color:black;">Saudi Hollandi</a></li>
+								<li><a href="#" rel="themes/theme_tmg.css" style="color:black;">TMG Atira Credit</a></li>
+								<li><a href="#" rel="themes/theme_tmg_desjardins.css" style="color:black;">TMG Desjardins Bank</a></li>
+								<li><a href="#" rel="themes/theme_tmg_moo.css" style="color:black;">TMG Mutual of Omaha Bank</a></li>
+								<li><a href="#" rel="themes/theme_umb.css" style="color:black;">UMB</a></li>
+								<li><a href="#" rel="themes/theme_vantiv.css" style="color:black;">Vantiv</a></li>
+								<li><a href="#" rel="themes/theme_vantiv_ft.css" style="color:black;">Vantiv FT</a></li>
+								<li><a href="#" rel="themes/theme_vantiv_maj.css" style="color:black;">Vantiv MAJ</a></li>
+								<li><a href="#" rel="themes/theme_vantiv_pub.css" style="color:black;">Vantiv PUB</a></li>
+								<li><a href="#" rel="themes/theme_viseca.css" style="color:black;">Viseca</a></li>
+								<li><a href="#" rel="themes/theme_wells_fargo.css" style="color:black;">Wells Fargo</a></li>
+								
+                        </ul>
+                    </div>
+
+                </li>
+                    <li><a href="#">Previous Version</a></li>
+                </ul>
+					<br class="clear"/>
+				</div>
+			</div>
+			<br class="clear"/>
+	</div>
+</div>
+
+<!-- Theme Switcher - Not Needed for Final -->
+<script type="text/javascript" language="javascript" src="themes/jquery.cookie.js"></script>
+<script type="text/javascript">
+	if($.cookie("css")) {
+		$("link#theme").attr("href",$.cookie("css"));
+	}
+	  
+	$(document).ready(function() { 
+		if(window.location.hash) {
+			var hash = window.location.hash.substr(1);
+			console.log(hash);
+			var path = 'themes/theme_' + hash + '.css';
+			alert(path);
+			console.log(path);
+		} else {
+		  	var path = $.cookie("css",path);
+		}
+		$("link#theme").attr("href",path);
+		$.cookie("css",path, {expires: 365, path: '/'});
+		return false;
+	});
+	
+	$(document).ready(function() { 
+		$("#theme_list li a").click(function() { 
+			$("link#theme").attr("href",$(this).attr('rel'));
+			$.cookie("css",$(this).attr('rel'), {expires: 365, path: '/'});
+			return false;
+		});
+		
+	});
+</script>
+
+
+<!-- ****************************** -->
+<!-- 		Modal Windows 			-->
+<!-- ****************************** -->
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		
+		//DCI Dialog Box
+		$("#dci_link" ).click(function() {
+			$( "#dci_link_dialog" ).dialog( "open" );
+		});
+		
+		$( "#dci_link_dialog" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 500,
+			modal: true
+		});
+		
+		
+		//CAI Dialog Box
+		$("#cai_link" ).click(function() {
+			$( "#cai_filter_options" ).dialog( "open" );
+		});
+		
+		$( "#cai_filter_options" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 500,
+			modal: true
+		});
+		
+		//MSI Dialog Box
+		$("#msi_link" ).click(function() {
+			$( "#msi_link_dialog" ).dialog( "open" );
+		});
+		
+		$( "#msi_link_dialog" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 500,
+			
+			modal: true
+		});
+		
+		//CSSI Dialog Box
+		$("#cssi_link" ).click(function() {
+			$( "#cssi_link_dialog" ).dialog( "open" );
+		});
+		
+		$( "#cssi_link_dialog" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 500,
+			modal: true
+		});
+		
+		//ICRI Dialog Box
+		$("#icri_link" ).click(function() {
+			$( "#icri_link_dialog" ).dialog( "open" );
+		});
+		
+		$( "#icri_link_dialog" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 500,
+			modal: true
+		});
+		
+		//MCC Dialog Box
+		$("#mcc_link" ).click(function() {
+			$( "#mcc_link_dialog" ).dialog( "open" );
+		});
+		
+		$( "#mcc_link_dialog" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 500,
+			modal: true
+		});
+		
+		//MCG Dialog Box
+		$("#mcg_link" ).click(function() {
+			$( "#mcg_link_dialog" ).dialog( "open" );
+		});
+		
+		$( "#mcg_link_dialog" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 500,
+			modal: true
+		});
+		
+		
+		// Launch Filter Options
+		$("#btn_filter" ).click(function() {
+			$( "#cai_filter_options" ).dialog( "open" );
+		});
+		
+		$( "#cai_filter_options" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 500,
+			modal: true
+		});
+	
+		// List Print Options
+		$("#btn_list_print" ).click(function() {
+			$( "#btn_list_print_options" ).dialog( "open" );
+		});
+		
+		$( "#btn_list_print_options" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 300,
+			modal: true
+		});
+		
+		// List Output Options
+		$("#btn_list_output" ).click(function() {
+			$( "#btn_list_output_options" ).dialog( "open" );
+			radioBtnStatus();
+		});
+		
+		$( "#btn_list_output_options" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 360,
+			modal: true
+		});
+		
+		$(window).resize(function() {
+			$(".ui-dialog").dialog("option", "position", "center");
+		});
+		
+		$(".close_modal").click(function(){
+			$(this).parent().parent().dialog('close');
+		});
+		
+		$(".btn_cancel_modal").click(function(){
+			$(this).closest('.dialog_content').parent().dialog('close');
+		});
+		
+	});
+</script>
+
+
+
+<!-- JQuery Datepicker -->
+<script type="text/javascript">
+	$(function() {
+		$('.date_picker').datepicker({
+			showOn:'button',
+			buttonText: 'Datepicker'
+		});
+	});
+</script>
+
+<!-- Modal Window for CAI Filter options>-->
+<div id="cai_filter_options" title="Player Activity Statics Filter" role="dialog" aria-labelledby="cai_filter">
+	<div class="dialog_header">
+	    <h1 id="cai_filter">Player Activity Statics Filter</h1>
+    </div>
+	<div class="form_row_divider"></div>
+	<div class="dialog_content">
+	 <form class="fd_form" action="#" id="apply_filters_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+				
+				
+				<!--Dates-->
+				<div class="form_row inline">
+				
+                            <label for=""><b>Dates:</b></label><br><br>
+                   
+					<input type="radio" name="date" value="Calendar Periods From To">Calendar Periods From/To
+					<div class="form_select">
+                        	<select class="moz_custom" id="bill_currency" name="bill_currency" title="select the From/To">
+								<option value="">Please select a Date</option>
+                            	<option value="">02/20/2008</option>
+                            	<option value="1">08/12/2009</option>
+                            	<option value="2">05/08/2012</option>
+                            	<option value="3">08/09/2016</option>
+                           	</select>
+                        </div>
+					<br><br><br>
+					
+					
+					
+					<div class="form_label">
+					<input type="radio" name="" value="Date Range">
+                            Date Range
+                        </div>
+					<div class="form_date">
+                            <ul>
+                                <li>
+                                	<label for="filter_date_from" title="Enter From Date" aria-hidden="true">From Date</label>
+                                	<input type="text" name="filter_date_from" class="date_picker" placeholder="From Date" id="filter_date_from" aria-label="Format date as DD/MM/YYYY" />
+                                </li>
+                                <li><span class="date_spacer">-</span></li>
+                                <li>
+                                	<label for="filter_date_to" title="Enter To Date" aria-hidden="true">To Date</label>
+                                	<input type="text" name="filter_date_to" class="date_picker" placeholder="To Date" id="filter_date_to"  aria-label="Format date as DD/MM/YYYY" />
+                                </li>
+                            </ul>
+                            <br class="clear"/>
+                        </div>
+				</div>
+				
+				
+					<!--Currency-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="bill_currency">Billing Currency</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="bill_currency" name="bill_currency" title="select the billing currency">
+								<option value="">Select the Billing Currency</option>
+                            	<option value="">USD</option>
+                            	<option value="1">Pound</option>
+                            	<option value="2">Euro</option>
+                            	<option value="3">Rupees</option>
+                           	</select>
+                        </div>
+                    </div>		 
+				</div>
+			
+				<div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="reset" class="btn_normal btn_grey" value="Reset" id="btn_reset1" aria-label="Reset Filter Options" />
+					<input type="button" onclick="$('#cai_filter_options').dialog('close');" class="btn_normal btn_grey" value="Cancel" id="btn_reset1" aria-label="Reset Filter Options" /></div>
+                    <div class="form_action_right">
+					<button type="button" class="btn_normal btn_primary" style="float: right;" title="apply filter options" onclick="myFunction1()">Apply</button>
+					</div>
+                    <br class="clear"/>
+					<script>
+					function myFunction1() {
+								var myWindow = window.open("car.html", "_self");
+								
+							}
+					</script>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+	
+</div>
+
+
+<!--Delinquent Player Statics Dialog-->
+<div id="dci_link_dialog" title="Delinquent Player Statics Filter" role="dialog" aria-labelledby="dci_filter" >
+	<div class="dialog_header">
+	    <h1 id="dci_filter">Delinquent Player Statics Filter</h1>
+    </div>
+	<div class="form_row_divider"></div>
+	 <div class="dialog_content">
+	 <form class="fd_form" action="#" id="apply_filters_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+				
+					<!--Days Delinquent-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="days_delq">Days Delinquent</label>
+                        </div>
+                        <div class="form_select form_input split_options">
+                        	<ul>
+                            	<li>
+                                    <select class="moz_custom" id="filter_amount" name="days_delq" title="select days delinquent" aria-label="select days delinquent">
+                                        <option value=""></option>
+                                        <option value="1">Less Than</option>
+                                        <option value="2">Equal to</option>
+                                        <option value="3">Not Equal to</option>
+                                    </select>
+                            	</li>
+                                <li>
+                            		<input id="filter_amount_value" name="days_delg_input" aria-label="Enter Days Delinquent" type="text"><span class="hidden_label"><label for="filter_amount_value">Enter Days Delinquent</label></span>
+                            	</li>
+                            </ul>
+                        </div>
+                    </div>
+					
+					<!--Delinquent Amount-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="delq_amt">Delinquent Amount</label>
+                        </div>
+                        <div class="form_select form_input split_options">
+                        	<ul>
+                            	<li>
+                                    <select class="moz_custom" id="filter_amount" name="delq_amt" title="Select delinquent amount" aria-label="Select delinquent amount">
+                                        <option value=""></option>
+                                        <option value="1">Less Than</option>
+                                        <option value="2">Equal to</option>
+                                        <option value="3">Not Equal to</option>
+                                    </select>
+                            	</li>
+                                <li>
+                            		<input id="filter_amount_value" name="amt_delg_input" aria-label="Enter Delinquent Amount" type="text"><span class="hidden_label"><label for="filter_amount_value">Enter Delinquent Amount</label></span>
+                            	</li>
+                            </ul>
+                        </div>
+                    </div>
+					
+					<!--CAS-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="cas">CAS</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="cas" title="Choose From CAS" name="cas">
+                            	<option value="">Select the CAS</option>
+								<option value="">CAS 1</option>
+                            	<option value="1">CAS 2</option>
+                            	<option value="2">CAS 3</option>
+                            	<option value="3">CAS 4</option>
+                           	</select>
+                        </div>
+                    </div>
+					
+			
+					
+					<!--Currency-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="currency">Currency</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="currency" title="select the currency" name="currency">
+								<option value="">Select the Curreny</option>
+                            	<option value="">USD</option>
+                            	<option value="1">Pound</option>
+                            	<option value="2">Euro</option>
+                            	<option value="3">Rupees</option>
+                           	</select>
+                        </div>
+                    </div>
+					
+					<!--Sort order is-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="sort_order">Sort by </label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="sort_order" title="select the sort order" name="sort_order">
+								<option value="">Select the Sort by</option>
+                            	<option value="">Embossed Name</option>
+                            	<option value="1">Days Delinquent</option>
+                            	<option value="2">Delinquent Amount</option>
+                           	</select>
+                        </div>
+                    </div>
+					
+					
+					
+					<!--Layout-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="layout">Layout</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="layout" title="select the layout" name="layout">
+								<option value="">Select the Layout</option>
+                            	<option value="basic">Basic</option>
+                            	<option value="detailed">Detailed</option>
+                            	
+                           	</select>
+                        </div>
+                    </div>	 
+			</div>
+			<div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="reset" class="btn_normal btn_grey" value="Reset" id="btn_reset1" aria-label="Reset Filter Options" />
+					<input type="button" class="btn_normal btn_grey" onclick="$('#dci_link_dialog').dialog('close');" value="Cancel" id="btn_reset1" aria-label="Reset Filter Options" /></div>
+                    <div class="form_action_right">
+					<button type="button" class="btn_normal btn_primary" style="float: right;" title="apply filter options" onclick="dci()">Apply</button>
+					</div>
+                    <br class="clear"/>
+					<script>
+					function dci() {
+								
+								var e = document.getElementById("layout");
+								var selection = e.options[e.selectedIndex].value;
+								if(selection == 'detailed'){
+								var myWindow = window.open("dci_detailed.html", "_self");
+								}else{
+								var myWindow = window.open("dci.html", "_self");
+								}
+						}		
+					</script>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+	
+</div>
+
+
+<!--Merchant Spend Statics Dialog-->
+<div id="msi_link_dialog" title="Merchant Spend Statics Filter" role="dialog" aria-labelledby="msi_filter">
+	<div class="dialog_header">
+	    <h1 id="msi_filter">Merchant Spend Statics Filter</h1>
+    </div>
+	<div class="form_row_divider"></div>
+	 <div class="dialog_content">
+	 <form class="fd_form" action="#" id="apply_filters_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+				
+					<!--Merchant-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="merchant">Merchant</label>
+                        </div>
+                        <div class="form_select form_input split_options">
+                        	<ul>
+                            	
+                                <li>
+                            		<input id="merchant" name="merchant" title="merchant" aria-label="Enter Merchant" type="text">
+									<span class="hidden_label"><label for="merchant">Enter Merchant</label></span>
+                            	</li>
+                            </ul>
+                        </div>
+					</div>
+					
+					<!--Date range-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            Date Range
+                        </div>
+                        <div class="form_date">
+                            <ul>
+                                <li>
+                                	<label for="filter_date_from" title="Enter From Date" aria-hidden="true">From Date</label>
+                                	<input type="text" name="filter_date_from" class="date_picker" placeholder="From Date" id="filter_date_from" aria-label="Format date as DD/MM/YYYY" />
+                                </li>
+                                <li><span class="date_spacer">-</span></li>
+                                <li>
+                                	<label for="filter_date_to" title="Enter To Date" aria-hidden="true">To Date</label>
+                                	<input type="text" name="filter_date_to" class="date_picker" placeholder="To Date" id="filter_date_to"  aria-label="Format date as DD/MM/YYYY" />
+                                </li>
+                            </ul>
+                            <br class="clear"/>
+                        </div>
+                    </div>
+					
+					<!--Currency-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="currency">Billing Currency</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="currency" title="select billing currency" name="currency">
+								<option value="">Select Billing Currency</option>
+                            	<option value="">USD</option>
+                            	<option value="1">Pound</option>
+                            	<option value="2">Euro</option>
+                            	<option value="3">Rupees</option>
+                           	</select>
+                        </div>
+                    </div>
+					
+				<script type="text/javascript">
+					//function to populate the vlaues of MCC dropdown when selection of MCG dropdown
+					function configureDropDownLists(mcg,mcc) {
+					var mcc0=new Array('All', '0 -Unknown MCC', '1 -Default Expense', '763 -Agricultural Cooperative');
+					var  mcc1= new Array('All','0 -Unknown MCC', 'Default Expense', '1000 -Unknown MCC');
+					var mcc2 = new Array('All','1520 -General Contractors -Res', '1711 -Heating/Plumbing/Air -Con', '1731 -Electrical Contractors');
+					var mcc3 = new Array('All','5039 -Construction Materials', '5065 -Electrical Parts/Equipmen', '5074 -Plumbing/Heating Equipment');
+
+						switch (mcg.value) {
+							case 'mcc0':
+								mcc.options.length = 0;
+								for (i = 0; i < mcc1.length; i++) {
+									createOption(mcc, mcc0[i], mcc0[i]);
+								}
+								break;
+							case 'mcc1':
+								mcc.options.length = 0;
+								for (i = 0; i < mcc1.length; i++) {
+									createOption(mcc, mcc1[i], mcc1[i]);
+								}
+								break;
+							case 'mcc2':
+								mcc.options.length = 0; 
+							for (i = 0; i < mcc2.length; i++) {
+								createOption(mcc, mcc2[i], mcc2[i]);
+								}
+								break;
+							case 'mcc3':
+								mcc.options.length = 0;
+								for (i = 0; i < mcc3.length; i++) {
+									createOption(mcc, mcc3[i], mcc3[i]);
+								}
+								break;
+								default:
+									mcc.options.length = 0;
+								break;
+						}
+
+					}	
+
+					function createOption(mcg, text, value) {
+						var opt = document.createElement('option');
+						opt.value = value;
+						opt.text = text;
+						mcg.options.add(opt);
+					}
+				</script>
+					
+					<!--MCG-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="mcg">MCG</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="mcg" onchange="configureDropDownLists(this,document.getElementById('mcc'))" title="Choose From MCG" name="mcg">
+                            	
+								<option value="mcc0">All</option>
+                            	<option value="mcc1">0 -Unknown Mcg</option>
+                            	<option value="mcc2">1 -Building Services</option>
+                            	<option value="mcc3">2 -Building Materials</option>
+                           	</select>
+                        </div>
+                    </div>
+					
+					<!--MCC-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="mcc">MCC</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="mcc" title="Choose From MCC" name="mcc">
+                     
+                           	</select>
+                        </div>
+                    </div>
+					
+					<!--country-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="country">Country</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="country" title="Choose From country" name="country">
+                            	<option value="" selected="true">All</option><option value="248">Aaland Islands</option><option value="4  ">Afghanistan</option><option value="8  ">Albania</option><option value="12 ">Algeria</option><option value="16 ">American Samoa</option><option value="20 ">Andorra</option><option value="24 ">Angola</option><option value="660">Anguilla</option><option value="10 ">Antarctica</option><option value="28 ">Antigua And Barbuda</option><option value="32 ">Argentina</option><option value="51 ">Armenia</option><option value="533">Aruba</option><option value="36 ">Australia</option><option value="40 ">Austria</option><option value="31 ">Azerbaijan</option><option value="44 ">Bahamas</option><option value="48 ">Bahrain</option><option value="50 ">Bangladesh</option><option value="52 ">Barbados</option><option value="112">Belarus</option><option value="56 ">Belgium</option><option value="84 ">Belize</option><option value="204">Benin</option><option value="60 ">Bermuda</option><option value="64 ">Bhutan</option><option value="68 ">Bolivia</option><option value="70 ">Bosnia And Herzegovina</option><option value="72 ">Botswana</option><option value="74 ">Bouvet Island</option><option value="76 ">Brazil</option><option value="86 ">British Indian Ocean Terr</option><option value="96 ">Brunei Darussalam</option><option value="100">Bulgaria</option><option value="854">Burkina Faso</option><option value="108">Burundi</option><option value="116">Cambodia</option><option value="120">Cameroon</option><option value="124">Canada</option><option value="132">Cape Verde</option><option value="136">Cayman Islands</option><option value="140">Central African Republic</option><option value="148">Chad</option><option value="152">Chile</option><option value="156">China</option><option value="162">Christmas Island</option><option value="166">Cocos (Keeling) Islands</option><option value="170">Colombia</option><option value="174">Comoros</option><option value="178">Congo</option><option value="180">Congo, The Democratic Rep</option><option value="184">Cook Islands</option><option value="188">Costa Rica</option><option value="191">Croatia</option><option value="192">Cuba</option><option value="196">Cyprus</option><option value="203">Czech Republic</option><option value="208">Denmark</option><option value="262">Djibouti</option><option value="212">Dominica</option><option value="214">Dominican Republic</option><option value="218">Ecuador</option><option value="818">Egypt</option><option value="222">El Salvador</option><option value="226">Equatorial Guinea</option><option value="232">Eritrea</option><option value="233">Estonia</option><option value="231">Ethiopia</option><option value="238">Falkland Islands (Malvina</option><option value="234">Faroe Islands</option><option value="242">Fiji</option><option value="246">Finland</option><option value="250">France</option><option value="254">French Guiana</option><option value="258">French Polynesia</option><option value="260">French Southern Territori</option><option value="266">Gabon</option><option value="270">Gambia</option><option value="268">Georgia</option><option value="276">Germany</option><option value="288">Ghana</option><option value="292">Gibraltar</option><option value="300">Greece</option><option value="304">Greenland</option><option value="308">Grenada</option><option value="312">Guadeloupe</option><option value="316">Guam</option><option value="320">Guatemala</option><option value="324">Guinea</option><option value="624">Guinea-Bissau</option><option value="328">Guyana</option><option value="332">Haiti</option><option value="334">Heard Island And Mcdonald</option><option value="340">Honduras</option><option value="344">Hong Kong</option><option value="348">Hungary</option><option value="352">Iceland</option><option value="356">India</option><option value="360">Indonesia</option><option value="364">Iran</option><option value="368">Iraq</option><option value="372">Ireland</option><option value="376">Israel</option><option value="380">Italy</option><option value="384">Ivory Coast</option><option value="388">Jamaica</option><option value="392">Japan</option><option value="400">Jordan</option><option value="398">Kazakhstan</option><option value="404">Kenya</option><option value="296">Kiribati</option><option value="408">Korea, Democratic People'</option><option value="410">Korea, Republic Of</option><option value="414">Kuwait</option><option value="417">Kyrgyzstan</option><option value="418">Lao People's Democratic R</option><option value="428">Latvia</option><option value="422">Lebanon</option><option value="426">Lesotho</option><option value="430">Liberia</option><option value="434">Libyan Arab Jamahiriya</option><option value="438">Liechtenstein</option><option value="440">Lithuania</option><option value="442">Luxembourg</option><option value="446">Macao</option><option value="807">Macedonia, The Former Yug</option><option value="450">Madagascar</option><option value="454">Malawi</option><option value="458">Malaysia</option><option value="462">Maldives</option><option value="466">Mali</option><option value="470">Malta</option><option value="584">Marshall Islands</option><option value="474">Martinique</option><option value="478">Mauritania</option><option value="480">Mauritius</option><option value="175">Mayotte</option><option value="484">Mexico</option><option value="583">Micronesia, Federated Sta</option><option value="498">Moldova, Republic Of</option><option value="492">Monaco</option><option value="496">Mongolia</option><option value="500">Montserrat</option><option value="504">Morocco</option><option value="508">Mozambique</option><option value="104">Myanmar</option><option value="516">Namibia</option><option value="520">Nauru</option><option value="524">Nepal</option><option value="528">Netherlands</option><option value="530">Netherlands Antilles</option><option value="540">New Caledonia</option><option value="554">New Zealand</option><option value="558">Nicaragua</option><option value="562">Niger</option><option value="566">Nigeria</option><option value="570">Niue</option><option value="574">Norfolk Island</option><option value="580">Northern Mariana Islands</option><option value="578">Norway</option><option value="512">Oman</option><option value="586">Pakistan</option><option value="585">Palau</option><option value="275">Palestinian Territory, Oc</option><option value="591">Panama</option><option value="598">Papua New Guinea</option><option value="600">Paraguay</option><option value="604">Peru</option><option value="608">Philippines</option><option value="612">Pitcairn</option><option value="616">Poland</option><option value="620">Portugal</option><option value="630">Puerto Rico</option><option value="634">Qatar</option><option value="638">Reunion</option><option value="642">Romania</option><option value="643">Russian Federation</option><option value="646">Rwanda</option><option value="654">Saint Helena</option><option value="659">Saint Kitts And Nevis</option><option value="662">Saint Lucia</option><option value="666">Saint Pierre And Miquelon</option><option value="670">Saint Vincent And The Gre</option><option value="882">Samoa</option><option value="674">San Marino</option><option value="678">Sao Tome And Principe</option><option value="682">Saudi Arabia</option><option value="686">Senegal</option><option value="688">Serbia And Montenegro</option><option value="891">Serbia And Montenegro</option><option value="690">Seychelles</option><option value="694">Sierra Leone</option><option value="702">Singapore</option><option value="703">Slovakia</option><option value="705">Slovenia</option><option value="90 ">Solomon Islands</option><option value="706">Somalia</option><option value="710">South Africa</option><option value="239">South Georgia And The Sou</option><option value="724">Spain</option><option value="144">Sri Lanka</option><option value="736">Sudan</option><option value="740">Suriname</option><option value="744">Svalbard And Jan Mayen</option><option value="748">Swaziland</option><option value="752">Sweden</option><option value="756">Switzerland</option><option value="760">Syrian Arab Republic</option><option value="158">Taiwan, Province Of China</option><option value="762">Tajikistan</option><option value="834">Tanzania, United Republic</option><option value="764">Thailand</option><option value="626">Timor-Leste</option><option value="768">Togo</option><option value="772">Tokelau</option><option value="776">Tonga</option><option value="780">Trinidad And Tobago</option><option value="788">Tunisia</option><option value="792">Turkey</option><option value="795">Turkmenistan</option><option value="796">Turks And Caicos Islands</option><option value="798">Tuvalu</option><option value="800">Uganda</option><option value="804">Ukraine</option><option value="784">United Arab Emirates</option><option value="826">United Kingdom</option><option value="840">United States</option><option value="581">United States Minor Outly</option><option value="858">Uruguay</option><option value="860">Uzbekistan</option><option value="548">Vanuatu</option><option value="336">Vatican City State</option><option value="862">Venezuela</option><option value="704">Viet Nam</option><option value="92 ">Virgin Islands, British</option><option value="850">Virgin Islands, U.S.</option><option value="876">Wallis And Futuna</option><option value="732">Western Sahara</option><option value="887">Yemen</option><option value="894">Zambia</option><option value="716">Zimbabwe</option>
+                           	</select>
+                        </div>
+                    </div>
+					
+					<!--Preference-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="pref">Preference</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="pref" title="Choose From Preference" name="pref">
+                            	<option value="">All</option>
+                            	<option value="1">Yes</option>
+                            	<option value="2">No</option>
+                           	</select>
+                        </div>
+                    </div>
+					
+					<!--Exchange Rate Set-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="exch_rt_set">Exchange Rate Set</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="exch_rt_set" title="Choose From Exchange Rate Set" name="exch_rt_set">
+                            	<option value="">Select Exchange Rate Set </option>
+                            	<option value="1">CITY OF MILFORD set</option>
+                        
+                           	</select>
+                        </div>
+                    </div>
+					
+					<!--Location-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="location">Location</label>
+                        </div>
+                        <div class="form_select form_input split_options">
+                        	<ul>
+                            	
+                                <li>
+                            		<input id="location" name="location" aria-label="Location" title="location" type="text">
+									<span class="hidden_label"><label for="location">Location</label></span>
+                            	</li>
+                            </ul>
+                        </div>
+					</div>
+					
+					<!--Company ID--><!--ask for review-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="comp_id">Company ID</label>
+                        </div>
+                        <div class="form_select form_input split_options">
+                        	<ul>
+                            	
+                                <li>
+                            		<input id="comp_id" name="comp_id" aria-label="company id" title="company id" type="text"><span class="hidden_label"><label for="comp_id">Enter Company Id</label></span>
+                            	</li>
+                            </ul>
+                        </div>
+					</div>
+					
+					<!--VAT-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="vat">VAT</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="vat" title="Choose from VAT" name="vat">
+                            	<option value="">All </option>
+                            	<option value="1">Yes</option>
+                            	<option value="2">No</option>
+                           	</select>
+                        </div>
+                    </div>
+					
+					
+					<!--report in currenct-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="currency">Report in Currency</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="currency" title="select report in currency" name="currency">
+								<option value="" selected="true">Select Report in Currency</option><option value="GBP">GBP</option><option value="EUR">EUR</option><option value="USD" selected="true">USD</option><option value="">---</option><option value="AUD">AUD</option><option value="THB">THB</option><option value="BGN">BGN</option><option value="CAD">CAD</option><option value="HRK">HRK</option><option value="CYP">CYP</option><option value="CZK">CZK</option><option value="DKK">DKK</option><option value="HUF">HUF</option><option value="HKD">HKD</option><option value="ISK">ISK</option><option value="EEK">EEK</option><option value="LVL">LVL</option><option value="MYR">MYR</option><option value="MTL">MTL</option><option value="NZD">NZD</option><option value="NOK">NOK</option><option value="PHP">PHP</option><option value="PLN">PLN</option><option value="ZAR">ZAR</option><option value="RON">RON</option><option value="RUB">RUB</option><option value="SAR">SAR</option><option value="ILS">ILS</option><option value="SGD">SGD</option><option value="SKK">SKK</option><option value="SEK">SEK</option><option value="CHF">CHF</option><option value="LTL">LTL</option><option value="TRY">TRY</option><option value="KRW">KRW</option><option value="JPY">JPY</option><option value="CNY">CNY</option>
+                           	</select>
+                        </div>
+                    </div>	 
+			</div>
+			<div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="reset" class="btn_normal btn_grey" value="Reset" id="btn_reset1" aria-label="Reset Filter Options" />
+					<input type="button" onclick="$('#msi_link_dialog').dialog('close');" class="btn_normal btn_grey" value="Cancel" id="btn_reset1" aria-label="Reset Filter Options" /></div>
+                    <div class="form_action_right">
+					<button type="button" class="btn_normal btn_primary" title="Apply" style="float: right;" title="apply filter options" onclick="msi()">Apply</button>
+					</div>
+                    <br class="clear"/>
+					<script>
+					function msi() {
+								var myWindow = window.open("msi.html", "_self");
+								
+							}
+					</script>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+	
+</div>
+
+<!--Card Spend Summary Statics Dialog-->
+<div id="cssi_link_dialog" title="Card Spend Summary Statics Filter" role="dialog" aria-labelledby="cssi_filter">
+	<div class="dialog_header">
+	    <h1 id="cssi_filter">Card Spend Summary Statics Filter</h1>
+    </div>
+	<div class="form_row_divider"></div>
+	 <div class="dialog_content">
+	 <form class="fd_form" action="#" id="apply_filters_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+					
+					<!--Date range-->
+					<div class="form_row inline">
+                            <div class="form_label">
+                            <label for="date">Date Range</label>
+                        </div>
+                        <div class="form_date" id="date">
+                            <ul>
+                                <li>
+                                	<label for="filter_date_from" title="Enter From Date" aria-hidden="true">From Date</label>
+                                	<input type="text" name="filter_date_from" class="date_picker" placeholder="From Date" id="filter_date_from" aria-label="Format date as DD/MM/YYYY" />
+                                </li>
+                                <li><span class="date_spacer">-</span></li>
+                                <li>
+                                	<label for="filter_date_to" title="Enter To Date" aria-hidden="true">To Date</label>
+                                	<input type="text" name="filter_date_to" class="date_picker" placeholder="To Date" id="filter_date_to"  aria-label="Format date as DD/MM/YYYY" />
+                                </li>
+                            </ul>
+                            <br class="clear"/>
+                        </div>
+                    </div>
+					
+					<!--Bank-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="bank">Bank</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="bank" title="select the bank" name="bank">
+								<option value="">Select Bank</option>
+                            	<option value="">WELLS FARGO</option>
+                            	
+                           	</select>
+                        </div>
+                    </div>
+					
+					<!--cycle-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="cycle">Product</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="cycle" title="select the cycle" name="cycle">
+								<option value="">Select Product</option>
+                            	<option value="">Consolidated Bill Wells Fargo MasterCard</option>
+                 
+                           	</select>
+                        </div>
+                    </div>
+					
+					<!--cycle-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="cycle">Cycle</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="cycle" title="select the cycle" name="cycle">
+								
+                            	<option value="">All</option>
+                            	<option value="1">cycle 2</option>
+                            	<option value="2">cycle 3</option>
+                            	<option value="3">cycle 4</option>
+                           	</select>
+                        </div>
+                    </div>
+					
+					<!--cycle Date-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="cycle_dt">Cycle Date</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="cycle_dt" title="select the cycle date" name="cycle_dt">
+							
+                            	<option value="">All</option>
+                            	<option value="1">02/02/2010</option>
+                            	<option value="2">03/03/2009</option>
+                            	<option value="3">04/04/2008</option>
+                           	</select>
+                        </div>
+                    </div>
+					
+					<!--Currency-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="currency">Billing Currency</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="currency" title="select the currency" name="currency">
+								<option value="">Select Billing Currency</option>
+                            	<option value="">USD</option>
+                            	<option value="1">Pound</option>
+                            	<option value="2">Euro</option>
+                            	<option value="3">Rupees</option>
+                           	</select>
+                        </div>
+                    </div>
+					
+					<!--Exchange Rate Set-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="exch_rt_set">Exchange Rate Set</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="exch_rt_set" title="select the exchange rate set" name="exch_rt_set">
+								<option value="">Select Exchange Rate Set </option>
+                            	<option value="1">CITY OF MILFORD set</option>
+                           	</select>
+                        </div>
+                    </div>
+					
+					<!--Report In Currency-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="rprt_cur">Report In Currency</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="rprt_cur" title="report in currency" name="rprt_cur">
+								<option value="">Select Report in Currency</option>
+                            		<option value="" selected="true">Select Report in Currency</option><option value="GBP">GBP</option><option value="EUR">EUR</option><option value="USD" selected="true">USD</option><option value="">---</option><option value="AUD">AUD</option><option value="THB">THB</option><option value="BGN">BGN</option><option value="CAD">CAD</option><option value="HRK">HRK</option><option value="CYP">CYP</option><option value="CZK">CZK</option><option value="DKK">DKK</option><option value="HUF">HUF</option><option value="HKD">HKD</option><option value="ISK">ISK</option><option value="EEK">EEK</option><option value="LVL">LVL</option><option value="MYR">MYR</option><option value="MTL">MTL</option><option value="NZD">NZD</option><option value="NOK">NOK</option><option value="PHP">PHP</option><option value="PLN">PLN</option><option value="ZAR">ZAR</option><option value="RON">RON</option><option value="RUB">RUB</option><option value="SAR">SAR</option><option value="ILS">ILS</option><option value="SGD">SGD</option><option value="SKK">SKK</option><option value="SEK">SEK</option><option value="CHF">CHF</option><option value="LTL">LTL</option><option value="TRY">TRY</option><option value="KRW">KRW</option><option value="JPY">JPY</option><option value="CNY">CNY</option>
+                           	</select>
+                        </div>
+                    </div>	 
+			</div>
+			<div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="reset" class="btn_normal btn_grey" value="Reset" id="btn_reset1" aria-label="Reset Filter Options" />
+					<input type="button" onclick="$('#cssi_link_dialog').dialog('close');" class="btn_normal btn_grey" value="Cancel" id="btn_reset1" aria-label="Reset Filter Options" /></div>
+                    <div class="form_action_right">
+					<button type="button" class="btn_normal btn_primary" style="float: right;" title="apply filter options" onclick="cssi()">Apply</button>
+					</div>
+                    <br class="clear"/>
+					<script>
+					function cssi() {
+								var myWindow = window.open("cssi.html", "_self");
+							}
+					</script>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+	
+</div>
+
+<!--Inactive Cards Report Statics Dialog-->
+<div id="icri_link_dialog" title="Inactive Cards Report Statics Filter" role="dialog" aria-labelledby="icri_filter">
+	<div class="dialog_header">
+	    <h1 id="icri_filter">Inactive Cards Report Statics Filter</h1>
+    </div>
+	<div class="form_row_divider"></div>
+	 <div class="dialog_content">
+	 <form class="fd_form" action="#" id="apply_filters_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+				
+				<!--Billing A/C-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="crd_status">Billing acc0untt</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="crd_status" title="select the card status" name="crd_status">
+								<option value="">Select the Billing acc0untt</option>
+                            	<option value="">************4094 </option>
+                            	
+                           	</select>
+                        </div>
+                    </div>	 
+					
+					<!--From Date-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            From Date
+                        </div>
+                        <div class="form_date">
+                            <ul>
+                                <li>
+                                	<label for="filter_date_from" title="Enter From Date" aria-hidden="true">From Date</label>
+                                	<input type="text" name="filter_date_from" class="date_picker" placeholder="From Date" id="filter_date_from" aria-label="Format date as DD/MM/YYYY" />
+                                </li>
+                                
+                            </ul>
+                            <br class="clear"/>
+                        </div>
+                    </div>
+					
+					<!--Card Status-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="crd_status">Card Status</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="crd_status" title="select the card status" name="crd_status">
+							<option value="" selected="true">All</option><option value="2">Active</option><option value="3">Inactive</option><option value="4">Active and Inactive</option><option value="5">Closed</option>
+                           	</select>
+                        </div>
+                    </div>	 
+			</div>
+			
+			<div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="reset" class="btn_normal btn_grey" value="Reset" id="btn_reset1" aria-label="Reset Filter Options" />
+					<input type="button" class="btn_normal btn_grey" onclick="$('#icri_link_dialog').dialog('close');" value="Cancel" id="btn_reset1" aria-label="Reset Filter Options" /></div>
+                    <div class="form_action_right">
+					<button type="button" class="btn_normal btn_primary" style="float: right;" title="apply filter options" onclick="valid()">Apply</button>
+					</div>
+                    <br class="clear"/>
+					<script>
+					function valid() {
+					var today = new Date();
+					alert(today);
+					var dd = today.getDate();
+					var mm = today.getMonth()+1; //January is 0!
+					var yyyy = today.getFullYear();
+					var oneDay= 24*60*60*1000;//hours*minutes*seconds*milliseconds
+					if(dd<10) {
+						dd='0'+dd
+					} 
+
+					if(mm<10) {
+						mm='0'+mm
+					} 
+
+					today = mm+'/'+dd+'/'+yyyy;
+					var fromDate='02/05/2015';
+					var startDate=new Date(fromDate);
+					var endDate=new Date(today);
+					var diffDays= Math.round(Math.abs((startDate.getTime() - endDate.getTime())/(oneDay)));
+					alert(diffDays);
+				}
+					</script>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+	
+</div>
+
+<!--MCC Merchant Statics Dialog-->
+<div id="mcc_link_dialog" title="MCC Merchant Statics Filter" role="dialog" aria-labelledby="mcc_filter">
+	<div class="dialog_header">
+	    <h1 id="mcc_filter">MCC Merchant Statics Filter</h1>
+    </div>
+	<div class="form_row_divider"></div>
+	 <div class="dialog_content">
+	 <form class="fd_form" action="#" id="apply_filters_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+					
+					<!--Date range-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            Date Range
+                        </div>
+                        <div class="form_date">
+                            <ul>
+                                <li>
+                                	<label for="filter_date_from" title="Enter From Date" aria-hidden="true">From Date</label>
+                                	<input type="text" name="filter_date_from" class="date_picker" placeholder="From Date" id="filter_date_from" aria-label="Format date as DD/MM/YYYY" />
+                                </li>
+                                <li><span class="date_spacer">-</span></li>
+                                <li>
+                                	<label for="filter_date_to" title="Enter To Date" aria-hidden="true">To Date</label>
+                                	<input type="text" name="filter_date_to" class="date_picker" placeholder="To Date" id="filter_date_to"  aria-label="Format date as DD/MM/YYYY" />
+                                </li>
+                            </ul>
+                            <br class="clear"/>
+                        </div>
+                    </div>
+					
+					<!--Merchant-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="merchant">Merchant</label>
+                        </div>
+                        <div class="form_select form_input split_options">
+                        	<ul>
+                            	
+                                <li>
+                            		<input id="merchant" name="merchant" aria-label="Enter Merchant" title="enter merchant" type="text"><span class="hidden_label"><label for="merchant">Enter Merchant</label></span>
+                            	</li>
+                            </ul>
+                        </div>
+					</div>
+					
+					<!--Currency-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="currency">Billing Currency</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="currency" title="select the currency" name="currency">
+								<option value="">All</option>
+                            	<option value="">USD</option>
+                            	<option value="1">Pound</option>
+                            	<option value="2">Euro</option>
+                            	<option value="3">Rupees</option>
+                           	</select>
+                        </div>
+                    </div>
+					
+					<!--Exchange Rate Set-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="exch_rt_set">Exchange Rate Set</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="exch_rt_set" title="Choose From Exchange rate set" name="exch_rt_set">
+                            	<option value="">Select Exchange Rate Set </option>
+                            	<option value="1">CITY OF MALFORD Set</option>
+                            	
+                           	</select>
+                        </div>
+                    </div>
+					
+					<!--report in currenct-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="currency">Report in Currency</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="currency" title="select report in currency" name="currency">
+								<option value="">Select Report in Currency</option><option value="GBP">GBP</option><option value="EUR">EUR</option><option value="USD" selected="true">USD</option><option value="">---</option><option value="AUD">AUD</option><option value="THB">THB</option><option value="BGN">BGN</option><option value="CAD">CAD</option><option value="HRK">HRK</option><option value="CYP">CYP</option><option value="CZK">CZK</option><option value="DKK">DKK</option><option value="HUF">HUF</option><option value="HKD">HKD</option><option value="ISK">ISK</option><option value="EEK">EEK</option><option value="LVL">LVL</option><option value="MYR">MYR</option><option value="MTL">MTL</option><option value="NZD">NZD</option><option value="NOK">NOK</option><option value="PHP">PHP</option><option value="PLN">PLN</option><option value="ZAR">ZAR</option><option value="RON">RON</option><option value="RUB">RUB</option><option value="SAR">SAR</option><option value="ILS">ILS</option><option value="SGD">SGD</option><option value="SKK">SKK</option><option value="SEK">SEK</option><option value="CHF">CHF</option><option value="LTL">LTL</option><option value="TRY">TRY</option><option value="KRW">KRW</option><option value="JPY">JPY</option><option value="CNY">CNY</option>
+                           	</select>
+                        </div>
+                    </div>	 
+			</div>
+			<div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="reset" class="btn_normal btn_grey" value="Reset" id="btn_reset1" aria-label="Reset Filter Options" /><input type="reset" class="btn_normal btn_grey" value="Cancel" id="btn_reset1" aria-label="Reset Filter Options" /></div>
+                    <div class="form_action_right">
+					<button type="button" class="btn_normal btn_primary" style="float: right;" title="apply filter options" onclick="mcc()">Apply</button>
+					</div>
+                    <br class="clear"/>
+					<script>
+					function mcc() {
+								var myWindow = window.open("mcc.html", "_self");
+							}
+					</script>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+	
+</div>
+
+
+<!--MCG Merchant Statics Dialog-->
+<div id="mcg_link_dialog" title="Filters" role="dialog" aria-labelledby="filterTitle" aria-describedby="filterDesc">
+	<div class="dialog_header">
+	    <h1 id="filterTitle">MCG Merchant Statics Filter</h1>
+    </div>
+	<div class="form_row_divider"></div>
+	 <div class="dialog_content">
+	 <form class="fd_form" action="#" id="apply_filters_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+					<!--Date range-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            Date Range
+                        </div>
+                        <div class="form_date">
+                            <ul>
+                                <li>
+                                	<label for="filter_date_from" title="Enter From Date" aria-hidden="true">From Date</label>
+                                	<input type="text" name="filter_date_from" class="date_picker" placeholder="From Date" id="filter_date_from" aria-label="Format date as DD/MM/YYYY" />
+                                </li>
+                                <li><span class="date_spacer">-</span></li>
+                                <li>
+                                	<label for="filter_date_to" title="Enter To Date" aria-hidden="true">To Date</label>
+                                	<input type="text" name="filter_date_to" class="date_picker" placeholder="To Date" id="filter_date_to"  aria-label="Format date as DD/MM/YYYY" />
+                                </li>
+                            </ul>
+                            <br class="clear"/>
+                        </div>
+                    </div>
+					
+					<!--Merchant-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="merchant">Merchant</label>
+                        </div>
+                        <div class="form_select form_input split_options">
+                        	<ul>
+                            	
+                                <li>
+                            		<input id="merchant" name="merchant" aria-label="Enter Merchant" title="enter merchant" type="text"><span class="hidden_label"><label for="merchant">Enter Merchant</label></span>
+                            	</li>
+                            </ul>
+                        </div>
+					</div>
+					
+					<!--Currency-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="currency">Billing Currency</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="currency" title="select the currency" name="currency">
+								<option value="">Select Billing Currency</option>
+                            	<option value="">USD</option>
+                            	<option value="1">Pound</option>
+                            	<option value="2">Euro</option>
+                            	<option value="3">Rupees</option>
+                           	</select>
+                        </div>
+                    </div>
+					
+					<!--Exchange Rate Set-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="exch_rt_set">Exchange Rate Set</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="exch_rt_set" title="Choose From Exchange rate set" name="exch_rt_set">
+                            	<option value="">Select Exchange Rate Set </option>
+                            	<option value="1">CITY OF MALFORD Set</option>
+                           	</select>
+                        </div>
+                    </div>
+					
+					<!--report in currenct-->
+					<div class="form_row inline">
+                        <div class="form_label">
+                            <label for="currency">Report in Currency</label>
+                        </div>
+                        <div class="form_select">
+                        	<select class="moz_custom" id="currency" title="select report in currency" name="currency">
+								<option value="">Select Report in Currency</option><option value="GBP">GBP</option><option value="EUR">EUR</option><option value="USD" selected="true">USD</option><option value="">---</option><option value="AUD">AUD</option><option value="THB">THB</option><option value="BGN">BGN</option><option value="CAD">CAD</option><option value="HRK">HRK</option><option value="CYP">CYP</option><option value="CZK">CZK</option><option value="DKK">DKK</option><option value="HUF">HUF</option><option value="HKD">HKD</option><option value="ISK">ISK</option><option value="EEK">EEK</option><option value="LVL">LVL</option><option value="MYR">MYR</option><option value="MTL">MTL</option><option value="NZD">NZD</option><option value="NOK">NOK</option><option value="PHP">PHP</option><option value="PLN">PLN</option><option value="ZAR">ZAR</option><option value="RON">RON</option><option value="RUB">RUB</option><option value="SAR">SAR</option><option value="ILS">ILS</option><option value="SGD">SGD</option><option value="SKK">SKK</option><option value="SEK">SEK</option><option value="CHF">CHF</option><option value="LTL">LTL</option><option value="TRY">TRY</option><option value="KRW">KRW</option><option value="JPY">JPY</option><option value="CNY">CNY</option>
+                           	</select>
+                        </div>
+                    </div>	 
+					 
+			</div>
+			<div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="reset" class="btn_normal btn_grey" value="Reset" id="btn_reset1" aria-label="Reset Filter Options" /><input type="reset" class="btn_normal btn_grey" value="Cancel" id="btn_reset1" aria-label="Reset Filter Options" /></div>
+                    <div class="form_action_right">
+					<button type="button" class="btn_normal btn_primary" style="float: right;" title="apply filter options" onclick="mcg()">Apply</button>
+					</div>
+                    <br class="clear"/>
+					<script>
+					function mcg() {
+								var myWindow = window.open("mcg.html", "_self");
+							}
+					</script>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+	
+</div>            
+
+<!-- Modal Window for Output Options -->
+<div id="btn_list_output_options" title="Output Options" role="dialog" aria-labelledby="listOutputTitle" aria-describedby="listOutputDesc">
+	<div class="dialog_header">
+	    <h1 id="listOutputTitle">Output Settings</h1>
+    </div>
+    <div id="listOutputDesc" class="dialog_desc">This Dialog allows you to select the output settings of your list.</div>
+    <div class="dialog_content">
+        <form class="fd_form" action="#" id="output_settings_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+                
+                	<script type="text/javascript">
+					
+						
+						function radioBtnStatus() {
+								var outputChoice = $('input[name="output_choice"]');
+																
+								outputChoice.each(function () {
+									if ($(this).prop('checked')) {
+										var radioID = $(this).attr('id');
+										
+										if (radioID == 'output_all_visible'){
+											$('#output_default_options').show();
+										}
+										
+										if (radioID == 'output_all_columns'){
+											$('#output_default_options').show();
+										}
+										
+										if (radioID == 'output_standard'){
+											$('#output_default_options').show();
+										}
+										
+										if (radioID == 'output_quicken'){
+											$('#output_quicken_options').show();
+										}
+										
+										if (radioID == 'output_quickbooks'){
+											$('#output_quickbooks_options').show();
+										}
+										
+									} else {
+										return false;
+									}
+								});
+								
+								$('input[name="output_choice"]').change(function () {
+									if ($(this).prop('checked')) {
+										$('.output_options').hide();
+										var radioIDAlt = $(this).attr('id');
+										
+										if (radioIDAlt == 'output_all_visible'){
+											$('#output_default_options').show();
+											$('#incl_fields_in_detail').removeAttr("disabled");
+										}
+										
+										if (radioIDAlt == 'output_all_columns'){
+											$('#output_default_options').show();
+											$('#incl_fields_in_detail').prop('checked', false);
+											$('#incl_fields_in_detail').attr("disabled", true);
+											
+										}
+										
+										if (radioIDAlt == 'output_standard'){
+											$('#output_default_options').show();
+											$('#incl_fields_in_detail').prop('checked', false);
+											$('#incl_fields_in_detail').attr("disabled", true);
+										}
+										
+										if (radioIDAlt == 'output_quicken'){
+											$('#output_quicken_options').show();
+											$('#incl_fields_in_detail').prop('checked', false);
+											$('#incl_fields_in_detail').attr("disabled", true);
+										}
+										
+										if (radioIDAlt == 'output_quickbooks'){
+											$('#output_quickbooks_options').show();
+											$('#incl_fields_in_detail').prop('checked', false);
+											$('#incl_fields_in_detail').attr("disabled", true);
+										}
+										
+									} else {
+										return false;
+									}
+								});
+							};
+                    </script>
+                
+                	<div class="form_row">
+                    	<fieldset>
+                            <legend class="show_legend">Which columns would you like to output</legend>
+                            <div class="form_radio">
+                                <ul>
+                                    <li><input type="radio" name="output_choice" value="Visible Columns" id="output_all_visible"  aria-label="Output only visible Columns" checked="checked" /><label for="output_all_visible">Visible Columns</label>
+                                        <ul>
+                                            <li id="include_fields_option"><input type="checkbox" name="incl_fields_in_detail" value="Include" id="incl_fields_in_detail"  aria-label="Include the fields in the details panel" /><label for="incl_fields_in_detail">Include the fields in the details panel</label></li>
+                                        </ul>
+                                    </li>
+                                    <li><input type="radio" name="output_choice" value="All Columns" id="output_all_columns"  aria-label="Output All Columns" /><label for="output_all_columns">All Columns</label></li>
+                                    <li><input type="radio" name="output_choice" value="Standard Output" id="output_standard"  aria-label="Output to Standard Format" /><label for="output_standard">Standard Output <span class="help_text">(Outputs the most frequently used columns and standard format)</span></label></li>
+                                    </ul>
+                                <br class="clear"/>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="form_row_divider"></div>
+                    <div class="form_row inline output_options" id="output_default_options" style="display:none;">
+                    	<div class="form_label">
+                        	<label for="output_type">Output File Format</label>
+                        </div>
+                        <div class="form_select">
+                        	<select id="output_type" aria-label="Select Output File Format">
+                            	
+                            	<option value="XLS">Excel (xls)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form_row inline output_options" id="output_quicken_options" style="display:none;">
+                    	<div class="form_label">
+                        	<label for="output_type_quicken">Output File Format</label>
+                        </div>
+                        <div class="form_input">
+                        	<input type="text" id="output_type_quicken" name="output_type_quicken" value="Quicken (OFX)" disabled="disabled" />
+                        </div>
+                    </div>
+                    <div class="form_row inline output_options" id="output_quickbooks_options" style="display:none;">
+                    	<div class="form_label">
+                        	<label for="output_type_quickbooks">Output File Format</label>
+                        </div>
+                        <div class="form_input">
+                        	<input type="text" id="output_type_quickbooks" name="output_type_quickbooks" value="Quickbooks (IIF)" disabled="disabled" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="button" class="btn_normal btn_grey btn_cancel_modal" value="Cancel" id="btn_cancel5" aria-label="Cancel Output Options" /></div>
+                    <div class="form_action_right"><input type="button" class="btn_normal btn_primary" value="Output File" id="btn_output_table" aria-label="Output Schedule File" /></div>
+                    <br class="clear"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+</div>
+                                	 
+</body>
+</html>

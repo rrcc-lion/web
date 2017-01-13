@@ -1,0 +1,943 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Austin Cricket | 360 Austin</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+<meta content="telephone=no" name="format-detection">
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/normalize.css">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.dialog.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.datepicker.css">
+
+<!-- Theme -->
+<link id="theme" rel="stylesheet" type="text/css" href="themes/theme_360.css">
+
+<!-- Print Stylesheet -->
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print">
+
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="css/ie8_style.css" id="theme_ie8" />
+<![endif]-->
+
+<!-- Javascript -->
+<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.4.min.js" ></script>
+
+<script type="text/javascript" src="js/respond.js" ></script>
+
+<!-- Add Common Functions -->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		dropdownContainers();
+		resizeFonts();
+	});
+</script>
+
+</head>
+
+<body class="bg_color_4 easy_view">
+
+<div id="page_container">
+	
+    <!-- Page Header -->
+    <div id="page_header" class="bg_color_2">
+    	<div class="logo_primary">
+        	<div><a href="index.html" title="Company Logo" aria-label="Visit the Homepage">Company Name</a></div>
+        </div>
+        <div class="logo_secondary">
+        	<div class="logo_container" title="Product Logo" aria-label="Product Name">Product Name</div>
+        </div>
+        
+        <div class="user_preferences">
+            <ul>
+            	<li>
+                	<a href="javascript:void[0]" id="style_switcher" class="dd_link" title="Change Application Font Size">aA</a>
+                    <div id="style_switcher_options" style="display:none;" class="dd_option_panel">
+                    	<div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Style Options">Close Style Options Panel</a></div>
+                        <h3 class="color_1">Font Size Options</h3>
+                    	<ul>
+                        	<li><a href="javascript:void(0)" id="font_increase" title="Increase Font Size">Large</a></li>
+                        	<li><a href="javascript:void(0)" id="font_reset" title="Reset Font Size">Normal</a></li>
+                        	<li><a href="javascript:void(0)" id="font_decrease" title="Decrease Font Size">Small</a></li>
+                        </ul>
+                    </div>
+                </li>
+            	<li>
+                	<a href="javascript:void[0]" id="user_preferences" class="dd_link" title="Current User">Zulifqar Ahmad</a>
+                    <div id="user_preferences_options" style="display:none;" class="dd_option_panel">
+                    	<div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close User Preferences">Close User Options Panel</a></div>
+                        <h3 class="color_1">User Preferences</h3>
+                        <div class="user_profile_panel">
+                        	<div class="info_user">Zulifqar Ahmad</div>
+                            <div class="info_location"><span>Role: </span>Programme Administrator</div>
+                            <div class="info_company"><span>Company: </span>Acme Holdings</div>
+                            <div class="info_structure"><span>Structure: </span>North America</div>
+                            <div class="info_cas"><span>CAS: </span>FDC <a href="javascript:void(0)" aria-label="Change CAS Selection" id="change_cas_link">(Change)</a></div>
+                        </div>
+                        <div class="info_history"><span>Last logged in at:</span> 14/03/2016, 20:05</div>
+                    	<ul>
+                        	<li><a href="javascript:void(0)">Change pa55word</a></li>
+                        	<li><a href="javascript:void(0)">Change Username</a></li>
+                        	<li><a href="javascript:void(0)">Language - English US</a></li>
+                        	<li><a href="dashboard.html">Switch to Full View</a></li>
+                        	<li><a href="javascript:void(0)">Timezone - EST (Eastern Standard Time)</a></li>
+                        	<li><a href="javascript:void(0)">Email Notifications for card changes</a></li>
+                        </ul>
+                    </div>
+
+                </li>
+                <li>
+                	<a href="index.html" title="Logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="print_header" aria-hidden="true" style="display:none;">
+        <div class="logo_primary">
+            <div><img src="images/img_logo_dark_first_data_x2.png" alt="Product Specific Logo showing 360 Austin" title="360 Austin Logo" /></div>
+        </div>
+        <div class="logo_secondary">
+            <div><img src="images/img_logo_dark_360Control_x2.png" alt="Product Specific Logo showing 360 Austin" title="360 Austin Logo" /></div>
+        </div>
+        <br class="clear"/>
+    </div>
+    
+    
+    <!-- Page Body -->
+    <div id="page_body">
+    
+    	<div id="page_content">
+        	<!-- Page Title -->
+            <div class="page_title">
+                <h1>Schedule</h1>
+                
+                <div class="card_switcher">
+                	<span>My Card - 8379</span>
+                </div>
+                <br class="clear"/>
+            </div>
+            
+            <div class="search">
+            	
+            
+                <!-- Search and Filters -->
+                <div class="find_container">
+                    <div id="find_input_container">
+                        <form action="#" id="search_form">
+                            <span class="hidden_label"><label for="find_input">Search</label></span>
+                            <input type="text" id="find_input" class="search_input" name="find_input" aria-invalid="false" />
+                            <input type="submit" title="Submit Search Query Button" value="Search" id="btn_find" />
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Period Chooser -->
+                <div class="period_chooser">
+                	<form action="#" class="fd_form" id="period_selector">
+                    	<div class="form_container">
+                        	<div class="form_row inline">
+                            	<div class="form_label" style="width:100px;"><label for="period_selector_select">Select Period</label></div>
+                                <div class="form_select" style="width:300px;">
+                                	<select id="period_selector_select" aria-label="Select the period you want to view transactions for" style="width:180px; float:left;">
+                                    	<option value="12/03/2016 - 13/03/2016">12/03/2016 - 13/03/2016</option>
+                                    	<option value="11/03/2016 - 12/03/2016">11/03/2016 - 12/03/2016</option>
+                                    	<option value="10/03/2016 - 11/03/2016">10/03/2016 - 11/03/2016</option>
+                                    	<option value="09/03/2016 - 10/03/2016">09/03/2016 - 10/03/2016</option>
+                                    	<option value="08/03/2016 - 09/03/2016">08/03/2016 - 09/03/2016</option>
+                                    </select>
+                                    <input type="submit" value="Apply" class="btn_normal btn_primary" aria-label="Apply selected range to results" style="margin-left:5px;"/>
+                                	<input type="button" value="Date Range" id="switch_to_range_btn" aria-label="Switch Selector from Period Selector to Date Range Inputs"/>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <!-- JQuery Datepicker -->
+					<script type="text/javascript">
+                        $(function() {
+                            $('.date_picker').datepicker({
+                                showOn:'button',
+								buttonText: "Datepicker"
+                            });
+                        });
+						
+						$(document).ready(function(){	
+							// Hide the Range Period onload
+							$('#period_range').hide();
+									
+							// Remove Filters from List		
+							$("#switch_to_range_btn").click(function(){
+								$('#period_selector').hide();
+								$('#period_range').show();
+								$('#filter_date_from').focus();
+							});
+							
+							// Remove Filters from List		
+							$("#switch_to_period_btn").click(function(){
+								$('#period_selector').show();
+								$('#period_range').hide();
+								$('#period_selector_select').focus();
+							});
+						});
+                    </script>
+                    
+                    <form action="#" class="fd_form" id="period_range">
+                    	<div class="form_container">
+                        	<div class="form_row inline">
+                                <div class="form_label" style="width:100px;">
+                                    <label>Date Range</label>
+                                </div>
+                                <div class="form_date" style="width:350px;">
+                                    <ul style="width:250px;">
+                                        <li>
+                                            <label for="filter_date_from" title="Enter From Date">From Date</label>
+                                            <input type="text" name="filter_date_from" class="date_picker" id="filter_date_from" aria-label="Format date as DD/MM/YYYY" />
+                                        </li>
+                                        <li><span class="date_spacer">-</span></li>
+                                        <li>
+                                            <label for="filter_date_to" title="Enter To Date">To Date</label>
+                                            <input type="text" name="filter_date_to" class="date_picker" id="filter_date_to"  aria-label="Format date as DD/MM/YYYY" />
+                                        </li>
+                                    </ul>
+                                    <input type="submit" value="Apply" class="btn_normal btn_primary" aria-label="Apply selected range to results" style="margin-left:5px;" />
+                                	<input type="button" value="Selector" id="switch_to_period_btn" aria-label="Switch Selector from Date Range Inputs to Period Dropdown"/>
+                                    <br class="clear"/>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <br class="clear">
+            </div>
+            
+
+        	<div id="page_content_inner">
+                <div id="grid_view_easy">
+                
+                	<script type="text/javascript">
+						$(document).ready(function(){
+						
+							// add tabindex and id to all the relevant tr's & inputs to make them focusable
+							$(function() {
+								var tabIndexNumber = 2;
+									$('tr.parent, tr.child').each(function() {
+									$(this).attr('tabindex', tabIndexNumber);
+									tabIndexNumber += 1;
+								});
+							
+								$('tr.parent ').each(function() {
+									$(this).addClass('focusable');
+								});
+							});
+							
+							// add id to all the relevant tr's 
+							$(function() {
+								var idNumber = 1;
+								$('#grid_table tbody tr').each(function() {
+									$(this).attr('id', 'row_' + idNumber);
+									idNumber += 1;
+								});
+							});
+
+							// Add unique ID to toggle switch for Table Row
+							$(function() {
+								var transNumber = 1;
+								$('#grid_table tbody tr input:button').each(function() {
+									$(this).attr('id', 'trans_btn_' + transNumber);
+									transNumber += 1;
+								});
+							});
+							
+							
+							// Add selected cloass to table row focused
+							$("#grid_table tbody tr").focusin(function (e) {
+								$(this).addClass('highlight');
+							});
+							
+							$("#grid_table tbody tr").focusout(function (e) {
+								$(this).removeClass('highlight');
+							});
+							
+							$("#grid_table tbody tr").mouseup(function (e) {
+								$(this).addClass('highlight');
+							});
+							
+							
+							// If you press enter it will toggle the checkbox status
+							$("#grid_table tbody tr").keydown(function (e) {
+								//Only apply logic if table row is focused
+								if ($(this).hasClass('highlight')) {
+									
+									//If you push the down arrow
+									if (e.keyCode === 40) {
+										var currentselected = $(this);
+										var nextitem = $(currentselected).nextAll("tr.focusable:first");
+										if (nextitem.length > 0) {
+											$(currentselected).removeClass('highlight');
+											$(nextitem).addClass('highlight').focus();
+										}
+										return false;
+									}
+								
+									//If you push the up arrow
+									if (e.keyCode === 38) {
+										var currentselected = $(this);
+										var previtem = $(currentselected).prevAll("tr.focusable:first");
+										if (previtem.length > 0) {
+											$(currentselected).removeClass('highlight');
+											$(previtem).addClass('highlight').focus();
+										}
+										return false;
+									}
+								}
+							});
+							
+							
+							// **********************
+							// Manage Keyup Behaviors
+							// **********************
+							
+							// Show or hide row details when using side arrow
+							$(".parent").keydown(function(e){
+								if(e.keyCode==39){
+									$(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').show();
+									$(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').addClass('focusable');
+									$(this).closest('tr.parent').children('td.toggle_cell').children('input').addClass('isOpen');
+								}
+								
+								if(e.keyCode==37){
+									$(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').hide();
+									$(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').removeClass('focusable');
+									$(this).closest('tr.parent').children('td.toggle_cell').children('input').removeClass('isOpen');
+								}
+							});
+							
+							$(".child").keydown(function (e) {
+								if (e.keyCode == 37) {
+									var currentselectedchild = $(this);
+									var parentitem = $(currentselectedchild).prevAll("tr.parent.focusable:first");
+									$(parentitem).nextUntil('tr.parent').not('tr.parent').hide();
+									$(parentitem).nextUntil('tr.parent').not('tr.parent').removeClass('focusable').removeClass('highlight');
+									$(parentitem).addClass('highlight').focus();
+									$(parentitem).children('td.toggle_cell').children('input').removeClass('isOpen');
+								}
+							});
+							
+							
+							$(".btn_trans_toggle").click(function(event){
+								event.preventDefault();
+								if ($(this).hasClass("isOpen") ) {
+									$(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').hide();
+									$(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').removeClass('focusable');
+									$(this).removeClass('isOpen');
+								} else {
+									$(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').show();
+									$(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').addClass('focusable');
+									$(this).addClass('isOpen');
+								}
+								return false;
+							});
+							
+							$(".btn_toggle_addendum").click(function(event){
+								event.preventDefault();
+								if ($(this).hasClass("isOpen") ) {
+									$('tr.parent').nextUntil('tr.parent').not('tr.parent').hide();
+									$('tr.parent').nextUntil('tr.parent').not('tr.parent').removeClass('focusable');
+									$('.btn_trans_toggle').removeClass('isOpen');
+									$(this).removeClass('isOpen');
+								} else {
+									$('tr.parent').nextUntil('tr.parent').not('tr.parent').show();
+									$('tr.parent').nextUntil('tr.parent').not('tr.parent').addClass('focusable');
+									$('.btn_trans_toggle').addClass('isOpen');
+									$(this).addClass('isOpen');
+								}
+								return false;
+							});
+							
+						});
+                    </script>
+                    
+                	<!-- Schedule Grid -->
+                    <table id="grid_table" class="grid_table" aria-label="Schedule - All Members. To navigate between the table rows use the up and down arrow keys.">
+                        <caption>Schedule - All Members</caption>
+                        <thead>
+                            <tr>
+                                <th id="col_toggle_switch"><input type="button" value="toggle_addendum" class="btn_toggle_addendum" title="VToggle View Addendum Items" aria-label="Toggle View Addendum Items"></th>
+                                <th id="col_date">
+                                	<span class="date_switch_container">
+                                        <a href="javascript:void[0]" id="switch_date_sort" class="dd_link" title="Change which date format you want to use">Schedule Date</a>
+                                        <span id="switch_date_sort_options" style="display:none; right:auto; left:0px; font-size:12px;" class="dd_option_panel">
+                                            <span class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Date Column Format Options">Close Date Column Format Options Panel</a></span>
+                                            <ul class="card_list">
+                                                <li><a href="#trans_date">Schedule Date</a></li>
+                                                <li><a href="#posting_date">Posting Date</a></li>
+                                            </ul>
+                                        </span>
+                                    </span>
+                     				<a href="#" class="sortswitch active ascending" title="Sorted Ascending"><img src="images/icon_sort_indicator.png" alt="Sort Ascending / Descending Icon"/></a></th>
+                                <th id="col_merchant">Merchant <a href="#" class="sortswitch" title="Sort by this Column"><img src="images/icon_sort_indicator.png" alt="Sort Ascending / Descending Icon"/></a></th>
+                                <th id="col_billing_amt" class="text_right">Amount <a href="#" class="sortswitch" title="Sort by this Column"><img src="images/icon_sort_indicator.png" alt="Sort Ascending / Descending Icon"/></a></th>
+                                <th id="col_go_cell"><span aria-label='This column is used as a placeholder to hold the button to view transaction details' class="hidden_table_label">View Full Details Column</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="parent">
+                                <td class="toggle_cell"><input type="button" value="4" class="btn_trans_toggle" title="View Schedule Split / Line Items" aria-label="View Schedule Split / Line Items for this transaction" /></td>
+                                <td>12/09/2016</td>
+                                <td>Crown Plaza - 73642</td>
+                                <td class="value_cell">1,360.00 <span class="currency">USD</span></td>
+                                <td class="go_cell"><input type="button" value="View" class="btn_launch_transaction" aria-label="View Schedule Details" onClick="window.location='easy_transaction_details.html'" /></td>
+                            </tr>
+                            <tr class="child split_item">
+                                <td class="toggle_cell"></td>
+                                <td><span class="icon_child_type"><span><img src="images/icon_line_split_item_x2.png" alt="Image for Line Item or Split Item"/></span>1</span></td>
+                                <td colspan="1"><div class="child_details_container">Nights - Room Rate<span class="child_row_details">3 units @ 330.00<span class="currency">USD</span></span></div></td>
+                                <td class="value_cell">990.00 <span class="currency">USD</span></td>
+                                <td class="go_cell"><input type="button" value="View" class="btn_launch_transaction" aria-label="View Schedule Details" onClick="window.location='easy_line_item_details.html'" /></td>
+                            </tr>
+                            <tr class="child split_item">
+                                <td class="toggle_cell"></td>
+                                <td><span class="icon_child_type"><span><img src="images/icon_line_split_item_x2.png" alt="Image for Line Item or Split Item"/></span>2</span></td>
+                                <td colspan="1"><div class="child_details_container">Restaurant - Evening Meal<span class="child_row_details">1 unit @ 100.00<span class="currency">USD</span></span></div></td>
+                                <td class="value_cell">100.00 <span class="currency">USD</span></td>
+                                <td class="go_cell"><input type="button" value="View" class="btn_launch_transaction" aria-label="View Schedule Details" onClick="window.location='easy_line_item_details.html'" /></td>
+                            </tr>
+                            <tr class="child split_item">
+                                <td class="toggle_cell"></td>
+                                <td><span class="icon_child_type"><span><img src="images/icon_line_split_item_x2.png" alt="Image for Line Item or Split Item"/></span>3</span></td>
+                                <td colspan="1"><div class="child_details_container">Restaurant - Evening Meal<span class="child_row_details">1 unit @ 250.00<span class="currency">USD</span></span></div></td>
+                                <td class="value_cell">250.00 <span class="currency">USD</span></td>
+                                <td class="go_cell"><input type="button" value="View" class="btn_launch_transaction" aria-label="View Schedule Details" onClick="window.location='easy_line_item_details.html'" /></td>
+                            </tr>
+                            <tr class="child split_item">
+                                <td class="toggle_cell"></td>
+                                <td><span class="icon_child_type"><span><img src="images/icon_line_split_item_x2.png" alt="Image for Line Item or Split Item"/></span>4</span></td>
+                                <td colspan="1"><div class="child_details_container">Restaurant - Evening Meal<span class="child_row_details">1 unit @ 20.00<span class="currency">USD</span></span></div></td>
+                                <td class="value_cell">20.00 <span class="currency">USD</span></td>
+                                <td class="go_cell"><input type="button" value="View" class="btn_launch_transaction" aria-label="View Schedule Details" onClick="window.location='easy_line_item_details.html'" /></td>
+                            </tr>
+                            <tr class="parent">
+                                <td class="toggle_cell"><input type="button" value="2" class="btn_trans_toggle" title="View Schedule Split / Line Items" aria-label="View Schedule Split / Line Items for this transaction"></td>
+                                <td>12/09/2016</td>
+                                <td>Hertz Geneva GVA *94838224329</td>
+                                <td class="value_cell">11,637.00 <span class="currency">USD</span></td>
+                                <td class="go_cell"><input type="button" value="View" class="btn_launch_transaction" aria-label="View Schedule Details" onClick="window.location='easy_transaction_details.html'" /></td>
+                            </tr>
+                            <tr class="child line_item">
+                                <td class="toggle_cell"></td>
+                                <td><span class="icon_child_type"><span><img src="images/icon_line_split_item_x2.png" alt="Image for Line Item or Split Item"/></span>1</span></td>
+                                <td colspan="1"><div class="child_details_container">Restaurant - Evening Meal<span class="child_row_details">1 unit @ 250.00<span class="currency">USD</span></span></div></td>
+                                <td class="value_cell">250.00 <span class="currency">USD</span></td>
+                                <td class="go_cell"><input type="button" value="View" class="btn_launch_transaction" aria-label="View Schedule Details" onClick="window.location='easy_line_item_details.html'" /></td>
+                            </tr>
+                            <tr class="child line_item">
+                                <td class="toggle_cell"></td>
+                                <td><span class="icon_child_type"><span><img src="images/icon_line_split_item_x2.png" alt="Image for Line Item or Split Item"/></span>2</span></td>
+                                <td colspan="1"><div class="child_details_container">Restaurant - Evening Meal<span class="child_row_details">1 unit @ 20.00<span class="currency">USD</span></span></div></td>
+                                <td class="value_cell">20.00 <span class="currency">USD</span></td>
+                                <td class="go_cell"><input type="button" value="View" class="btn_launch_transaction" aria-label="View Schedule Details" onClick="window.location='easy_line_item_details.html'" /></td>
+                            </tr>
+                            <tr class="parent">
+                                <td class="toggle_cell"></td>
+                                <td>12/09/2016</td>
+                                <td>Crown Plaza - 73642</td>
+                                <td class="value_cell">1,864.00 <span class="currency">USD</span></td>
+                                <td class="go_cell"><input type="button" value="View" class="btn_launch_transaction" aria-label="View Schedule Details" onClick="window.location='easy_transaction_details.html'" /></td>
+                            </tr>
+                            <tr class="parent">
+                                <td class="toggle_cell"></td>
+                                <td>12/09/2016</td>
+                                <td>Airport Transfers Ltd. Houston</td>
+                                <td class="value_cell">9,644.00 <span class="currency">USD</span></td>
+                                <td class="go_cell"><input type="button" value="View" class="btn_launch_transaction" aria-label="View Schedule Details" onClick="window.location='easy_transaction_details.html'" /></td>
+                            </tr>
+                            <tr class="parent">
+                                <td class="toggle_cell"></td>
+                                <td>12/09/2016</td>
+                                <td>Hilton Garden Inn - Indianapolis</td>
+                                <td class="value_cell">8,649.00 <span class="currency">USD</span></td>
+                                <td class="go_cell"><input type="button" value="View" class="btn_launch_transaction" aria-label="View Schedule Details" onClick="window.location='easy_transaction_details.html'" /></td>
+                            </tr>
+                            <tr class="parent">
+                                <td class="toggle_cell"></td>
+                                <td>12/09/2016</td>
+                                <td>Crown Plaza - 73642</td>
+                                <td class="value_cell">7,654.00 <span class="currency">USD</span></td>
+                                <td class="go_cell"><input type="button" value="View" class="btn_launch_transaction" aria-label="View Schedule Details" onClick="window.location='easy_transaction_details.html'" /></td>
+                            </tr>
+                            <tr class="parent">
+                                <td class="toggle_cell"></td>
+                                <td>12/09/2016</td>
+                                <td>Crown Plaza - 73642</td>
+                                <td class="value_cell">5,236.00 <span class="currency">USD</span></td>
+                                <td class="go_cell"><input type="button" value="View" class="btn_launch_transaction" aria-label="View Schedule Details" onClick="window.location='easy_transaction_details.html'" /></td>
+                            </tr>
+                            <tr class="parent">
+                                <td class="toggle_cell"></td>
+                                <td>12/09/2016</td>
+                                <td>Hertz Geneva GVA *94838224329</td>
+                                <td class="value_cell">4,974.00 <span class="currency">USD</span></td>
+                                <td class="go_cell"><input type="button" value="View" class="btn_launch_transaction" aria-label="View Schedule Details" onClick="window.location='easy_transaction_details.html'" /></td>
+                            </tr>
+                            <tr class="parent">
+                                <td class="toggle_cell"></td>
+                                <td>12/09/2016</td>
+                                <td>Crown Plaza - 73642</td>
+                                <td class="value_cell">4,938.00 <span class="currency">USD</span></td>
+                                <td class="go_cell"><input type="button" value="View" class="btn_launch_transaction" aria-label="View Schedule Details" onClick="window.location='easy_transaction_details.html'" /></td>
+                            </tr>
+                            <tr class="parent">
+                                <td class="toggle_cell"></td>
+                                <td>12/09/2016</td>
+                                <td>Airport Geneva GVA *94838224329</td>
+                                <td class="value_cell">5,432.00 <span class="currency">USD</span></td>
+                                <td class="go_cell"><input type="button" value="View" class="btn_launch_transaction" aria-label="View Schedule Details" onClick="window.location='easy_transaction_details.html'" /></td>
+                            </tr>
+                            <tr class="parent">
+                                <td class="toggle_cell"></td>
+                                <td>12/09/2016</td>
+                                <td>Airport Transfers Ltd. Houston</td>
+                                <td class="value_cell">3,424.00 <span class="currency">USD</span></td>
+                                <td class="go_cell"><input type="button" value="View" class="btn_launch_transaction" aria-label="View Schedule Details" onClick="window.location='easy_transaction_details.html'" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="grid_controls">
+                    <div id="row_count_selector">
+                        <input type="button" class="btn_normal btn_grey" value="View All" title="View All Schedule" />
+                        <div class="row_result">
+                            1-10 of 14 Transations
+                        </div>
+                    </div>
+                    
+                    <div id="grid_actions">
+                        <ul>
+                            <li><input type="button" value="Output" id="btn_list_output" class="btn_normal btn_grey btn_icon btn_icon_output" aria-label="Ouput Schedule Rows into a specific output format" /></li>
+                            <!--<li><input type="button" value="Print" id="btn_list_print" class="btn_normal btn_grey btn_icon btn_icon_print" aria-label="Print the existing Schedule Rows" /></li>-->
+                        </ul>
+                    </div>
+                    <br class="clear"/>
+                </div>
+        	</div>
+        </div>
+        
+        <!-- Right Hand Navigation -->
+        <div id="page_slider_nav" class="bg_color_1 color_3">
+            <div id="page_slider_nav_inner">
+                <div class="col_easy_nav">
+                    <h2>I Want to...</h2>
+                </div>
+                <div class="col_easy_nav">
+                    <h3 class="title_card_payments">Manage Payments</h3>
+                    <ul>
+                        <li><a href="easy_make_once_off_payment.html">Make One-time Payment</a></li>
+                        <li><a href="easy_setup_auto_payment.html">Set-up Automatic Payments</a></li>
+                        <li><a href="easy_view_payment_history.html">View Payment History</a></li>
+                        <li><a href="easy_view_scheduled_payments.html">View Scheduled Payments</a></li>
+                    </ul>
+                </div>
+                <div class="col_easy_nav">
+                    <h3 class="title_card_details">Card Details</h3>
+                    <ul>
+                        <li><a href="easy_update_contact_details.html">Update Contact Details</a></li>
+                        <li><a href="easy_order_replacement_card.html">Order a Replacement Card</a></li>
+                        <li><a href="easy_request_limit_and_strategy.html">Request Limit and Strategy</a></li>
+                        <li><a href="easy_change_acc0untt_status.html">Change acc0untt Status</a></li>
+                        <li><a href="easy_view_my_rewards.html">View My Rewards</a></li>
+                    </ul>
+                </div>
+                <div class="col_easy_nav">
+                    <h3 class="title_card_transactions">Card Schedule</h3>
+                    <ul>
+                        <li><a href="easy_view_my_statements.html">View my Scorecard</a></li>
+                        <li><a href="easy_update_statement_delivery_option.html">Update Statement Delivery Option</a></li>
+                        <li><a href="easy_view_auths_and_declines.html">View Auths and Declines</a></li>
+                    </ul>
+                </div>
+                <br class="clear"/>
+            </div>
+        </div>
+    </div>
+    
+    <div id="page_footer" class="bg_color_2">
+    	<div class="footer_left">
+        	<div class="footer_nav">
+                <ul>
+                    <li><a href="#">Help</a></li>
+                    
+                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <br class="clear"/>
+            </div>
+            <div class="footer_text">&copy; 2008 - 2016Austin Cricket League. All Rights Reserved</div>
+        </div>
+        <div class="footer_right">
+        	<div class="footer_nav">
+                <ul>
+                	<li style="position:relative;">
+                        <a href="javascript:void[0]" id="switch_theme" class="dd_link" title="Select Theme">Theme</a>
+                        <div id="switch_theme_options" style="display:none;" class="dd_option_panel" role="dialog" aria-label="Theme Switcher Options">
+                            <h3 class="color_1">Change Theme</h3>
+                            <div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Theme Switcher Options">Close Player Options Panel</a></div>
+                            <ul id="theme_list">
+                                <li><a href="#" rel="themes/theme_360.css">Default</a></li>
+                                <li><a href="#" rel="themes/theme_hsbc.css">HSBC</a></li>
+                                <li><a href="#" rel="themes/theme_wells_fargo.css">Wells Fargo</a></li>
+                                <li><a href="#" rel="themes/theme_first_tennessee.css">First Tennessee</a></li>
+                                <li><a href="#" rel="themes/theme_umb.css">UMB</a></li>
+                                <li><a href="#" rel="themes/theme_pnc.css">PNC</a></li>
+                                <li><a href="#" rel="themes/theme_citi.css">Citi</a></li>
+                                <li><a href="#" rel="themes/theme_abank.css">ABank</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Previous Version</a></li>
+                </ul>
+                <br class="clear"/>
+            </div>
+        </div>
+        <br class="clear"/>
+    </div>
+    
+</div>
+
+<!-- Theme Switcher - Not Needed for Final -->
+<script type="text/javascript" language="javascript" src="themes/jquery.cookie.js"></script>
+<script type="text/javascript">
+	if($.cookie("css")) {
+		$("link#theme").attr("href",$.cookie("css"));
+	}
+	  
+	$(document).ready(function() { 
+		if(window.location.hash) {
+			var hash = window.location.hash.substr(1);
+			var path = 'themes/theme_' + hash + '.css';
+		} else {
+		  	var path = $.cookie("css",path);
+		}
+		$("link#theme").attr("href",path);
+		$.cookie("css",path, {expires: 365, path: '/'});
+		return false;
+	});
+	
+	$(document).ready(function() { 
+		$("#theme_list li a").click(function() { 
+			$("link#theme").attr("href",$(this).attr('rel'));
+			$.cookie("css",$(this).attr('rel'), {expires: 365, path: '/'});
+			return false;
+		});
+		
+	});
+</script>
+
+
+<!-- ****************************** -->
+<!-- 		Modal Windows 			-->
+<!-- ****************************** -->
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		
+		
+		// List Print Options
+		$("#btn_list_print" ).click(function() {
+			$( "#btn_list_print_options" ).dialog( "open" );
+		});
+		
+		$( "#btn_list_print_options" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 300,
+			modal: true
+		});
+		
+		// List Output Options
+		$("#btn_list_output" ).click(function() {
+			$( "#btn_list_output_options" ).dialog( "open" );
+			radioBtnStatus();
+		});
+		
+		$( "#btn_list_output_options" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 360,
+			modal: true
+		});
+		
+		// Launch Receipts Dialog
+		$("#change_cas_link" ).click(function() {
+			$( "#change_cas_dialog" ).dialog( "open" );
+		});
+		
+		$( "#change_cas_dialog" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 400,
+			modal: true
+		});
+		
+		
+		$(".close_modal").click(function(){
+			$(this).parent().parent().dialog('close');
+		});
+		
+		$(".btn_cancel_modal").click(function(){
+			$(this).closest('.dialog_content').parent().dialog('close');
+		});
+	});
+</script>
+
+
+
+<!-- JQuery Datepicker -->
+<script type="text/javascript">
+	$(function() {
+		$('.date_picker').datepicker({
+			showOn:'button'
+		});
+	});
+</script>
+
+
+<!-- Modal Window for Print Settings -->
+<div id="btn_list_print_options" title="Print Settings" role="dialog" aria-labelledby="listPrintTitle" aria-describedby="listPrintDesc">
+	<div class="dialog_header">
+	    <h1 id="listPrintTitle">Print Settings</h1>
+    </div>
+    <div id="listPrintDesc" class="dialog_desc">This Dialog allows you to select the print settings of your list.</div>
+    <div class="dialog_content">
+        <form class="fd_form" action="#" id="print_settings_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+                <fieldset>
+                	<legend class="show_legend">Which columns would you like to print</legend>
+                	<div class="form_row">
+                        <div class="form_radio" id="radio_buttons">
+                            <ul>
+                                <li><input type="radio" name="print_view" value="Visible Columns" id="visible_columns"  aria-label="Print Only Visible Table Columns" checked="checked"><label for="visible_columns">Visible Columns</label></li>
+                                <li><input type="radio" name="print_view" value="All Columns" id="all_columns"  aria-label="Print All Table Columns"><label for="all_columns">All Columns</label></li>
+                            </ul>
+                            <br class="clear"/>
+                        </div>
+                    </div>
+                </fieldset>
+                </div>
+                <div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="button" class="btn_normal btn_grey btn_cancel_modal" value="Cancel" id="btn_cancel_print" aria-label="Cancel Print Option" /></div>
+                    <div class="form_action_right"><input type="button" class="btn_normal btn_primary" value="Print" id="btn_print_item" aria-label="Print Table"  onClick="window.print()" /></div>
+                    <br class="clear"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+</div>
+
+<!-- Modal Window for Output Options -->
+<div id="btn_list_output_options" title="Print Settings" role="dialog" aria-labelledby="listOutputTitle" aria-describedby="listOutputDesc">
+	<div class="dialog_header">
+	    <h1 id="listOutputTitle">Output Settings</h1>
+    </div>
+    <div id="listOutputDesc" class="dialog_desc">This Dialog allows you to select the output settings of your list.</div>
+    <div class="dialog_content">
+        <form class="fd_form" action="#" id="output_settings_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+                
+                	<script type="text/javascript">
+					
+						
+						function radioBtnStatus() {
+								var outputChoice = $('input[name="output_choice"]');
+																
+								outputChoice.each(function () {
+									if ($(this).prop('checked')) {
+										var radioID = $(this).attr('id');
+										
+										if (radioID == 'output_all_visible'){
+											$('#output_default_options').show();
+										}
+										
+										if (radioID == 'output_all_columns'){
+											$('#output_default_options').show();
+										}
+										
+										if (radioID == 'output_standard'){
+											$('#output_default_options').show();
+										}
+										
+										if (radioID == 'output_quicken'){
+											$('#output_quicken_options').show();
+										}
+										
+										if (radioID == 'output_quickbooks'){
+											$('#output_quickbooks_options').show();
+										}
+										
+									} else {
+										return false;
+									}
+								});
+								
+								$('input[name="output_choice"]').change(function () {
+									if ($(this).prop('checked')) {
+										$('.output_options').hide();
+										var radioIDAlt = $(this).attr('id');
+										
+										if (radioIDAlt == 'output_all_visible'){
+											$('#output_default_options').show();
+											$('#incl_fields_in_detail').removeAttr("disabled");
+										}
+										
+										if (radioIDAlt == 'output_all_columns'){
+											$('#output_default_options').show();
+											$('#incl_fields_in_detail').prop('checked', false);
+											$('#incl_fields_in_detail').attr("disabled", true);
+											
+										}
+										
+										if (radioIDAlt == 'output_standard'){
+											$('#output_default_options').show();
+											$('#incl_fields_in_detail').prop('checked', false);
+											$('#incl_fields_in_detail').attr("disabled", true);
+										}
+										
+										if (radioIDAlt == 'output_quicken'){
+											$('#output_quicken_options').show();
+											$('#incl_fields_in_detail').prop('checked', false);
+											$('#incl_fields_in_detail').attr("disabled", true);
+										}
+										
+										if (radioIDAlt == 'output_quickbooks'){
+											$('#output_quickbooks_options').show();
+											$('#incl_fields_in_detail').prop('checked', false);
+											$('#incl_fields_in_detail').attr("disabled", true);
+										}
+										
+									} else {
+										return false;
+									}
+								});
+							};
+                    </script>
+                
+                	<div class="form_row">
+                    	<fieldset>
+                            <legend class="show_legend">Which columns would you like to output</legend>
+                            <div class="form_radio">
+                                <ul>
+                                    <li><input type="radio" name="output_choice" value="Visible Columns" id="output_all_visible"  aria-label="Output only visible Columns" checked="checked" /><label for="output_all_visible">Visible Columns</label>
+                                        <ul>
+                                            <li id="include_fields_option"><input type="checkbox" name="incl_fields_in_detail" value="Include" id="incl_fields_in_detail"  aria-label="Include the fields in the details panel" /><label for="incl_fields_in_detail">Include the fields in the details panel</label></li>
+                                        </ul>
+                                    </li>
+                                    <li><input type="radio" name="output_choice" value="All Columns" id="output_all_columns"  aria-label="Output All Columns" /><label for="output_all_columns">All Columns</label></li>
+                                    <li><input type="radio" name="output_choice" value="Standard Output" id="output_standard"  aria-label="Output to Standard Format" /><label for="output_standard">Standard Output <span class="help_text">(Outputs the most frequently used columns and standard format)</span></label></li>
+                                    <li><input type="radio" name="output_choice" value="Quicken" id="output_quicken"  aria-label="Output to Quicken Format"/><label for="output_quicken">Quicken</label></li>
+                                    <li><input type="radio" name="output_choice" value="Quickbooks" id="output_quickbooks"  aria-label="Output to Quickbooks Format" /><label for="output_quickbooks">Quickbooks</label></li>
+                                </ul>
+                                <br class="clear"/>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="form_row_divider"></div>
+                    <div class="form_row inline output_options" id="output_default_options" style="display:none;">
+                    	<div class="form_label">
+                        	<label for="output_type">Output File Format</label>
+                        </div>
+                        <div class="form_select">
+                        	<select id="output_type" aria-label="Select Output File Format">
+                            	<option value="CSV">CSV</option>
+                            	<option value="XLS">Excel (xls)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form_row inline output_options" id="output_quicken_options" style="display:none;">
+                    	<div class="form_label">
+                        	<label for="output_type_quicken">Output File Format</label>
+                        </div>
+                        <div class="form_input">
+                        	<input type="text" id="output_type_quicken" name="output_type_quicken" value="Quicken (OFX)" disabled="disabled" />
+                        </div>
+                    </div>
+                    <div class="form_row inline output_options" id="output_quickbooks_options" style="display:none;">
+                    	<div class="form_label">
+                        	<label for="output_type_quickbooks">Output File Format</label>
+                        </div>
+                        <div class="form_input">
+                        	<input type="text" id="output_type_quickbooks" name="output_type_quickbooks" value="Quickbooks (IIF)" disabled="disabled" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="button" class="btn_normal btn_grey btn_cancel_modal" value="Cancel" id="btn_cancel_ouput" aria-label="Cancel Output Options" /></div>
+                    <div class="form_action_right"><input type="button" class="btn_normal btn_primary" value="Output File" id="btn_output_table" aria-label="Output Schedule File" /></div>
+                    <br class="clear"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+</div>
+
+<!-- Change CAS -->
+<div id="change_cas_dialog" title="Cost Allocation System" role="dialog" aria-labelledby="listCASTitle" aria-describedby="listCASDesc">
+	<div class="dialog_header">
+	    <h1 id="listCASTitle">Change Cost Allocation System</h1>
+    </div>
+    <div id="listCASDesc" class="dialog_desc">This Dialog allows you to view the receipt linked to a transaction.</div>
+    <div class="dialog_content">
+     <form class="fd_form" action="#" id="change_cas_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+                	<div class="form_row">
+                    	<div class="form_label"><label for="change_cas_select">Change CAS</label></div>
+                        <div class="form_select">
+                            <select class="selectbox" id="change_cas_select">
+                                <option value="option_1">UK Oracle</option>
+                                <option value="option_2">US Debit</option>
+                                <option value="option_3">US FDC</option>
+                                <option value="option_4" selected="selected">US FDR</option>
+                                <option value="option_5">US I-Procure</option>
+                                <option value="option_6">US Merchant Srvs</option>
+                                <option value="option_7">US Payment Srvs</option>
+                                <option value="option_8">US Telecheck</option>
+                                <option value="option_9">UK-lexpenses</option>
+                            </select>
+                            <br class="clear"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="button" class="btn_normal btn_grey btn_cancel_modal" value="Cancel" id="btn_cancel_cas" aria-label="Cancel Cost Allocation System Update" /></div>
+                    <div class="form_action_right"><input type="button" class="btn_normal btn_primary" value="Update CAS" id="btn_update_cas" aria-label="Update Cost Allocation System"  /></div>
+                    <br class="clear"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+</div>
+ 
+</body>
+</html>

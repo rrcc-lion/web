@@ -1,0 +1,1024 @@
+<html lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>User Preferences -Austin Cricket | 360 Austin</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+<meta content="telephone=no" name="format-detection">
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/normalize.css">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<link rel="stylesheet" type="text/css" href="css/phase_2.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.dialog.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.datepicker.css">
+
+<!-- Theme -->
+<link id="theme" rel="stylesheet" type="text/css" href="themes/theme_edit_user_preferences.css">
+
+<!-- Print Stylesheet -->
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print">
+
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="css/ie8_style.css" id="theme_ie8" />
+<![endif]-->
+
+<!-- Javascript -->
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.4.min.js"></script>
+
+<script type="text/javascript" src="js/respond.js"></script>
+
+<!-- Add Common Functions -->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        dropdownContainers();
+        resizeFonts();
+    });
+</script>
+
+
+<style type="text/css"></style></head>
+
+<body class="bg_color_2">
+
+<div id="page_container">
+    
+    <div id="page_header" class="bg_color_2">
+        <div class="logo_primary">
+            <div><a href="index.html" title="Company Logo" aria-label="Visit the Homepage">Company Name</a></div>
+        </div>
+        <div class="logo_secondary">
+            <div class="logo_container" title="Product Logo" aria-label="Product Name">Product Name</div>
+        </div>
+        
+        <div class="user_preferences">
+            <ul>
+                <li>
+                    <a href="javascript:void[0]" id="style_switcher" class="dd_link" title="Change Application Font Size">aA</a>
+                    <div id="style_switcher_options" style="display:none;" class="dd_option_panel">
+                        <div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Style Options">Close Style Options Panel</a></div>
+                        <h3 class="color_1">Font Size Options</h3>
+                        <ul>
+                            <li><a href="javascript:void(0)" id="font_increase" title="Increase Font Size">Large</a></li>
+                            <li><a href="javascript:void(0)" id="font_reset" title="Reset Font Size">Normal</a></li>
+                            <li><a href="javascript:void(0)" id="font_decrease" title="Decrease Font Size">Small</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:void[0]" id="user_preferences" class="dd_link" title="Current User">Zulifqar Ahmad</a>
+                    <div id="user_preferences_options" style="display: none;" class="dd_option_panel">
+                        <div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close User Preferences">Close User Options Panel</a></div>
+                        <h3 class="color_1">User Preferences</h3>
+                        <div class="user_profile_panel">
+                            <div class="info_user">Zulifqar Ahmad</div>
+                            <div class="info_location"><span>Role: </span>Programme Administrator</div>
+                            <div class="info_company"><span>Company: </span>Acme Holdings</div>
+                            <div class="info_structure"><span>Structure: </span>North America</div>
+                            <div class="info_cas"><span>CAS: </span>FDC <a href="javascript:void(0)" aria-label="Change CAS Selection" id="change_cas_link">(Change)</a></div>
+                        </div>
+                        <div class="info_history"><span>Last logged in at:</span> 14/03/2016, 20:05</div>
+                        <ul>
+                            <li><a href="javascript:void(0)">Change pa55word</a></li>
+                            <li><a href="javascript:void(0)">Change Username</a></li>
+                            <li><a href="javascript:void(0)">Language - English US</a></li>
+                            <li><a href="easy_transactions.html">Switch to Simplified View</a></li>
+                            <li><a href="javascript:void(0)">Timezone - EST (Eastern Standard Time)</a></li>
+                            <li><a href="javascript:void(0)">Email Notifications for card changes</a></li>
+                        </ul>
+                    </div>
+
+                </li>
+                <li>
+                    <a href="index.html" title="Logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="print_header" aria-hidden="true" style="display:none;">
+        <div class="logo_primary">
+            <div><img src="images/img_logo_dark_first_data_x2.png" alt="Austin Cricket Logo" title="Austin Cricket Logo"></div>
+        </div>
+        <div class="logo_secondary">
+            <div><img src="images/img_logo_dark_360Control_x2.png" alt="Product Specific Logo showing 360 Austin" title="360 Austin Logo"></div>
+        </div>
+        <br class="clear">
+    </div>
+        
+    <div id="page_nav" role="navigation">
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="transactions.html">Schedule</a></li>
+            <li><a href="statements.html">Scorecard</a></li>
+            <li><a href="cards.html">Cards</a></li>
+            <li class="current"><a href="javascript:void[0]" id="admin_panel" class="dd_link" title="View Administration Menu Options">Administration</a>
+                <div id="admin_panel_options" style="display:none;" class="dd_option_panel" role="dialog" aria-label="Administration Menu Options">
+                    <div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Player Switcher Options">Close Administrationg Menu Options</a></div>
+                    <h3 class="color_1">Administration Menu</h3>
+                    <ul>
+                        <li><a href="users_cards.html">Users &amp; Cards</a></li>
+                        <li><a href="billing_control_acc.html">Billing Control acc0untts</a></li>
+                        <li><a href="card_request_tracking.html">Card Request Tracking</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    <div id="page_body">
+
+        <div id="page_content">
+            <!-- Page Title -->
+            <div class="page_title">
+                <a href="users_cards.html" class="back_btn bg_color_2" title="Back to Previous Page">Back to Previous Page</a>
+                <h1>User Preferences Settings</h1>
+
+                <!-- This switcher should only be visible if the users rights permits it -->
+                <!-- Not Needed for this Phase
+                <div class="profile_switcher">
+                    <a href="javascript:void[0]" id="profile_cardholder" class="dd_link" title="Current User">Profile A</a>
+                    <div id="profile_cardholder_options" style="display:none;" class="dd_option_panel">
+                        <div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Profile Switcher Options">Close Profile Options Panel</a></div>
+                        <h3 class="color_1">Switch Profile</h3>
+                        <ul class="menu_list">
+                            <li><a href="#profile_a">Profile A</a></li>
+                            <li><a href="#profile_b">Profile B</a></li>
+                            <li><a href="#profile_c">Profile C</a></li>
+                        </ul>
+                    </div>
+                </div>
+                -->
+
+                <br class="clear">
+            </div>
+            
+
+
+            <div id="page_content_inner">
+
+                <div class="column_container column_3 clearfix">
+                    <div class="column width_3">
+                        <div class="column_inner">
+
+
+                            <!-- Start of Page Nodes -->
+                            <div class="inner_col_left">
+                                
+                                <!-- Statement Address -->
+                                <div class="module_block">
+                                    <!-- Region Panel -->
+                                    <div class="drawer_panel">
+                                        <h4>
+                                            <a href="javascript:void[0]" class="drawer_toggle color_1 isOpen"><span class="drawer_status hidden_label">Collapse</span> Region  </a>
+                                        </h4>
+                                        <div class="drawer_panel_details" style="display:block">
+
+                                            <table class="grid_table no_border">
+                                                <caption>Region Settings Table</caption>
+                                                <thead class="hidden_header">
+                                                    <tr>
+                                                        <th scope="col" id="col_preference">Preferences</th>
+                                                        <th scope="col">Settings</th>
+                                                        <th scope="col" id="col_action" aria-label="View Details Button"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="col_preference" scope="row">Language</td>
+                                                        <td id="language_value">English (US)</td>
+                                                        <td class="col_action"><input type="button" id="language_button" value="Edit Language Settings" class="btn_action_icon"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="col_preference" scope="row">Timezone</td>
+                                                        <td id="timezone_value_row">EST (Eastern Standard Time)</td>
+                                                        <td class="col_action"><input type="button" id="timezone_button" value="Edit Timezone Settings" class="btn_action_icon"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <!-- Region Panel -->
+                                    <div class="drawer_panel">
+                                        <h4>
+                                            <a href="javascript:void[0]" class="drawer_toggle color_1 isOpen"><span class="drawer_status hidden_label">Collapse</span> Display  </a>
+                                        </h4>
+                                        <div class="drawer_panel_details" style="display: block;" aria-hidden="false">
+
+                                            <table class="grid_table no_border">
+                                                <caption>Display Settings Table</caption>
+                                                <thead class="hidden_header">
+                                                    <tr>
+                                                        <th scope="col" id="col_preference">Preferences</th>
+                                                        <th scope="col">Settings</th>
+                                                        <th scope="col" id="col_action" aria-label="View Details Button"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td scope="row" class="col_preference">Default <abbr title="Cost Allocation System">CAS</abbr></td>
+                                                        <td id="cas_value">US FDR</td>
+                                                        <td class="col_action"><input type="button" value="Edit Default Cost Allocation System Settings" id="cas_button" class="btn_action_icon"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+											<script type="text/javascript">
+											function alertValue() {
+												var timezone_value = document.getElementById("timezone_select_value").value;
+												var lan_value = document.getElementById("lan_select_value").value;
+												var cas_value = document.getElementById("cas_select_value").value;
+												
+												if (document.getElementById('no_email').checked) {
+													notification_value = document.getElementById('no_email').value;
+												}
+												
+												if (document.getElementById('one_email').checked) {
+													notification_value = document.getElementById('one_email').value;
+												}
+												
+												if (document.getElementById('one_summ').checked) {
+													notification_value = document.getElementById('one_summ').value;
+												}
+												
+												if (document.getElementById('both').checked) {
+													notification_value = document.getElementById('both').value;
+												}
+											
+												document.getElementById("timezone_value_row").innerHTML = timezone_value;
+												document.getElementById("language_value").innerHTML = lan_value;
+												document.getElementById("cas_value").innerHTML = cas_value;
+												document.getElementById("notification_row").innerHTML = notification_value;
+											}
+											</script>
+                                        </div>
+                                    </div>
+
+                                    <!-- Notifications Panel -->
+                                    <div class="drawer_panel">
+                                        <h4>
+                                            <a href="javascript:void[0]" class="drawer_toggle color_1 isOpen"><span class="drawer_status hidden_label">Collapse</span> Notifications  </a>
+                                        </h4>
+                                        <div class="drawer_panel_details" style="display: block;" aria-hidden="false">
+
+                                            <table class="grid_table no_border">
+                                                <caption>Notifications Settings Table</caption>
+                                                <thead class="hidden_header">
+                                                    <tr>
+                                                        <th scope="col" id="col_preference">Preferences</th>
+                                                        <th scope="col">Settings</th>
+                                                        <th scope="col" id="col_action" aria-label="View Details Button"></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="col_preference" scope="row">Email notification for Card Request changes</td>
+                                                        <td id="notification_row">Both (an email per action and a summary email)</td>
+                                                        <td class="col_action"><input type="button" id="email_button" value="Edit Email Notification for card request change" class="btn_action_icon"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    
+                                </div>
+                                
+                            </div>
+                            <div class="inner_col_right">
+                                
+                                <!-- Comments -->
+                                <div class="module_block" id="language">
+                                    <div class="module_header bg_color_5">
+                                        <h3>Language</h3>
+                                    </div>
+                                    <div class="module_content">
+                                        <div class="fd_form">
+                                            <div class="form_container clearfix">
+
+                                                <div class="form_row inline clearfix">
+                                                    <div class="form_label">
+                                                        <label for="lan_select_value">Select your preferred Language. <span class="mandatory">*</span></label>
+                                                    </div>
+                                                    <div class="form_select">
+                                                        <select name="lan_select_value" id="lan_select_value" class="moz_custom">
+                                                            <option value="English US" selected="selected">English US</option>
+                                                            <option value="English UK">English UK</option>
+                                                            <option value="German">German</option>
+                                                            <option value="French">French</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+								
+								<div class="module_block" id="timezone">
+                                    <div class="module_header bg_color_5">
+                                        <h3>Timezone</h3>
+                                    </div>
+                                    <div class="module_content">
+                                        <div class="fd_form">
+                                            <div class="form_container clearfix">
+
+                                                <div class="form_row inline clearfix">
+                                                    <div class="form_label">
+                                                        <label for="timezone_select_value">Select your preferred Timezone: <span class="mandatory">*</span></label>
+                                                    </div>
+                                                    <div class="form_select">
+                                                        <select name="timezone_select_value" id="timezone_select_value" class="moz_custom">
+   						 			<option class="ng-scope" label="MitWestSamoaTime" value="MIT" translate="">MIT: West Samoa Time</option>
+									<option class="ng-scope" label="Pacific/ApiaWestSamoa1432" value="Pacific/Apia" translate="">Pacific/Apia: West Samoa Time</option>
+									<option class="ng-scope" label="Pacific/NiueNiueTime1451" value="Pacific/Niue" translate="">Pacific/Niue: Niue Time</option>
+									<option class="ng-scope" label="Pacific/PagoPagoSamoa1454" value="Pacific/Pago_Pago" translate="">Pacific/Pago_Pago: Samoa Standard Time</option>
+									<option class="ng-scope" label="America/AdakHawaiiAleu225" value="America/Adak" translate="">America/Adak: Hawaii-Aleutian Standard Time</option>
+									<option class="ng-scope" label="HstHawaiiStandardTime" value="HST" translate="">HST: Hawaii Standard Time</option>
+									<option class="ng-scope" label="Pacific/FakaofoTokelau1438" value="Pacific/Fakaofo" translate="">Pacific/Fakaofo: Tokelau Time</option>
+									<option class="ng-scope" label="Pacific/HonoluluHawaii1445" value="Pacific/Honolulu" translate="">Pacific/Honolulu: Hawaii Standard Time</option>
+									<option class="ng-scope" label="Pacific/RarotongaCookI1459" value="Pacific/Rarotonga" translate="">Pacific/Rarotonga: Cook Is. Time</option>
+									<option class="ng-scope" label="Pacific/TahitiTahitiTi1461" value="Pacific/Tahiti" translate="">Pacific/Tahiti: Tahiti Time</option>
+									<option class="ng-scope" label="Pacific/MarquesasMarque1449" value="Pacific/Marquesas" translate="">Pacific/Marquesas: Marquesas Time</option>
+									<option class="ng-scope" label="AstAlaskaStandardTime" value="AST" translate="">AST: Alaska Standard Time</option>
+									<option class="ng-scope" label="America/AnchorageAlaska226" value="America/Anchorage" translate="">America/Anchorage: Alaska Standard Time</option>
+									<option class="ng-scope" label="Pacific/GambierGambier1442" value="Pacific/Gambier" translate="">Pacific/Gambier: Gambier Time</option>
+									<option class="ng-scope" label="America/LosAngelesPaci261" value="America/Los_Angeles" translate="">America/Los_Angeles: Pacific Standard Time</option>
+									<option class="ng-scope" label="America/TijuanaPacific294" value="America/Tijuana" translate="">America/Tijuana: Pacific Standard Time</option>
+									<option class="ng-scope" label="America/VancouverPacifi296" value="America/Vancouver" translate="">America/Vancouver: Pacific Standard Time</option>
+									<option class="ng-scope" label="PstPacificStandardTime" value="PST" translate="">PST: Pacific Standard Time</option>
+									<option class="ng-scope" label="Pacific/PitcairnPitcair1456" value="Pacific/Pitcairn" translate="">Pacific/Pitcairn: Pitcairn Standard Time</option>
+									<option class="ng-scope" label="America/DawsonCreekMou242" value="America/Dawson_Creek" translate="">America/Dawson_Creek: Mountain Standard Time</option>
+									<option class="ng-scope" label="America/DenverMountain243" value="America/Denver" translate="">America/Denver: Mountain Standard Time</option>
+									<option class="ng-scope" label="America/EdmontonMountai245" value="America/Edmonton" translate="">America/Edmonton: Mountain Standard Time</option>
+									<option class="ng-scope" label="America/MazatlanMountai265" value="America/Mazatlan" translate="">America/Mazatlan: Mountain Standard Time</option>
+									<option class="ng-scope" label="America/PhoenixMountain276" value="America/Phoenix" translate="">America/Phoenix: Mountain Standard Time</option>
+									<option class="ng-scope" label="AmericaArizonaMountainStandardTime" value="America/Arizona" translate="">America/Arizona: Mountain Standard Time</option>
+									<option class="ng-scope" label="MstMountainStandardTime" value="MST" translate="">MST: Mountain Standard Time</option>
+									<option class="ng-scope" label="Canada/Atlantic" value="Canada/Atlantic" translate="">Canada/Atlantic: Atlantic Standard Time </option>
+									<option class="ng-scope" label="Canada/Central" value="Canada/Central" translate="">Canada/Central: Central Standard Time</option>
+									<option class="ng-scope" label="Canada/Easterne" value="Canada/Eastern" translate="">Canada/Easterne</option>
+									<option class="ng-scope" label="Canada/EastSaska " value="Canada/East-Saskatchewan" translate="">Canada/East-Saskatchewan:  Central Standard Time </option>
+									<option class="ng-scope" label="Canada/Mountain" value="Canada/Mountain" translate="">Canada/Mountain: Mountain Standard Time</option>
+									<option class="ng-scope" label="Canada/NewFound" value="Canada/Newfoundland" translate="">Canada/Newfoundland: Newfoundland Standard Time</option>
+									<option class="ng-scope" label="Canada/Pacific" value="Canada/Pacific" translate="">Canada/Pacific: Pacific Standard Time</option>
+									<option class="ng-scope" label="Canada/Saska" value="Canada/Saskatchewan" translate="">Canada/Saskatchewan: Central Standard Time</option>
+									<option class="ng-scope" label="Canada/Yukon" value="Canada/Yukon" translate="">Canada/Yukon: Pacific Standard Time</option>
+									<option class="ng-scope" label="PntMountainStandardTime" value="PNT" translate="">PNT: Mountain Standard Time</option>
+									<option class="ng-scope" label="America/BelizeCentralS232" value="America/Belize" translate="">America/Belize: Central Standard Time</option>
+									<option class="ng-scope" label="America/ChicagoCentral238" value="America/Chicago" translate="">America/Chicago: Central Standard Time</option>
+									<option class="ng-scope" label="America/CostaRicaCentr239" value="America/Costa_Rica" translate="">America/Costa_Rica: Central Standard Time</option>
+									<option class="ng-scope" label="America/ElSalvadorCent246" value="America/El_Salvador" translate="">America/El_Salvador: Central Standard Time</option>
+									<option class="ng-scope" label="America/GuatemalaCentra252" value="America/Guatemala" translate="">America/Guatemala: Central Standard Time</option>
+									<option class="ng-scope" label="America/ManaguaCentral262" value="America/Managua" translate="">America/Managua: Central Standard Time</option>
+									<option class="ng-scope" label="America/MexicoCityCent266" value="America/Mexico_City" translate="">America/Mexico_City: Central Standard Time</option>
+									<option class="ng-scope" label="America/ReginaCentralS281" value="America/Regina" translate="">America/Regina: Central Standard Time</option>
+									<option class="ng-scope" label="America/TegucigalpaCent292" value="America/Tegucigalpa" translate="">America/Tegucigalpa: Central Standard Time</option>
+									<option class="ng-scope" label="America/WinnipegCentral297" value="America/Winnipeg" translate="">America/Winnipeg: Central Standard Time</option>
+									<option class="ng-scope" label="CstCentralStandardTime" value="CST" translate="">CST: Central Standard Time</option>
+									<option class="ng-scope" label="Pacific/EasterEasterIs1435" value="Pacific/Easter" translate="">Pacific/Easter: Easter Is. Time</option>
+									<option class="ng-scope" label="Pacific/GalapagosGalapa1441" value="Pacific/Galapagos" translate="">Pacific/Galapagos: Galapagos Time</option>
+									<option class="ng-scope" label="America/BogotaColombia233" value="America/Bogota" translate="">America/Bogota: Colombia Time</option>
+									<option class="ng-scope" label="America/CaymanEasternS237" value="America/Cayman" translate="">America/Cayman: Eastern Standard Time</option>
+									<option class="ng-scope" label="America/GrandTurkEaste249" value="America/Grand_Turk" translate="">America/Grand_Turk: Eastern Standard Time</option>
+									<option class="ng-scope" label="America/GuayaquilEcuado253" value="America/Guayaquil" translate="">America/Guayaquil: Ecuador Time</option>
+									<option class="ng-scope" label="America/HavanaCentralS256" value="America/Havana" translate="">America/Havana: Central Standard Time</option>
+									<option class="ng-scope" label="America/IndianapolisEas257" value="America/Indianapolis" translate="">America/Indianapolis: Eastern Standard Time</option>
+									<option class="ng-scope" label="America/JamaicaEastern258" value="America/Jamaica" translate="">America/Jamaica: Eastern Standard Time</option>
+									<option class="ng-scope" label="America/LimaPeruTime260" value="America/Lima" translate="">America/Lima: Peru Time</option>
+									<option class="ng-scope" label="America/MontrealEastern269" value="America/Montreal" translate="">America/Montreal: Eastern Standard Time</option>
+									<option class="ng-scope" label="America/NassauEasternS271" value="America/Nassau" translate="">America/Nassau: Eastern Standard Time</option>
+									<option class="ng-scope" label="America/NewYorkEastern272" value="America/New_York" translate="">America/New_York: Eastern Standard Time</option>
+									<option class="ng-scope" label="America/PanamaEasternS274" value="America/Panama" translate="">America/Panama: Eastern Standard Time</option>
+									<option class="ng-scope" label="America/PortauPrinceE278" value="America/Port-au-Prince" translate="">America/Port-au-Prince: Eastern Standard Time</option>
+									<option class="ng-scope" label="America/PortoAcreAcre279" value="America/Porto_Acre" translate="">America/Porto_Acre: Acre Time</option>
+									<option class="ng-scope" label="America/RioBrancoGMT0282" value="America/Rio_Branco" translate="">America/Rio_Branco: GMT-05:00</option>
+									<option class="ng-scope" label="EstEasternStandardTime" value="EST (Eastern Standard Time)" selected="selected">EST (Eastern Standard Time)</option>
+									<option class="ng-scope" label="IetEasternStandardTime" value="IET" translate="">IET: Eastern Standard Time</option>
+									<option class="ng-scope" label="America/AnguillaAtlanti227" value="America/Anguilla" translate="">America/Anguilla: Atlantic Standard Time</option>
+									<option class="ng-scope" label="America/AntiguaAtlantic228" value="America/Antigua" translate="">America/Antigua: Atlantic Standard Time</option>
+									<option class="ng-scope" label="America/ArubaAtlanticS229" value="America/Aruba" translate="">America/Aruba: Atlantic Standard Time</option>
+									<option class="ng-scope" label="America/AsuncionParagua230" value="America/Asuncion" translate="">America/Asuncion: Paraguay Time</option>
+									<option class="ng-scope" label="America/BarbadosAtlanti231" value="America/Barbados" translate="">America/Barbados: Atlantic Standard Time</option>
+									<option class="ng-scope" label="America/CaracasVenezuel235" value="America/Caracas" translate="">America/Caracas: Venezuela Time</option>
+									<option class="ng-scope" label="America/CuiabaAmazonSt240" value="America/Cuiaba" translate="">America/Cuiaba: Amazon Standard Time</option>
+									<option class="ng-scope" label="America/CuracaoAtlantic241" value="America/Curacao" translate="">America/Curacao: Atlantic Standard Time</option>
+									<option class="ng-scope" label="America/DominicaAtlanti244" value="America/Dominica" translate="">America/Dominica: Atlantic Standard Time</option>
+									<option class="ng-scope" label="America/GrenadaAtlantic250" value="America/Grenada" translate="">America/Grenada: Atlantic Standard Time</option>
+									<option class="ng-scope" label="America/GuadeloupeAtlan251" value="America/Guadeloupe" translate="">America/Guadeloupe: Atlantic Standard Time</option>
+									<option class="ng-scope" label="America/GuyanaGuyanaTi254" value="America/Guyana" translate="">America/Guyana: Guyana Time</option>
+									<option class="ng-scope" label="America/HalifaxAtlantic255" value="America/Halifax" translate="">America/Halifax: Atlantic Standard Time</option>
+									<option class="ng-scope" label="America/LaPazBoliviaT259" value="America/La_Paz" translate="">America/La_Paz: Bolivia Time</option>
+									<option class="ng-scope" label="America/ManausAmazonSt263" value="America/Manaus" translate="">America/Manaus: Amazon Standard Time</option>
+									<option class="ng-scope" label="America/MartiniqueAtlan264" value="America/Martinique" translate="">America/Martinique: Atlantic Standard Time</option>
+									<option class="ng-scope" label="America/MontserratAtlan270" value="America/Montserrat" translate="">America/Montserrat: Atlantic Standard Time</option>
+									<option class="ng-scope" label="America/PortofSpainAt277" value="America/Port_of_Spain" translate="">America/Port_of_Spain: Atlantic Standard Time</option>
+									<option class="ng-scope" label="America/PuertoRicoAtla280" value="America/Puerto_Rico" translate="">America/Puerto_Rico: Atlantic Standard Time</option>
+									<option class="ng-scope" label="America/SantiagoChileT283" value="America/Santiago" translate="">America/Santiago: Chile Time</option>
+									<option class="ng-scope" label="America/StKittsAtlanti288" value="America/St_Kitts" translate="">America/St_Kitts: Atlantic Standard Time</option>
+									<option class="ng-scope" label="America/StLuciaAtlanti289" value="America/St_Lucia" translate="">America/St_Lucia: Atlantic Standard Time</option>
+									<option class="ng-scope" label="America/StThomasAtlant290" value="America/St_Thomas" translate="">America/St_Thomas: Atlantic Standard Time</option>
+									<option class="ng-scope" label="America/StVincentAtlan291" value="America/St_Vincent" translate="">America/St_Vincent: Atlantic Standard Time</option>
+									<option class="ng-scope" label="America/ThuleAtlanticS293" value="America/Thule" translate="">America/Thule: Atlantic Standard Time</option>
+									<option class="ng-scope" label="America/TortolaAtlantic295" value="America/Tortola" translate="">America/Tortola: Atlantic Standard Time</option>
+									<option class="ng-scope" label="Antarctica/PalmerChile306" value="Antarctica/Palmer" translate="">Antarctica/Palmer: Chile Time</option>
+									<option class="ng-scope" label="Atlantic/BermudaAtlanti427" value="Atlantic/Bermuda" translate="">Atlantic/Bermuda: Atlantic Standard Time</option>
+									<option class="ng-scope" label="PrtAtlanticStandardTime" value="PRT" translate="">PRT: Atlantic Standard Time</option>
+									<option class="ng-scope" label="America/StJohnsNewfoun287" value="America/St_Johns" translate="">America/St_Johns: Newfoundland Standard Time</option>
+									<option class="ng-scope" label="CntNewfoundlandStandardTime" value="CNT" translate="">CNT: Newfoundland Standard Time</option>
+									<option class="ng-scope" label="AgtArgentineTime" value="AGT" translate="">AGT: Argentine Time</option>
+									<option class="ng-scope" label="America/BuenosAiresArg234" value="America/Buenos_Aires" translate="">America/Buenos_Aires: Argentine Time</option>
+									<option class="ng-scope" label="America/CayenneFrenchG236" value="America/Cayenne" translate="">America/Cayenne: French Guiana Time</option>
+									<option class="ng-scope" label="America/FortalezaBrazil247" value="America/Fortaleza" translate="">America/Fortaleza: Brazil Time</option>
+									<option class="ng-scope" label="America/GodthabWestern248" value="America/Godthab" translate="">America/Godthab: Western Greenland Time</option>
+									<option class="ng-scope" label="America/MiquelonPierre267" value="America/Miquelon" translate="">America/Miquelon: Pierre + Miquelon Standard Time</option>
+									<option class="ng-scope" label="America/MontevideoUrugu268" value="America/Montevideo" translate="">America/Montevideo: Uruguay Time</option>
+									<option class="ng-scope" label="America/ParamariboSurin275" value="America/Paramaribo" translate="">America/Paramaribo: Suriname Time</option>
+									<option class="ng-scope" label="America/SaoPauloBrazil285" value="America/Sao_Paulo" translate="">America/Sao_Paulo: Brazil Time</option>
+									<option class="ng-scope" label="BetBrazilTime" value="BET" translate="">BET: Brazil Time</option>
+									<option class="ng-scope" label="America/NoronhaFernando273" value="America/Noronha" translate="">America/Noronha: Fernando de Noronha Time</option>
+									<option class="ng-scope" label="Atlantic/SouthGeorgiaS433" value="Atlantic/South_Georgia" translate="">Atlantic/South_Georgia: South Georgia Standard Time</option>
+									<option class="ng-scope" label="America/ScoresbysundEas286" value="America/Scoresbysund" translate="">America/Scoresbysund: Eastern Greenland Time</option>
+									<option class="ng-scope" label="Atlantic/AzoresAzoresT426" value="Atlantic/Azores" translate="">Atlantic/Azores: Azores Time</option>
+									<option class="ng-scope" label="Atlantic/CapeVerdeCape429" value="Atlantic/Cape_Verde" translate="">Atlantic/Cape_Verde: Cape Verde Time</option>
+									<option class="ng-scope" label="Atlantic/JanMayenEaste431" value="Atlantic/Jan_Mayen" translate="">Atlantic/Jan_Mayen: Eastern Greenland Time</option>
+									<option class="ng-scope" label="Africa/AbidjanGreenwich155" value="Africa/Abidjan" translate="">Africa/Abidjan: Greenwich Mean Time</option>
+									<option class="ng-scope" label="Africa/AccraGreenwichM156" value="Africa/Accra" translate="">Africa/Accra: Greenwich Mean Time</option>
+									<option class="ng-scope" label="Africa/BanjulGreenwich161" value="Africa/Banjul" translate="">Africa/Banjul: Greenwich Mean Time</option>
+									<option class="ng-scope" label="Africa/BissauGreenwich162" value="Africa/Bissau" translate="">Africa/Bissau: Greenwich Mean Time</option>
+									<option class="ng-scope" label="Africa/CasablancaWester166" value="Africa/Casablanca" translate="">Africa/Casablanca: Western European Time</option>
+									<option class="ng-scope" label="Africa/ConakryGreenwich167" value="Africa/Conakry" translate="">Africa/Conakry: Greenwich Mean Time</option>
+									<option class="ng-scope" label="Africa/DakarGreenwichM168" value="Africa/Dakar" translate="">Africa/Dakar: Greenwich Mean Time</option>
+									<option class="ng-scope" label="Africa/FreetownGreenwic172" value="Africa/Freetown" translate="">Africa/Freetown: Greenwich Mean Time</option>
+									<option class="ng-scope" label="Africa/LomeGreenwichMe182" value="Africa/Lome" translate="">Africa/Lome: Greenwich Mean Time</option>
+									<option class="ng-scope" label="Africa/MonroviaGreenwic191" value="Africa/Monrovia" translate="">Africa/Monrovia: Greenwich Mean Time</option>
+									<option class="ng-scope" label="Africa/NouakchottGreenw195" value="Africa/Nouakchott" translate="">Africa/Nouakchott: Greenwich Mean Time</option>
+									<option class="ng-scope" label="Africa/OuagadougouGreen196" value="Africa/Ouagadougou" translate="">Africa/Ouagadougou: Greenwich Mean Time</option>
+									<option class="ng-scope" label="Africa/SaoTomeGreenwic198" value="Africa/Sao_Tome" translate="">Africa/Sao_Tome: Greenwich Mean Time</option>
+									<option class="ng-scope" label="Africa/TimbuktuGreenwic199" value="Africa/Timbuktu" translate="">Africa/Timbuktu: Greenwich Mean Time</option>
+									<option class="ng-scope" label="Atlantic/CanaryWestern428" value="Atlantic/Canary" translate="">Atlantic/Canary: Western European Time</option>
+									<option class="ng-scope" label="Atlantic/FaeroeWestern430" value="Atlantic/Faeroe" translate="">Atlantic/Faeroe: Western European Time</option>
+									<option class="ng-scope" label="Atlantic/ReykjavikGreen432" value="Atlantic/Reykjavik" translate="">Atlantic/Reykjavik: Greenwich Mean Time</option>
+									<option class="ng-scope" label="Atlantic/StHelenaGreen434" value="Atlantic/St_Helena" translate="">Atlantic/St_Helena: Greenwich Mean Time</option>
+									<option class="ng-scope" label="Europe/DublinGreenwich912" value="Europe/Dublin" translate="">Europe/Dublin: Greenwich Mean Time</option>
+									<option class="ng-scope" label="Europe/LisbonWesternEu918" value="Europe/Lisbon" translate="">Europe/Lisbon: Western European Time</option>
+									<option class="ng-scope" label="Europe/LondonGreenwich919" value="Europe/London" translate="">Europe/London: Greenwich Mean Time</option>
+									<option class="ng-scope" label="GmtGreenwichMeanTime" value="GMT" translate="">GMT: Greenwich Mean Time</option>
+									<option class="ng-scope" label="UtcCoordinatedUniversalTime" value="UTC" translate="">UTC: Coordinated Universal Time</option>
+									<option class="ng-scope" label="WetWesternEuropeanTime" value="WET" translate="">WET: Western European Time</option>
+									<option class="ng-scope" label="Africa/AlgiersCentralE158" value="Africa/Algiers" translate="">Africa/Algiers: Central European Time</option>
+									<option class="ng-scope" label="Africa/BanguiWesternAf160" value="Africa/Bangui" translate="">Africa/Bangui: Western African Time</option>
+									<option class="ng-scope" label="Africa/DoualaWesternAf171" value="Africa/Douala" translate="">Africa/Douala: Western African Time</option>
+									<option class="ng-scope" label="Africa/KinshasaWestern179" value="Africa/Kinshasa" translate="">Africa/Kinshasa: Western African Time</option>
+									<option class="ng-scope" label="Africa/LagosWesternAfr180" value="Africa/Lagos" translate="">Africa/Lagos: Western African Time</option>
+									<option class="ng-scope" label="Africa/LibrevilleWester181" value="Africa/Libreville" translate="">Africa/Libreville: Western African Time</option>
+									<option class="ng-scope" label="Africa/LuandaWesternAf183" value="Africa/Luanda" translate="">Africa/Luanda: Western African Time</option>
+									<option class="ng-scope" label="Africa/MalaboWesternAf186" value="Africa/Malabo" translate="">Africa/Malabo: Western African Time</option>
+									<option class="ng-scope" label="Africa/NdjamenaWestern193" value="Africa/Ndjamena" translate="">Africa/Ndjamena: Western African Time</option>
+									<option class="ng-scope" label="Africa/NiameyWesternAf194" value="Africa/Niamey" translate="">Africa/Niamey: Western African Time</option>
+									<option class="ng-scope" label="Africa/PortoNovoWester197" value="Africa/Porto-Novo" translate="">Africa/Porto-Novo: Western African Time</option>
+									<option class="ng-scope" label="Africa/TunisCentralEur201" value="Africa/Tunis" translate="">Africa/Tunis: Central European Time</option>
+									<option class="ng-scope" label="Africa/WindhoekWestern202" value="Africa/Windhoek" translate="">Africa/Windhoek: Western African Time</option>
+									<option class="ng-scope" label="EctCentralEuropeanTime" value="ECT" translate="">ECT: Central European Time</option>
+									<option class="ng-scope" label="Europe/AmsterdamCentral902" value="Europe/Amsterdam" translate="">Europe/Amsterdam: Central European Time</option>
+									<option class="ng-scope" label="Europe/AndorraCentralE903" value="Europe/Andorra" translate="">Europe/Andorra: Central European Time</option>
+									<option class="ng-scope" label="Europe/BelgradeCentral905" value="Europe/Belgrade" translate="">Europe/Belgrade: Central European Time</option>
+									<option class="ng-scope" label="Europe/BerlinCentralEu906" value="Europe/Berlin" translate="">Europe/Berlin: Central European Time</option>
+									<option class="ng-scope" label="Europe/BrusselsCentral907" value="Europe/Brussels" translate="">Europe/Brussels: Central European Time</option>
+									<option class="ng-scope" label="Europe/BudapestCentral909" value="Europe/Budapest" translate="">Europe/Budapest: Central European Time</option>
+									<option class="ng-scope" label="Europe/CopenhagenCentra911" value="Europe/Copenhagen" translate="">Europe/Copenhagen: Central European Time</option>
+									<option class="ng-scope" label="Europe/GibraltarCentral913" value="Europe/Gibraltar" translate="">Europe/Gibraltar: Central European Time</option>
+									<option class="ng-scope" label="Europe/LuxembourgCentra920" value="Europe/Luxembourg" translate="">Europe/Luxembourg: Central European Time</option>
+									<option class="ng-scope" label="Europe/MadridCentralEu921" value="Europe/Madrid" translate="">Europe/Madrid: Central European Time</option>
+									<option class="ng-scope" label="Europe/MaltaCentralEur922" value="Europe/Malta" translate="">Europe/Malta: Central European Time</option>
+									<option class="ng-scope" label="Europe/MonacoCentralEu924" value="Europe/Monaco" translate="">Europe/Monaco: Central European Time</option>
+									<option class="ng-scope" label="Europe/OsloCentralEuro926" value="Europe/Oslo" translate="">Europe/Oslo: Central European Time</option>
+									<option class="ng-scope" label="Europe/ParisCentralEur927" value="Europe/Paris" translate="">Europe/Paris: Central European Time</option>
+									<option class="ng-scope" label="Europe/PragueCentralEu928" value="Europe/Prague" translate="">Europe/Prague: Central European Time</option>
+									<option class="ng-scope" label="Europe/RomeCentralEuro930" value="Europe/Rome" translate="">Europe/Rome: Central European Time</option>
+									<option class="ng-scope" label="Europe/StockholmCentral934" value="Europe/Stockholm" translate="">Europe/Stockholm: Central European Time</option>
+									<option class="ng-scope" label="Europe/TiraneCentralEu936" value="Europe/Tirane" translate="">Europe/Tirane: Central European Time</option>
+									<option class="ng-scope" label="Europe/VaduzCentralEur937" value="Europe/Vaduz" translate="">Europe/Vaduz: Central European Time</option>
+									<option class="ng-scope" label="Europe/ViennaCentralEu938" value="Europe/Vienna" translate="">Europe/Vienna: Central European Time</option>
+									<option class="ng-scope" label="Europe/WarsawCentralEu940" value="Europe/Warsaw" translate="">Europe/Warsaw: Central European Time</option>
+									<option class="ng-scope" label="Europe/ZurichCentralEu941" value="Europe/Zurich" translate="">Europe/Zurich: Central European Time</option>
+									<option class="ng-scope" label="ArtEasternEuropeanTime" value="ART" translate="">ART: Eastern European Time</option>
+									<option class="ng-scope" label="Africa/BlantyreCentral163" value="Africa/Blantyre" translate="">Africa/Blantyre: Central African Time</option>
+									<option class="ng-scope" label="Africa/BujumburaCentral164" value="Africa/Bujumbura" translate="">Africa/Bujumbura: Central African Time</option>
+									<option class="ng-scope" label="Africa/CairoEasternEur165" value="Africa/Cairo" translate="">Africa/Cairo: Eastern European Time</option>
+									<option class="ng-scope" label="Africa/GaboroneCentral173" value="Africa/Gaborone" translate="">Africa/Gaborone: Central African Time</option>
+									<option class="ng-scope" label="Africa/HarareCentralAf174" value="Africa/Harare" translate="">Africa/Harare: Central African Time</option>
+									<option class="ng-scope" label="Africa/JohannesburgSout175" value="Africa/Johannesburg" translate="">Africa/Johannesburg: South Africa Standard Time</option>
+									<option class="ng-scope" label="Africa/KigaliCentralAf178" value="Africa/Kigali" translate="">Africa/Kigali: Central African Time</option>
+									<option class="ng-scope" label="Africa/LubumbashiCentra184" value="Africa/Lubumbashi" translate="">Africa/Lubumbashi: Central African Time</option>
+									<option class="ng-scope" label="Africa/LusakaCentralAf185" value="Africa/Lusaka" translate="">Africa/Lusaka: Central African Time</option>
+									<option class="ng-scope" label="Africa/MaputoCentralAf187" value="Africa/Maputo" translate="">Africa/Maputo: Central African Time</option>
+									<option class="ng-scope" label="Africa/MaseruSouthAfri188" value="Africa/Maseru" translate="">Africa/Maseru: South Africa Standard Time</option>
+									<option class="ng-scope" label="Africa/MbabaneSouthAfr189" value="Africa/Mbabane" translate="">Africa/Mbabane: South Africa Standard Time</option>
+									<option class="ng-scope" label="Africa/TripoliEasternE200" value="Africa/Tripoli" translate="">Africa/Tripoli: Eastern European Time</option>
+									<option class="ng-scope" label="Asia/AmmanEasternEurop335" value="Asia/Amman" translate="">Asia/Amman: Eastern European Time</option>
+									<option class="ng-scope" label="Asia/BeirutEasternEuro345" value="Asia/Beirut" translate="">Asia/Beirut: Eastern European Time</option>
+									<option class="ng-scope" label="Asia/DamascusEasternEu351" value="Asia/Damascus" translate="">Asia/Damascus: Eastern European Time</option>
+									<option class="ng-scope" label="Asia/JerusalemIsraelSt359" value="Asia/Jerusalem" translate="">Asia/Jerusalem: Israel Standard Time</option>
+									<option class="ng-scope" label="Asia/NicosiaEasternEur371" value="Asia/Nicosia" translate="">Asia/Nicosia: Eastern European Time</option>
+									<option class="ng-scope" label="CatCentralAfricanTime" value="CAT" translate="">CAT: Central African Time</option>
+									<option class="ng-scope" label="EetEasternEuropeanTime" value="EET" translate="">EET: Eastern European Time</option>
+									<option class="ng-scope" label="Europe/AthensEasternEu904" value="Europe/Athens" translate="">Europe/Athens: Eastern European Time</option>
+									<option class="ng-scope" label="Europe/BucharestEastern908" value="Europe/Bucharest" translate="">Europe/Bucharest: Eastern European Time</option>
+									<option class="ng-scope" label="Europe/ChisinauEastern910" value="Europe/Chisinau" translate="">Europe/Chisinau: Eastern European Time</option>
+									<option class="ng-scope" label="Europe/HelsinkiEastern914" value="Europe/Helsinki" translate="">Europe/Helsinki: Eastern European Time</option>
+									<option class="ng-scope" label="Europe/IstanbulEastern915" value="Europe/Istanbul" translate="">Europe/Istanbul: Eastern European Time</option>
+									<option class="ng-scope" label="Europe/KaliningradEaste916" value="Europe/Kaliningrad" translate="">Europe/Kaliningrad: Eastern European Time</option>
+									<option class="ng-scope" label="Europe/KievEasternEuro917" value="Europe/Kiev" translate="">Europe/Kiev: Eastern European Time</option>
+									<option class="ng-scope" label="Europe/MinskEasternEur923" value="Europe/Minsk" translate="">Europe/Minsk: Eastern European Time</option>
+									<option class="ng-scope" label="Europe/RigaEasternEuro929" value="Europe/Riga" translate="">Europe/Riga: Eastern European Time</option>
+									<option class="ng-scope" label="Europe/SimferopolEaster932" value="Europe/Simferopol" translate="">Europe/Simferopol: Eastern European Time</option>
+									<option class="ng-scope" label="Europe/SofiaEasternEur933" value="Europe/Sofia" translate="">Europe/Sofia: Eastern European Time</option>
+									<option class="ng-scope" label="Europe/TallinnEasternE935" value="Europe/Tallinn" translate="">Europe/Tallinn: Eastern European Time</option>
+									<option class="ng-scope" label="Europe/VilniusEasternE939" value="Europe/Vilnius" translate="">Europe/Vilnius: Eastern European Time</option>
+									<option class="ng-scope" label="Africa/AddisAbabaEaste157" value="Africa/Addis_Ababa" translate="">Africa/Addis_Ababa: Eastern African Time</option>
+									<option class="ng-scope" label="Africa/AsmeraEasternAf159" value="Africa/Asmera" translate="">Africa/Asmera: Eastern African Time</option>
+									<option class="ng-scope" label="Africa/DaresSalaamEas169" value="Africa/Dar_es_Salaam" translate="">Africa/Dar_es_Salaam: Eastern African Time</option>
+									<option class="ng-scope" label="Africa/DjiboutiEastern170" value="Africa/Djibouti" translate="">Africa/Djibouti: Eastern African Time</option>
+									<option class="ng-scope" label="Africa/KampalaEasternA176" value="Africa/Kampala" translate="">Africa/Kampala: Eastern African Time</option>
+									<option class="ng-scope" label="Africa/KhartoumEastern177" value="Africa/Khartoum" translate="">Africa/Khartoum: Eastern African Time</option>
+									<option class="ng-scope" label="Africa/MogadishuEastern190" value="Africa/Mogadishu" translate="">Africa/Mogadishu: Eastern African Time</option>
+									<option class="ng-scope" label="Africa/NairobiEasternA192" value="Africa/Nairobi" translate="">Africa/Nairobi: Eastern African Time</option>
+									<option class="ng-scope" label="Asia/AdenArabiaStandar333" value="Asia/Aden" translate="">Asia/Aden: Arabia Standard Time</option>
+									<option class="ng-scope" label="Asia/BaghdadArabiaStan341" value="Asia/Baghdad" translate="">Asia/Baghdad: Arabia Standard Time</option>
+									<option class="ng-scope" label="Asia/BahrainArabiaStan342" value="Asia/Bahrain" translate="">Asia/Bahrain: Arabia Standard Time</option>
+									<option class="ng-scope" label="Asia/KuwaitArabiaStand366" value="Asia/Kuwait" translate="">Asia/Kuwait: Arabia Standard Time</option>
+									<option class="ng-scope" label="Asia/QatarArabiaStanda375" value="Asia/Qatar" translate="">Asia/Qatar: Arabia Standard Time</option>
+									<option class="ng-scope" label="Asia/RiyadhArabiaStand377" value="Asia/Riyadh" translate="">Asia/Riyadh: Arabia Standard Time</option>
+									<option class="ng-scope" label="EatEasternAfricanTime" value="EAT" translate="">EAT: Eastern African Time</option>
+									<option class="ng-scope" label="Europe/MoscowMoscowSta925" value="Europe/Moscow" translate="">Europe/Moscow: Moscow Standard Time</option>
+									<option class="ng-scope" label="Indian/AntananarivoEast1128" value="Indian/Antananarivo" translate="">Indian/Antananarivo: Eastern African Time</option>
+									<option class="ng-scope" label="Indian/ComoroEasternAf1132" value="Indian/Comoro" translate="">Indian/Comoro: Eastern African Time</option>
+									<option class="ng-scope" label="Indian/MayotteEasternA1137" value="Indian/Mayotte" translate="">Indian/Mayotte: Eastern African Time</option>
+									<option class="ng-scope" label="Asia/TehranIranTime385" value="Asia/Tehran" translate="">Asia/Tehran: Iran Time</option>
+									<option class="ng-scope" label="MetIranTime" value="MET" translate="">MET: Iran Time</option>
+									<option class="ng-scope" label="Asia/AqtauAqtauTime337" value="Asia/Aqtau" translate="">Asia/Aqtau: Aqtau Time</option>
+									<option class="ng-scope" label="Asia/BakuAzerbaijanTim343" value="Asia/Baku" translate="">Asia/Baku: Azerbaijan Time</option>
+									<option class="ng-scope" label="Asia/DubaiGulfStandard353" value="Asia/Dubai" translate="">Asia/Dubai: Gulf Standard Time</option>
+									<option class="ng-scope" label="Asia/MuscatGulfStandar370" value="Asia/Muscat" translate="">Asia/Muscat: Gulf Standard Time</option>
+									<option class="ng-scope" label="Asia/TbilisiGeorgiaTim384" value="Asia/Tbilisi" translate="">Asia/Tbilisi: Georgia Time</option>
+									<option class="ng-scope" label="Asia/YerevanArmeniaTim396" value="Asia/Yerevan" translate="">Asia/Yerevan: Armenia Time</option>
+									<option class="ng-scope" label="Europe/SamaraSamaraTim931" value="Europe/Samara" translate="">Europe/Samara: Samara Time</option>
+									<option class="ng-scope" label="Indian/MaheSeychellesT1134" value="Indian/Mahe" translate="">Indian/Mahe: Seychelles Time</option>
+									<option class="ng-scope" label="Indian/MauritiusMauriti1136" value="Indian/Mauritius" translate="">Indian/Mauritius: Mauritius Time</option>
+									<option class="ng-scope" label="Indian/ReunionReunionT1138" value="Indian/Reunion" translate="">Indian/Reunion: Reunion Time</option>
+									<option class="ng-scope" label="NetArmeniaTime" value="NET" translate="">NET: Armenia Time</option>
+									<option class="ng-scope" label="Asia/KabulAfghanistanT360" value="Asia/Kabul" translate="">Asia/Kabul: Afghanistan Time</option>
+									<option class="ng-scope" label="Asia/AqtobeAqtobeTime338" value="Asia/Aqtobe" translate="">Asia/Aqtobe: Aqtobe Time</option>
+									<option class="ng-scope" label="Asia/AshgabatTurkmenist339" value="Asia/Ashgabat" translate="">Asia/Ashgabat: Turkmenistan Time</option>
+									<option class="ng-scope" label="Asia/AshkhabadTurkmenis340" value="Asia/Ashkhabad" translate="">Asia/Ashkhabad: Turkmenistan Time</option>
+									<option class="ng-scope" label="Asia/BishkekKirgizstan346" value="Asia/Bishkek" translate="">Asia/Bishkek: Kirgizstan Time</option>
+									<option class="ng-scope" label="Asia/DushanbeTajikistan354" value="Asia/Dushanbe" translate="">Asia/Dushanbe: Tajikistan Time</option>
+									<option class="ng-scope" label="Asia/KarachiPakistanTi362" value="Asia/Karachi" translate="">Asia/Karachi: Pakistan Time</option>
+									<option class="ng-scope" label="Asia/TashkentUzbekistan383" value="Asia/Tashkent" translate="">Asia/Tashkent: Uzbekistan Time</option>
+									<option class="ng-scope" label="Asia/YekaterinburgYekat395" value="Asia/Yekaterinburg" translate="">Asia/Yekaterinburg: Yekaterinburg Time</option>
+									<option class="ng-scope" label="Indian/ChagosIndianOce1129" value="Indian/Chagos" translate="">Indian/Chagos: Indian Ocean Territory Time</option>
+									<option class="ng-scope" label="Indian/MaldivesMaldives1135" value="Indian/Maldives" translate="">Indian/Maldives: Maldives Time</option>
+									<option class="ng-scope" label="PltPakistanTime" value="PLT" translate="">PLT: Pakistan Time</option>
+									<option class="ng-scope" label="Asia/CalcuttaIndiaStan348" value="Asia/Calcutta" translate="">Asia/Calcutta: India Standard Time</option>
+									<option class="ng-scope" label="IstIndiaStandardTime" value="IST" translate="">IST: India Standard Time</option>
+									<option class="ng-scope" label="Asia/KatmanduNepalTime363" value="Asia/Katmandu" translate="">Asia/Katmandu: Nepal Time</option>
+									<option class="ng-scope" label="Antarctica/MawsonMawson304" value="Antarctica/Mawson" translate="">Antarctica/Mawson: Mawson Time</option>
+									<option class="ng-scope" label="Asia/AlmatyAlmaAtaTim334" value="Asia/Almaty" translate="">Asia/Almaty: Alma-Ata Time</option>
+									<option class="ng-scope" label="Asia/ColomboSriLankaT349" value="Asia/Colombo" translate="">Asia/Colombo: Sri Lanka Time</option>
+									<option class="ng-scope" label="Asia/DaccaBangladeshTi350" value="Asia/Dacca" translate="">Asia/Dacca: Bangladesh Time</option>
+									<option class="ng-scope" label="Asia/DhakaBangladeshTi352" value="Asia/Dhaka" translate="">Asia/Dhaka: Bangladesh Time</option>
+									<option class="ng-scope" label="Asia/NovosibirskNovosib372" value="Asia/Novosibirsk" translate="">Asia/Novosibirsk: Novosibirsk Time</option>
+									<option class="ng-scope" label="Asia/ThimbuBhutanTime386" value="Asia/Thimbu" translate="">Asia/Thimbu: Bhutan Time</option>
+									<option class="ng-scope" label="Asia/ThimphuBhutanTime387" value="Asia/Thimphu" translate="">Asia/Thimphu: Bhutan Time</option>
+									<option class="ng-scope" label="BstBangladeshTime" value="BST" translate="">BST: Bangladesh Time</option>
+									<option class="ng-scope" label="Asia/RangoonMyanmarTim376" value="Asia/Rangoon" translate="">Asia/Rangoon: Myanmar Time</option>
+									<option class="ng-scope" label="Indian/CocosCocosIslan1131" value="Indian/Cocos" translate="">Indian/Cocos: Cocos Islands Time</option>
+									<option class="ng-scope" label="Asia/BangkokIndochinaT344" value="Asia/Bangkok" translate="">Asia/Bangkok: Indochina Time</option>
+									<option class="ng-scope" label="Asia/JakartaJavaTime357" value="Asia/Jakarta" translate="">Asia/Jakarta: Java Time</option>
+									<option class="ng-scope" label="Asia/KrasnoyarskKrasnoy364" value="Asia/Krasnoyarsk" translate="">Asia/Krasnoyarsk: Krasnoyarsk Time</option>
+									<option class="ng-scope" label="Asia/PhnomPenhIndochin373" value="Asia/Phnom_Penh" translate="">Asia/Phnom_Penh: Indochina Time</option>
+									<option class="ng-scope" label="Asia/SaigonIndochinaTi378" value="Asia/Saigon" translate="">Asia/Saigon: Indochina Time</option>
+									<option class="ng-scope" label="Asia/VientianeIndochina392" value="Asia/Vientiane" translate="">Asia/Vientiane: Indochina Time</option>
+									<option class="ng-scope" label="Indian/ChristmasChristm1130" value="Indian/Christmas" translate="">Indian/Christmas: Christmas Island Time</option>
+									<option class="ng-scope" label="VstIndochinaTime" value="VST" translate="">VST: Indochina Time</option>
+									<option class="ng-scope" label="Antarctica/CaseyWestern302" value="Antarctica/Casey" translate="">Antarctica/Casey: Western Standard Time (Australia)</option>
+									<option class="ng-scope" label="Asia/BruneiBruneiTime347" value="Asia/Brunei" translate="">Asia/Brunei: Brunei Time</option>
+									<option class="ng-scope" label="Asia/HongKongHongKong355" value="Asia/Hong_Kong" translate="">Asia/Hong_Kong: Hong Kong Time</option>
+									<option class="ng-scope" label="Asia/IrkutskIrkutskTim356" value="Asia/Irkutsk" translate="">Asia/Irkutsk: Irkutsk Time</option>
+									<option class="ng-scope" label="Asia/KualaLumpurMalays365" value="Asia/Kuala_Lumpur" translate="">Asia/Kuala_Lumpur: Malaysia Time</option>
+									<option class="ng-scope" label="Asia/MacaoChinaStandar367" value="Asia/Macao" translate="">Asia/Macao: China Standard Time</option>
+									<option class="ng-scope" label="Asia/ManilaPhilippines369" value="Asia/Manila" translate="">Asia/Manila: Philippines Time</option>
+									<option class="ng-scope" label="Asia/ShanghaiChinaStan380" value="Asia/Shanghai" translate="">Asia/Shanghai: China Standard Time</option>
+									<option class="ng-scope" label="Asia/SingaporeSingapore381" value="Asia/Singapore" translate="">Asia/Singapore: Singapore Time</option>
+									<option class="ng-scope" label="Asia/TaipeiChinaStanda382" value="Asia/Taipei" translate="">Asia/Taipei: China Standard Time</option>
+									<option class="ng-scope" label="Asia/UjungPandangBorne389" value="Asia/Ujung_Pandang" translate="">Asia/Ujung_Pandang: Borneo Time</option>
+									<option class="ng-scope" label="Asia/UlaanbaatarUlaanba390" value="Asia/Ulaanbaatar" translate="">Asia/Ulaanbaatar: Ulaanbaatar Time</option>
+									<option class="ng-scope" label="Asia/UlanBatorUlaanbaa391" value="Asia/Ulan_Bator" translate="">Asia/Ulan_Bator: Ulaanbaatar Time</option>
+									<option class="ng-scope" label="Australia/PerthWestern444" value="Australia/Perth" translate="">Australia/Perth: Western Standard Time (Australia)</option>
+									<option class="ng-scope" label="CttChinaStandardTime" value="CTT" translate="">CTT: China Standard Time</option>
+									<option class="ng-scope" label="Asia/JayapuraJayapuraT358" value="Asia/Jayapura" translate="">Asia/Jayapura: Jayapura Time</option>
+									<option class="ng-scope" label="Asia/PyongyangKoreaSta374" value="Asia/Pyongyang" translate="">Asia/Pyongyang: Korea Standard Time</option>
+									<option class="ng-scope" label="Asia/SeoulKoreaStandar379" value="Asia/Seoul" translate="">Asia/Seoul: Korea Standard Time</option>
+									<option class="ng-scope" label="Asia/TokyoJapanStandar388" value="Asia/Tokyo" translate="">Asia/Tokyo: Japan Standard Time</option>
+									<option class="ng-scope" label="Asia/YakutskYakutskTim394" value="Asia/Yakutsk" translate="">Asia/Yakutsk: Yakutsk Time</option>
+									<option class="ng-scope" label="JstJapanStandardTime" value="JST" translate="">JST: Japan Standard Time</option>
+									<option class="ng-scope" label="Pacific/PalauPalauTime1455" value="Pacific/Palau" translate="">Pacific/Palau: Palau Time</option>
+									<option class="ng-scope" label="ACTCentralStandardTim66" value="ACT" translate="">ACT: Central Standard Time (Northern Territory)</option>
+									<option class="ng-scope" label="Australia/AdelaideCentr438" value="Australia/Adelaide" translate="">Australia/Adelaide: Central Standard Time (South Australia)</option>
+									<option class="ng-scope" label="Australia/DarwinCentral441" value="Australia/Darwin" translate="">Australia/Darwin: Central Standard Time (Northern Territory)</option>
+									<option class="ng-scope" label="AETEasternStandardTim153" value="AET" translate="">AET: Eastern Standard Time (New South Wales)</option>
+									<option class="ng-scope" label="Antarctica/DumontDUrville303" value="Antarctica/DumontDUrville" translate="">Antarctica/DumontDUrville: Dumont-d'Urville Time</option>
+									<option class="ng-scope" label="Asia/VladivostokVladivo393" value="Asia/Vladivostok" translate="">Asia/Vladivostok: Vladivostok Time</option>
+									<option class="ng-scope" label="Australia/BrisbaneEaste439" value="Australia/Brisbane" translate="">Australia/Brisbane: Eastern Standard Time (Queensland)</option>
+									<option class="ng-scope" label="Australia/HobartEastern442" value="Australia/Hobart" translate="">Australia/Hobart: Eastern Standard Time (Tasmania)</option>
+									<option class="ng-scope" label="Australia/SydneyEastern445" value="Australia/Sydney" translate="">Australia/Sydney: Eastern Standard Time (New South Wales)</option>
+									<option class="ng-scope" label="Pacific/GuamChamorroSt1444" value="Pacific/Guam" translate="">Pacific/Guam: Chamorro Standard Time</option>
+									<option class="ng-scope" label="Pacific/PortMoresbyPap1458" value="Pacific/Port_Moresby" translate="">Pacific/Port_Moresby: Papua New Guinea Time</option>
+									<option class="ng-scope" label="Pacific/SaipanChamorro1460" value="Pacific/Saipan" translate="">Pacific/Saipan: Chamorro Standard Time</option>
+									<option class="ng-scope" label="Pacific/TrukTrukTime1464" value="Pacific/Truk" translate="">Pacific/Truk: Truk Time</option>
+									<option class="ng-scope" label="Australia/LordHoweLoad443" value="Australia/Lord_Howe" translate="">Australia/Lord_Howe: Load Howe Standard Time</option>
+									<option class="ng-scope" label="Asia/MagadanMagadanTim368" value="Asia/Magadan" translate="">Asia/Magadan: Magadan Time</option>
+									<option class="ng-scope" label="Pacific/EfateVanuatuTi1436" value="Pacific/Efate" translate="">Pacific/Efate: Vanuatu Time</option>
+									<option class="ng-scope" label="Pacific/KosraeKosraeTi1447" value="Pacific/Kosrae" translate="">Pacific/Kosrae: Kosrae Time</option>
+									<option class="ng-scope" label="Pacific/NoumeaNewCaled1453" value="Pacific/Noumea" translate="">Pacific/Noumea: New Caledonia Time</option>
+									<option class="ng-scope" label="Pacific/PonapePonapeTi1457" value="Pacific/Ponape" translate="">Pacific/Ponape: Ponape Time</option>
+									<option class="ng-scope" label="Pacific/NorfolkNorfolk1452" value="Pacific/Norfolk" translate="">Pacific/Norfolk: Norfolk Time</option>
+									<option class="ng-scope" label="Antarctica/McMurdoNewZ305" value="Antarctica/McMurdo" translate="">Antarctica/McMurdo: New Zealand Standard Time</option>
+									<option class="ng-scope" label="Asia/AnadyrAnadyrTime336" value="Asia/Anadyr" translate="">Asia/Anadyr: Anadyr Time</option>
+									<option class="ng-scope" label="Asia/KamchatkaPetropavl361" value="Asia/Kamchatka" translate="">Asia/Kamchatka: Petropavlovsk-Kamchatski Time</option>
+									<option class="ng-scope" label="NstNewZealandStandardTime" value="NST" translate="">NST: New Zealand Standard Time</option>
+									<option class="ng-scope" label="Pacific/AucklandNewZea1433" value="Pacific/Auckland" translate="">Pacific/Auckland: New Zealand Standard Time</option>
+									<option class="ng-scope" label="Pacific/FijiFijiTime1439" value="Pacific/Fiji" translate="">Pacific/Fiji: Fiji Time</option>
+									<option class="ng-scope" label="Pacific/FunafutiTuvalu1440" value="Pacific/Funafuti" translate="">Pacific/Funafuti: Tuvalu Time</option>
+									<option class="ng-scope" label="Pacific/MajuroMarshall1448" value="Pacific/Majuro" translate="">Pacific/Majuro: Marshall Islands Time</option>
+									<option class="ng-scope" label="Pacific/NauruNauruTime1450" value="Pacific/Nauru" translate="">Pacific/Nauru: Nauru Time</option>
+									<option class="ng-scope" label="Pacific/WakeWakeTime1465" value="Pacific/Wake" translate="">Pacific/Wake: Wake Time</option>
+									<option class="ng-scope" label="Pacific/WallisWallis1466" value="Pacific/Wallis" translate="">Pacific/Wallis: Wallis + Futuna Time</option>
+									<option class="ng-scope" label="Pacific/ChathamChatham1434" value="Pacific/Chatham" translate="">Pacific/Chatham: Chatham Standard Time</option>
+									<option class="ng-scope" label="Pacific/TongatapuTonga1463" value="Pacific/Tongatapu" translate="">Pacific/Tongatapu: Tonga Time</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+								
+								<div class="module_block" id="change_cas">
+                                    <div class="module_header bg_color_5">
+                                        <h3>Change Cost Allocation System</h3>
+                                    </div>
+                                    <div class="module_content">
+                                        <div class="fd_form">
+                                            <div class="form_container clearfix">
+
+                                                <div class="form_row inline clearfix">
+                                                    <div class="form_label">
+                                                        <label for="cas_select_value">Change CAS <span class="mandatory">*</span></label>
+                                                    </div>
+                                                    <div class="form_select">
+                                                        <select name="cas_select_value" id="cas_select_value" class="moz_custom">
+                                                            <option value="UK Oracle">UK Oracle</option>
+															<option value="US Debit">US Debit</option>
+															<option value="US FDC">US FDC</option>
+															<option value="US FDC" selected="selected">US FDR</option>
+															<option value="US I-Procure">US I-Procure</option>
+															<option value="US Merchant Srvs">US Merchant Srvs</option>
+															<option value="US Payment Srvs">US Payment Srvs</option>
+															<option value="US Telecheck">US Telecheck</option>
+															<option value="UK-lexpenses">UK-lexpenses</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+								
+								<div class="module_block" id="email_notification">
+                                    <div class="module_header bg_color_5">
+                                        <h3>Details</h3>
+                                    </div>
+                                    <div class="module_content">
+                                        <div class="fd_form">
+                                            <div class="form_container clearfix">
+
+                                                <div class="form_row inline clearfix">
+                                                    <div class="">
+                                                        <label for="ud_profile"><b>Email notifications for Card Request changes</b></label><br>
+                                                    </div>
+													<br class="clear">
+                                                    <div>
+                                                        <label for="ud_profile">Choose one of the following:</label><br><br>
+														<div style="padding-left:10px;">
+														<input type="radio" name="re" id="no_email" value="No email">No email</input><br><br>
+														<input type="radio" name="re" id="one_email" value="One email for each action">One email for each action</input><br><br>
+														<input type="radio" name="re" id="one_summ" value="One summary email each day">One summary email each day</input><br><br>
+														<input type="radio" checked="checked" name="re" id="both" value="Both (an email per action and a summary email)">Both (an email per action and a summary email)</input><br><br>
+														</div>
+														<script type="text/javascript">
+															var allRadios = document.getElementsByName('re');
+															var booRadio;
+															var x = 0;
+															for(x = 0; x < allRadios.length; x++){
+
+																allRadios[x].onclick = function() {
+																	if(booRadio == this){
+																		this.checked = false;
+																		booRadio = null;
+																	}else{
+																		booRadio = this;
+																	}
+																};
+															}
+														</script>
+                                                    </div>
+													<br class="clear">
+													<div class="form_label">
+                                                        <label for="ud_profile">Schedule time for sending emails</label>
+                                                    </div>
+													<br class="clear">
+                                                    <div style="width:70px; padding-left:10px;">
+                                                        <select name="ud_profile" id="ud_profile" class="moz_custom"><br>
+																<option value="" selected="selected">00:00</option>
+																<option value="">10:00</option>
+																<option value="">15:00</option>
+																<option value="">30:00</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+								<!--Hide and show the side panels-->
+								<script type="text/javascript">
+									$(document).ready(function() {
+										$("#email_notification").hide();
+										$("#timezone").hide();
+										$("#change_cas").hide();
+										$("#cas_button" ).click(function() {
+											$("#language").hide();
+											$("#email_notification").hide();
+											$("#change_cas").show();
+											$("#timezone").hide();
+										});
+										
+										$("#email_button" ).click(function() {
+											$("#language").hide();
+											$("#email_notification").show();
+											$("#change_cas").hide();
+											$("#timezone").hide();
+										});
+										
+										$("#language_button" ).click(function() {
+											$("#language").show();
+											$("#email_notification").hide();
+											$("#change_cas").hide();
+											$("#timezone").hide();
+										});
+										
+										$("#timezone_button" ).click(function() {
+											$("#language").hide();
+											$("#email_notification").hide();
+											$("#change_cas").hide();
+											$("#timezone").show();
+										});
+        
+									});
+								
+								</script>
+
+                                <div class="page_actions">
+                                    <div class="page_actions_left">
+                                        <ul>
+                                            <li><input type="button" value="Cancel" id="" class="btn_normal btn_grey" aria-label="Cancel Updating Language Preference"></li>
+                                        </ul>
+                                    </div>
+                                    <div class="page_actions_right">
+                                        <ul>
+                                            <li><input type="button" value="Update" id="" onclick="alertValue();" class="btn_normal btn_primary" aria-label="Update Language Preference"></li>
+                                        </ul>
+                                    </div>
+                                    <br class="clear">
+                                </div>
+
+                            </div>
+                            <br class="clear">
+
+                            
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        
+    <div id="page_footer" class="bg_color_2">
+        <div class="footer_left">
+            <div class="footer_nav">
+                <ul>
+                    <li><a href="#">Help</a></li>
+                    
+                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <br class="clear">
+            </div>
+            <div class="footer_text">© 2008 - 2016Austin Cricket League. All Rights Reserved</div>
+        </div>
+        <div class="footer_right">
+            <div class="footer_nav">
+                <ul>
+                    <li style="position:relative;">
+                        <a href="javascript:void[0]" id="switch_theme" class="dd_link" title="Select Theme">Theme</a>
+                        <div id="switch_theme_options" style="display:none;" class="dd_option_panel" role="dialog" aria-label="Theme Switcher Options">
+                            <h3 class="color_1">Change Theme</h3>
+                            <div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Theme Switcher Options">Close Player Options Panel</a></div>
+                            <ul id="theme_list">
+                                <li><a href="#" rel="themes/theme_360.css">Default</a></li>
+                                <li><a href="#" rel="themes/theme_hsbc.css">HSBC</a></li>
+                                <li><a href="#" rel="themes/theme_wells_fargo.css">Wells Fargo</a></li>
+                                <li><a href="#" rel="themes/theme_first_tennessee.css">First Tennessee</a></li>
+                                <li><a href="#" rel="themes/theme_umb.css">UMB</a></li>
+                                <li><a href="#" rel="themes/theme_pnc.css">PNC</a></li>
+                                <li><a href="#" rel="themes/theme_citi.css">Citi</a></li>
+                                <li><a href="#" rel="themes/theme_abank.css">ABank</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Previous Version</a></li>
+                </ul>
+                <br class="clear">
+            </div>
+        </div>
+        <br class="clear">
+    </div>
+    
+</div>
+
+<!-- JQuery Datepicker -->
+<script type="text/javascript">
+    $(function() {
+        $('.date_picker:enabled').datepicker({
+            showOn:'button',
+            buttonText: 'Datepicker'
+        });
+    });
+</script>
+
+<!-- Script to Handle Drawers -->
+<script type="text/javascript">
+    // Script to Toggle the Drawers
+    $(document).ready(function(){
+        $(".drawer_toggle").click(function(event){
+            event.preventDefault();
+            if ($(this).hasClass("isOpen") ) {
+                $(this).parent().next('.drawer_panel_details').slideToggle('fast');
+                $(this).removeClass('isOpen');
+                $(this).parent().next('.drawer_panel_details').attr('aria-hidden','true');
+                $(this).find('.drawer_status').text('Expand');
+
+
+            } else {
+                $(this).parent().next('.drawer_panel_details').slideToggle('fast');
+                $(this).parent().next('.drawer_panel_details').attr('aria-hidden','false');
+                $(this).addClass('isOpen');
+                $(this).find('.drawer_status').text('Collapse');
+            }
+            return false;
+        });
+    });
+</script>
+
+<!-- Theme Switcher - Not Needed for Final -->
+<script type="text/javascript" language="javascript" src="themes/jquery.cookie.js"></script>
+<script type="text/javascript">
+    if($.cookie("css")) {
+        $("link#theme").attr("href",$.cookie("css"));
+    }
+      
+    $(document).ready(function() { 
+        if(window.location.hash) {
+            var hash = window.location.hash.substr(1);
+            var path = 'themes/theme_' + hash + '.css';
+        } else {
+            var path = $.cookie("css",path);
+        }
+        $("link#theme").attr("href",path);
+        $.cookie("css",path, {expires: 365, path: '/'});
+        return false;
+    });
+    
+    $(document).ready(function() { 
+        $("#theme_list li a").click(function() { 
+            $("link#theme").attr("href",$(this).attr('rel'));
+            $.cookie("css",$(this).attr('rel'), {expires: 365, path: '/'});
+            return false;
+        });
+        
+    });
+</script>
+
+
+<!-- ****************************** -->
+<!--        Modal Windows           -->
+<!-- ****************************** -->
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        // Change CAS Dialog Box
+        $("#change_cas_link" ).click(function() {
+            $( "#change_cas_dialog" ).dialog( "open" );
+        });
+        
+        $( "#change_cas_dialog" ).dialog({
+            autoOpen: false,
+            height: 'auto',
+            width: 400,
+            modal: true
+        });
+
+         // Select MCC Range
+        $("#btn_range_start, #btn_range_end" ).click(function() {
+            $( "#mcc_select_range_dialog" ).dialog( "open" );
+        });
+        
+        $( "#mcc_select_range_dialog" ).dialog({
+            autoOpen: false,
+            height: 'auto',
+            width: 500,
+            modal: true
+        });
+
+        
+        $(".close_modal").click(function(){
+            $(this).parent().parent().dialog('close');
+        });
+        
+        $(".btn_cancel_modal").click(function(){
+            $(this).closest('.dialog_content').parent().dialog('close');
+        });
+    });
+</script>
+
+
+
+
+<!-- Change CAS -->
+
+
+
+
+                
+ 
+
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-describedby="change_cas_dialog" aria-labelledby="ui-id-1" style="position: absolute; display: none; height: auto; width: 400px; top: 206.5px; left: 474.5px;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-1" class="ui-dialog-title">Cost Allocation System</span><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" aria-disabled="false" title="close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">close</span></button></div><div id="change_cas_dialog" role="dialog" aria-labelledby="listCASTitle" aria-describedby="listCASDesc" class="ui-dialog-content ui-widget-content" style="width: auto; min-height: 150px; max-height: none; height: auto;">
+    <div class="dialog_header">
+        <h1 id="listCASTitle">Change Cost Allocation System</h1>
+    </div>
+    <div id="listCASDesc" class="dialog_desc">This Dialog allows you to view the receipt linked to a transaction.</div>
+    <div class="dialog_content">
+        <form class="fd_form" action="#" id="change_cas_form">
+            <div class="form_container">
+                <div class="modal_content_padding">
+                    <div class="form_row">
+                        <div class="form_label"><label for="change_cas_select">Change CAS</label></div>
+                        <div class="form_select">
+                            <select class="selectbox" id="change_cas_select">
+                                <option value="option_1">UK Oracle</option>
+                                <option value="option_2">US Debit</option>
+                                <option value="option_3">US FDC</option>
+                                <option value="option_4" selected="selected">US FDR</option>
+                                <option value="option_5">US I-Procure</option>
+                                <option value="option_6">US Merchant Srvs</option>
+                                <option value="option_7">US Payment Srvs</option>
+                                <option value="option_8">US Telecheck</option>
+                                <option value="option_9">UK-lexpenses</option>
+                            </select>
+                            <br class="clear">
+                        </div>
+                    </div>
+                </div>
+                <div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="button" class="btn_normal btn_grey btn_cancel_modal" value="Cancel" id="btn_cancel_cas" aria-label="Cancel Cost Allocation System Update"></div>
+                    <div class="form_action_right"><input type="button" class="btn_normal btn_primary" value="Update CAS" id="btn_update_cas" aria-label="Update Cost Allocation System"></div>
+                    <br class="clear">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+</div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div></div></body></html>

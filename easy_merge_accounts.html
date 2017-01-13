@@ -1,0 +1,503 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Austin Cricket | 360 Austin</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+<meta content="telephone=no" name="format-detection">
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/normalize.css">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.dialog.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.datepicker.css">
+
+<!-- Theme -->
+<link id="theme" rel="stylesheet" type="text/css" href="themes/theme_360.css">
+
+<!-- Print Stylesheet -->
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print">
+
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="css/ie8_style.css" id="theme_ie8" />
+<![endif]-->
+
+<!-- Javascript -->
+<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.4.min.js" ></script>
+
+<script type="text/javascript" src="js/respond.js" ></script>
+
+<!-- Add Common Functions -->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		dropdownContainers();
+		resizeFonts();
+	});
+</script>
+
+
+<script type="text/javascript">
+	$(function() {
+		$('.date_picker').datepicker({
+			showOn:'button',
+			buttonText: 'Datepicker'
+		});
+	});
+</script>
+
+<script type="text/javascript">
+	$( document ).ready(function() {
+		
+		// Click on an Update button to show the editable states of the fields
+		$(".btn_update").click(function() {
+			// Get the ID of the button clicked
+			var btnID = $(this).attr('id');
+			// Target the ID of the Container it need to interact with
+			var updateContainerID = $('#' + btnID + '_container');
+			// Show  and Hide the container and update button
+			$(updateContainerID).show();
+			$('#' + btnID).parent().parent().hide();
+		});
+		
+		// Now do the reverse of everything above
+		$(".btn_save_update").click(function() {
+			var btnSaveID = $(this).attr('id');
+			var targetID = btnSaveID.replace(/.*save_/, "");
+			
+			$('#' + targetID).parent().parent().show();
+			$('#' + targetID + '_container').hide();
+		});
+	});
+</script>
+
+</head>
+
+<body class="bg_color_4 easy_view">
+
+<div id="page_container">
+	
+    <!-- Page Header -->
+    <div id="page_header" class="bg_color_2">
+    	<div class="logo_primary">
+        	<div><a href="index.html" title="Company Logo" aria-label="Visit the Homepage">Company Name</a></div>
+        </div>
+        <div class="logo_secondary">
+        	<div class="logo_container" title="Product Logo" aria-label="Product Name">Product Name</div>
+        </div>
+        
+        <div class="user_preferences">
+            <ul>
+            	<li>
+                	<a href="javascript:void[0]" id="style_switcher" class="dd_link" title="Change Application Font Size">aA</a>
+                    <div id="style_switcher_options" style="display:none;" class="dd_option_panel">
+                    	<div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Style Options">Close Style Options Panel</a></div>
+                        <h3 class="color_1">Font Size Options</h3>
+                    	<ul>
+                        	<li><a href="javascript:void(0)" id="font_increase" title="Increase Font Size">Large</a></li>
+                        	<li><a href="javascript:void(0)" id="font_reset" title="Reset Font Size">Normal</a></li>
+                        	<li><a href="javascript:void(0)" id="font_decrease" title="Decrease Font Size">Small</a></li>
+                        </ul>
+                    </div>
+                </li>
+            	<li>
+                	<a href="javascript:void[0]" id="user_preferences" class="dd_link" title="Current User">Zulifqar Ahmad</a>
+                    <div id="user_preferences_options" style="display:none;" class="dd_option_panel">
+                    	<div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close User Preferences">Close User Options Panel</a></div>
+                        <h3 class="color_1">User Preferences</h3>
+                        <div class="user_profile_panel">
+                        	<div class="info_user">Zulifqar Ahmad</div>
+                            <div class="info_location"><span>Role: </span>Programme Administrator</div>
+                            <div class="info_company"><span>Company: </span>Acme Holdings</div>
+                            <div class="info_structure"><span>Structure: </span>North America</div>
+                            <div class="info_cas"><span>CAS: </span>FDC <a href="javascript:void(0)" aria-label="Change CAS Selection" id="change_cas_link">(Change)</a></div>
+                        </div>
+                        <div class="info_history"><span>Last logged in at:</span> 14/03/2016, 20:05</div>
+                    	<ul>
+                        	<li><a href="javascript:void(0)">Change pa55word</a></li>
+                        	<li><a href="javascript:void(0)">Change Username</a></li>
+                        	<li><a href="javascript:void(0)">Language - English US</a></li>
+                        	<li><a href="dashboard.html">Switch to Full View</a></li>
+                        	<li><a href="javascript:void(0)">Timezone - EST (Eastern Standard Time)</a></li>
+                        	<li><a href="javascript:void(0)">Email Notifications for card changes</a></li>
+                        </ul>
+                    </div>
+
+                </li>
+                <li>
+                	<a href="index.html" title="Logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="print_header" aria-hidden="true" style="display:none;">
+        <div class="logo_primary">
+            <div><img src="images/img_logo_dark_first_data_x2.png" alt="Product Specific Logo showing 360 Austin" title="360 Austin Logo" /></div>
+        </div>
+        <div class="logo_secondary">
+            <div><img src="images/img_logo_dark_360Control_x2.png" alt="Product Specific Logo showing 360 Austin" title="360 Austin Logo" /></div>
+        </div>
+        <br class="clear"/>
+    </div>
+    
+    
+    <!-- Page Body -->
+    <div id="page_body">
+    
+    	<div id="page_content">
+        	<!-- Page Title -->
+            <div class="page_title">
+            	<h1>Link an acc0untt</h1>
+                <br class="clear"/>
+            </div>
+                    
+        	<div id="page_content_inner">
+                <div class="page_content">
+                    
+                    <!-- Card Overview Container -->
+                    <div class="card_overview_container">
+                        <!-- Embossed Name 1 -->
+                        <div class="card_owner">Joseph H Bloggs</div>
+                        <br class="clear"/>
+                    </div>
+                    
+                    <!-- Start of Page Nodes -->
+                    <div class="inner_col_left">
+                        
+                        <!-- Select Existing acc0untt to LInk -->
+                        <div class="module_block">
+                            <div class="module_header bg_color_5">
+                                <h3>Select Existing acc0untt</h3>
+                                <div class="module_actions"></div>
+                            </div>
+                            <div class="module_content">
+                                <div class="fd_form">
+                                    <div class="form_container">
+                                        
+                                        
+                                        <div class="form_row ">
+                                            <div class="form_label"><label for="merge_acc_no">A22ount Num2er </label></div>
+                                            <div class="form_select">
+                                                <select id="merge_acc_no" name="merge_acc_no" aria-required="true">
+                                                    <option value="">Select your A22ount Num2er here</option>
+                                                    <option value="********5925">********5925</option>
+                                                </select>
+                                            </div>
+                                            <br class="clear"/>
+                                        </div>
+                                        
+                                        <br class="clear"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                    <div class="inner_col_right">
+                    
+                    	<!-- Link Alternative acc0untt -->
+                        <div class="module_block">
+                            <div class="module_header bg_color_5">
+                                <h3>Enter Additional acc0untt Details to link</h3>
+                                <div class="module_actions"></div>
+                            </div>
+                            <div class="module_content">
+                                <div class="fd_form">
+                                    <div class="form_container">
+                                        
+                                        <p>If you want to add another A22ount Num2er under your current User ID and pa55word, complete the form below and click Submit. You'll have immediate access to both acc0untts.</p>
+                                        
+                                        <div class="form_row_divider"></div>
+                                        <div class="form_row ">
+                                            <div class="form_label"><label for="merge_acc_no_linked" id="merge_acc_no_linked_title">A22ount Num2er to be linked <span class="mandatory">*</span> </label></div>
+                                            <div class="form_input"><input type="text" id="merge_acc_no_linked" name="merge_acc_no_linked" aria-invalid="false" required="required" aria-required="true" aria-labelledby="merge_acc_no_linked_title" aria-describedby="merge_acc_no_linked_desc"/></div>
+                                            <br class="clear"/>
+                                            <p class="form_help_text_no_icon" id="merge_acc_no_linked_desc">No (*), (-), spaces, or PINs.</p>
+                                        </div>
+                                        
+                                        <div class="form_row ">
+                                            <div class="form_label"><label for="merge_business_name" id="merge_business_name_title">First 3 character of Business Name <span class="mandatory">*</span></label></div>
+                                            <div class="form_input"><input type="text" id="merge_business_name" name="merge_business_name" aria-invalid="false" required="required" aria-required="true" aria-labelledby="merge_business_name_title" aria-describedby="merge_business_name_desc"/></div>
+                                            <br class="clear"/>
+                                            <p class="form_help_text_no_icon" id="merge_business_name_desc">All characters allowed including spaces and special characters.</p>
+                                        </div>
+                                        
+                                        <div class="form_row ">
+                                            <div class="form_label"><label for="merge_postal_code">Postal Code <span class="mandatory">*</span></label></div>
+                                            <div class="form_input"><input type="text" id="merge_postal_code" name="merge_postal_code" aria-invalid="false" required="required" aria-required="true"/></div>
+                                            <br class="clear"/>
+                                        </div>
+                                        
+                                        <div class="form_row ">
+                                            <div class="form_label"><label for="merge_last_3_digits" id="merge_digit_title">Last 3 digits on Signature Panel <span class="mandatory">*</span></label></div>
+                                            <div class="form_input"><input type="text" id="merge_last_3_digits" name="merge_last_3_digits" aria-invalid="false" required="required" aria-required="true" aria-labelledby="merge_digit_title" aria-describedby="merge_digit_desc"/></div>
+                                            <br class="clear"/>
+                                            <p class="form_help_text_no_icon" id="merge_digit_desc"><a href="javascript:void(0)" aria-label="View a Sample Image of last 3 digits on signature panel" title="View a Sample Image of last 3 digits on signature panel" id="view_sample_link">View Sample</a></p>
+                                        </div>
+                                        <br class="clear"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                    <br class="clear"/>
+                    
+                </div>
+                <div class="page_actions">
+                	<div class="page_actions_left">
+                    </div>
+                    <div class="page_actions_right">
+                        <ul>
+							<li><input type="button" value="Submit" id="btn_submit" class="btn_normal btn_primary" aria-label="Submit Merge acc0untt" /></li>
+                        </ul>
+                    </div>
+                    <br class="clear"/>
+                </div>
+                
+        	</div>
+        </div>
+        <!-- Right Hand Navigation -->
+        <div id="page_slider_nav" class="bg_color_1 color_3">
+            <div id="page_slider_nav_inner">
+                <div class="col_easy_nav">
+                    <h2>I Want to...</h2>
+                </div>
+                <div class="col_easy_nav">
+                    <h3 class="title_card_payments">Manage Payments</h3>
+                    <ul>
+                        <li><a href="easy_make_once_off_payment.html">Make One-time Payment</a></li>
+                        <li><a href="easy_setup_auto_payment.html">Set-up Automatic Payments</a></li>
+                        <li><a href="easy_view_payment_history.html">View Payment History</a></li>
+                        <li><a href="easy_view_scheduled_payments.html">View Scheduled Payments</a></li>
+                    </ul>
+                </div>
+                <div class="col_easy_nav">
+                    <h3 class="title_card_details">Card Details</h3>
+                    <ul>
+                        <li><a href="easy_update_contact_details.html">Update Contact Details</a></li>
+                        <li><a href="easy_order_replacement_card.html">Order a Replacement Card</a></li>
+                        <li><a href="easy_request_limit_and_strategy.html">Request Limit and Strategy</a></li>
+                        <li><a href="easy_change_acc0untt_status.html">Change acc0untt Status</a></li>
+                        <li><a href="easy_view_my_rewards.html">View My Rewards</a></li>
+                    </ul>
+                </div>
+                <div class="col_easy_nav">
+                    <h3 class="title_card_transactions">Card Schedule</h3>
+                    <ul>
+                        <li><a href="easy_view_my_statements.html">View my Scorecard</a></li>
+                        <li><a href="easy_update_statement_delivery_option.html">Update Statement Delivery Option</a></li>
+                        <li><a href="easy_view_auths_and_declines.html">View Auths and Declines</a></li>
+                    </ul>
+                </div>
+                <div class="col_easy_nav">
+                	<ul>
+                        <li><a href="easy_message_center.html">Message Center</a></li>
+                        <li><a href="easy_faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <br class="clear"/>
+            </div>
+        </div>
+    </div>
+    
+    <div id="page_footer" class="bg_color_2">
+    	<div class="footer_left">
+        	<div class="footer_nav">
+                <ul>
+                    <li><a href="#">Help</a></li>
+                    
+                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <br class="clear"/>
+            </div>
+            <div class="footer_text">&copy; 2008 - 2016Austin Cricket League. All Rights Reserved</div>
+        </div>
+        <div class="footer_right">
+        	<div class="footer_nav">
+                <ul>
+                	<li style="position:relative;">
+                        <a href="javascript:void[0]" id="switch_theme" class="dd_link" title="Select Theme">Theme</a>
+                        <div id="switch_theme_options" style="display:none;" class="dd_option_panel" role="dialog" aria-label="Theme Switcher Options">
+                            <h3 class="color_1">Change Theme</h3>
+                            <div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Theme Switcher Options">Close Player Options Panel</a></div>
+                            <ul id="theme_list">
+                                <li><a href="#" rel="themes/theme_360.css">Default</a></li>
+                                <li><a href="#" rel="themes/theme_hsbc.css">HSBC</a></li>
+                                <li><a href="#" rel="themes/theme_wells_fargo.css">Wells Fargo</a></li>
+                                <li><a href="#" rel="themes/theme_first_tennessee.css">First Tennessee</a></li>
+                                <li><a href="#" rel="themes/theme_umb.css">UMB</a></li>
+                                <li><a href="#" rel="themes/theme_pnc.css">PNC</a></li>
+                                <li><a href="#" rel="themes/theme_citi.css">Citi</a></li>
+                                <li><a href="#" rel="themes/theme_abank.css">ABank</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Previous Version</a></li>
+                </ul>
+                <br class="clear"/>
+            </div>
+        </div>
+        <br class="clear"/>
+    </div>
+    
+</div>
+
+<!-- Theme Switcher - Not Needed for Final -->
+<script type="text/javascript" language="javascript" src="themes/jquery.cookie.js"></script>
+<script type="text/javascript">
+	if($.cookie("css")) {
+		$("link#theme").attr("href",$.cookie("css"));
+	}
+	  
+	$(document).ready(function() { 
+		if(window.location.hash) {
+			var hash = window.location.hash.substr(1);
+			var path = 'themes/theme_' + hash + '.css';
+		} else {
+		  	var path = $.cookie("css",path);
+		}
+		$("link#theme").attr("href",path);
+		$.cookie("css",path, {expires: 365, path: '/'});
+		return false;
+	});
+	
+	$(document).ready(function() { 
+		$("#theme_list li a").click(function() { 
+			$("link#theme").attr("href",$(this).attr('rel'));
+			$.cookie("css",$(this).attr('rel'), {expires: 365, path: '/'});
+			return false;
+		});
+		
+	});
+</script>
+
+
+<!-- ****************************** -->
+<!-- 		Modal Windows 			-->
+<!-- ****************************** -->
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		
+		
+		
+		// Launch Receipts Dialog
+		$("#change_cas_link" ).click(function() {
+			$( "#change_cas_dialog" ).dialog( "open" );
+		});
+		
+		$( "#change_cas_dialog" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 400,
+			modal: true
+		});
+		
+		
+		$("#view_sample_link" ).click(function() {
+			$( "#view_sample_dialog" ).dialog( "open" );
+		});
+		
+		$( "#view_sample_dialog" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 400,
+			modal: true
+		});
+		
+		
+		$(".close_modal").click(function(){
+			$(this).parent().parent().dialog('close');
+		});
+		
+		$(".btn_cancel_modal").click(function(){
+			$(this).closest('.dialog_content').parent().dialog('close');
+		});
+	});
+</script>
+
+
+
+<!-- JQuery Datepicker -->
+<script type="text/javascript">
+	$(function() {
+		$('.date_picker').datepicker({
+			showOn:'button'
+		});
+	});
+</script>
+
+<!-- Change CAS -->
+<div id="change_cas_dialog" title="Cost Allocation System" role="dialog" aria-labelledby="listCASTitle" aria-describedby="listCASDesc">
+	<div class="dialog_header">
+	    <h1 id="listCASTitle">Change Cost Allocation System</h1>
+    </div>
+    <div id="listCASDesc" class="dialog_desc">This Dialog allows you to view the receipt linked to a transaction.</div>
+    <div class="dialog_content">
+     <form class="fd_form" action="#" id="change_cas_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+                	<div class="form_row">
+                    	<div class="form_label"><label for="change_cas_select">Change CAS</label></div>
+                        <div class="form_select">
+                            <select class="selectbox" id="change_cas_select">
+                                <option value="option_1">UK Oracle</option>
+                                <option value="option_2">US Debit</option>
+                                <option value="option_3">US FDC</option>
+                                <option value="option_4" selected="selected">US FDR</option>
+                                <option value="option_5">US I-Procure</option>
+                                <option value="option_6">US Merchant Srvs</option>
+                                <option value="option_7">US Payment Srvs</option>
+                                <option value="option_8">US Telecheck</option>
+                                <option value="option_9">UK-lexpenses</option>
+                            </select>
+                            <br class="clear"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="button" class="btn_normal btn_grey btn_cancel_modal" value="Cancel" id="btn_cancel_cas" aria-label="Cancel Cost Allocation System Update" /></div>
+                    <div class="form_action_right"><input type="button" class="btn_normal btn_primary" value="Update CAS" id="btn_update_cas" aria-label="Update Cost Allocation System"  /></div>
+                    <br class="clear"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+</div>
+
+
+<!-- View Sample Image -->
+<div id="view_sample_dialog" title="Sample Image of Last 3 Digits on Signature Panel" role="dialog" aria-labelledby="sampleImgTitle" aria-describedby="sampleImgDesc">
+	<div class="dialog_header">
+	    <h1 id="sampleImgTitle">Sample Image</h1>
+    </div>
+    <div id="sampleImgDesc" class="dialog_desc">This Dialog allows you a sample image of last 3 digits on signature panel.</div>
+    <div class="dialog_content">
+    	<div class="modal_content_padding">
+    		place image here
+        </div>
+    </div>
+    <div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+</div>
+
+ 
+</body>
+</html>

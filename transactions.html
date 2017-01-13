@@ -1,0 +1,2406 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Austin Cricket | 360 Austin</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+<meta content="telephone=no" name="format-detection">
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/normalize.css">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.dialog.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.datepicker.css">
+
+<!-- Theme -->
+<link id="theme" rel="stylesheet" type="text/css" href="themes/theme_360.css">
+
+<!-- Print Stylesheet -->
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print">
+
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="css/ie8_style.css" id="theme_ie8" />
+<![endif]-->
+
+<!-- Javascript -->
+<script type="text/javascript" src="js/respond.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.4.min.js" ></script>
+
+<script type="text/javascript" src="js/respond.js" ></script>
+
+<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+
+<!-- Add Common Functions -->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		dropdownContainers();
+		resizeFonts();
+	});
+</script>
+
+<!-- Slide The Schedule Details Panel out when clicking on the switch -->             
+<script type="text/javascript">
+	$(document).ready(function(){
+	  	$("#grid_detail_link input").click( function(event){
+			event.preventDefault();
+			if ($(this).hasClass("isOpen") ) {
+				$('#grid_panel_table').animate({
+					marginRight: "0px"
+				}, 500);
+				$('#grid_panel_details').animate({
+					right: "-340px",
+				}, 500);
+				$('#grid_detail_link').animate({
+					right: "0px"
+				}, 500);          
+				$(this).removeClass("isOpen");
+			} else {
+				$('#grid_panel_table').animate({
+					marginRight: "340px"
+				}, 500);
+				$('#grid_panel_details').animate({
+					right: "0px",
+				}, 500);
+				$('#grid_detail_link').animate({
+					right: "340px"
+				}, 500); 
+				$(this).addClass("isOpen");
+				$('#grid_panel_details').focus();
+			}
+			return false;
+		});
+		
+		// Remove Filters from List		
+		$(".remove_filter_btn").click(function(){
+			$(this).parent().parent().remove();
+		});
+	});
+</script>
+
+
+
+
+</head>
+
+<body class="bg_color_2">
+
+<div id="page_container">
+    
+    <div id="page_header" class="bg_color_2">
+    	<div class="logo_primary">
+        	<div><a href="index.html" title="Company Logo" aria-label="Visit the Homepage">Company Name</a></div>
+        </div>
+        <div class="logo_secondary">
+        	<div class="logo_container" title="Product Logo" aria-label="Product Name">Product Name</div>
+        </div>
+        
+        <div class="user_preferences">
+            <ul>
+            	<li>
+                	<a href="javascript:void[0]" id="style_switcher" class="dd_link" title="Change Application Font Size">aA</a>
+                    <div id="style_switcher_options" style="display:none;" class="dd_option_panel" role="dialog" aria-label="Style Switcher Options">
+                    	<div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Style Options">Close Style Options Panel</a></div>
+                        <h3 class="color_1">Font Size Options</h3>
+                    	<ul>
+                        	<li><a href="javascript:void(0)" id="font_increase" title="Increase Font Size">Large</a></li>
+                        	<li><a href="javascript:void(0)" id="font_reset" title="Reset Font Size">Normal</a></li>
+                        	<li><a href="javascript:void(0)" id="font_decrease" title="Decrease Font Size">Small</a></li>
+                        </ul>
+                    </div>
+                </li>
+            	<li>
+                	<a href="javascript:void[0]" id="user_preferences" class="dd_link" title="Current User">Zulifqar Ahmad</a>
+                    <div id="user_preferences_options" style="display:none;" class="dd_option_panel" role="dialog" aria-label="User Options Panel">
+                    	<div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close User Preferences">Close User Options Panel</a></div>
+                        <h3 class="color_1">User Preferences</h3>
+                        <div class="user_profile_panel">
+                        	<div class="info_user">Zulifqar Ahmad</div>
+                            <div class="info_location"><span>Role: </span>Programme Administrator</div>
+                            <div class="info_company"><span>Company: </span>Acme Holdings</div>
+                            <div class="info_structure"><span>Structure: </span>North America</div>
+                            <div class="info_cas"><span>CAS: </span>FDC <a href="javascript:void(0)" aria-label="Change CAS Selection" id="change_cas_link">(Change)</a></div>
+                        </div>
+                        <div class="info_history"><span>Last logged in at:</span> 14/03/2016, 20:05</div>
+                    	<ul>
+                        	<li><a href="javascript:void(0)">Change pa55word</a></li>
+                        	<li><a href="javascript:void(0)">Change Username</a></li>
+                        	<li><a href="javascript:void(0)">Language - English US</a></li>
+                        	<li><a href="easy_transactions.html">Switch to Simplified View</a></li>
+                        	<li><a href="javascript:void(0)">Timezone - EST (Eastern Standard Time)</a></li>
+                        	<li><a href="javascript:void(0)">Email Notifications for card changes</a></li>
+                        </ul>
+                    </div>
+
+                </li>
+                <li>
+                	<a href="index.html" title="Logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="print_header" aria-hidden="true" style="display:none;">
+        <div class="logo_primary">
+            <div><img src="images/img_logo_dark_first_data_x2.png" alt="Austin Cricket Logo" title="Austin Cricket Logo" /></div>
+        </div>
+        <div class="logo_secondary">
+            <div><img src="images/img_logo_dark_360Control_x2.png" alt="Product Specific Logo showing 360 Austin" title="360 Austin Logo" /></div>
+        </div>
+        <br class="clear"/>
+    </div>
+        
+    <div id="page_nav" role="navigation">
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li class="current"><a href="transactions.html">Schedule</a></li>
+            <li><a href="statements.html">Scorecard</a></li>
+            <li><a href="cards.html">Cards</a></li>
+			<li><a href="inquiry.html" title="Statics">Statics</a></li>
+			<li><a href="javascript:void[0]" id="admin_panel" class="dd_link" title="View Administration Menu Options">Administration</a>
+            	<div id="admin_panel_options" style="display:none;" class="dd_option_panel" role="dialog" aria-label="Administration Menu Options">
+                    <div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Player Switcher Options">Close Administrationg Menu Options</a></div>
+                    <h3 class="color_1">Administration Menu</h3>
+                    <ul>
+                        <li><a href="users_cards.html">Users &amp; Cards</a></li>
+                        <li><a href="billing_control_acc.html">Billing Control acc0untts</a></li>
+                        <li><a href="card_request_tracking.html">Card Request Tracking</a></li>
+                    </ul>
+                </div>
+            </li>
+			<li><a href="invoice_payment.html" title="Photo Gallery">Photo Gallery</a></li>
+            
+        </ul>
+        
+    </div>
+    
+    <div id="page_body">
+    	<div id="page_content">
+        	<!-- Page Title -->
+            <div class="page_title">
+                <h1>Schedule</h1>
+                
+                <div class="card_switcher">
+                    <a href="javascript:void[0]" id="switch_cardholder" class="dd_link" title="Current User">All Members</a>
+                    <div id="switch_cardholder_options" style="display:none;" class="dd_option_panel" role="dialog" aria-label="Player Switcher Options">
+                        <div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Player Switcher Options">Close Player Options Panel</a></div>
+                        
+                        <ul class="card_list">
+                            <li><a href="#all_cardholders">All Members</a></li>
+                            <li><div class="line_divider"></div></li>
+                            <li><a href="#my_card_1">My Card - 8379</a></li>
+                            <li><a href="#my_card_2">My Card - 7384</a></li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <!-- Search and Filters -->
+                <div class="find_container">
+                    <div id="filter_input"><input type="button" class="btn_normal btn_grey btn_icon btn_icon_filter" id="btn_filter" value="Filters" title="Apply Filters" /></div>
+                    <div id="find_input_container">
+                        <form action="#" id="search_form">
+                            <span class="hidden_label"><label for="find_input">Search</label></span>
+                            <input type="text" id="find_input" class="search_input" name="find_input" aria-invalid="false" />
+                            <input type="submit" title="Submit Search Query Button" value="Search" id="btn_find" />
+                        </form>
+                    </div>
+                </div>
+                <br class="clear">
+            </div>
+            
+
+        	<div id="page_content_inner">
+            	<div id="grid_detail_link"><input type="button" class="toggle_Drawer_btn isOpen bg_color_1" value="Toggle Schedule Details Panel" title="Show or Hide The Schedule Details Panel" /></div>
+                <div id="grid_panel_table" role="main">
+                	
+                    <!-- Existing Filters -->
+                    <div id="applied_filters">
+                    	<ul>
+                        	<li>
+                            	<div class="filter_item bg_color_3">
+                                	<span class="filter_label">Post Date:</span>
+                                    <span class="filter_value">12/09/2016 - 13/09/2016</span>
+                                    <input type="button" class="remove_filter_btn" value="Remove Filter" title="Remove this Filter" />
+                                </div>
+                            </li>
+                        	<li>
+                            	<div class="filter_item bg_color_3">
+                                	<span class="filter_label">Filter Label:</span>
+                                    <span class="filter_value">Filter Value</span>
+                                    <input type="button" class="remove_filter_btn" value="Remove Filter" title="Remove this Filter" />
+                                </div>
+                            </li>
+                            <li>
+                            	<input type="button" value="Save" id="btn_save_filter" class="btn_grey btn_normal btn_icon btn_icon_save" title="Save Filter Options" />
+                            </li>
+                        </ul>
+                        <br class="clear"/>
+                    </div>
+                    
+                    <!-- Script to handle table interactions -->
+					<script type="text/javascript">
+						$(document).ready(function(){
+							
+							//$('#grid_container').focus();
+						
+							// add tabindex and id to all the relevant tr's & inputs to make them focusable
+							$(function() {
+								var tabIndexNumber = 2;
+									$('tr.parent, tr.child').each(function() {
+									$(this).attr('tabindex', tabIndexNumber);
+									tabIndexNumber += 1;
+								});
+								$('tr.parent ').each(function() {
+									$(this).addClass('focusable');
+								});
+							});
+							
+							// add id to all the relevant tr's & inputs to make them focusable
+							$(function() {
+								var idNumber = 1;
+								$('#grid_table tbody tr input:checkbox').each(function() {
+									$(this).attr('id', 'chbox_' + idNumber);
+									$(this).next('span').children('label').attr('for', 'chbox_' + idNumber);
+									$(this).attr('name', 'trans_details');
+									idNumber += 1;
+								});
+							});
+							
+							// add id to all the relevant tr's 
+							$(function() {
+								var idNumber = 1;
+								$('#grid_table tbody tr').each(function() {
+									$(this).attr('id', 'row_' + idNumber);
+									idNumber += 1;
+								});
+							});
+
+							// Add unique ID to toggle switch for Table Row
+							$(function() {
+								var transNumber = 1;
+								$('#grid_table tbody tr input:button').each(function() {
+									$(this).attr('id', 'trans_btn_' + transNumber);
+									transNumber += 1;
+								});
+							});
+							
+							$("#select_all_chbox").click(function () {
+								$('.chbox_cell input').not(this).prop('checked', this.checked);
+							});
+							
+							
+							// Add selected cloass to table row focused
+							$("#grid_table tbody tr").focusin(function (e) {
+								$(this).addClass('highlight');
+							});
+							
+							$("#grid_table tbody tr").focusout(function (e) {
+								$(this).removeClass('highlight');
+							});
+							
+							$("#grid_table tbody tr").mouseup(function (e) {
+								$(this).addClass('highlight');
+							});
+							
+							
+							// If you press enter it will toggle the checkbox status
+							$("#grid_table tbody tr").keydown(function (e) {
+								//Only apply logic if table row is focused
+								if ($(this).hasClass('highlight')) {
+									if (e.keyCode == 13) {
+										var rowcheckbox = $(this).find(":checkbox");
+										
+										// check to see if it's currenlty checked, else apply the check
+										if ($(rowcheckbox).prop('checked')) {
+											$(rowcheckbox).prop("checked", false);
+										} else {
+											$(rowcheckbox).prop("checked", true);
+										}
+									}
+									
+									// transfer focus to transaction details panel
+									if (e.keyCode === 86) {
+										var pushId = $(this).attr('id');
+                       					$('#transaction_details').focus();
+                       					$('#grid_panel_details').attr('class', pushId);
+										
+										
+											if (!$('#grid_detail_link input').hasClass("isOpen") ) {
+												$('#grid_panel_table').animate({
+													marginRight: "380px"
+												}, 0);
+												$('#grid_panel_details').animate({
+													right: "0px",
+												}, 0);
+												$('#grid_detail_link').animate({
+													right: "380px"
+												}, 0); 
+												$('#grid_detail_link input').addClass("isOpen");
+											}
+									}
+
+									//If you push the down arrow
+									if (e.keyCode === 40) {
+										var currentselected = $(this);
+										var nextitem = $(currentselected).nextAll("tr.focusable:first");
+										if (nextitem.length > 0) {
+											$(currentselected).removeClass('highlight');
+											$(nextitem).addClass('highlight').focus();
+										}
+										return false;
+									}
+								
+									//If you push the up arrow
+									if (e.keyCode === 38) {
+										var currentselected = $(this);
+										var previtem = $(currentselected).prevAll("tr.focusable:first");
+										if (previtem.length > 0) {
+											$(currentselected).removeClass('highlight');
+											$(previtem).addClass('highlight').focus();
+										}
+										return false;
+									}
+								}
+							});
+							
+							// remove focus from transaction details
+							$('#grid_panel_details').keydown(function(e) {
+								if (e.keyCode === 67) {
+									var pushBack = $(this).attr('class');
+									$('tr.parent, tr.child').each(function() {
+			                            if ($(this).attr('id') === pushBack) {
+			                                $(this).focus();
+			                            };
+			                        });
+			                        $(this).removeClass();
+								}
+							});
+							
+							$("#grid_table tr td input").focusin(function(e){
+								$(this).parent().parent().addClass('highlight');
+							}).focusout(function(e){
+								$(this).parent().parent().removeClass('highlight');
+							});
+							
+							
+							// **********************
+							// Manage Keyup Behaviors
+							// **********************
+							
+							// Show or hide row details when using side arrow
+							$(".parent").keydown(function(e){
+								if(e.keyCode==39){
+									$(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').show();
+									$(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').addClass('focusable');
+									$(this).closest('tr.parent').children('td.toggle_cell').children('input').addClass('isOpen');
+								}
+								
+								if(e.keyCode==37){
+									$(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').hide();
+									$(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').removeClass('focusable');
+									$(this).closest('tr.parent').children('td.toggle_cell').children('input').removeClass('isOpen');
+								}
+							});
+							
+							$(".child").keydown(function (e) {
+								if (e.keyCode == 37) {
+									var currentselectedchild = $(this);
+									var parentitem = $(currentselectedchild).prevAll("tr.parent.focusable:first");
+									$(parentitem).nextUntil('tr.parent').not('tr.parent').hide();
+									$(parentitem).nextUntil('tr.parent').not('tr.parent').removeClass('focusable').removeClass('highlight');
+									$(parentitem).addClass('highlight').focus();
+									$(parentitem).children('td.toggle_cell').children('input').removeClass('isOpen');
+								}
+							});
+							
+							
+							$(".btn_trans_toggle").click(function(event){
+								event.preventDefault();
+								if ($(this).hasClass("isOpen") ) {
+									$(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').hide();
+									$(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').removeClass('focusable');
+									$(this).removeClass('isOpen');
+								} else {
+									$(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').show();
+									$(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').addClass('focusable');
+									$(this).addClass('isOpen');
+								}
+								return false;
+							});
+							
+							$(".btn_toggle_addendum").click(function(event){
+								event.preventDefault();
+								if ($(this).hasClass("isOpen") ) {
+									$('tr.parent').nextUntil('tr.parent').not('tr.parent').hide();
+									$('tr.parent').nextUntil('tr.parent').not('tr.parent').removeClass('focusable');
+									$('.btn_trans_toggle').removeClass('isOpen');
+									$(this).removeClass('isOpen');
+								} else {
+									$('tr.parent').nextUntil('tr.parent').not('tr.parent').show();
+									$('tr.parent').nextUntil('tr.parent').not('tr.parent').addClass('focusable');
+									$('.btn_trans_toggle').addClass('isOpen');
+									$(this).addClass('isOpen');
+								}
+								return false;
+							});
+							
+							
+							
+						});
+                    </script>
+                    
+                    <!-- Schedule Grid -->
+                    <div id="grid_container" tabindex="-1" >
+                        <table id="grid_table" class="grid_table" aria-label="Schedule - All Members. To navigate between the table rows use the up and down arrow keys. To move focus to the transactions panel press the V key. To return focus to the table row press the C key.">
+                            <caption>Schedule - All Members</caption>
+                            <thead>
+                                <tr>
+                                    <th id="col_toggle_switch" scope="col"><input type="button" value="toggle_addendum" class="btn_toggle_addendum" title="VToggle View Addendum Items" aria-label="Toggle View Addendum Items"></th>
+                                    <th id="col_chbox" scope="col"><input type="checkbox" title="Select All Schedule Rows" tabindex="1" id="select_all_chbox" /><span class="hidden_label"><label for="select_all_chbox">Select All Schedule Rows</label></span></th>
+                                    <th id="col_date" scope="col">Date <a href="#" class="sortswitch active ascending" title="Sorted Ascending"><img src="images/icon_sort_indicator.png" alt="Sort Ascending / Descending Icon"/></a></th>
+                                    <th id="col_cardholder" scope="col">Player<a href="#" class="sortswitch" title="Sort by this Column"><img src="images/icon_sort_indicator.png" alt="Sort Ascending / Descending Icon"/></a></th>
+                                    <th id="col_card" scope="col">Card <a href="#" class="sortswitch" title="Sort by this Column"><img src="images/icon_sort_indicator.png" alt="Sort Ascending / Descending Icon"/></a></th>
+                                    <th id="col_merchant" scope="col">Merchant <a href="#" class="sortswitch active descending" title="Sorted Descending" ><img src="images/icon_sort_indicator.png" alt="Sort Ascending / Descending Icon"/></a></th>
+                                    <th id="col_billing_amt" scope="col" class="text_right">Billing Amount <a href="#" class="sortswitch" title="Sort by this Column"><img src="images/icon_sort_indicator.png" alt="Sort Ascending / Descending Icon"/></a></th>
+                                    <th id="col_status" scope="col" colspan="6">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="parent">
+                                    <td class="toggle_cell"><input type="button" value="4" class="btn_trans_toggle" title="View Schedule Split / Line Items" aria-label="View Schedule Split / Line Items"></td>
+                                    <td class="chbox_cell"><input type="checkbox" value="select" title="Select Schedule Item" /><span class="hidden_label"><label>Select Schedule Row 12/09/2016 Crown Plaza - 7364</label></span></td>
+                                    <td>12/09/2016</td>
+                                    <td>Zulifqar Ahmad</td>
+                                    <td>************3873</td>
+                                    <td>Crown Plaza - 73642</td>
+                                    <td class="value_cell">1,360.00 <span class="currency">USD</span></td>
+                                    <td class="status_cell"><span class="status_icon status_reviewed_yes" title="Reviewed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Reviewed</span></td>
+                                    <td class="status_cell"><span class="status_icon status_enhanced_hotel" title="Hotel Enhanced Data"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Hotel Enhanced Data</span></td>
+                                    <td class="status_cell"><span class="status_icon status_tam_yes" title="tam Applied"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>tam Applied</span></td>
+                                    <td class="status_cell"><span class="status_icon status_dispute_no" title="Not Disputed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Not Disputed</span></td>
+                                    <td class="status_cell"><a href="#view_comment" title="Click to View Comment" class="view_comment_link"><span class="status_icon status_comment_yes" title="Comments Available"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Comments Available</span></a></td>
+                                    <td class="status_cell"><span class="status_icon status_receipt_no" title="No Receipts Available"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No Receipts</span></td>
+                                </tr>
+                                <tr class="child split_item">
+                                    <td class="toggle_cell"></td>
+                                    <td class="chbox_cell"><input type="checkbox" value="select" title="Select Schedule Item" /><span class="hidden_label"><label>Select Split Item Nights - Room Rate 3 units @ 330.00</label></span></td>
+                                    <td><span class="icon_child_type"><span><img src="images/icon_line_split_item_x2.png" alt="Split Item Icon"/></span>1</span></td>
+                                    <td colspan="3"><div class="child_details_container">Nights - Room Rate<span class="child_row_details">3 units @ 330.00<span class="currency">USD</span></span></div></td>
+                                    <td class="value_cell">990.00 <span class="currency">USD</span></td>
+                                    <td class="status_cell"></td>
+                                    <td class="status_cell"></td>
+                                    <td class="status_cell"><span class="status_icon status_tam_yes" title="tam Applied"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>tam Applied</span></td>
+                                    <td class="status_cell"><span class="status_icon status_dispute_no" title="Not Disputed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Not Disputed</span></td>
+                                    <td class="status_cell"><span class="status_icon status_comment_no" title="No Comments"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No Comments</span></td>
+                                    <td class="status_cell"></td>
+                                </tr>
+                                <tr class="child split_item">
+                                    <td class="toggle_cell"></td>
+                                    <td class="chbox_cell"><input type="checkbox"  value="select" title="Select Schedule Item" /><span class="hidden_label"><label>Select Split Item Restaurant - Evening Meal 1 unit @ 100.00</label></span></td>
+                                    <td><span class="icon_child_type"><span><img src="images/icon_line_split_item_x2.png" alt="Split Item Icon"/></span>2</span></td>
+                                    <td colspan="3"><div class="child_details_container">Restaurant - Evening Meal<span class="child_row_details">1 unit @ 100.00<span class="currency">USD</span></span></div></td>
+                                    <td class="value_cell">100.00 <span class="currency">USD</span></td>
+                                    <td class="status_cell"></td>
+                                    <td class="status_cell"></td>
+                                    <td class="status_cell"><span class="status_icon status_tam_yes" title="tam Applied"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>tam Applied</span></td>
+                                    <td class="status_cell"><span class="status_icon status_dispute_no" title="Not Disputed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Not Disputed</span></td>
+                                    <td class="status_cell"><span class="status_icon status_comment_no" title="No Comments"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No Comments</span></td>
+                                    <td class="status_cell"></td>
+                                </tr>
+                                <tr class="child split_item" >
+                                    <td class="toggle_cell"></td>
+                                    <td class="chbox_cell"><input type="checkbox" value="select" title="Select Schedule Item" /><span class="hidden_label"><label>Select Split Item Restaurant - Evening Meal 1 unit @ 250.00</label></span></td>
+                                    <td><span class="icon_child_type"><span><img src="images/icon_line_split_item_x2.png" alt="Split Item Icon"/></span>3</span></td>
+                                    <td colspan="3"><div class="child_details_container">Restaurant - Evening Meal<span class="child_row_details">1 unit @ 250.00<span class="currency">USD</span></span></div></td>
+                                    <td class="value_cell">250.00 <span class="currency">USD</span></td>
+                                    <td class="status_cell"></td>
+                                    <td class="status_cell"></td>
+                                    <td class="status_cell"><span class="status_icon status_tam_yes" title="tam Applied"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>tam Applied</span></td>
+                                    <td class="status_cell"><span class="status_icon status_dispute_no" title="Not Disputed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Not Disputed</span></td>
+                                    <td class="status_cell"><span class="status_icon status_comment_no" title="No Comments"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No Comments</span></td>
+                                    <td class="status_cell"></td>
+                                </tr>
+                                <tr class="child split_item">
+                                    <td class="toggle_cell"></td>
+                                    <td class="chbox_cell"><input type="checkbox" value="select" title="Select Schedule Item" /><span class="hidden_label"><label>Select Split Item Restaurant - Evening Meal 1 unit @ 20.00</label></span></td>
+                                    <td><span class="icon_child_type"><span><img src="images/icon_line_split_item_x2.png" alt="Split Item Icon"/></span>4</span></td>
+                                    <td colspan="3"><div class="child_details_container">Restaurant - Evening Meal<span class="child_row_details">1 unit @ 20.00<span class="currency">USD</span></span></div></td>
+                                    <td class="value_cell">20.00 <span class="currency">USD</span></td>
+                                    <td class="status_cell"></td>
+                                    <td class="status_cell"></td>
+                                    <td class="status_cell"><span class="status_icon status_tam_yes" title="tam Applied"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>tam Applied</span></td>
+                                    <td class="status_cell"><span class="status_icon status_dispute_no" title="Not Disputed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Not Disputed</span></td>
+                                    <td class="status_cell"><span class="status_icon status_comment_no" title="No Comments"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No Comments</span></td>
+                                    <td class="status_cell"></td>
+                                </tr>
+                                <tr class="parent">
+                                    <td class="toggle_cell"><input type="button" value="2" class="btn_trans_toggle" title="View Schedule Split / Line Items" aria-label="View Schedule Split / Line Items"></td>
+                                    <td class="chbox_cell"><input type="checkbox" value="select" title="Select Schedule Item" /><span class="hidden_label"><label>Select Schedule Row 12/09/2016 Hertz Geneva GVA *94838224329</label></span></td>
+                                    <td>12/09/2016</td>
+                                    <td>Alan Alda</td>
+                                    <td>************3873</td>
+                                    <td>Hertz Geneva GVA *94838224329</td>
+                                    <td class="value_cell">11,637.00 <span class="currency">USD</span></td>
+                                    <td class="status_cell"><span class="status_icon status_reviewed_no" title="Not Reviewed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Not Reviewed</span></td>
+                                    <td class="status_cell"><span class="status_icon status_enhanced_car" title="Car Hire Enhanced Data"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"/></span>Car Hire Enhanced Data</span></td>
+                                    <td class="status_cell"><span class="status_icon status_tam_yes" title="tam Applied"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"/></span>tam Applied</span></td>
+                                    <td class="status_cell"><span class="status_icon status_dispute_no" title="Not Disputed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"/></span>Not Disputed</span></td>
+                                    <td class="status_cell"><span class="status_icon status_comment_no" title="No Comments"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"/></span>No Comments</span></td>
+                                    <td class="status_cell"><a href="#view_receipt" title="Click to View the Receipt" class="view_receipt_link"><span class="status_icon status_receipt_yes" title="Receipt Available"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"/></span>Receipts Available</span></a></td>
+                                </tr>
+                                <tr class="child line_item">
+                                    <td class="toggle_cell"></td>
+                                    <td class="chbox_cell"><input type="checkbox" value="select" title="Select Schedule Item" /><span class="hidden_label"><label>Select Line Item Restaurant - Evening Meal1 unit @ 250.00</label></span></td>
+                                    <td><span class="icon_child_type"><span><img src="images/icon_line_split_item_x2.png" alt="Line Item Icon"/></span>1</span></td>
+                                    <td colspan="3"><div class="child_details_container">Restaurant - Evening Meal<span class="child_row_details">1 unit @ 250.00<span class="currency">USD</span></span></div></td>
+                                    <td class="value_cell">250.00 <span class="currency">USD</span></td>
+                                    <td class="status_cell"></td>
+                                    <td class="status_cell"></td>
+                                    <td class="status_cell"><span class="status_icon status_tam_no" title="No tam Applied"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No tam Applied</span></td>
+                                    <td class="status_cell"><span class="status_icon status_dispute_no" title="Not Disputed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Not Disputed</span></td>
+                                    <td  class="status_cell"><span class="status_icon status_comment_no" title="No Comments"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No Comments</span></td>
+                                    <td class="status_cell"></td>
+                                </tr>
+                                <tr class="child line_item">
+                                    <td class="toggle_cell"></td>
+                                    <td class="chbox_cell"><input type="checkbox" value="select" title="Select Schedule Item" /><span class="hidden_label"><label>Select Line Item Restaurant - Evening Meal 1 unit @ 20.00</label></span></td>
+                                    <td><span class="icon_child_type"><span><img src="images/icon_line_split_item_x2.png" alt="Line Item Icon"/></span>2</span></td>
+                                    <td colspan="3"><div class="child_details_container">Restaurant - Evening Meal<span class="child_row_details">1 unit @ 20.00<span class="currency">USD</span></span></div></td>
+                                    <td class="value_cell">20.00 <span class="currency">USD</span></td>
+                                    <td class="status_cell"></td>
+                                    <td class="status_cell"></td>
+                                    <td class="status_cell"><span class="status_icon status_tam_no" title="No tam Applied"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No tam Applied</span></td>
+                                    <td class="status_cell"><span class="status_icon status_dispute_no" title="Not Disputed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Not Disputed</span></td>
+                                    <td class="status_cell"><span class="status_icon status_comment_no" title="No Comments"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No Comments</span></td>
+                                    <td class="status_cell"></td>
+                                </tr>
+                                <tr class="parent">
+                                    <td class="toggle_cell"></td>
+                                    <td class="chbox_cell"><input type="checkbox" value="select" title="Select Schedule Item" /><span class="hidden_label"><label>Select Schedule Row 11/09/2016 Crown Plaza - 73642</label></span></td>
+                                    <td>12/09/2016</td>
+                                    <td>Graham Gordons</td>
+                                    <td>************3873</td>
+                                    <td>Crown Plaza - 73642</td>
+                                    <td class="value_cell">1,864.00 <span class="currency">USD</span></td>
+                                    <td class="status_cell"><span class="status_icon status_reviewed_no" title="Not Reviewed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Not Reviewed</span></td>
+                                    <td class="status_cell"><span class="status_icon status_enhanced_hotel" title="Hotel Enhanced Data"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Hotel Enhanced Data</span></td>
+                                    <td class="status_cell"><span class="status_icon status_tam_no" title="No tam Applied"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No tam Applied</span></td>
+                                    <td class="status_cell"><span class="status_icon status_dispute_no" title="Not Disputed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Not Disputed</span></td>
+                                    <td class="status_cell"><span class="status_icon status_comment_no" title="No Comments"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No Comments</span></td>
+                                    <td class="status_cell"><span class="status_icon status_receipt_no" title="No Receipts Available"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No Receipts Available</span></td>
+                                </tr>
+                                <tr class="parent">
+                                    <td class="toggle_cell"></td>
+                                    <td class="chbox_cell"><input type="checkbox" value="select" title="Select Schedule Item" /><span class="hidden_label"><label>Select Schedule Row 12/09/2016 Airport Transfers Ltd. Texas</label></span></td>
+                                    <td>12/09/2016</td>
+                                    <td>Graham Gordons</td>
+                                    <td>************3873</td>
+                                    <td>Airport Transfers Ltd. Houston</td>
+                                    <td class="value_cell">9,644.00 <span class="currency">USD</span></td>
+                                    <td class="status_cell"><span class="status_icon status_reviewed_no" title="Not Reviewed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Not Reviewed</span></td>
+                                    <td class="status_cell"><span class="status_icon status_enhanced_no" title="No Enhanced Data"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No Enhanced Data</span></td>
+                                    <td class="status_cell"><span class="status_icon status_tam_no" title="No tam Applied"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No tam Applied</span></td>
+                                    <td class="status_cell"><span class="status_icon status_dispute_no" title="Not Disputed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Not Disputed</span></td>
+                                    <td class="status_cell"><span class="status_icon status_comment_no" title="No Comments"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No Comments</span></td>
+                                    <td class="status_cell"><a href="#view_receipt" title="Click to View the Receipt" class="view_receipt_link"><span class="status_icon status_receipt_yes" title="Receipts Available"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Receipts Available</span></a></td>
+                                </tr>
+                                <tr class="parent">
+                                    <td class="toggle_cell"></td>
+                                    <td class="chbox_cell"><input type="checkbox" value="select" title="Select Schedule Item" /><span class="hidden_label"><label>Select Schedule Row 11/09/2016 Hilton Garden Inn - Indianapolis</label></span></td>
+                                    <td>12/09/2016</td>
+                                    <td>Donal Dineen</td>
+                                    <td>************2353</td>
+                                    <td>Hilton Garden Inn - Indianapolis</td>
+                                    <td class="value_cell">8,649.00 <span class="currency">USD</span></td>
+                                    <td class="status_cell"><span class="status_icon status_approved" title="Approved"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Approved</span></td>
+                                    <td class="status_cell"><span class="status_icon status_enhanced_hotel" title="Hotel Enhanced Data"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Hotel Enhanced Data</span></td>
+                                    <td class="status_cell"><span class="status_icon status_tam_no" title="No tam Applied"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No tam Applied</span></td>
+                                    <td class="status_cell"><span class="status_icon status_dispute_no" title="Not Disputed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Not Disputed</span></td>
+                                    <td class="status_cell"><span class="status_icon status_comment_no" title="No Comments"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No Comments</span></td>
+                                    <td class="status_cell"><span class="status_icon status_receipt_no" title="No Receipts Available"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No Receipts Available</span></td>
+                                </tr>
+                                <tr class="parent">
+                                    <td class="toggle_cell"></td>
+                                    <td class="chbox_cell"><input type="checkbox" value="select" title="Select Schedule Item" /><span class="hidden_label"><label>Select Schedule Row 12/09/2016 Crown Plaza - 736542</label></span></td>
+                                    <td>12/09/2016</td>
+                                    <td>Enda Entwistle</td>
+                                    <td>************2343</td>
+                                    <td>Crown Plaza - 73642</td>
+                                    <td class="value_cell">7,654.00 <span class="currency">USD</span></td>
+                                    <td class="status_cell"><span class="status_icon status_reviewed_yes" title="Reviewed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Reviewed</span></td>
+                                    <td class="status_cell"><span class="status_icon status_enhanced_hotel" title="Hotel Enhanced Data"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Hotel Enhanced Data</span></td>
+                                    <td class="status_cell"><span class="status_icon status_tam_yes" title="tam Applied"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>tam Applied</span></td>
+                                    <td class="status_cell"><span class="status_icon status_dispute_no" title="Not Disputed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Not Disputed</span></td>
+                                    <td class="status_cell"><a href="#view_comment" title="Click to View Comment" class="view_comment_link"><span class="status_icon status_comment_yes" title="Comments Available"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Comments Available</span></a></td>
+                                    <td class="status_cell"><a href="#view_receipt" title="Click to View the Receipt" class="view_receipt_link"><span class="status_icon status_receipt_hardcopy" title="Receipts Available"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Receipts Available</span></a></td>
+                                </tr>
+                                <tr class="parent">
+                                    <td class="toggle_cell"></td>
+                                    <td class="chbox_cell"><input type="checkbox" value="select" title="Select Schedule Item" /><span class="hidden_label"><label>Select Schedule Row 12/09/2016 Crown Plaza - 736142</label></span></td>
+                                    <td>12/09/2016</td>
+                                    <td>Freddie Flintoff</td>
+                                    <td>************4575</td>
+                                    <td>Crown Plaza - 73642</td>
+                                    <td class="value_cell">5,236.00 <span class="currency">USD</span></td>
+                                    <td class="status_cell"><span class="status_icon status_reviewed_yes" title="Reviewed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Reviewed</span></td>
+                                    <td class="status_cell"><span class="status_icon status_enhanced_hotel" title="Hotel Enhanced Data"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Hotel Enhanced Data</span></td>
+                                    <td class="status_cell"><span class="status_icon status_tam_yes" title="tam Applied"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>tam Applied</span></td>
+                                    <td class="status_cell"><span class="status_icon status_dispute_no" title="Not Disputed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Not Disputed</span></td>
+                                    <td class="status_cell"><a href="#view_comment" title="Click to View Comment" class="view_comment_link"><span class="status_icon status_comment_yes" title="Comments Available"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Comments Available</span></a></td>
+                                    <td class="status_cell"><a href="#view_receipt" title="Click to View the Receipt" class="view_receipt_link"><span class="status_icon status_receipt_both" title="Receipts Available"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Receipts Available</span></a></td>
+                                </tr>
+                                <tr class="parent">
+                                    <td class="toggle_cell"></td>
+                                    <td class="chbox_cell"><input type="checkbox" value="select" title="Select Schedule Item" /><span class="hidden_label"><label>Select Schedule Row 12/09/2016 Hertz Geneva GVA *948338224329</label></span></td>
+                                    <td>12/09/2016</td>
+                                    <td>Graham Gordons</td>
+                                    <td>************3873</td>
+                                    <td>Hertz Geneva GVA *94838224329</td>
+                                    <td class="value_cell">4,974.00 <span class="currency">USD</span></td>
+                                    <td class="status_cell"><span class="status_icon status_reviewed_yes" title="Reviewed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Reviewed</span></td>
+                                    <td class="status_cell"><span class="status_icon status_enhanced_car" title="Car Hire Enhanced Data"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Car Hire Enhanced Data</span></td>
+                                    <td class="status_cell"><span class="status_icon status_tam_no" title="No tam Applied"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No tam Applied</span></td>
+                                    <td class="status_cell"><span class="status_icon status_dispute_no" title="Not Disputed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Not Disputed</span></td>
+                                    <td class="status_cell"><span class="status_icon status_comment_no" title="No Comments"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No Comments</span></td>
+                                    <td class="status_cell"><span class="status_icon status_receipt_no" title="No Receipts Available"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No Receipts Available</span></td>
+                                </tr>
+                                <tr class="parent">
+                                    <td class="toggle_cell"></td>
+                                    <td class="chbox_cell"><input type="checkbox" value="select" title="Select Schedule Item" /><span class="hidden_label"><label>Select Schedule Row 12/09/2016 Crown Plaza - 732642</label></span></td>
+                                    <td>12/09/2016</td>
+                                    <td>Tammy Billington-Dynes</td>
+                                    <td>************3424</td>
+                                    <td>Crown Plaza - 73642</td>
+                                    <td class="value_cell">4,938.00 <span class="currency">USD</span></td>
+                                    <td class="status_cell"><span class="status_icon status_approved" title="Approved"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Approved</span></td>
+                                    <td class="status_cell"><span class="status_icon status_enhanced_hotel" title="Hotel Enhanced Data"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Hotel Enhanced Data</span></td>
+                                    <td class="status_cell"><span class="status_icon status_tam_yes" title="tam Applied"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>tam Applied</span></td>
+                                    <td class="status_cell"><span class="status_icon status_dispute_no" title="Not Disputed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Not Disputed</span></td>
+                                    <td class="status_cell"><a href="#view_comment" title="Click to View Comment" class="view_comment_link"><span class="status_icon status_comment_yes" title="Comments Available"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Comments Available</span></a></td>
+                                    <td class="status_cell"><a href="#view_receipt" title="Click to View the Receipt" class="view_receipt_link"><span class="status_icon status_receipt_yes" title="Receipts Available"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Receipts Available</span></a></td>
+                                </tr>
+                                <tr class="parent">
+                                    <td class="toggle_cell"></td>
+                                    <td class="chbox_cell"><input type="checkbox" value="select" title="Select Schedule Item" /><span class="hidden_label"><label>Select Schedule Row 12/09/2016 Airport Geneva GVA *948328224329</label></span></td>
+                                    <td>12/09/2016</td>
+                                    <td>Mark Butterworth</td>
+                                    <td>************9875</td>
+                                    <td>Airport Geneva GVA *94838224329</td>
+                                    <td class="value_cell">5,432.00 <span class="currency">USD</span></td>
+                                    <td class="status_cell"><span class="status_icon status_reviewed_yes" title="Reviewed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Reviewed</span></td>
+                                    <td class="status_cell"><span class="status_icon status_enhanced_flight" title="Flight Enhanced Data"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Flight Enhanced Data</span></td>
+                                    <td class="status_cell"><span class="status_icon status_tam_no" title="No tam Applied"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No tam Applied</span></td>
+                                    <td class="status_cell"><span class="status_icon status_dispute_no" title="Not Disputed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Not Disputed</span></td>
+                                    <td class="status_cell"><a href="#view_comment" title="Click to View Comment" class="view_comment_link"><span class="status_icon status_comment_yes" title="Comments Available"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Comments Available</span></a></td>
+                                    <td class="status_cell"><span class="status_icon status_receipt_no" title="No Receipts Available"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No Receipts Available</span></td>
+                                </tr>
+                                <tr class="parent">
+                                    <td class="toggle_cell"></td>
+                                    <td class="chbox_cell"><input type="checkbox" value="select" title="Select Schedule Item" /><span class="hidden_label"><label>Select Schedule Row 12/09/2016 Airport Transfers Ltd Houston</label></span></td>
+                                    <td>12/09/2016</td>
+                                    <td>James Starke</td>
+                                    <td>************6336</td>
+                                    <td>Airport Transfers Ltd. Houston</td>
+                                    <td class="value_cell">3,424.00 <span class="currency">USD</span></td>
+                                    <td class="status_cell"><span class="status_icon status_approved" title="Approved"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Approved</span></td>
+                                    <td class="status_cell"><span class="status_icon status_enhanced_no" title="No Enhanced Data"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No Enhanced Data</span></td>
+                                    <td class="status_cell"><span class="status_icon status_tam_yes" title="tam Applied"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>tam Applied</span></td>
+                                    <td class="status_cell"><span class="status_icon status_dispute_no" title="Not Disputed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Not Disputed</span></td>
+                                    <td aria-label="commetns status" class="status_cell"><a href="#view_comment" title="Click to View Comment" class="view_comment_link"><span class="status_icon status_comment_yes" title="Comments Available"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Comments Available</span></a></td>
+                                    <td class="status_cell"><span class="status_icon status_receipt_no" title="No Receipts Available"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No Receipts Available</span></td>
+                                </tr>
+                                <tr class="parent">
+                                    <td class="toggle_cell"></td>
+                                    <td class="chbox_cell"><input type="checkbox" value="select" title="Select Schedule Item" /><span class="hidden_label"><label>Select Schedule Row 12/09/2016 Crown Plaza - 73342</label></span></td>
+                                    <td>12/09/2016</td>
+                                    <td>Peter McNally</td>
+                                    <td>************2353</td>
+                                    <td>Crown Plaza - 73642</td>
+                                    <td class="value_cell">1,353.00 <span class="currency">USD</span></td>
+                                    <td class="status_cell"><span class="status_icon status_reviewed_no" title="Not Reviewed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Not Reviewed</span></td>
+                                    <td class="status_cell"><span class="status_icon status_enhanced_hotel" title="Hotel Enhanced Data"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Hotel Enhanced Data</span></td>
+                                    <td class="status_cell"><span class="status_icon status_tam_no" title="No tam Applied"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No tam Applied</span></td>
+                                    <td class="status_cell"><span class="status_icon status_dispute_no" title="Not Disputed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Not Disputed</span></td>
+                                    <td class="status_cell"><span class="status_icon status_comment_no" title="No Comments"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No Comments Available</span></td>
+                                    <td class="status_cell"><a href="#view_receipt" title="Click to View the Receipt" class="view_receipt_link"><span class="status_icon status_receipt_yes" title="Receipts Available"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Receipts Available</span></a></td>
+                                </tr>
+                                <tr class="parent">
+                                    <td class="toggle_cell"></td>
+                                    <td class="chbox_cell"><input type="checkbox" value="select" title="Select Schedule Item" /><span class="hidden_label"><label>Select Schedule Row 12/09/2016 Speedy Car Hire Toronto *2523522</label></span></td>
+                                    <td>12/09/2016</td>
+                                    <td>Oscar Prentergast</td>
+                                    <td>************3632</td>
+                                    <td>Speedy Car Hire Toronto *2523522</td>
+                                    <td class="value_cell">633.00 <span class="currency">USD</span></td>
+                                    <td class="status_cell"><span class="status_icon status_exported" title="Exported"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Exported</span></td>
+                                    <td class="status_cell"><span class="status_icon status_enhanced_car" title="Car Hire Enhanced Data"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Car Hire Enhanced Data</span></td>
+                                    <td class="status_cell"><span class="status_icon status_tam_yes" title="tam Applied"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>tam Applied</span></td>
+                                    <td class="status_cell"><span class="status_icon status_dispute_no" title="Not Disputed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Not Disputed</span></td>
+                                    <td class="status_cell"><a href="#view_comment" title="Click to View Comment" class="view_comment_link"><span class="status_icon status_comment_yes" title="Comments Available"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Comments Available</span></a></td>
+                                    <td class="status_cell"><a href="#view_receipt" title="Click to View the Receipt" class="view_receipt_link"><span class="status_icon status_receipt_yes" title="Receipts Available"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Receipts Available</span></a></td>
+                                </tr>
+                                <tr class="parent">
+                                    <td class="toggle_cell"></td>
+                                    <td class="chbox_cell"><input type="checkbox" value="select" title="Select Schedule Item" /><span class="hidden_label"><label>Select Schedule Row 12/09/2016 Crown Plaza - 73643</label></span></td>
+                                    <td>12/09/2016</td>
+                                    <td>Joseph Bloggs</td>
+                                    <td>************5235</td>
+                                    <td>Crown Plaza - 73642</td>
+                                    <td class="value_cell">7,345.00 <span class="currency">USD</span></td>
+                                    <td class="status_cell"><span class="status_icon status_exported" title="Exported"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Exported</span></td>
+                                    <td class="status_cell"><span class="status_icon status_enhanced_hotel" title="Hotel Enhanced Data"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Hotel Enhanced Data</span></td>
+                                    <td class="status_cell"><span class="status_icon status_tam_yes" title="tam Applied"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>tam Applied</span></td>
+                                    <td class="status_cell"><span class="status_icon status_dispute_no" title="Not Disputed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Not Disputed</span></td>
+                                    <td class="status_cell"><a href="#view_comment" title="Click to View Comment" class="view_comment_link"><span class="status_icon status_comment_yes" title="Comments Available"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Comments Available</span></a></td>
+                                    <td class="status_cell"><span class="status_icon status_receipt_no" title="No Receipts Available"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No Receipts Available</span></td>
+                                </tr>
+                                <tr class="parent">
+                                    <td class="toggle_cell"></td>
+                                    <td class="chbox_cell"><input type="checkbox" value="select" title="Select Schedule Item" /><span class="hidden_label"><label>Select Schedule Row 12/09/2016 Airport Transfers Ltd. Houston</label></span></td>
+                                    <td>12/09/2016</td>
+                                    <td>Connor Cahill</td>
+                                    <td>************7547</td>
+                                    <td>Airport Transfers Ltd. Houston</td>
+                                    <td class="value_cell">2,523.00 <span class="currency">USD</span></td>
+                                    <td class="status_cell"><span class="status_icon status_not_reviewed" title="Not Reviewed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Not Reviewed</span></td>
+                                    <td class="status_cell"><span class="status_icon status_enhanced_no" title="No Enhanced Data"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No Enhanced Data</span></td>
+                                    <td class="status_cell"><span class="status_icon status_tam_no" title="No tam Applied"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No tam Applied</span></td>
+                                    <td class="status_cell"><span class="status_icon status_dispute_no" title="Not Disputed"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Not Disputed</span></td>
+                                    <td class="status_cell"><span class="status_icon status_comment_no" title="No Comments"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>No Comments Available</span></td>
+                                    <td class="status_cell"><a href="#view_receipt" title="Click to View the Receipt" class="view_receipt_link"><span class="status_icon status_receipt_yes" title="Receipts Available"><span><img src="images/icon_sprite_status_x2.png" alt="Status Icons"></span>Receipts Available</span></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Grid Footer Items -->
+                    <div class="grid_controls">
+                    	<div id="row_count_selector">
+                        	<div class="row_label">
+                        		<label for="row_count" title="Select how many Rows to display in the Schedule Details table">Show</label>
+                            </div>
+                            <div class="row_select">
+                            	<select id="row_count" name="row_count" style="width:60px;">
+                                	<option value="10">10</option>
+                                	<option value="20" selected="selected">20</option>
+                                	<option value="50">50</option>
+                                	<option value="100">100</option>
+                                </select>
+                            </div>
+                            <div class="row_result">
+                            	1-20 of 500+
+                            </div>
+                        </div>
+                        <div id="grid_pagination">
+                        	<ul>
+                            	<li><a href="#pag_prev" class="pag_prev_btn">Previous Page</a></li>
+                            	<li><span class="pag_current" title="Current Results Page is 1">1</span></li>
+                            	<li><a href="#pag_2" title="View Results Page 2">2</a></li>
+                            	<li><a href="#pag_3" title="View Results Page 3">3</a></li>
+                            	<li><span class="pag_divider">...</span></li>
+                            	<li><a href="#pag_25" title="View Results Page 25">25</a></li>
+                            	<li><a href="#pag_next" class="pag_next_btn">Next Page</a></li>
+                            </ul>
+                            <input type="button" class="btn_normal btn_grey" value="Prev 500" title="Load Previous 500 Results"  style="margin-right:2px;"/>
+                            <input type="button" class="btn_normal btn_grey" value="500 More" title="Load 500 More Results" />
+                        </div>
+                        
+                        <div id="grid_actions">
+                        	<ul>
+                            	<li><input type="button" aria-label="Modify table columns and view options" value="Settings" id="btn_list_settings" class="btn_normal btn_grey btn_icon btn_icon_settings" /></li>
+                                <li><input type="button" aria-label="Ouput Schedule Rows into a specific output format" value="Output" id="btn_list_output" class="btn_normal btn_grey btn_icon btn_icon_output" /></li>
+                                <!--<li><input type="button" aria-label="Print the existing Schedule Rows" value="Print" id="btn_list_print" class="btn_normal btn_grey btn_icon btn_icon_print" /></li>-->
+                                <li><input type="button" aria-label="Email transaction details to recipient dialog" value="Email" id="btn_email" class="btn_normal btn_grey btn_icon btn_icon_email" /></li>
+                           	</ul>
+                        </div>
+                        <br class="clear"/>
+                    </div>
+                </div>
+                <div id="grid_panel_details" aria-labelledby="transaction_details" tabindex="-1" role="complementary">
+                	<div class="grid_panel_inner">
+                    	<div class="grid_panel_header">
+                    		<h2 class="color_1" id="transaction_details" tabindex="-1">Schedule Details</h2>
+                        	<ul>
+                            	<li><a class="trans_options trans_option_trace" href="trace_transactions.html" id="btn_trace" title="Trace Schedule">Trace</a></li>
+                            	<li><a class="trans_options trans_option_detail" href="javascript:void(0)" id="btn_full_details" title="View Full Details">View Full Details</a></li>
+                            </ul>
+                        </div>
+                        <div class="trans_details_header">
+                        	<h3 id="trans_details_title">Crowne Plaza - 73642</h3>
+                            <div  class="multi_btn_container">
+                            	<input type="button" id="btn_split" value="Add Split" class="btn_normal btn_grey" />
+                            </div>
+                        </div>
+                        
+                        <!-- Script to Handle Drawers -->
+                        <script type="text/javascript">
+							// Script to Toggle the Drawers
+							$(document).ready(function(){
+								$(".drawer_toggle").click(function(event){
+									event.preventDefault();
+									if ($(this).hasClass("isOpen") ) {
+										$(this).parent().next('.drawer_panel_details').slideToggle('fast');
+										$(this).removeClass('isOpen');
+									} else {
+										$(this).parent().next('.drawer_panel_details').slideToggle('fast');
+										$(this).addClass('isOpen');
+									}
+									return false;
+								});
+							});
+							
+							// Script to Toggle the tam Drawer
+							$(document).ready(function(){
+								$(".tam_drawer_toggle").click(function(event){
+									event.preventDefault();
+									if ($(this).hasClass("isOpen") ) {
+										$(this).parent().parent().parent().find('.drawer_panel_details').slideToggle('fast');
+										$(this).removeClass('isOpen');
+									} else {
+										$(this).parent().parent().parent().find('.drawer_panel_details').slideToggle('fast');
+										$(this).addClass('isOpen');
+									}
+									return false;
+								});
+							});
+						</script>
+                        
+                        <!-- Values Panel -->
+                        <div class="drawer_panel">
+                            <h4><a href="javascript:void[0]" class="drawer_toggle color_1 isOpen" title="Expense Details Values" aria-label="Expense Details Values">Values</a></h4>
+                            <div class="drawer_panel_details">
+                        		<div class="fd_form">
+                                    <div class="form_container">
+                                        <div class="form_row inline readonly thin">
+                                            <div class="form_label">
+                                                <label for="value_orig_amt">Original Amount</label>
+                                            </div>
+                                            <div class="form_input">
+                                                <input type="text" readonly="readonly" value="1,360.00" id="value_orig_amt" class="text_right"/>
+                                               	<br class="clear"/>
+                                            </div>
+                                        </div>
+                                        <div class="form_row inline readonly thin">
+                                            <div class="form_label">
+                                                <label for="value_discounts">Discounts</label>
+                                            </div>
+                                            <div class="form_input">
+                                                <input type="text" readonly="readonly" value="0.00" id="value_discounts" class="text_right"/>
+                                               	<br class="clear"/>
+                                            </div>
+                                        </div>
+                                        <div class="form_row inline readonly thin">
+                                            <div class="form_label">
+                                                <label for="value_tam_deducted"><a href="javacript:void(0)" class="tam_drawer_toggle" title="Click to Open or Close the tam Deducted Panel">tam Deducted</a><br class="clear"/></label>
+                                            </div>
+                                            <div class="form_input">
+                                                <input type="text" readonly="readonly" value="5.72" id="value_tam_deducted" class="text_right"/>
+                                               	<br class="clear"/>
+                                            </div>
+                                            <br class="clear"/>
+                                            <div class="drawer_panel_details tam_drawer_panel" style="display:none;">
+                                                <div class="form_row">
+                                                    <div class="form_label"><label for="value_tam_rate">tam Rate</label></div>
+                                                    <div class="form_select">
+                                                        <select id="value_tam_rate" name="value_tam_rate">
+                                                            <option value="">Select a tam Rate</option>
+                                                            <option value="1">Option 1</option>
+                                                            <option value="2">Option 2</option>
+                                                            <option value="3">Option 3</option>
+                                                        </select>
+                                               		 	<br class="clear"/>
+                                                    </div>
+                                                </div>
+                                                <div class="form_row">
+                                                    <div class="form_label"><label for="value_tam_code">tam Code</label></div>
+                                                    <div class="form_select">
+                                                        <select id="value_tam_code" name="value_tam_code">
+                                                            <option value="">Select a tam Code</option>
+                                                            <option value="1">Option 1</option>
+                                                            <option value="2">Option 2</option>
+                                                            <option value="3">Option 3</option>
+                                                        </select>
+                                                		<br class="clear"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form_row inline readonly">
+                                            <div class="form_label">
+                                                <label for="value_net_amt">Net Amount</label>
+                                            </div>
+                                            <div class="form_input">
+                                                <input type="text" readonly="readonly" value="1,360.00" id="value_net_amt" class="text_right"/>
+                                                <br class="clear"/>
+                                            </div>
+                                        </div>
+                                        <div class="form_row">
+                                        	<div class="receipt_panel bg_color_4">
+                                            	<div class="form_row">
+                                                    <div class="form_chbox">
+                                                        <input type="checkbox" value="Yes" name="has_hardcopy_receipt" id="has_hardcopy_receipt"/>
+                                                        <label for="has_hardcopy_receipt">Has hardcopy receipt</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form_row">
+                                                	<div class="form_label">
+                                                    	<label for="digital_receipt">Digital Receipt</label>
+                                                    </div>
+                                                    <div class="form_file_input">
+                                                        <input type="file" id="digital_receipt" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            
+                        <!-- Cost Allocation Panel -->
+                        <div class="drawer_panel">
+                            <h4><a href="javascript:void[0]" class="drawer_toggle color_1">Cost Allocations<!-- Placholder <span class="info_link"><input type="button" value="View help text for Cost Allocations" id="info_cost_allocations" class="info_icon" /></span>--></a></h4>
+                            <div class="drawer_panel_details" style="display:none;">
+                            	<div class="fd_form">
+                                    <div class="form_container">
+                                        <div class="form_row">
+                                            <div class="form_label">
+                                                <label for="ca_gl_prime">GL Prime</label>
+                                            </div>
+                                            <div class="form_input">
+                                                <input type="text" readonly="readonly" value="1,360.00" id="ca_gl_prime" name="ca_gl_prime"/>
+                                                <br class="clear"/>
+                                            </div>
+                                        </div>
+                                        <div class="form_row">
+                                            <div class="form_label">
+                                                <label for="ca_comp_reporting_centre">Company Reporting Centre</label>
+                                            </div>
+                                            <div class="form_select">
+                                                <select id="ca_comp_reporting_centre" name="ca_comp_reporting_centre">
+                                                    <option value="">Select</option>
+                                                    <option value="1" selected="selected">Option 1</option>
+                                                    <option value="2">Option 2</option>
+                                                    <option value="3">Option 3</option>
+                                                    <option value="2">Option 3</option>
+                                                    <option value="3">Option 4</option>
+                                                    <option value="2">Option 5</option>
+                                                    <option value="3">Option 6</option>
+                                                    <option value="2">Option 7</option>
+                                                    <option value="3">Option 8</option>
+                                                    <option value="3">Option 9</option>
+                                                    <option value="3">Option 10</option>
+                                                    <option value="3">&nbsp;</option>
+                                                    <option>Search for another...</option>
+                                                </select>
+                                                <br class="clear"/>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <div class="form_row">
+                                            <div class="form_label">
+                                                <label for="ca_comp_code">Company Code</label>
+                                            </div>
+                                            <div class="form_input">
+                                                <input type="text" readonly="readonly" value="01100 -Austin Cricket League" id="ca_comp_code" name="ca_comp_code"/>
+                                                <br class="clear"/>
+                                            </div>
+                                        </div>
+                                        <div class="form_row">
+                                            <div class="form_label">
+                                                <label for="ca_commodity_category">Commodity Category</label>
+                                            </div>
+                                            <div class="form_select">
+                                            	<select id="ca_commodity_category" name="ca_commodity_category">
+                                                    <option value="">Select Commodity Category</option>
+                                                    <option value="1">Option 1</option>
+                                                    <option value="2">Option 2</option>
+                                                    <option value="3">Option 3</option>
+                                                    <option value="4">Option 3</option>
+                                                    <option value="5">Option 4</option>
+                                                    <option value="6">Option 5</option>
+                                                    <option value="7">Option 6</option>
+                                                    <option value="8">Option 7</option>
+                                                    <option value="9">Option 8</option>
+                                                    <option value="0">Option 9</option>
+                                                    <option value="10">Option 10</option>
+                                                    <option class="select-dash" disabled="disabled">--------------------</option>
+                                                    <option value="choose" title="Choose a different Commodity Category. This will open a dialog window.">Choose a different option.</option>
+                                                </select>                                                
+                                                <br class="clear"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Comments Panel -->
+                        <div class="drawer_panel">
+                            <h4><a href="javascript:void[0]" class="drawer_toggle color_1">Comments (2)</a></h4>
+                            <div class="drawer_panel_details" style="display:none;">
+                                <ul class="comments">
+                                    <li>
+                                        <div class="comment_text">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
+                                        <div class="comment_by color_1">Brian Bennet - 03/09/2016</div>
+                                    </li>
+                                    <li>
+                                        <div class="comment_text">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis iriure dolor.</div>
+                                        <div class="comment_by color_1">Brian Bennet - 03/09/2016</div>
+                                    </li>
+                                </ul>
+                                <div class="fd_form">
+                                    <div class="form_container">
+                                        <div class="form_row">
+                                        	<div class="form_label hidden_label">
+                                            	<label for="user_comment">Enter comment below</label>
+                                            </div>
+                                            <div class="form_textarea">
+                                            	<textarea id="user_comment" name="user_comment"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form_actions">
+                                        	<div class="form_action_left">
+                                            </div>
+                                            <div class="form_action_right">
+                                        		<input type="button" value="Add Comment" class="btn_normal btn_grey" />
+                                        	</div>
+                                            <br class="clear"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Panel Actions -->
+                        <div class="drawer_panel_actions">
+                        	<div class="panel_actions_left">
+                            </div>
+                            <div class="panel_actions_right">
+                            	<input type="button" class="btn_normal btn_primary btn_icon btn_icon_approve" value="Approve" />
+                            </div>
+                            <br class="clear"/>
+                        </div>
+                    </div>
+                </div>
+        	</div>
+        </div>
+    </div>
+    
+        
+    <div id="page_footer" class="bg_color_2">
+    	<div class="footer_left">
+        	<div class="footer_nav">
+                <ul>
+                    <li><a href="#">Help</a></li>
+                    
+                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <br class="clear"/>
+            </div>
+            <div class="footer_text">&copy; 2008 - 2016Austin Cricket League. All Rights Reserved</div>
+        </div>
+        <div class="footer_right">
+        	<div class="footer_nav">
+                <ul>
+					<li>
+					<div class="card_switcher">
+                	<a href="javascript:void[0]" id="switcher_theme" class="dd_link" title="Change Application Theme">Theme</a>
+                    <div id="switcher_theme_options" style="display:none;" class="dd_option_panel">
+					    <h3 class="color_1">Change Theme</h3>
+                    	<div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Style Options">Close Style Options Panel</a></div>
+                    	<ul id="theme_list">
+						
+								<li><a href="#" rel="themes/theme_360.css" style="color:black;">Default</a></li>
+								<li><a href="#" rel="themes/theme_abank.css" style="color:black;">ABank</a></li>
+								<li><a href="#" rel="themes/theme_atb.css" style="color:black;">ATB Financial</a></li>
+                                <li><a href="#" rel="themes/theme_becu.css" style="color:black;">BECU</a></li>
+                                <li><a href="#" rel="themes/theme_boi.css" style="color:black;">Bank of Ireland</a></li>
+                                <li><a href="#" rel="themes/theme_cnh_can.css" style="color:black;">CNH CAN</a></li>
+                                <li><a href="#" rel="themes/theme_cnh_us.css" style="color:black;">CNH US</a></li>
+								<li><a href="#" rel="themes/theme_citi.css" style="color:black;">Citi</a></li>
+                                <li><a href="#" rel="themes/theme_coop.css" style="color:black;">Co-operative Bank</a></li>
+                                <li><a href="#" rel="themes/theme_first_niagra.css" style="color:black;">First Niagra</a></li>
+								<li><a href="#" rel="themes/theme_first_tennessee.css" style="color:black;">First Tennessee</a></li>
+								<li><a href="#" rel="themes/theme_firstbank.css" style="color:black;">First Bank</a></li>
+								<li><a href="#" rel="themes/theme_hertfordshire.css" style="color:black;">Hertfordshire</a></li>
+								<li><a href="#" rel="themes/theme_home_depot_can.css" style="color:black;">Home Depot CAN</a></li>
+								<li><a href="#" rel="themes/theme_home_depot_us.css" style="color:black;">Home Depot US</a></li>
+								<li><a href="#" rel="themes/theme_hsbc.css" style="color:black;">HSBC</a></li>
+								<li><a href="#" rel="themes/theme_pnc.css" style="color:black;">PNC</a></li>
+								<li><a href="#" rel="themes/theme_pscu.css" style="color:black;">PSCU</a></li>
+								<li><a href="#" rel="themes/theme_pscu_mf.css" style="color:black;">PSCU MF</a></li>
+								<li><a href="#" rel="themes/theme_pscu_usf.css" style="color:black;">PSCU USF</a></li>
+								<li><a href="#" rel="themes/theme_santander.css" style="color:black;">Santander</a></li>
+								<li><a href="#" rel="themes/theme_saudi_hollandi.css" style="color:black;">Saudi Hollandi</a></li>
+								<li><a href="#" rel="themes/theme_tmg.css" style="color:black;">TMG Atira Credit</a></li>
+								<li><a href="#" rel="themes/theme_tmg_desjardins.css" style="color:black;">TMG Desjardins Bank</a></li>
+								<li><a href="#" rel="themes/theme_tmg_moo.css" style="color:black;">TMG Mutual of Omaha Bank</a></li>
+								<li><a href="#" rel="themes/theme_umb.css" style="color:black;">UMB</a></li>
+								<li><a href="#" rel="themes/theme_vantiv.css" style="color:black;">Vantiv</a></li>
+								<li><a href="#" rel="themes/theme_vantiv_ft.css" style="color:black;">Vantiv FT</a></li>
+								<li><a href="#" rel="themes/theme_vantiv_maj.css" style="color:black;">Vantiv MAJ</a></li>
+								<li><a href="#" rel="themes/theme_vantiv_pub.css" style="color:black;">Vantiv PUB</a></li>
+								<li><a href="#" rel="themes/theme_viseca.css" style="color:black;">Viseca</a></li>
+								<li><a href="#" rel="themes/theme_wells_fargo.css" style="color:black;">Wells Fargo</a></li>
+								
+                        </ul>
+                    </div>
+
+                </li>
+                    <li><a href="#">Previous Version</a></li>
+                </ul>
+                <br class="clear"/>
+            </div>
+        </div>
+        <br class="clear"/>
+    </div>
+    
+</div>
+
+<!-- Theme Switcher - Not Needed for Final -->
+<script type="text/javascript" language="javascript" src="themes/jquery.cookie.js"></script>
+<script type="text/javascript">
+	if($.cookie("css")) {
+		$("link#theme").attr("href",$.cookie("css"));
+	}
+	  
+	$(document).ready(function() { 
+		if(window.location.hash) {
+			var hash = window.location.hash.substr(1);
+			console.log(hash);
+			var path = 'themes/theme_' + hash + '.css';
+			alert(path);
+			console.log(path);
+		} else {
+		  	var path = $.cookie("css",path);
+		}
+		$("link#theme").attr("href",path);
+		$.cookie("css",path, {expires: 365, path: '/'});
+		return false;
+	});
+	
+	$(document).ready(function() { 
+		$("#theme_list li a").click(function() { 
+			$("link#theme").attr("href",$(this).attr('rel'));
+			$.cookie("css",$(this).attr('rel'), {expires: 365, path: '/'});
+			return false;
+		});
+		
+	});
+</script>
+
+
+<!-- ****************************** -->
+<!-- 		Modal Windows 			-->
+<!-- ****************************** -->
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		// Launch Split Options
+		$("#btn_split" ).click(function() {
+			$( "#btn_split_options" ).dialog( "open" );
+		});
+		
+		$( "#btn_split_options" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 400,
+			modal: true
+		});
+	
+		// Launch Filter Options
+		$("#btn_filter" ).click(function() {
+			$( "#btn_filter_options" ).dialog( "open" );
+		});
+		
+		$( "#btn_filter_options" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 500,
+			modal: true
+		});
+	
+		// Save Filter Options
+		$("#btn_save_filter" ).click(function() {
+			$( "#btn_save_filter_options" ).dialog( "open" );
+		});
+		
+		$( "#btn_save_filter_options" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 400,
+			modal: true
+		});
+		
+		// Email Details Options
+		$("#btn_email" ).click(function() {
+			$( "#btn_email_options" ).dialog( "open" );
+		});
+		
+		$( "#btn_email_options" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 500,
+			modal: true
+		});
+		
+		// List Settings Options
+		$("#btn_list_settings" ).click(function() {
+			$( "#btn_list_settings_options" ).dialog( "open" );
+			settingsList();
+		});
+		
+		$( "#btn_list_settings_options" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 500,
+			modal: true
+		});
+		
+		// List Print Options
+		$("#btn_list_print" ).click(function() {
+			$( "#btn_list_print_options" ).dialog( "open" );
+		});
+		
+		$( "#btn_list_print_options" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 300,
+			modal: true
+		});
+		
+		// List Output Options
+		$("#btn_list_output" ).click(function() {
+			$( "#btn_list_output_options" ).dialog( "open" );
+			radioBtnStatus();
+		});
+		
+		$( "#btn_list_output_options" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 360,
+			modal: true
+		});
+		
+		/* Find Commodity Category
+		$("#ca_commodity_category" ).click(function() {
+			$( "#commodity_category_finder" ).dialog( "open" );
+			radioBtnStatus();
+		});
+		*/
+		
+		$('#ca_commodity_category').change(function () {
+			if ($(this).val() == "choose") {
+				$( "#commodity_category_finder" ).dialog( "open" );
+				radioBtnStatus();
+			};
+		});
+		
+		$( "#commodity_category_finder" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 500,
+			modal: true
+		});
+		
+		// Launch Comments Dialog
+		$(".view_comment_link" ).click(function() {
+			$( "#view_comment_dialog" ).dialog( "open" );
+		});
+		
+		$( "#view_comment_dialog" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 400,
+			modal: true
+		});
+		
+		// Launch Receipts Dialog
+		$(".view_receipt_link" ).click(function() {
+			$( "#view_receipt_dialog" ).dialog( "open" );
+		});
+		
+		$( "#view_receipt_dialog" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 600,
+			modal: true
+		});
+		
+		// Launch Receipts Dialog
+		$("#change_cas_link" ).click(function() {
+			$( "#change_cas_dialog" ).dialog( "open" );
+		});
+		
+		$( "#change_cas_dialog" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 400,
+			modal: true
+		});
+		
+		
+		// Full Details Dialog
+		$("#btn_full_details" ).click(function() {
+			$( "#full_details_dialog" ).dialog( "open" );
+		});
+		
+		$( "#full_details_dialog" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 760,
+			modal: true,
+		});
+		
+		$(window).resize(function() {
+			$(".ui-dialog").dialog("option", "position", "center");
+		});
+		
+		$(".close_modal").click(function(){
+			$(this).parent().parent().dialog('close');
+		});
+		
+		$(".btn_cancel_modal").click(function(){
+			$(this).closest('.dialog_content').parent().dialog('close');
+		});
+		
+	});
+</script>
+
+
+
+<!-- JQuery Datepicker -->
+<script type="text/javascript">
+	$(function() {
+		$('.date_picker').datepicker({
+			showOn:'button',
+			buttonText: 'Datepicker'
+		});
+	});
+</script>
+
+<!-- Modal Window For Split Schedule -->               
+<div id="btn_split_options" title="Split Schedule" role="dialog" aria-labelledby="splitTitle" aria-describedby="splitDesc">
+	<div class="dialog_header">
+	    <h1 id="splitTitle">Split Schedule</h1>
+    </div>
+    <div id="splitDesc" class="dialog_desc">This Form allows you to decide by hom many rows you want to split the item and if you want to split it by Amount or Percentage</div>
+    <div class="dialog_content">
+        <form class="fd_form" action="#" id="split_item_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+                    <div class="form_row inline">
+                        <div class="form_label">
+                            <label for="split_count">Number of Splits</label>
+                        </div>
+                        <div class="form_input">
+                            <input type="text" name="split_count" id="split_count" />
+                        </div>
+                    </div>
+                    
+                    <fieldset>
+                        <legend class="show_legend absolute">Split by</legend>
+                        <div class="form_row inline">
+                            <div class="form_radio" id="radio_buttons">
+                                <ul>
+                                    <li><input type="radio" name="split_by" id="split_by_amount" checked /><label for="split_by_amount" aria-label="Split Schedule by Amount" title="Split Schedule by Amount">Amount</label></li>
+                                    <li><input type="radio" name="split_by" id="split_by_percentage" /><label for="split_by_percentage" aria-label="Split Schedule by Percentage" title="Split Schedule by Percentage">Percentage</label></li>
+                                </ul>
+                                <br class="clear"/>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <br class="clear"/>
+                </div>
+                <div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="button" class="btn_normal btn_grey btn_cancel_modal" value="Cancel" id="btn_cancel1" title="Cancel Split Preferences" /></div>
+                    <div class="form_action_right"><input type="button" class="btn_normal btn_primary" value="Apply" id="btn_split_item" title="Apply Split Preferences" /></div>
+                    <br class="clear"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+</div>
+
+<!-- Modal Window for Filter Options -->
+<div id="btn_filter_options" title="Filters" role="dialog" aria-labelledby="filterTitle" aria-describedby="filterDesc">
+	<div class="dialog_header">
+	    <h1 id="filterTitle">Filters - 1 Applied</h1>
+    </div>
+    <div id="filterDesc" class="dialog_desc">This Form allows you to set filters that can be applied to the results on the transactions table</div>
+    <div class="dialog_content">
+        <form class="fd_form" action="#" id="apply_filters_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+                    <div class="form_row inline">
+                        <div class="form_label">
+                            <label for="saved_filters">Saved Filters</label>
+                        </div>
+                        <div class="form_select">
+                        	<select id="saved_filters" name="saved_filters">
+                            	<option value="">Select Pre-saved Filter</option>
+                            	<option value="1">Filter Name 1</option>
+                            	<option value="2">Filter Name 2</option>
+                            	<option value="3">Filter Name 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form_row_divider"></div>
+                    <div class="form_row inline">
+                        <div class="form_label">
+                            <span>Date Range</span>
+                        </div>
+                        <div class="form_date">
+                            <ul>
+                                <li>
+                                	<label for="filter_date_from" title="Enter From Date">From Date</label>
+                                	<input type="text" name="filter_date_from" class="date_picker" id="filter_date_from" aria-label="Format date as DD/MM/YYYY" />
+                                </li>
+                                <li><span class="date_spacer">-</span></li>
+                                <li>
+                                	<label for="filter_date_to" title="Enter To Date">To Date</label>
+                                	<input type="text" name="filter_date_to" class="date_picker" id="filter_date_to"  aria-label="Format date as DD/MM/YYYY" />
+                                </li>
+                            </ul>
+                            <br class="clear"/>
+                        </div>
+                    </div>
+                    <!-- Player Normal -->
+                    <div class="form_row inline">
+                        <div class="form_label">
+                            <label for="filter_cardholder">Player</label>
+                        </div>
+                        <div class="form_select">
+                        	<select id="filter_cardholder" name="filter_cardholder">
+                            	<option value="">Select Player</option>
+                            	<option value="1">Zulifqar Ahmad</option>
+                            	<option value="2">Alan Alda</option>
+                            	<option value="3">Joseph Bloggs</option>
+                           	</select>
+                        </div>
+                    </div>
+                    
+                    <!-- Player Additive -->
+                    <div class="form_row inline">
+                        <div class="form_label">
+                            <label for="filter_cardholder_additive">Player</label>
+                        </div>
+                        <div class="form_select">
+                        	<select id="filter_cardholder_additive" name="filter_cardholder_additive" class="allow_for_btn">
+                            	<option value="">Select Player</option>
+                            	<option value="1">Zulifqar Ahmad</option>
+                            	<option value="2">Alan Alda</option>
+                            	<option value="3">Joseph Bloggs</option>
+                           	</select>
+                            <input type="button" class="btn_normal btn_grey btn_add_inline" value="Add" aria-label="Add Selected Player"/>
+                        </div>
+                        
+                        <div class="additive_container">
+                        	<div class="additive_filters">
+                                <ul>
+                                    <li>
+                                        <div class="filter_item bg_color_3">
+                                            <span class="filter_label">Player:</span>
+                                            <span class="filter_value">Zulifqar Ahmad</span>
+                                            <input type="button" class="remove_filter_btn" value="Remove Filter" title="Remove this Filter" />
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="filter_item bg_color_3">
+                                            <span class="filter_label">Player:</span>
+                                            <span class="filter_value">Joseph Bloggs</span>
+                                            <input type="button" class="remove_filter_btn" value="Remove Filter" title="Remove this Filter" />
+                                        </div>
+                                    </li>
+                                </ul>
+                                <br class="clear"/>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="form_row inline">
+                        <div class="form_label">
+                            <label for="filter_status">Status</label>
+                        </div>
+                        <div class="form_select">
+                        	<select id="filter_status" name="saved_filters">
+                            	<option value="">Select Status</option>
+                            	<option value="1">Reviewed</option>
+                            	<option value="2">Unreviewed</option>
+                            	<option value="3">Approved</option>
+                            	<option value="4">Exported</option>
+                            	<option value="5">Disputed</option>
+                           	</select>
+                        </div>
+                    </div>
+                    <div class="form_row inline">
+                        <div class="form_label">
+                            <label for="filter_amount">Amount</label>
+                        </div>
+                        <div class="form_select form_input split_options">
+                        	<ul>
+                            	<li>
+                                    <select id="filter_amount" name="saved_filters" aria-label="Choose Amount Distinguisher">
+                                        <option value="">More Than</option>
+                                        <option value="1">Less Than</option>
+                                        <option value="2">Equal to</option>
+                                        <option value="3">Not Equal to</option>
+                                    </select>
+                            	</li>
+                                <li>
+                            		<input type="text" id="filter_amount_value" name="filter_amount_value" aria-label="Enter Amount Value" /><span class="hidden_label"><label for="filter_amount_value">Enter Amount Value</label></span>
+                            	</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="form_row inline">
+                        <div class="form_label">
+                            <label for="filter_commodity_category">Commodity Category</label>
+                        </div>
+                        <div class="form_select">
+                        	<select id="filter_commodity_category" name="filter_commodity_category">
+                            	<option value="">Select Category</option>
+                            	<option value="1">Option 1</option>
+                            	<option value="2">Option 2</option>
+                            	<option value="3">Option 3</option>
+                           	</select>
+                        </div>
+                    </div>
+                    <div class="form_row_divider"></div>
+                    <div class="form_row inline">
+                        <div class="form_label">
+                            <label for="filter_add_new">Add New Filter</label>
+                        </div>
+                        <div class="form_select">
+                        	<select id="filter_add_new" name="filter_add_new">
+                            	<option value="">Select Filter Type</option>
+                            	<option value="1">Embossed Name</option>
+                            	<option value="2">Card</option>
+                            	<option value="3">Merchant</option>
+                            	<option value="4">Billing Amount</option>
+                            	<option value="5">Cost Allocation Code Level 1</option>
+                            	<option value="6">Cost Allocation Code Level 2</option>
+                            	<option value="7">Cost Allocation Code Level 3</option>
+                           	</select>
+                        </div>
+                    </div>
+                    <br class="clear"/>
+                </div>
+                <div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="reset" class="btn_normal btn_grey" value="Reset" id="btn_reset1" aria-label="Reset Filter Options" /></div>
+                    <div class="form_action_right"><input type="submit" class="btn_normal btn_primary" value="Apply" id="btn_split_item2" aria-label="Apply Filter Options" /></div>
+                    <br class="clear"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+</div>
+
+<!-- Modal Window for Save Filters -->
+<div id="btn_save_filter_options" title="Save Current Filter Settings" role="dialog" aria-labelledby="saveFilterTitle" aria-describedby="saveFilterDesc">
+	<div class="dialog_header">
+	    <h1 id="saveFilterTitle">Save Current Filter Settings</h1>
+    </div>
+    <div id="saveFilterDesc" class="dialog_desc">This Form allows you to save your current filters as a preset filter. You can select it again when vieweing your filter options.</div>
+    <div class="dialog_content">
+        <form class="fd_form" action="#" id="save_filter_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+                    <div class="form_row inline">
+                        <div class="form_label">
+                            <label for="save_filter_desctiption">Description</label>
+                        </div>
+                        <div class="form_input">
+                            <input type="text" name="save_filter_desctiption" id="save_filter_desctiption" />
+                        </div>
+                    </div>
+                    <br class="clear"/>
+                </div>
+                <div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="button" class="btn_normal btn_grey btn_cancel_modal" value="Cancel" id="btn_cancel2" aria-label="Cancel Save Filter" /></div>
+                    <div class="form_action_right"><input type="button" class="btn_normal btn_primary" value="Save Filter" id="btn_split_item3" aria-label="Save Filter" /></div>
+                    <br class="clear"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+</div>
+
+<!-- Modal Window for Email Selected Schedule Details -->
+<div id="btn_email_options" title="Email" role="dialog" aria-labelledby="emailTitle" aria-describedby="emailDesc">
+	<div class="dialog_header">
+	    <h1 id="emailTitle">Email</h1>
+    </div>
+    <div id="emailDesc" class="dialog_desc">This Form allows you to email the details of a transaction to the email address linked to the transaction.</div>
+    <div class="dialog_content">
+        <form class="fd_form" action="#" id="email_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+                	<div class="email_response bg_color_3">Message has been sent to 28 recipients</div>
+                    <div class="form_row inline">
+                        <div class="form_label">
+                            <label for="email_templates">Templates</label>
+                        </div>
+                        <div class="form_select">
+                        	<select id="email_templates" name="email_templates" aria-label="Select the Email Template">
+                            	<option value="">Select Template</option>
+                            	<option value="1">Player Reminder</option>
+                            	<option value="2">Template 1</option>
+                            	<option value="3">Template 2</option>
+                            	<option value="4">Template 3</option>
+                           	</select>
+                        </div>
+                    </div>
+                	<div class="form_row_divider"></div>
+                    <div class="form_row inline">
+                        <div class="form_label">
+                            <label for="email_from_address">From Address</label>
+                        </div>
+                        <div class="form_input">
+                            <input type="text" name="email_from_address" id="email_from_address" aria-label="Enter the Email Address that will send the Email" />
+                        </div>
+                    </div>
+                    <div class="form_row inline">
+                        <div class="form_label">
+                            <label for="email_subject">Subject</label>
+                        </div>
+                        <div class="form_input">
+                            <input type="text" name="email_subject" id="email_subject" aria-label="Enter the Subject Line for the Email" />
+                        </div>
+                    </div>
+                    <div class="form_row inline">
+                        <div class="form_label">
+                            <label for="email_message">Message</label>
+                        </div>
+                        <div class="form_textarea">
+                            <textarea name="email_message" id="email_message" aria-label="Enter the Message for the Email" style="height:140px;"></textarea>
+                        </div>
+                    </div>
+                    <br class="clear"/>
+                </div>
+                <div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="button" class="btn_normal btn_grey btn_cancel_modal" value="Discard" id="btn_cancel3" aria-label="Discard Email" /></div>
+                    <div class="form_action_right"><input type="button" class="btn_normal btn_primary" value="Send Email" id="btn_split_item4" aria-label="Send Email" /></div>
+                    <br class="clear"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+</div>
+
+<!-- Modal Window for List Settings -->
+<div id="btn_list_settings_options" title="List Settings" role="dialog" aria-labelledby="listSettingsTitle" aria-describedby="listSettingsDesc">
+	<div class="dialog_header">
+	    <h1 id="listSettingsTitle">List Settings</h1>
+    </div>
+    <div id="listSettingsDesc" class="dialog_desc">This Dialog allows you to arrange and customise how the grid is laid out.</div>
+    <div class="dialog_content">
+        <form class="fd_form" action="#" id="list_settings_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+                	
+                	<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+                	<script type="text/javascript">
+						// Run this function when the page loads
+						function settingsList() {
+							
+							// Apply Values to inputs for sorting
+							applySortOrder();
+							chboxStatus();
+							
+							// Return a helper with preserved width of cells
+							var fixHelper = function(e, ui) {
+								ui.children().each(function() {
+									$(this).width($(this).width());
+								});
+								return ui;
+							};
+							
+							// Allow sorting of table rows when the drag item is moved
+							$( "#settings_list_table tbody" ).sortable({
+								items: "tr:not(.notActive)",
+								helper: fixHelper,
+								handle: '.dragger',
+								stop: function(event,ui){
+									applySortOrder();
+								}
+							});
+							
+							// Don't allow columns who have notActive to be sortable
+							$( "#settings_list_table tbody" ).sortable({
+								cancel: ".notActive"
+							});
+							
+							// when you sort an item, the value of the input needs to be updated
+							function applySortOrder() {
+								var sortNumber = 1;
+								$('#settings_list_table tbody tr:not(.notActive) input:text').each(function() {
+									$(this).attr('value', sortNumber);
+									sortNumber += 1;
+								});
+							};
+							
+							function chboxStatus() {
+								var settingcheckbox = $('#settings_list_table tbody tr td.list_check').find(":checkbox");
+								
+								settingcheckbox.each(function () {
+									if ($(this).prop('checked')) {
+										$(this).parent().parent().removeClass('notActive')
+									} else {
+										$(this).parent().parent().addClass('notActive')
+									}
+								});
+								
+								$('#settings_list_table tbody tr td.list_check :checkbox').change(function () {
+									if ($(this).prop('checked')) {
+										$(this).parent().parent().removeClass('notActive')
+										applySortOrder();
+										chboxStatus();
+									} else {
+										$(this).parent().parent().addClass('notActive')
+										applySortOrder();
+										chboxStatus();
+									}
+								});
+							}
+						};
+                    </script>
+                	
+                    <table class="grid_table" id="settings_list_table">
+                    	<caption>List Settings</caption>
+                    	<thead>
+                        	<tr>
+                            	<th id="col_list_chbox">List</th>
+                            	<th id="col_detail_chbox">Detail</th>
+                            	<th id="col_column_value">Column</th>
+                            	<th id="col_position_value">Position</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        	<tr>
+                            	<td class="list_check"><input type="checkbox" disabled="disabled" checked="checked" id="show_grid_date" name="show_grid_date" aria-label="Check to show Date Column in Table"><span class="hidden_label"><label for="show_grid_date">Check to show Date Column in Table</label></span></td>
+                                <td><input type="checkbox" id="show_details_date" name="show_details_date" aria-label="Check to show Date details in the Details Panel"><span class="hidden_label"><label for="show_details_date">Check to show Date details in the Details Panel</label></span></td>
+                                <td>Date</td>
+                                <td><span class="sort_container"><input type="text" size="3" style="width:60px;" class="inputbox" id="order_value_1"><span class="hidden_label"><label for="order_value_1">Ordering Value</label></span><input type="button" class="dragger" value="Move" /></span></td>
+                            </tr>
+                        	<tr>
+                            	<td class="list_check"><input type="checkbox" checked="checked" id="show_grid_cardholder" name="show_grid_cardholder" aria-label="Check to show Player Column in Table"><span class="hidden_label"><label for="show_grid_cardholder">Check to show Player Column in Table</label></span></td>
+                                <td><input type="checkbox" id="show_details_cardholder" name="show_details_cardholder" aria-label="Check to show Player details in the Details Panel"><span class="hidden_label"><label for="show_details_cardholder">Check to show Player details in the Details Panel</label></span></td>
+                                <td>Embossed Name</td>
+                                <td><span class="sort_container"><input type="text" size="3" style="width:60px;" class="inputbox" id="order_value_2"><span class="hidden_label"><label for="order_value_2">Ordering Value</label></span><input type="button" class="dragger" value="Move" /></span></td>
+                            </tr>
+                        	<tr>
+                            	<td class="list_check"><input type="checkbox"  checked="checked" id="show_grid_card" name="show_grid_card" aria-label="Check to show Card Column in Table"><span class="hidden_label"><label for="show_grid_card">Check to show Card Column in Table</label></span></td>
+                                <td><input type="checkbox" id="show_details_card" name="show_details_card" aria-label="Check to show Card details in the Details Panel"><span class="hidden_label"><label for="show_details_card">Check to show Card details in the Details Panel</label></span></td>
+                                <td>Card</td>
+                                <td><span class="sort_container"><input type="text" size="3" style="width:60px;" class="inputbox" id="order_value_3"><span class="hidden_label"><label for="order_value_3">Ordering Value</label></span><input type="button" class="dragger" value="Move" /></span></td>
+                            </tr>
+                        	<tr>
+                            	<td class="list_check"><input type="checkbox" disabled="disabled" checked="checked" id="show_grid_billing_amt" name="show_grid_billing_amt" aria-label="Check to show Billing Amount Column in Table"><span class="hidden_label"><label for="show_grid_billing_amt">Check to show Billing Amount Column in Table</label></span></td>
+                                <td><input type="checkbox" id="show_details_billing_amount" name="show_details_billing_amount" aria-label="Check to show Billing Amount details in the Details Panel"><span class="hidden_label"><label for="show_details_billing_amount">Check to show Billing Amount details in the Details Panel</label></span></td>
+                                <td>Billing Amount</td>
+                                <td><span class="sort_container"><input type="text" size="3" style="width:60px;" class="inputbox" id="order_value_4"><span class="hidden_label"><label for="order_value_4">Ordering Value</label></span><input type="button" class="dragger" value="Move" /></span></td>
+                            </tr>
+                        	<tr>
+                            	<td class="list_check"><input type="checkbox" disabled="disabled" checked="checked" id="show_grid_merchant" name="show_grid_merchant" aria-label="Check to show Merchant Column in Table"><span class="hidden_label"><label for="show_grid_merchant">Check to show Merchant Column in Table</label></span></td>
+                                <td><input type="checkbox" id="show_details_merchant" name="show_details_merchant" aria-label="Check to show Merchant details in the Details Panel"><span class="hidden_label"><label for="show_details_merchant">Check to show Merchant details in the Details Panel</label></span></td>
+                                <td>Merchant</td>
+                                <td><span class="sort_container"><input type="text" size="3" style="width:60px;" class="inputbox" id="order_value_5"><span class="hidden_label"><label for="order_value_5">Ordering Value</label></span><input type="button" class="dragger" value="Move" /></span></td>
+                            </tr>
+                        	<tr>
+                            	<td class="list_check"><input type="checkbox" id="show_grid_cost_allocation" name="show_grid_cost_allocation" aria-label="Check to show Cost Allocation Column in Table"><span class="hidden_label"><label for="show_grid_cost_allocation">Check to show Cost Allocation Column in Table</label></span></td>
+                                <td><input type="checkbox" id="show_details_cost_allocation" name="show_details_cost_allocation" aria-label="Check to show Cost Allocation details in the Details Panel"><span class="hidden_label"><label for="show_details_cost_allocation">Check to show Cost Allocation details in the Details Panel</label></span></td>
+                                <td>Cost Allocation</td>
+                                <td><span class="sort_container"><input type="text" size="3" style="width:60px;" class="inputbox" id="order_value_6"><span class="hidden_label"><label for="order_value_6">Ordering Value</label></span><input type="button" class="dragger" value="Move" /></span></td>
+                            </tr>
+                        	<tr>
+                            	<td class="list_check"><input type="checkbox" id="show_grid_tam" name="show_grid_tam" aria-label="Check to show tam Column in Table"><span class="hidden_label"><label for="show_grid_tam">Check to show tam Column in Table</label></span></td>
+                                <td><input type="checkbox" id="show_details_tam" name="show_details_tam" aria-label="Check to show tam details in the Details Panel"><span class="hidden_label"><label for="show_details_tam">Check to show tam details in the Details Panel</label></span></td>
+                                <td>tam</td>
+                                <td><span class="sort_container"><input type="text" size="3" style="width:60px;" class="inputbox" id="order_value_7"><span class="hidden_label"><label for="order_value_7">Ordering Value</label></span><input type="button" class="dragger" value="Move" /></span></td>
+                            </tr>
+                        	<tr>
+                            	<td class="list_check"><input type="checkbox" id="show_grid_discount" name="show_grid_discount" aria-label="Check to show Discount Column in Table"><span class="hidden_label"><label for="show_grid_discount">Check to show Discount Column in Table</label></span></td>
+                                <td><input type="checkbox" id="show_details_discount" name="show_details_discount" aria-label="Check to show Discount details in the Details Panel"><span class="hidden_label"><label for="show_details_discount">Check to show Discount details in the Details Panel</label></span></td>
+                                <td>Discount</td>
+                                <td><span class="sort_container"><input type="text" size="3" style="width:60px;" class="inputbox" id="order_value_8"><span class="hidden_label"><label for="order_value_8">Ordering Value</label></span><input type="button" class="dragger" value="Move" /></span></td>
+                            </tr>
+                        	<tr>
+                            	<td class="list_check"><input type="checkbox" id="show_grid_unit_cost" name="show_grid_unit_cost" aria-label="Check to show Unit Cost Column in Table"><span class="hidden_label"><label for="show_grid_unit_cost">Check to show Unit Cost Column in Table</label></span></td>
+                                <td>
+                                	<input type="checkbox" id="show_details_unit_cost" name="show_details_unit_cost" aria-label="Check to show Unit Cost details in the Details Panel"><span class="hidden_label">
+                                	<label for="show_details_unit_cost">Check to show Unit Cost details in the Details Panel</label></span>
+                                </td>
+                                <td>Unit Cost</td>
+                                <td><span class="sort_container"><input type="text" size="3" style="width:60px;" class="inputbox" id="order_value_9"><span class="hidden_label"><label for="order_value_9">Ordering Value</label></span><input type="button" class="dragger" value="Move" /></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+                </div>
+                <div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="button" class="btn_normal btn_grey btn_cancel_modal" value="Reset" id="btn_reset2" aria-label="Reset List Settings" /></div>
+                    <div class="form_action_right"><input type="button" class="btn_normal btn_primary" value="Apply" id="btn_apply_Setting" aria-label="Apply List Settings" /></div>
+                    <br class="clear"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+</div>
+
+<!-- Modal Window for Print Settings -->
+<div id="btn_list_print_options" title="Print Settings" role="dialog" aria-labelledby="listPrintTitle" aria-describedby="listPrintDesc">
+	<div class="dialog_header">
+	    <h1 id="listPrintTitle">Print Settings</h1>
+    </div>
+    <div id="listPrintDesc" class="dialog_desc">This Dialog allows you to select the print settings of your list.</div>
+    <div class="dialog_content">
+        <form class="fd_form" action="#" id="print_settings_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+                <fieldset>
+                	<legend class="show_legend">Which columns would you like to print</legend>
+                	<div class="form_row">
+                        <div class="form_radio" id="radio_buttons">
+                            <ul>
+                                <li><input type="radio" name="print_view" value="Visible Columns" id="visible_columns"  aria-label="Print Only Visible Table Columns" checked="checked"><label for="visible_columns">Visible Columns</label></li>
+                                <li><input type="radio" name="print_view" value="All Columns" id="all_columns"  aria-label="Print All Table Columns"><label for="all_columns">All Columns</label></li>
+                            </ul>
+                            <br class="clear"/>
+                        </div>
+                    </div>
+                </fieldset>
+                </div>
+                <div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="button" class="btn_normal btn_grey btn_cancel_modal" value="Cancel" id="btn_cancel_print" aria-label="Cancel Print Option" /></div>
+                    <div class="form_action_right"><input type="button" class="btn_normal btn_primary" value="Print" id="btn_print_item" aria-label="Print Table"  onClick="window.print()" /></div>
+                    <br class="clear"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+</div>
+
+<!-- Modal Window for Output Options -->
+<div id="btn_list_output_options" title="Output Options" role="dialog" aria-labelledby="listOutputTitle" aria-describedby="listOutputDesc">
+	<div class="dialog_header">
+	    <h1 id="listOutputTitle">Output Settings</h1>
+    </div>
+    <div id="listOutputDesc" class="dialog_desc">This Dialog allows you to select the output settings of your list.</div>
+    <div class="dialog_content">
+        <form class="fd_form" action="#" id="output_settings_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+                
+                	<script type="text/javascript">
+					
+						
+						function radioBtnStatus() {
+								var outputChoice = $('input[name="output_choice"]');
+																
+								outputChoice.each(function () {
+									if ($(this).prop('checked')) {
+										var radioID = $(this).attr('id');
+										
+										if (radioID == 'output_all_visible'){
+											$('#output_default_options').show();
+										}
+										
+										if (radioID == 'output_all_columns'){
+											$('#output_default_options').show();
+										}
+										
+										if (radioID == 'output_standard'){
+											$('#output_default_options').show();
+										}
+										
+										if (radioID == 'output_quicken'){
+											$('#output_quicken_options').show();
+										}
+										
+										if (radioID == 'output_quickbooks'){
+											$('#output_quickbooks_options').show();
+										}
+										
+									} else {
+										return false;
+									}
+								});
+								
+								$('input[name="output_choice"]').change(function () {
+									if ($(this).prop('checked')) {
+										$('.output_options').hide();
+										var radioIDAlt = $(this).attr('id');
+										
+										if (radioIDAlt == 'output_all_visible'){
+											$('#output_default_options').show();
+											$('#incl_fields_in_detail').removeAttr("disabled");
+										}
+										
+										if (radioIDAlt == 'output_all_columns'){
+											$('#output_default_options').show();
+											$('#incl_fields_in_detail').prop('checked', false);
+											$('#incl_fields_in_detail').attr("disabled", true);
+											
+										}
+										
+										if (radioIDAlt == 'output_standard'){
+											$('#output_default_options').show();
+											$('#incl_fields_in_detail').prop('checked', false);
+											$('#incl_fields_in_detail').attr("disabled", true);
+										}
+										
+										if (radioIDAlt == 'output_quicken'){
+											$('#output_quicken_options').show();
+											$('#incl_fields_in_detail').prop('checked', false);
+											$('#incl_fields_in_detail').attr("disabled", true);
+										}
+										
+										if (radioIDAlt == 'output_quickbooks'){
+											$('#output_quickbooks_options').show();
+											$('#incl_fields_in_detail').prop('checked', false);
+											$('#incl_fields_in_detail').attr("disabled", true);
+										}
+										
+									} else {
+										return false;
+									}
+								});
+							};
+                    </script>
+                
+                	<div class="form_row">
+                    	<fieldset>
+                            <legend class="show_legend">Which columns would you like to output</legend>
+                            <div class="form_radio">
+                                <ul>
+                                    <li><input type="radio" name="output_choice" value="Visible Columns" id="output_all_visible"  aria-label="Output only visible Columns" checked="checked" /><label for="output_all_visible">Visible Columns</label>
+                                        <ul>
+                                            <li id="include_fields_option"><input type="checkbox" name="incl_fields_in_detail" value="Include" id="incl_fields_in_detail"  aria-label="Include the fields in the details panel" /><label for="incl_fields_in_detail">Include the fields in the details panel</label></li>
+                                        </ul>
+                                    </li>
+                                    <li><input type="radio" name="output_choice" value="All Columns" id="output_all_columns"  aria-label="Output All Columns" /><label for="output_all_columns">All Columns</label></li>
+                                    <li><input type="radio" name="output_choice" value="Standard Output" id="output_standard"  aria-label="Output to Standard Format" /><label for="output_standard">Standard Output <span class="help_text">(Outputs the most frequently used columns and standard format)</span></label></li>
+                                    <li><input type="radio" name="output_choice" value="Quicken" id="output_quicken"  aria-label="Output to Quicken Format"/><label for="output_quicken">Quicken</label></li>
+                                    <li><input type="radio" name="output_choice" value="Quickbooks" id="output_quickbooks"  aria-label="Output to Quickbooks Format" /><label for="output_quickbooks">Quickbooks</label></li>
+                                </ul>
+                                <br class="clear"/>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="form_row_divider"></div>
+                    <div class="form_row inline output_options" id="output_default_options" style="display:none;">
+                    	<div class="form_label">
+                        	<label for="output_type">Output File Format</label>
+                        </div>
+                        <div class="form_select">
+                        	<select id="output_type" aria-label="Select Output File Format">
+                            	<option value="CSV">CSV</option>
+                            	<option value="XLS">Excel (xls)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form_row inline output_options" id="output_quicken_options" style="display:none;">
+                    	<div class="form_label">
+                        	<label for="output_type_quicken">Output File Format</label>
+                        </div>
+                        <div class="form_input">
+                        	<input type="text" id="output_type_quicken" name="output_type_quicken" value="Quicken (OFX)" disabled="disabled" />
+                        </div>
+                    </div>
+                    <div class="form_row inline output_options" id="output_quickbooks_options" style="display:none;">
+                    	<div class="form_label">
+                        	<label for="output_type_quickbooks">Output File Format</label>
+                        </div>
+                        <div class="form_input">
+                        	<input type="text" id="output_type_quickbooks" name="output_type_quickbooks" value="Quickbooks (IIF)" disabled="disabled" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="button" class="btn_normal btn_grey btn_cancel_modal" value="Cancel" id="btn_cancel5" aria-label="Cancel Output Options" /></div>
+                    <div class="form_action_right"><input type="button" class="btn_normal btn_primary" value="Output File" id="btn_output_table" aria-label="Output Schedule File" /></div>
+                    <br class="clear"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+</div>
+
+<!-- Modal Window for Commodity Category Finder -->
+<div id="commodity_category_finder" title="Find Commodity Category" role="dialog" aria-labelledby="commodityTitle" aria-describedby="commodityDesc">
+	<div class="dialog_header">
+	    <h1 id="commodityTitle">Find Commodity Category Settings</h1>
+    </div>
+    <div id="commodityDesc" class="dialog_desc">This Dialog allows you to search and select a specific commodity category. The last 10 used will be shown by default.</div>
+    <div class="dialog_content">
+        <form class="fd_form" action="#">
+    		<div class="form_container">
+		        <div class="modal_content_padding">
+		        	<div class="form_row">
+			        	<div class="form_label">
+			        		<label for="commodity_search">Search Commodity Categories</label>
+			        	</div>
+				        <div class="form_input">
+				        	<input aria-label="Search for a specific commodity category or tab below to browse ten most recently used." id="commodity_search" type="text" /> 
+				        </div>
+			        </div>
+			        
+			        <div class="form_row">
+						<ul class="type_ahead_results">
+						    <li><a href="javascript:void(0)">apples</a></li>
+						    <li><a href="javascript:void(0)">apricots</a></li>
+						    <li><a href="javascript:void(0)">acai</a></li>
+						    <li><a href="javascript:void(0)">blueberry</a></li>
+						    <li><a href="javascript:void(0)">bananas</a></li>
+						    <li><a href="javascript:void(0)">cherry</a></li>
+						    <li><a href="javascript:void(0)">coconut</a></li>
+						    <li><a href="javascript:void(0)">donut</a></li>
+						    <li><a href="javascript:void(0)">durean</a></li>
+						</ul>
+					</div>
+		        </div>
+	        </div>
+        </form>
+        <script type="text/javascript">
+        	$(document).ready(function(){
+        		$('#commodity_search').keyup(function(){
+				   var valThis = $(this).val().toLowerCase();
+				    $('.type_ahead_results > li > a').each(function(){
+				     var text = $(this).text().toLowerCase();
+				        (text.indexOf(valThis) == 0) ? $(this).show() : $(this).hide();            
+				   });
+				});
+			})
+        </script>
+    </div>
+    <div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+</div>
+
+<!-- Modal Window for Comments -->
+<div id="view_comment_dialog" title="Schedule Comments" role="dialog" aria-labelledby="listCommentTitle" aria-describedby="listCommentDesc">
+	<div class="dialog_header">
+	    <h1 id="listCommentTitle">Comments (2)</h1>
+    </div>
+    <div id="listCommentDesc" class="dialog_desc">This Dialog allows you to view the comments linked to a transaction.</div>
+    <div class="dialog_content">
+        <form class="fd_form" action="#" id="comments_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+                	<ul class="comments">
+                        <li>
+                            <div class="comment_text">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
+                            <div class="comment_by color_1">Brian Bennet - 03/09/2016</div>
+                        </li>
+                        <li>
+                            <div class="comment_text">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis iriure dolor.</div>
+                            <div class="comment_by color_1">Brian Bennet - 03/09/2016</div>
+                        </li>
+                    </ul>
+                    <div class="form_row">
+                        <div class="form_label hidden_label">
+                            <label for="dialog_user_comment">Enter comment below</label>
+                        </div>
+                        <div class="form_textarea">
+                            <textarea id="dialog_user_comment" name="dialog_user_comment"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="button" class="btn_normal btn_grey btn_cancel_modal" value="Cancel" id="btn_cancel_comment" aria-label="Cancel Comment" /></div>
+                    <div class="form_action_right"><input type="button" class="btn_normal btn_primary" value="Submit" id="btn_submit_comment" aria-label="Submit Comment"  /></div>
+                    <br class="clear"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+</div>
+
+<!-- Modal Window for Receipts -->
+<div id="view_receipt_dialog" title="View Receipts" role="dialog" aria-labelledby="listReceiptTitle" aria-describedby="listReceiptDesc">
+	<div class="dialog_header">
+	    <h1 id="listReceiptTitle">View Receipt (2)</h1>
+    </div>
+    <div id="listReceiptDesc" class="dialog_desc">This Dialog allows you to view the receipt linked to a transaction.</div>
+    <div class="dialog_content">
+    	<div class="modal_content_padding">
+        	Awaiting on sign off of this screen
+        </div>
+        
+    </div>
+    <div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+</div>
+
+<!-- Change CAS -->
+<div id="change_cas_dialog" title="Cost Allocation System" role="dialog" aria-labelledby="listCASTitle" aria-describedby="listCASDesc">
+	<div class="dialog_header">
+	    <h1 id="listCASTitle">Change Cost Allocation System</h1>
+    </div>
+    <div id="listCASDesc" class="dialog_desc">This Dialog allows you to view the receipt linked to a transaction.</div>
+    <div class="dialog_content">
+     <form class="fd_form" action="#" id="change_cas_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+                	<div class="form_row">
+                    	<div class="form_label"><label for="change_cas_select">Change CAS</label></div>
+                        <div class="form_select">
+                            <select class="selectbox" id="change_cas_select">
+                                <option value="option_1">UK Oracle</option>
+                                <option value="option_2">US Debit</option>
+                                <option value="option_3">US FDC</option>
+                                <option value="option_4" selected="selected">US FDR</option>
+                                <option value="option_5">US I-Procure</option>
+                                <option value="option_6">US Merchant Srvs</option>
+                                <option value="option_7">US Payment Srvs</option>
+                                <option value="option_8">US Telecheck</option>
+                                <option value="option_9">UK-lexpenses</option>
+                            </select>
+                            <br class="clear"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="button" class="btn_normal btn_grey btn_cancel_modal" value="Cancel" id="btn_cancel_cas" aria-label="Cancel Cost Allocation System Update" /></div>
+                    <div class="form_action_right"><input type="button" class="btn_normal btn_primary" value="Update CAS" id="btn_update_cas" aria-label="Update Cost Allocation System"  /></div>
+                    <br class="clear"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+</div>
+
+
+<!-- View Full Details -->
+<div id="full_details_dialog" title="View Full Details" role="dialog" aria-labelledby="fullDetailsTitle" aria-describedby="fullDetailsDesc">
+	<div class="dialog_header">
+	    <h1 id="fullDetailsTitle">Schedule - Full Details</h1>
+    </div>
+    <div id="fullDetailsDesc" class="dialog_desc">This Dialog shows you the full details for a selected transaction.</div>
+    <div class="dialog_content">
+    	<form class="fd_form" action="#" id="view_trans_details">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+                	<!-- Schedule Overview -->
+                    <div class="full_details_tx_overview">
+                        <div class="tx_desc">Crowne Plaza - 73642</div>
+                        <div class="tx_date">12/09/2016</div>
+                    	<div class="tx_amt">1,360.00 USD</div>
+                    </div> 
+                
+               		<!-- Values Panel -->
+                    <div class="drawer_panel">
+                        <h4><a href="javascript:void[0]" class="drawer_toggle color_1 isOpen">Schedule Details</a></h4>
+                        <div class="drawer_panel_details">
+                        	<div class="inner_col_left">
+                            	<div class="inner_col_left_padding">
+                            		<div class="form_row inline readonly thin">
+                                        <div class="item_label"><span>Schedule Date:</span></div>
+                                        <div class="item_value"><span>12/09/2016</span></div>
+                                        <br class="clear"/>
+                                    </div>
+                                    <div class="form_row inline readonly thin">
+                                        <div class="item_label"><span>Post Date:</span></div>
+                                        <div class="item_value"><span>12/09/2016</span></div>
+                                        <br class="clear"/>
+                                    </div>
+                                    <div class="form_row inline readonly thin">
+                                        <div class="item_label"><span>Schedule Type:</span></div>
+                                        <div class="item_value"><span>Top line detail</span></div>
+                                        <br class="clear"/>
+                                    </div>
+                                    <div class="form_row inline readonly thin">
+                                        <div class="item_label"><span>Player:</span></div>
+                                        <div class="item_value"><span>12/09/2016</span></div>
+                                        <br class="clear"/>
+                                    </div>
+                                    <div class="form_row inline readonly thin">
+                                        <div class="item_label"><span>Card Number:</span></div>
+                                        <div class="item_value"><span>************3112</span></div>
+                                        <br class="clear"/>
+                                    </div>
+                                    <div class="form_row inline readonly thin">
+                                        <div class="item_label"><span>Structure:</span></div>
+                                        <div class="item_value"><span>47321-315665-3112</span></div>
+                                        <br class="clear"/>
+                                    </div>
+                                    <div class="form_row inline readonly thin">
+                                        <div class="item_label"><span>tam:</span></div>
+                                        <div class="item_value"><span>Not Applicable</span></div>
+                                        <br class="clear"/>
+                                    </div>
+                                    <div class="form_row inline readonly thin">
+                                        <div class="item_label"><span>tam Error/Desc:</span></div>
+                                        <div class="item_value"><span>Schedule Originated In A Non-accredited Country</span></div>
+                                        <br class="clear"/>
+                                    </div>
+                                    <div class="form_row inline readonly thin">
+                                        <div class="item_label"><span>tam Implementation Type:</span></div>
+                                        <div class="item_value"><span>-</span></div>
+                                        <br class="clear"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="inner_col_right">
+                            	<div class="inner_col_right_padding">
+                            		<div class="form_row inline readonly thin">
+                                        <div class="item_label"><span>Customer Reference Code:</span></div>
+                                        <div class="item_value"><span>5811 - Caterers</span></div>
+                                        <br class="clear"/>
+                                    </div>
+                                    <div class="form_row inline readonly thin">
+                                        <div class="item_label"><span>Stan Ref:</span></div>
+                                        <div class="item_value"><span>24692162038000853625025</span></div>
+                                        <br class="clear"/>
+                                    </div>
+                                    <div class="form_row inline readonly thin">
+                                        <div class="item_label"><span>Schedule ID:</span></div>
+                                        <div class="item_value"><span>30566448</span></div>
+                                        <br class="clear"/>
+                                    </div>
+                                    <div class="form_row inline readonly thin">
+                                        <div class="item_label"><span>Status:</span></div>
+                                        <div class="item_value"><span>Exported</span></div>
+                                        <br class="clear"/>
+                                    </div>
+                                    <div class="form_row inline readonly thin">
+                                        <div class="item_label"><span>Merchant:</span></div>
+                                        <div class="item_value"><span>Crowne Plaza - 73642</span></div>
+                                        <br class="clear"/>
+                                    </div>
+                                    <div class="form_row inline readonly thin">
+                                        <div class="item_label"><span>Merchant Order Number:</span></div>
+                                        <div class="item_value"><span>-</span></div>
+                                        <br class="clear"/>
+                                    </div>
+                                    <div class="form_row inline readonly thin">
+                                        <div class="item_label"><span>Supplier VAT Number:</span></div>
+                                        <div class="item_value"><span>-</span></div>
+                                        <br class="clear"/>
+                                    </div>
+                                    <div class="form_row inline readonly thin">
+                                        <div class="item_label"><span>MCG:</span></div>
+                                        <div class="item_value"><span>6: Catering and Catering Supplies</span></div>
+                                        <br class="clear"/>
+                                    </div>
+                                    <div class="form_row inline readonly thin">
+                                        <div class="item_label"><span>MCC:</span></div>
+                                        <div class="item_value"><span>5811: Caterers</span></div>
+                                        <br class="clear"/>
+                                    </div>
+                                </div>
+                            </div>
+                        	<br class="clear"/>
+                        </div>
+                    </div>
+                    
+                    <!-- Comments -->
+                    <div class="drawer_panel">
+                        <h4><a href="javascript:void[0]" class="drawer_toggle color_1">Comments (2)</a></h4>
+                        <div class="drawer_panel_details" style="display:none;">
+                        	<ul class="comments">
+                                <li>
+                                    <div class="comment_text">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
+                                    <div class="comment_by color_1">Brian Bennet - 03/09/2016</div>
+                                </li>
+                                <li>
+                                    <div class="comment_text">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis iriure dolor.</div>
+                                    <div class="comment_by color_1">Brian Bennet - 03/09/2016</div>
+                                </li>
+                            </ul>
+                            <div class="form_row">
+                                <div class="form_label hidden_label">
+                                    <label for="full_details_user_comment">Enter comment below</label>
+                                </div>
+                                <div class="form_textarea">
+                                    <textarea id="full_details_user_comment" name="full_details_user_comment"></textarea>
+                                </div>
+                            </div>
+                            <div class="form_actions">
+                                <div class="form_action_left">
+                                </div>
+                                <div class="form_action_right">
+                                    <input type="button" value="Submit" class="btn_normal btn_grey" id="btn_submit_comment_full_details" />
+                                </div>
+                                <br class="clear"/>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Top Line Details -->
+                    <div class="drawer_panel">
+                        <h4><a href="javascript:void[0]" class="drawer_toggle color_1">Top Line Details</a></h4>
+                        <div class="drawer_panel_details" style="display:none;">
+                        	Drawer Details
+                        </div>
+                    </div>
+                    
+                    <!-- Top Line Details -->
+                    <div class="drawer_panel">
+                        <h4><a href="javascript:void[0]" class="drawer_toggle color_1">Cost Allocations</a></h4>
+                        <div class="drawer_panel_details" style="display:none;">
+                        	Drawer Details
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="button" class="btn_normal btn_grey btn_cancel_modal" value="Cancel" id="btn_close_full_view" aria-label="Close Full View Dialog" /></div>
+                    <div class="form_action_right"><input type="button" class="btn_normal btn_grey btn_icon btn_icon_print" value="Print" id="btn_print_full_view" aria-label="Print Full View Details for Schedule" /></div>
+                    <br class="clear"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+</div>
+
+
+                                	
+ 
+</body>
+</html>

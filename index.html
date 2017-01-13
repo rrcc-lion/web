@@ -1,0 +1,311 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Austin Cricket | 360 Austin</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+<meta content="telephone=no" name="format-detection">
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/normalize.css">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+
+<!-- Theme -->
+<link id="theme" rel="stylesheet" type="text/css" href="themes/theme_360.css">
+
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="css/ie8_style.css" id="theme_ie8" />
+<![endif]-->
+
+<!-- Javascript -->
+<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.4.min.js" ></script>
+
+<script type="text/javascript" src="js/respond.js" ></script>
+
+<!-- Add Common Functions -->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		dropdownContainers();
+		resizeFonts();
+	});
+</script>
+
+
+<!-- Form Validation -->
+<script type="text/javascript" src="js/jquery.validate.js"></script>
+<script type="text/javascript">
+	$().ready(function() {
+		// validate the login form when it is submitted
+		$("#form_login").validate({
+			rules: {
+				login_username: {
+					required: true
+				},
+				login_pa55word: {
+					required: true
+				},
+				login_security_digit: {
+					required: true
+				}
+			},
+			messages: {
+				login_username: {
+					required: "Please ensure you have entered a valid username",
+				},
+				login_pa55word: {
+					required: "Please check to see if your pa55word is correct",
+				},
+				login_security_digit: {
+					required: "Please check to see if the last 4 digits are correct",
+				}
+			}	
+		});
+		
+		// validate the login form when it is submitted
+		$("#form_register").validate({
+			rules: {
+				register_role: {
+					required: true
+				}
+			},
+			messages: {
+				register_role: {
+					required: "Please ensure you have selected a role",
+				}
+			}	
+		});
+		
+		$(':input:enabled:visible:first').focus();
+	});
+</script>
+
+
+</head>
+
+<body class="bg_color_2 not_logged_in">
+
+<div id="page_container">
+	
+    <div id="page_header" class="bg_color_2">
+    	<div class="logo_primary">
+        	<div><a href="index.html" title="Company Logo" aria-label="Visit the Homepage">Company Name</a></div>
+        </div>
+        <div class="logo_secondary">
+        	<div class="logo_container" title="Product Logo" aria-label="Product Name">Product Name</div>
+        </div>
+        
+        <div class="user_preferences">
+            <ul>
+            	<li>
+                	<a href="javascript:void[0]" id="style_switcher" class="dd_link" title="Change Application Font Size">aA</a>
+                    <div id="style_switcher_options" style="display:none;" class="dd_option_panel">
+                    	<div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Style Options">Close Style Options Panel</a></div>
+                        <h3 class="color_1">Font Size Options</h3>
+                    	<ul>
+                        	<li><a href="javascript:void(0)" id="font_increase" title="Increase Font Size">Large</a></li>
+                        	<li><a href="javascript:void(0)" id="font_reset" title="Reset Font Size">Normal</a></li>
+                        	<li><a href="javascript:void(0)" id="font_decrease" title="Decrease Font Size">Small</a></li>
+                        </ul>
+                    </div>
+                </li>
+            	<li>
+                	<span>Language:</span>
+                	<a href="javascript:void[0]" id="language_switcher" class="dd_link" title="Current Selected Language" aria-label="Current Selected language is English. Select to change language.">English</a>
+                    <div id="language_switcher_options" style="display:none;" class="dd_option_panel">
+                    	<div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Language Options">Close Language Options Panel</a></div>
+                        <h3 class="color_1">Change Language</h3>
+                    	<ul>
+                        	<li><a href="javascript:void(0)" id="lang_en">English</a></li>
+                        	<li><a href="javascript:void(0)" id="lang_fr">Français</a></li>
+                        	<li><a href="javascript:void(0)" id="lang_de">Deutsch</a></li>
+                        	<li><a href="javascript:void(0)" id="lang_es">Español</a></li>
+                        	<li><a href="javascript:void(0)" id="lang_ar">العربية</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    <div id="page_body" class="no_nav">
+    	<div id="page_content">
+            <div class="login_panel_container">
+                <!-- Login -->
+                <div id="login_panel" class="panel_outer">
+                    <div class="panel_inner">
+                        <h1 class="color_1">Login</h1>
+                        
+                        <!-- Error Message - Only visible if your login is incorrect but you have met the validation rules for the inputs simply remove the 'display:none' off the div -->
+                        <div class="error_msg" style="display:none;">Sorry, your Login details are invalid. You have 1 of 3 attempts remaining.</div>
+                        
+                        
+                        <p class="form_intro">If you are an existing user click below to login.</p>
+                        
+                        
+                        <form id="form_login" action="#" method="get" class="fd_form">
+                            <div class="form_container form_items_big">
+                                <fieldset>
+                                    <legend>Member Login Details</legend>
+                                    <div class="form_row">
+                                        <div class="form_label">
+                                            <label for="login_username" >Please enter your Username</label>
+                                        </div>
+                                        <div class="form_input">
+                                            <input type="text" id="login_username" name="login_username" required="required" aria-invalid="false" />
+                                        </div>
+                                    </div>
+                                    <div class="form_row">
+                                        <div class="form_label">
+                                            <label for="login_pa55word">Please enter your pa55word</label>
+                                        </div>
+                                        <div class="form_input">
+                                            <input type="pa55word" id="login_pa55word" name="login_pa55word" required="required" aria-invalid="false" />
+                                        </div>
+                                    </div>
+                                    <div class="form_row">
+                                        <div class="form_label">
+                                            <label for="login_security_digit">Please enter the last 4 digits of your phone number</label>
+                                        </div>
+                                        <div class="form_input">
+                                            <input type="text" id="login_security_digit" name="login_security_digit" required="required" aria-invalid="false" />
+                                        </div>
+                                    </div>
+                                    <div class="form_actions">
+                                        <div class="form_action_left">
+                                        	<div class="action_link"><a href="forgot_pa55word.html">Forgotten pa55word</a><br/><a href="forgot_username.html">Forgotten Username</a></div>
+                                        </div>
+                                        <div class="form_action_right">
+                                            <input type="submit" value="Login" onclick="openFunction();" class="btn_normal btn_primary btn_arrow_left"/>
+                                        </div>
+										<script type="text/javascript">
+											function openFunction(){
+												var myWindow = window.open("dashboard.html", "_self");
+											};
+										</script>
+                                        <br class="clear"/>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Register -->
+                <div id="register_panel" class="panel_outer">
+                    <div class="panel_inner">
+                        <h2 class="color_2">No acc0untt? Register now</h2>
+                        <p class="form_intro">Enter your details below to start</p>
+                        <form id="form_register" action="self_register_administrator_1.html" class="fd_form">
+                            <div class="form_container form_items_big">
+                                <fieldset>
+                                    <legend>Self Register Details</legend>
+                                    <div class="form_row">
+                                        <div class="form_label">
+                                            <label for="register_role">Please select your role</label>
+                                        </div>
+                                        <div class="form_select">
+                                            <select id="register_role" name="register_role" >
+                                                <option value="" selected="selected">Select</option>
+                                                <option value="cardholder">Player</option>
+                                                <option value="administrator">Administrator</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form_actions">
+                                        <div class="form_action_left"></div>
+                                        <div class="form_action_right">
+                                            <input type="submit" value="Self Register" class="btn_normal btn_secondary btn_arrow_left" />
+                                        </div>
+                                        <br class="clear"/>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <br class="clear"/>
+            </div>
+        </div>
+    </div>
+    
+    <div id="page_footer" class="bg_color_2">
+    	<div class="footer_left">
+        	<div class="footer_nav">
+                <ul>
+                    <li><a href="#">Help</a></li>
+                    
+                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <br class="clear"/>
+            </div>
+            <div class="footer_text">&copy; 2008 - 2016Austin Cricket League. All Rights Reserved</div>
+        </div>
+        <div class="footer_right">
+        	<div class="footer_nav">
+                <ul>
+                	<li style="position:relative;">
+                        <a href="javascript:void[0]" id="switch_theme" class="dd_link" title="Select Theme">Theme</a>
+                        <div id="switch_theme_options" style="display:none;" class="dd_option_panel" role="dialog" aria-label="Theme Switcher Options">
+                            <h3 class="color_1">Change Theme</h3>
+                            <div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Theme Switcher Options">Close Player Options Panel</a></div>
+                            <ul id="theme_list">
+                                <li><a href="#" rel="themes/theme_360.css">Default</a></li>
+                                <li><a href="#" rel="themes/theme_hsbc.css">HSBC</a></li>
+                                <li><a href="#" rel="themes/theme_wells_fargo.css">Wells Fargo</a></li>
+                                <li><a href="#" rel="themes/theme_first_tennessee.css">First Tennessee</a></li>
+                                <li><a href="#" rel="themes/theme_umb.css">UMB</a></li>
+                                <li><a href="#" rel="themes/theme_pnc.css">PNC</a></li>
+                                <li><a href="#" rel="themes/theme_citi.css">Citi</a></li>
+                                <li><a href="#" rel="themes/theme_abank.css">ABank</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <br class="clear"/>
+            </div>
+        </div>
+        <br class="clear"/>
+    </div>
+    
+</div>
+
+<!-- Theme Switcher - Not Needed for Final -->
+<script type="text/javascript" language="javascript" src="themes/jquery.cookie.js"></script>
+<script type="text/javascript">
+	if($.cookie("css")) {
+		$("link#theme").attr("href",$.cookie("css"));
+	}
+	  
+	$(document).ready(function() { 
+		if(window.location.hash) {
+			var hash = window.location.hash.substr(1);
+			var path = 'themes/theme_' + hash + '.css';
+		} else {
+		  	var path = $.cookie("css",path);
+		}
+		$("link#theme").attr("href",path);
+		$.cookie("css",path, {expires: 365, path: '/'});
+		return false;
+	});
+	
+	$(document).ready(function() { 
+		$("#theme_list li a").click(function() { 
+			$("link#theme").attr("href",$(this).attr('rel'));
+			$.cookie("css",$(this).attr('rel'), {expires: 365, path: '/'});
+			return false;
+		});
+		
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Austin Cricket | 360 Austin</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+<meta content="telephone=no" name="format-detection">
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/normalize.css">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.dialog.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.datepicker.css">
+
+<!-- Theme -->
+<link id="theme" rel="stylesheet" type="text/css" href="themes/theme_360.css">
+
+<!-- Print Stylesheet -->
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print">
+
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="css/ie8_style.css" id="theme_ie8" />
+<![endif]-->
+
+<!-- Javascript -->
+<script type="text/javascript" src="js/respond.js"></script>
+<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.4.min.js" ></script>
+
+<script type="text/javascript" src="js/respond.js" ></script>
+
+<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+
+<!-- Add Common Functions -->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		dropdownContainers();
+		resizeFonts();
+	});
+</script>
+</head>
+
+<body class="bg_color_2">
+
+<div id="page_container">
+    
+    <div id="page_header" class="bg_color_2">
+    	<div class="logo_primary">
+        	<div><a href="index.html" title="Company Logo" aria-label="Visit the Homepage">Company Name</a></div>
+        </div>
+        <div class="logo_secondary">
+        	<div class="logo_container" title="Product Logo" aria-label="Product Name">Product Name</div>
+        </div>
+        
+        <div class="user_preferences">
+            <ul>
+            	<li>
+                	<a href="javascript:void[0]" id="style_switcher" class="dd_link" title="Change Application Font Size">aA</a>
+                    <div id="style_switcher_options" style="display:none;" class="dd_option_panel" role="dialog" aria-label="Style Switcher Options">
+                    	<div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Style Options">Close Style Options Panel</a></div>
+                        <h3 class="color_1">Font Size Options</h3>
+                    	<ul>
+                        	<li><a href="javascript:void(0)" id="font_increase" title="Increase Font Size">Large</a></li>
+                        	<li><a href="javascript:void(0)" id="font_reset" title="Reset Font Size">Normal</a></li>
+                        	<li><a href="javascript:void(0)" id="font_decrease" title="Decrease Font Size">Small</a></li>
+                        </ul>
+                    </div>
+                </li>
+            	<li>
+                	<a href="javascript:void[0]" id="user_preferences" class="dd_link" title="Current User">Zulifqar Ahmad</a>
+                    <div id="user_preferences_options" style="display:none;" class="dd_option_panel" role="dialog" aria-label="User Options Panel">
+                    	<div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close User Preferences">Close User Options Panel</a></div>
+                        <h3 class="color_1">User Preferences</h3>
+                        <div class="user_profile_panel">
+                        	<div class="info_user">Zulifqar Ahmad</div>
+                            <div class="info_location"><span>Role: </span>Programme Administrator</div>
+                            <div class="info_company"><span>Company: </span>Acme Holdings</div>
+                            <div class="info_structure"><span>Structure: </span>North America</div>
+                            <div class="info_cas"><span>CAS: </span>FDC <a href="javascript:void(0)" aria-label="Change CAS Selection" id="change_cas_link">(Change)</a></div>
+                        </div>
+                        <div class="info_history"><span>Last logged in at:</span> 14/03/2016, 20:05</div>
+                    	<ul>
+                        	<li><a href="javascript:void(0)">Change pa55word</a></li>
+                        	<li><a href="javascript:void(0)">Change Username</a></li>
+                        	<li><a href="javascript:void(0)">Language - English US</a></li>
+                        	<li><a href="easy_transactions.html">Switch to Simplified View</a></li>
+                        	<li><a href="javascript:void(0)">Timezone - EST (Eastern Standard Time)</a></li>
+                        	<li><a href="javascript:void(0)">Email Notifications for card changes</a></li>
+                        </ul>
+                    </div>
+
+                </li>
+                <li>
+                	<a href="index.html" title="Logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="print_header" aria-hidden="true" style="display:none;">
+        <div class="logo_primary">
+            <div><img src="images/img_logo_dark_first_data_x2.png" alt="Austin Cricket Logo" title="Austin Cricket Logo" /></div>
+        </div>
+        <div class="logo_secondary">
+            <div><img src="images/img_logo_dark_360Control_x2.png" alt="Product Specific Logo showing 360 Austin" title="360 Austin Logo" /></div>
+        </div>
+        <br class="clear"/>
+    </div>
+        
+    <div id="page_nav" role="navigation">
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="transactions.html">Schedule</a></li>
+            <li><a href="statements.html">Scorecard</a></li>
+            <li><a href="cards.html">Cards</a></li>.<li><a href="inquiry.html" title="Statics">Statics</a></li>
+			<li><a href="javascript:void[0]" id="admin_panel" class="dd_link" title="View Administration Menu Options">Administration</a>
+            	<div id="admin_panel_options" style="display:none;" class="dd_option_panel" role="dialog" aria-label="Administration Menu Options">
+                    <div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Player Switcher Options">Close Administrationg Menu Options</a></div>
+                    <h3 class="color_1">Administration Menu</h3>
+                    <ul>
+                        <li><a href="users_cards.html">Users &amp; Cards</a></li>
+                        <li><a href="billing_control_acc.html">Billing Control acc0untts</a></li>
+                        <li><a href="card_request_tracking.html">Card Request Tracking</a></li>
+                    </ul>
+                </div>
+            </li>
+			<li class="current"><a href="invoice_payment.html" title="Photo Gallery">Photo Gallery</a></li>
+            
+        </ul>
+        
+    </div>
+    
+    <div id="page_body">
+    	<div id="page_content">
+        	<!-- Page Title -->
+            <div class="page_title">
+                <h1 tabindex="0" title="Photo Gallery">Photo Gallery</h1>
+                <br class="clear">
+            </div>
+            <style>
+.btn_invoice {
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 20px;
+}
+
+.mineral_invoice {background-image: url("images/btn_icons/mineraltree_btn.png"); background-repeat: no-repeat; height: 65px; width: 225px; border: 1px inset black;}
+.ariba_invoice {background-image: url("images/btn_icons/ariba_btn.png"); background-repeat: no-repeat; height: 100px; width: 182px; border: 1px inset black;}
+</style>
+        	<div id="page_content_inner" style="height:500px;">
+			     <br class="clear">
+				 <div style="position: relative; left: 28%; top: 30%;">
+				   <input type="button" class="btn_invoice mineral_invoice" id="btn_mineral" title="Mineral Tree Button" />
+				   <input type="button" class="btn_invoice ariba_invoice " id="btn_invoice" title="Ariba Button" />
+			     </div>
+				 <br class="clear">
+			</div>
+		</div>
+	</div>
+	<div id="page_footer" class="bg_color_2">
+			<div class="footer_left">
+				<div class="footer_nav">
+					<ul>
+						<li><a href="#">Help</a></li>
+						
+						<li><a href="privacy_policy.html">Privacy Policy</a></li>
+						<li><a href="#">Security</a></li>
+						<li><a href="#">Terms &amp; Conditions</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">FAQ</a></li>
+					</ul>
+					<br class="clear"/>
+				</div>
+				<div class="footer_text">&copy; 2008 - 2016Austin Cricket League. All Rights Reserved</div>
+			</div>
+			<div class="footer_right">
+				<div class="footer_nav">
+					<ul>
+					<li>
+					<div class="card_switcher">
+                	<a href="javascript:void[0]" id="switcher_theme" class="dd_link" title="Change Application Theme">Theme</a>
+                    <div id="switcher_theme_options" style="display:none;" class="dd_option_panel">
+					    <h3 class="color_1">Change Theme</h3>
+                    	<div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Style Options">Close Style Options Panel</a></div>
+                    	<ul id="theme_list">
+						
+								<li><a href="#" rel="themes/theme_360.css" style="color:black;">Default</a></li>
+								<li><a href="#" rel="themes/theme_abank.css" style="color:black;">ABank</a></li>
+								<li><a href="#" rel="themes/theme_atb.css" style="color:black;">ATB Financial</a></li>
+                                <li><a href="#" rel="themes/theme_becu.css" style="color:black;">BECU</a></li>
+                                <li><a href="#" rel="themes/theme_boi.css" style="color:black;">Bank of Ireland</a></li>
+                                <li><a href="#" rel="themes/theme_cnh_can.css" style="color:black;">CNH CAN</a></li>
+                                <li><a href="#" rel="themes/theme_cnh_us.css" style="color:black;">CNH US</a></li>
+								<li><a href="#" rel="themes/theme_citi.css" style="color:black;">Citi</a></li>
+                                <li><a href="#" rel="themes/theme_coop.css" style="color:black;">Co-operative Bank</a></li>
+                                <li><a href="#" rel="themes/theme_first_niagra.css" style="color:black;">First Niagra</a></li>
+								<li><a href="#" rel="themes/theme_first_tennessee.css" style="color:black;">First Tennessee</a></li>
+								<li><a href="#" rel="themes/theme_firstbank.css" style="color:black;">First Bank</a></li>
+								<li><a href="#" rel="themes/theme_hertfordshire.css" style="color:black;">Hertfordshire</a></li>
+								<li><a href="#" rel="themes/theme_home_depot_can.css" style="color:black;">Home Depot CAN</a></li>
+								<li><a href="#" rel="themes/theme_home_depot_us.css" style="color:black;">Home Depot US</a></li>
+								<li><a href="#" rel="themes/theme_hsbc.css" style="color:black;">HSBC</a></li>
+								<li><a href="#" rel="themes/theme_pnc.css" style="color:black;">PNC</a></li>
+								<li><a href="#" rel="themes/theme_pscu.css" style="color:black;">PSCU</a></li>
+								<li><a href="#" rel="themes/theme_pscu_mf.css" style="color:black;">PSCU MF</a></li>
+								<li><a href="#" rel="themes/theme_pscu_usf.css" style="color:black;">PSCU USF</a></li>
+								<li><a href="#" rel="themes/theme_santander.css" style="color:black;">Santander</a></li>
+								<li><a href="#" rel="themes/theme_saudi_hollandi.css" style="color:black;">Saudi Hollandi</a></li>
+								<li><a href="#" rel="themes/theme_tmg.css" style="color:black;">TMG Atira Credit</a></li>
+								<li><a href="#" rel="themes/theme_tmg_desjardins.css" style="color:black;">TMG Desjardins Bank</a></li>
+								<li><a href="#" rel="themes/theme_tmg_moo.css" style="color:black;">TMG Mutual of Omaha Bank</a></li>
+								<li><a href="#" rel="themes/theme_umb.css" style="color:black;">UMB</a></li>
+								<li><a href="#" rel="themes/theme_vantiv.css" style="color:black;">Vantiv</a></li>
+								<li><a href="#" rel="themes/theme_vantiv_ft.css" style="color:black;">Vantiv FT</a></li>
+								<li><a href="#" rel="themes/theme_vantiv_maj.css" style="color:black;">Vantiv MAJ</a></li>
+								<li><a href="#" rel="themes/theme_vantiv_pub.css" style="color:black;">Vantiv PUB</a></li>
+								<li><a href="#" rel="themes/theme_viseca.css" style="color:black;">Viseca</a></li>
+								<li><a href="#" rel="themes/theme_wells_fargo.css" style="color:black;">Wells Fargo</a></li>
+								
+                        </ul>
+                    </div>
+
+                </li>
+                    <li><a href="#">Previous Version</a></li>
+                </ul>
+					<br class="clear"/>
+				</div>
+			</div>
+			<br class="clear"/>
+	</div>
+</div>
+
+<!-- Theme Switcher - Not Needed for Final -->
+<script type="text/javascript" language="javascript" src="themes/jquery.cookie.js"></script>
+<script type="text/javascript">
+	if($.cookie("css")) {
+		$("link#theme").attr("href",$.cookie("css"));
+	}
+	  
+	$(document).ready(function() { 
+		if(window.location.hash) {
+			var hash = window.location.hash.substr(1);
+			console.log(hash);
+			var path = 'themes/theme_' + hash + '.css';
+			alert(path);
+			console.log(path);
+		} else {
+		  	var path = $.cookie("css",path);
+		}
+		$("link#theme").attr("href",path);
+		$.cookie("css",path, {expires: 365, path: '/'});
+		return false;
+	});
+	
+	$(document).ready(function() { 
+		$("#theme_list li a").click(function() { 
+			$("link#theme").attr("href",$(this).attr('rel'));
+			$.cookie("css",$(this).attr('rel'), {expires: 365, path: '/'});
+			return false;
+		});
+		
+	});
+</script>
+
+
+<!-- ****************************** -->
+<!-- 		Modal Windows 			-->
+<!-- ****************************** -->
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		// Launch Filter Options
+		$("#btn_invoice" ).click(function() {
+			$( "#invoice_options" ).dialog( "open" );
+		});
+		
+		$( "#invoice_options" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 500,
+			modal: true
+		});
+		
+		$(window).resize(function() {
+			$(".ui-dialog").dialog("option", "position", "center");
+		});
+		
+		$(".close_modal").click(function(){
+			$(this).parent().parent().dialog('close');
+		});
+		
+		$(".btn_cancel_modal").click(function(){
+			$(this).closest('.dialog_content').parent().dialog('close');
+		});
+		
+	});
+</script>
+
+
+
+<!-- JQuery Datepicker -->
+<script type="text/javascript">
+	$(function() {
+		$('.date_picker').datepicker({
+			showOn:'button',
+			buttonText: 'Datepicker'
+		});
+	});
+</script>
+
+<!-- Modal Window for pay Invoice options>-->
+<!--<div id="invoice_options" title="Pay Invoice" role="dialog" aria-labelledby="invoice_options">
+  <div class="dialog_header">
+	 <h1 id="invoice_options">Pay Invoice</h1>
+  </div>
+	
+</div>   -->                            	 
+</body>
+</html>

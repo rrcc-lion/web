@@ -1,0 +1,898 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Austin Cricket | 360 Austin</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+<meta content="telephone=no" name="format-detection">
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/normalize.css">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.dialog.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.datepicker.css">
+
+<!-- Theme -->
+<link id="theme" rel="stylesheet" type="text/css" href="themes/theme_360.css">
+
+<!-- Print Stylesheet -->
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print">
+
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="css/ie8_style.css" id="theme_ie8" />
+<![endif]-->
+
+<!-- Javascript -->
+<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.4.min.js" ></script>
+
+<script type="text/javascript" src="js/respond.js" ></script>
+
+<!-- Add Common Functions -->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		dropdownContainers();
+		resizeFonts();
+	});
+</script>
+
+
+</head>
+
+<body class="bg_color_2">
+
+<div id="page_container">
+    
+    <div id="page_header" class="bg_color_2">
+    	<div class="logo_primary">
+        	<div><a href="index.html" title="Company Logo" aria-label="Visit the Homepage">Company Name</a></div>
+        </div>
+        <div class="logo_secondary">
+        	<div class="logo_container" title="Product Logo" aria-label="Product Name">Product Name</div>
+        </div>
+        
+        <div class="user_preferences">
+            <ul>
+            	<li>
+                	<a href="javascript:void[0]" id="style_switcher" class="dd_link" title="Change Application Font Size">aA</a>
+                    <div id="style_switcher_options" style="display:none;" class="dd_option_panel">
+                    	<div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Style Options">Close Style Options Panel</a></div>
+                        <h3 class="color_1">Font Size Options</h3>
+                    	<ul>
+                        	<li><a href="javascript:void(0)" id="font_increase" title="Increase Font Size">Large</a></li>
+                        	<li><a href="javascript:void(0)" id="font_reset" title="Reset Font Size">Normal</a></li>
+                        	<li><a href="javascript:void(0)" id="font_decrease" title="Decrease Font Size">Small</a></li>
+                        </ul>
+                    </div>
+                </li>
+            	<li>
+                	<a href="javascript:void[0]" id="user_preferences" class="dd_link" title="Current User">Zulifqar Ahmad</a>
+                    <div id="user_preferences_options" style="display:none;" class="dd_option_panel">
+                    	<div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close User Preferences">Close User Options Panel</a></div>
+                        <h3 class="color_1">User Preferences</h3>
+                        <div class="user_profile_panel">
+                        	<div class="info_user">Zulifqar Ahmad</div>
+                            <div class="info_location"><span>Role: </span>Programme Administrator</div>
+                            <div class="info_company"><span>Company: </span>Acme Holdings</div>
+                            <div class="info_structure"><span>Structure: </span>North America</div>
+                            <div class="info_cas"><span>CAS: </span>FDC <a href="javascript:void(0)" aria-label="Change CAS Selection" id="change_cas_link">(Change)</a></div>
+                        </div>
+                        <div class="info_history"><span>Last logged in at:</span> 14/03/2016, 20:05</div>
+                    	<ul>
+                        	<li><a href="javascript:void(0)">Change pa55word</a></li>
+                        	<li><a href="javascript:void(0)">Change Username</a></li>
+                        	<li><a href="javascript:void(0)">Language - English US</a></li>
+                        	<li><a href="easy_transactions.html">Switch to Simplified View</a></li>
+                        	<li><a href="javascript:void(0)">Timezone - EST (Eastern Standard Time)</a></li>
+                        	<li><a href="javascript:void(0)">Email Notifications for card changes</a></li>
+                        </ul>
+                    </div>
+
+                </li>
+                <li>
+                	<a href="index.html" title="Logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="print_header" aria-hidden="true" style="display:none;">
+        <div class="logo_primary">
+            <div><img src="images/img_logo_dark_first_data_x2.png" alt="Austin Cricket Logo" title="Austin Cricket Logo" /></div>
+        </div>
+        <div class="logo_secondary">
+            <div><img src="images/img_logo_dark_360Control_x2.png" alt="Product Specific Logo showing 360 Austin" title="360 Austin Logo" /></div>
+        </div>
+        <br class="clear"/>
+    </div>
+        
+    <div id="page_nav" role="navigation">
+        <ul>
+            <li class="current"><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="transactions.html">Schedule</a></li>
+            <li><a href="statements.html">Scorecard</a></li>
+            <li><a href="cards.html">Cards</a></li>
+        </ul>
+    </div>
+    
+    <div id="page_body">
+    	<div id="page_content">
+        	<!-- Page Title -->
+            <div class="page_title">
+                <h1>Articles</h1>
+                
+                <div class="card_switcher">
+                    <a href="javascript:void[0]" id="switch_cardholder" class="dd_link" title="Current User">All Members</a>
+                    <div id="switch_cardholder_options" style="display:none;" class="dd_option_panel">
+                        <div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Player Switcher Options">Close Player Options Panel</a></div>
+                        <ul class="card_list">
+                            <li><a href="#all_cardholders">All Members</a></li>
+                            <li><div class="line_divider"></div></li>
+                            <li><a href="#my_card_1">My Card - 8379</a></li>
+                            <li><a href="#my_card_2">My Card - 7384</a></li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <!-- Search and Filters -->
+                <div class="find_container">
+                    <div id="filter_input"><input type="button" class="btn_normal btn_grey btn_icon btn_icon_filter" id="btn_filter" value="Filters" title="Apply Filters" /></div>
+                    <div id="find_input_container">
+                        <form action="#" id="search_form">
+                            <span class="hidden_label"><label for="find_input">Search</label></span>
+                            <input type="text" id="find_input" class="search_input" name="find_input" aria-invalid="false" />
+                            <input type="submit" title="Submit Search Query Button" value="Search" id="btn_find" />
+                        </form>
+                    </div>
+                </div>
+                <br class="clear">
+            </div>
+            
+
+        	<div id="page_content_inner">
+            	<div id="table_container" role="main">
+            		<!-- Script to handle table interactions -->
+					<script type="text/javascript">
+						$(document).ready(function(){
+							
+							//$('#grid_container').focus();
+						
+							// add tabindex and id to all the relevant tr's & inputs to make them focusable
+							$(function() {
+								var tabIndexNumber = 2;
+									$('tr.parent, tr.child').each(function() {
+									$(this).attr('tabindex', tabIndexNumber);
+									tabIndexNumber += 1;
+								});
+								$('tr.parent ').each(function() {
+									$(this).addClass('focusable');
+								});
+							});
+							
+							// add id to all the relevant tr's & inputs to make them focusable
+							$(function() {
+								var idNumber = 1;
+								$('#grid_table tbody tr input:checkbox').each(function() {
+									$(this).attr('id', 'chbox_' + idNumber);
+									$(this).next('span').children('label').attr('for', 'chbox_' + idNumber);
+									$(this).attr('name', 'trans_details');
+									idNumber += 1;
+								});
+							});
+							
+							// add id to all the relevant tr's 
+							$(function() {
+								var idNumber = 1;
+								$('#grid_table tbody tr').each(function() {
+									$(this).attr('id', 'row_' + idNumber);
+									idNumber += 1;
+								});
+							});
+
+							// Add unique ID to toggle switch for Table Row
+							$(function() {
+								var transNumber = 1;
+								$('#grid_table tbody tr input:button').each(function() {
+									$(this).attr('id', 'trans_btn_' + transNumber);
+									transNumber += 1;
+								});
+							});
+							
+							$("#select_all_chbox").click(function () {
+								$('.chbox_cell input').not(this).prop('checked', this.checked);
+							});
+							
+							
+							// Add selected cloass to table row focused
+							$("#grid_table tbody tr").focusin(function (e) {
+								$(this).addClass('highlight');
+							});
+							
+							$("#grid_table tbody tr").focusout(function (e) {
+								$(this).removeClass('highlight');
+							});
+							
+							$("#grid_table tbody tr").mouseup(function (e) {
+								$(this).addClass('highlight');
+							});
+							
+							
+							// If you press enter it will toggle the checkbox status
+							$("#grid_table tbody tr").keydown(function (e) {
+								//Only apply logic if table row is focused
+								if ($(this).hasClass('highlight')) {
+									if (e.keyCode == 13) {
+										var rowcheckbox = $(this).find(":checkbox");
+										
+										// check to see if it's currenlty checked, else apply the check
+										if ($(rowcheckbox).prop('checked')) {
+											$(rowcheckbox).prop("checked", false);
+										} else {
+											$(rowcheckbox).prop("checked", true);
+										}
+									}
+									
+									// transfer focus to transaction details panel
+									if (e.keyCode === 86) {
+										var pushId = $(this).attr('id');
+                       					$('#transaction_details').focus();
+                       					$('#grid_panel_details').attr('class', pushId);
+										
+										
+											if (!$('#grid_detail_link input').hasClass("isOpen") ) {
+												$('#grid_panel_table').animate({
+													marginRight: "380px"
+												}, 0);
+												$('#grid_panel_details').animate({
+													right: "0px",
+												}, 0);
+												$('#grid_detail_link').animate({
+													right: "380px"
+												}, 0); 
+												$('#grid_detail_link input').addClass("isOpen");
+											}
+									}
+
+									//If you push the down arrow
+									if (e.keyCode === 40) {
+										var currentselected = $(this);
+										var nextitem = $(currentselected).nextAll("tr.focusable:first");
+										if (nextitem.length > 0) {
+											$(currentselected).removeClass('highlight');
+											$(nextitem).addClass('highlight').focus();
+										}
+										return false;
+									}
+								
+									//If you push the up arrow
+									if (e.keyCode === 38) {
+										var currentselected = $(this);
+										var previtem = $(currentselected).prevAll("tr.focusable:first");
+										if (previtem.length > 0) {
+											$(currentselected).removeClass('highlight');
+											$(previtem).addClass('highlight').focus();
+										}
+										return false;
+									}
+								}
+							});
+							
+							// remove focus from transaction details
+							$('#grid_panel_details').keydown(function(e) {
+								if (e.keyCode === 67) {
+									var pushBack = $(this).attr('class');
+									$('tr.parent, tr.child').each(function() {
+			                            if ($(this).attr('id') === pushBack) {
+			                                $(this).focus();
+			                            };
+			                        });
+			                        $(this).removeClass();
+								}
+							});
+							
+							$("#grid_table tr td input").focusin(function(e){
+								$(this).parent().parent().addClass('highlight');
+							}).focusout(function(e){
+								$(this).parent().parent().removeClass('highlight');
+							});
+							
+							
+							// **********************
+							// Manage Keyup Behaviors
+							// **********************
+							
+							// Show or hide row details when using side arrow
+							$(".parent").keydown(function(e){
+								if(e.keyCode==39){
+									$(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').show();
+									$(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').addClass('focusable');
+									$(this).closest('tr.parent').children('td.toggle_cell').children('input').addClass('isOpen');
+								}
+								
+								if(e.keyCode==37){
+									$(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').hide();
+									$(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').removeClass('focusable');
+									$(this).closest('tr.parent').children('td.toggle_cell').children('input').removeClass('isOpen');
+								}
+							});
+							
+							$(".child").keydown(function (e) {
+								if (e.keyCode == 37) {
+									var currentselectedchild = $(this);
+									var parentitem = $(currentselectedchild).prevAll("tr.parent.focusable:first");
+									$(parentitem).nextUntil('tr.parent').not('tr.parent').hide();
+									$(parentitem).nextUntil('tr.parent').not('tr.parent').removeClass('focusable').removeClass('highlight');
+									$(parentitem).addClass('highlight').focus();
+									$(parentitem).children('td.toggle_cell').children('input').removeClass('isOpen');
+								}
+							});
+							
+							
+							$(".btn_trans_toggle").click(function(event){
+								event.preventDefault();
+								if ($(this).hasClass("isOpen") ) {
+									$(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').hide();
+									$(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').removeClass('focusable');
+									$(this).removeClass('isOpen');
+								} else {
+									$(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').show();
+									$(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').addClass('focusable');
+									$(this).addClass('isOpen');
+								}
+								return false;
+							});
+							
+							$(".btn_toggle_addendum").click(function(event){
+								event.preventDefault();
+								if ($(this).hasClass("isOpen") ) {
+									$('tr.parent').nextUntil('tr.parent').not('tr.parent').hide();
+									$('tr.parent').nextUntil('tr.parent').not('tr.parent').removeClass('focusable');
+									$('.btn_trans_toggle').removeClass('isOpen');
+									$(this).removeClass('isOpen');
+								} else {
+									$('tr.parent').nextUntil('tr.parent').not('tr.parent').show();
+									$('tr.parent').nextUntil('tr.parent').not('tr.parent').addClass('focusable');
+									$('.btn_trans_toggle').addClass('isOpen');
+									$(this).addClass('isOpen');
+								}
+								return false;
+							});
+							
+							
+							
+						});
+                    </script>
+                    
+                    <!-- Schedule Grid -->
+                    <div id="grid_container" tabindex="-1" >
+                        <table id="grid_table" class="grid_table" aria-label="Schedule - All Members. To navigate between the table rows use the up and down arrow keys. To move focus to the transactions panel press the V key. To return focus to the table row press the C key.">
+                            <caption>Schedule - All Members</caption>
+                            <thead>
+                                <tr>
+                                    <th id="col_chbox"><input type="checkbox" title="Select All Schedule Rows" tabindex="1" id="select_all_chbox" /><span class="hidden_label"><label for="select_all_chbox">Select All Schedule Rows</label></span></th>
+                                    <th id="col_date">Date &amp; Time <a href="#" class="sortswitch active ascending" title="Sorted Ascending"><img src="images/icon_sort_indicator.png" alt="Sort Ascending / Descending Icon"/></a></th>
+                                    <th id="col_type">Type<a href="#" class="sortswitch" title="Sort by this Column"><img src="images/icon_sort_indicator.png" alt="Sort Ascending / Descending Icon"/></a></th>
+                                    <th id="col_message">Message <a href="#" class="sortswitch" title="Sort by this Column"><img src="images/icon_sort_indicator.png" alt="Sort Ascending / Descending Icon"/></a></th>
+                                    <th id="col_action">Action <a href="#" class="sortswitch active descending" title="Sorted Descending" ><img src="images/icon_sort_indicator.png" alt="Sort Ascending / Descending Icon"/></a></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="parent">
+                                    <td class="chbox_cell"><input type="checkbox" value="select" title="Select Schedule Item" /><span class="hidden_label"><label>Select Schedule Row 12/09/2016 Crown Plaza - 7364</label></span></td>
+                                    <td>12/09/2016 - 14:32</td>
+                                    <td class="msg_type"><span class="msg_priority msg_warning" aria-label="Message Status: Warning" title="Warning">Warning</span></td>
+                                    <td>45: 1 new cards need to be assigned.</td>
+                                    <td>1 Unassigned cards created</td>
+                                </tr>
+                                <tr class="parent">
+                                    <td class="chbox_cell"><input type="checkbox" value="select" title="Select Schedule Item" /><span class="hidden_label"><label>Select Schedule Row 12/09/2016 Hertz Geneva GVA *94838224329</label></span></td>
+                                    <td>12/09/2016 - 12:13</td>
+                                    <td class="msg_type"><span class="msg_priority msg_information" aria-label="Message Status: Informative" title="Informative">Informative</span></td>
+                                    <td>John Admin's acc0untt has been locked due to...</td>
+                                    <td></td>
+                                </tr>
+                                <tr class="parent">
+                                    <td class="chbox_cell"><input type="checkbox" value="select" title="Select Schedule Item" /><span class="hidden_label"><label>Select Schedule Row 11/09/2016 Crown Plaza - 73642</label></span></td>
+                                    <td>12/09/2016 - 09:44</td>
+                                    <td class="msg_type"><span class="msg_priority msg_warning" aria-label="Message Status: Warning" title="Warning">Warning</span></td>
+                                    <td>45: 2 new cards need to be assigned.</td>
+                                    <td>2 Unassigned cards created</td>
+                                </tr>
+                                <tr class="parent">
+                                    <td class="chbox_cell"><input type="checkbox" value="select" title="Select Schedule Item" /><span class="hidden_label"><label>Select Schedule Row 12/09/2016 Crown Plaza - 7364</label></span></td>
+                                    <td>11/09/2016 - 22:32</td>
+                                    <td class="msg_type"><span class="msg_priority msg_severe" aria-label="Message Status: Severe" title="Severe">Severe</span></td>
+                                    <td>45: 1 new cards need to be assigned.</td>
+                                    <td>1 Unassigned cards created</td>
+                                </tr>
+                                <tr class="parent">
+                                    <td class="chbox_cell"><input type="checkbox" value="select" title="Select Schedule Item" /><span class="hidden_label"><label>Select Schedule Row 11/09/2016 Crown Plaza - 73642</label></span></td>
+                                    <td>08/09/2016 - 19:44</td>
+                                    <td class="msg_type"><span class="msg_priority msg_fatal" aria-label="Message Status: Fatal" title="Fatal">Fatal</span></td>
+                                    <td>45: 2 new cards need to be assigned.</td>
+                                    <td>2 Unassigned cards created</td>
+                                </tr>
+                                <tr class="parent">
+                                    <td class="chbox_cell"><input type="checkbox" value="select" title="Select Schedule Item" /><span class="hidden_label"><label>Select Schedule Row 12/09/2016 Hertz Geneva GVA *94838224329</label></span></td>
+                                    <td>07/09/2016 - 14:13</td>
+                                    <td class="msg_type"><span class="msg_priority msg_information" aria-label="Message Status: Informative" title="Informative">Informative</span></td>
+                                    <td>John Admin's acc0untt has been locked due to...</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Grid Footer Items -->
+                    <div class="grid_controls">
+                    	<div id="row_count_selector">
+                        	<div class="row_label">
+                        		<label for="row_count" title="Select how many Rows to display in the Schedule Details table">Show</label>
+                            </div>
+                            <div class="row_select">
+                            	<select id="row_count" name="row_count" style="width:60px;">
+                                	<option value="10">10</option>
+                                	<option value="20" selected="selected">20</option>
+                                	<option value="50">50</option>
+                                	<option value="100">100</option>
+                                </select>
+                            </div>
+                            <div class="row_result">
+                            	1-20 of 500+
+                            </div>
+                        </div>
+                        <div id="grid_pagination">
+                        	<ul>
+                            	<li><a href="#pag_prev" class="pag_prev_btn">Previous Page</a></li>
+                            	<li><span class="pag_current" title="Current Results Page is 1">1</span></li>
+                            	<li><a href="#pag_2" title="View Results Page 2">2</a></li>
+                            	<li><a href="#pag_3" title="View Results Page 3">3</a></li>
+                            	<li><span class="pag_divider">...</span></li>
+                            	<li><a href="#pag_25" title="View Results Page 25">25</a></li>
+                            	<li><a href="#pag_next" class="pag_next_btn">Next Page</a></li>
+                            </ul>
+                            <input type="button" class="btn_normal btn_grey" value="500 More" title="Load 500 More Results" />
+                        </div>
+                        
+                        <div id="grid_actions">
+                        	<ul>
+                            	<li><input type="button" aria-label="Ouput Message Rows into a specific output format" value="Output" id="btn_list_output" class="btn_normal btn_grey btn_icon btn_icon_output" /></li>
+                                <li><input type="button" aria-label="Print the existing Articles" value="Print" id="btn_list_print" class="btn_normal btn_grey btn_icon btn_icon_print" /></li>
+                            	<li><input type="button" aria-label="Delete Message" value="Delete Message" id="btn_list_delete" class="btn_normal btn_grey" /></li>
+                           	</ul>
+                        </div>
+                        <br class="clear"/>
+                    </div>
+                </div>
+        	</div>
+        </div>
+    </div>
+    
+        
+    <div id="page_footer" class="bg_color_2">
+    	<div class="footer_left">
+        	<div class="footer_nav">
+                <ul>
+                    <li><a href="#">Help</a></li>
+                    
+                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <br class="clear"/>
+            </div>
+            <div class="footer_text">&copy; 2008 - 2016Austin Cricket League. All Rights Reserved</div>
+        </div>
+        <div class="footer_right">
+        	<div class="footer_nav">
+                <ul>
+                	<li style="position:relative;">
+                        <a href="javascript:void[0]" id="switch_theme" class="dd_link" title="Select Theme">Theme</a>
+                        <div id="switch_theme_options" style="display:none;" class="dd_option_panel" role="dialog" aria-label="Theme Switcher Options">
+                            <h3 class="color_1">Change Theme</h3>
+                            <div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Theme Switcher Options">Close Player Options Panel</a></div>
+                            <ul id="theme_list">
+                                <li><a href="#" rel="themes/theme_360.css">Default</a></li>
+                                <li><a href="#" rel="themes/theme_hsbc.css">HSBC</a></li>
+                                <li><a href="#" rel="themes/theme_wells_fargo.css">Wells Fargo</a></li>
+                                <li><a href="#" rel="themes/theme_first_tennessee.css">First Tennessee</a></li>
+                                <li><a href="#" rel="themes/theme_umb.css">UMB</a></li>
+                                <li><a href="#" rel="themes/theme_pnc.css">PNC</a></li>
+                                <li><a href="#" rel="themes/theme_citi.css">Citi</a></li>
+                                <li><a href="#" rel="themes/theme_abank.css">ABank</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Previous Version</a></li>
+                </ul>
+                <br class="clear"/>
+            </div>
+        </div>
+        <br class="clear"/>
+    </div>
+    
+</div>
+
+<!-- Theme Switcher - Not Needed for Final -->
+<script type="text/javascript" language="javascript" src="themes/jquery.cookie.js"></script>
+<script type="text/javascript">
+	if($.cookie("css")) {
+		$("link#theme").attr("href",$.cookie("css"));
+	}
+	  
+	$(document).ready(function() { 
+		if(window.location.hash) {
+			var hash = window.location.hash.substr(1);
+			var path = 'themes/theme_' + hash + '.css';
+		} else {
+		  	var path = $.cookie("css",path);
+		}
+		$("link#theme").attr("href",path);
+		$.cookie("css",path, {expires: 365, path: '/'});
+		return false;
+	});
+	
+	$(document).ready(function() { 
+		$("#theme_list li a").click(function() { 
+			$("link#theme").attr("href",$(this).attr('rel'));
+			$.cookie("css",$(this).attr('rel'), {expires: 365, path: '/'});
+			return false;
+		});
+		
+	});
+</script>
+
+
+<!-- ****************************** -->
+<!-- 		Modal Windows 			-->
+<!-- ****************************** -->
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		// Change CAS Dialog Box
+		$("#change_cas_link" ).click(function() {
+			$( "#change_cas_dialog" ).dialog( "open" );
+		});
+		
+		$( "#change_cas_dialog" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 400,
+			modal: true
+		});
+		
+		// List Print Options
+		$("#btn_list_print" ).click(function() {
+			$( "#btn_list_print_options" ).dialog( "open" );
+		});
+		
+		$( "#btn_list_print_options" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 300,
+			modal: true
+		});
+		
+		// Launch Filter Options
+		$("#btn_filter" ).click(function() {
+			$( "#btn_filter_options" ).dialog( "open" );
+		});
+		
+		$( "#btn_filter_options" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 500,
+			modal: true
+		});
+		
+		// List Output Options
+		$("#btn_list_output" ).click(function() {
+			$( "#btn_list_output_options" ).dialog( "open" );
+			radioBtnStatus();
+		});
+		
+		$( "#btn_list_output_options" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 360,
+			modal: true
+		});
+		
+		$(".close_modal").click(function(){
+			$(this).parent().parent().dialog('close');
+		});
+		
+		$(".btn_cancel_modal").click(function(){
+			$(this).closest('.dialog_content').parent().dialog('close');
+		});
+	});
+</script>
+
+<!-- JQuery Datepicker -->
+<script type="text/javascript">
+	$(function() {
+		$('.date_picker').datepicker({
+			showOn:'button',
+			buttonText: 'Datepicker'
+		});
+	});
+</script>
+
+<!-- Change CAS -->
+<div id="change_cas_dialog" title="Cost Allocation System" role="dialog" aria-labelledby="listCASTitle" aria-describedby="listCASDesc">
+	<div class="dialog_header">
+	    <h1 id="listCASTitle">Change Cost Allocation System</h1>
+    </div>
+    <div id="listCASDesc" class="dialog_desc">This Dialog allows you to view the receipt linked to a transaction.</div>
+    <div class="dialog_content">
+     <form class="fd_form" action="#" id="change_cas_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+                	<div class="form_row">
+                    	<div class="form_label"><label for="change_cas_select">Change CAS</label></div>
+                        <div class="form_select">
+                            <select class="selectbox" id="change_cas_select">
+                                <option value="option_1">UK Oracle</option>
+                                <option value="option_2">US Debit</option>
+                                <option value="option_3">US FDC</option>
+                                <option value="option_4" selected="selected">US FDR</option>
+                                <option value="option_5">US I-Procure</option>
+                                <option value="option_6">US Merchant Srvs</option>
+                                <option value="option_7">US Payment Srvs</option>
+                                <option value="option_8">US Telecheck</option>
+                                <option value="option_9">UK-lexpenses</option>
+                            </select>
+                            <br class="clear"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="button" class="btn_normal btn_grey btn_cancel_modal" value="Cancel" id="btn_cancel_cas" aria-label="Cancel Cost Allocation System Update" /></div>
+                    <div class="form_action_right"><input type="button" class="btn_normal btn_primary" value="Update CAS" id="btn_update_cas" aria-label="Update Cost Allocation System"  /></div>
+                    <br class="clear"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+</div>
+
+
+
+<!-- Modal Window for Filter Options -->
+<div id="btn_filter_options" title="Filters" role="dialog" aria-labelledby="filterTitle" aria-describedby="filterDesc">
+	<div class="dialog_header">
+	    <h1 id="filterTitle">Filters</h1>
+    </div>
+    <div id="filterDesc" class="dialog_desc">This Form allows you to set filters that can be applied to the results on the transactions table</div>
+    <div class="dialog_content">
+        <form class="fd_form" action="#" id="apply_filters_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+                    <div class="form_row inline">
+                        <div class="form_label">
+                            <label for="saved_filters">Saved Filters</label>
+                        </div>
+                        <div class="form_select">
+                        	<select id="saved_filters" name="saved_filters">
+                            	<option value="">Select Pre-saved Filter</option>
+                            	<option value="1">Filter Name 1</option>
+                            	<option value="2">Filter Name 2</option>
+                            	<option value="3">Filter Name 3</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form_row_divider"></div>
+                    <div class="form_row inline">
+                        <div class="form_label">
+                            <span>Date Range</span>
+                        </div>
+                        <div class="form_date">
+                            <ul>
+                                <li>
+                                	<label for="filter_date_from" title="Enter From Date">From Date</label>
+                                	<input type="text" name="filter_date_from" class="date_picker" id="filter_date_from" aria-label="Format date as DD/MM/YYYY" />
+                                </li>
+                                <li><span class="date_spacer">-</span></li>
+                                <li>
+                                	<label for="filter_date_to" title="Enter To Date">To Date</label>
+                                	<input type="text" name="filter_date_to" class="date_picker" id="filter_date_to"  aria-label="Format date as DD/MM/YYYY" />
+                                </li>
+                            </ul>
+                            <br class="clear"/>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="form_row inline">
+                        <div class="form_label">
+                            <label for="filter_type">Type</label>
+                        </div>
+                        <div class="form_select">
+                        	<select id="filter_type" name="filter_type">
+                            	<option value="">Select Status</option>
+                            	<option value="1">Information</option>
+                            	<option value="2">Warning</option>
+                            	<option value="3">Severe</option>
+                            	<option value="4">Fatal</option>
+                           	</select>
+                        </div>
+                    </div>
+                    
+                    <br class="clear"/>
+                </div>
+                <div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="reset" class="btn_normal btn_grey" value="Reset" id="btn_reset1" aria-label="Reset Filter Options" /></div>
+                    <div class="form_action_right"><input type="submit" class="btn_normal btn_primary" value="Apply" id="btn_split_item2" aria-label="Apply Filter Options" /></div>
+                    <br class="clear"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+</div>
+
+
+<!-- Modal Window for Print Settings -->
+<div id="btn_list_print_options" title="Print Settings" role="dialog" aria-labelledby="listPrintTitle" aria-describedby="listPrintDesc">
+	<div class="dialog_header">
+	    <h1 id="listPrintTitle">Print Settings</h1>
+    </div>
+    <div id="listPrintDesc" class="dialog_desc">This Dialog allows you to select the print settings of your list.</div>
+    <div class="dialog_content">
+        <form class="fd_form" action="#" id="print_settings_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+                <fieldset>
+                	<legend class="show_legend">Which columns would you like to print</legend>
+                	<div class="form_row">
+                        <div class="form_radio" id="radio_buttons">
+                            <ul>
+                                <li><input type="radio" name="print_view" value="Visible Columns" id="visible_columns"  aria-label="Print Only Visible Table Columns" checked="checked"><label for="visible_columns">Visible Columns</label></li>
+                                <li><input type="radio" name="print_view" value="All Columns" id="all_columns"  aria-label="Print All Table Columns"><label for="all_columns">All Columns</label></li>
+                            </ul>
+                            <br class="clear"/>
+                        </div>
+                    </div>
+                </fieldset>
+                </div>
+                <div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="button" class="btn_normal btn_grey btn_cancel_modal" value="Cancel" id="btn_cancel_print" aria-label="Cancel Print Option" /></div>
+                    <div class="form_action_right"><input type="button" class="btn_normal btn_primary" value="Print" id="btn_print_item" aria-label="Print Table"  onClick="window.print()" /></div>
+                    <br class="clear"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+</div>
+
+<!-- Modal Window for Output Options -->
+<div id="btn_list_output_options" title="Output Options" role="dialog" aria-labelledby="listOutputTitle" aria-describedby="listOutputDesc">
+	<div class="dialog_header">
+	    <h1 id="listOutputTitle">Output Settings</h1>
+    </div>
+    <div id="listOutputDesc" class="dialog_desc">This Dialog allows you to select the output settings of your list.</div>
+    <div class="dialog_content">
+        <form class="fd_form" action="#" id="output_settings_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+                
+                	<script type="text/javascript">
+					
+						
+						function radioBtnStatus() {
+								var outputChoice = $('input[name="output_choice"]');
+																
+								outputChoice.each(function () {
+									if ($(this).prop('checked')) {
+										var radioID = $(this).attr('id');
+										
+										if (radioID == 'output_all_visible'){
+											$('#output_default_options').show();
+										}
+										
+										if (radioID == 'output_all_columns'){
+											$('#output_default_options').show();
+										}
+										
+										if (radioID == 'output_standard'){
+											$('#output_default_options').show();
+										}
+										
+									} else {
+										return false;
+									}
+								});
+								
+								$('input[name="output_choice"]').change(function () {
+									if ($(this).prop('checked')) {
+										$('.output_options').hide();
+										var radioIDAlt = $(this).attr('id');
+										
+										if (radioIDAlt == 'output_all_visible'){
+											$('#output_default_options').show();
+											$('#incl_fields_in_detail').removeAttr("disabled");
+										}
+										
+										if (radioIDAlt == 'output_all_columns'){
+											$('#output_default_options').show();
+											$('#incl_fields_in_detail').prop('checked', false);
+											$('#incl_fields_in_detail').attr("disabled", true);
+											
+										}
+										
+										if (radioIDAlt == 'output_standard'){
+											$('#output_default_options').show();
+											$('#incl_fields_in_detail').prop('checked', false);
+											$('#incl_fields_in_detail').attr("disabled", true);
+										}
+										
+									} else {
+										return false;
+									}
+								});
+							};
+                    </script>
+                
+                	<div class="form_row">
+                    	<fieldset>
+                            <legend class="show_legend">Which columns would you like to output</legend>
+                            <div class="form_radio">
+                                <ul>
+                                    <li><input type="radio" name="output_choice" value="Visible Columns" id="output_all_visible"  aria-label="Output only visible Columns" checked="checked" /><label for="output_all_visible">Visible Columns</label>
+                                        <ul>
+                                            <li id="include_fields_option"><input type="checkbox" name="incl_fields_in_detail" value="Include" id="incl_fields_in_detail"  aria-label="Include the fields in the details panel" /><label for="incl_fields_in_detail">Include the fields in the details panel</label></li>
+                                        </ul>
+                                    </li>
+                                    <li><input type="radio" name="output_choice" value="All Columns" id="output_all_columns"  aria-label="Output All Columns" /><label for="output_all_columns">All Columns</label></li>
+                                    <li><input type="radio" name="output_choice" value="Standard Output" id="output_standard"  aria-label="Output to Standard Format" /><label for="output_standard">Standard Output <span class="help_text">(Outputs the most frequently used columns and standard format)</span></label></li>
+                                </ul>
+                                <br class="clear"/>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="form_row_divider"></div>
+                    <div class="form_row inline output_options" id="output_default_options" style="display:none;">
+                    	<div class="form_label">
+                        	<label for="output_type">Output File Format</label>
+                        </div>
+                        <div class="form_select">
+                        	<select id="output_type" aria-label="Select Output File Format">
+                            	<option value="CSV">CSV</option>
+                            	<option value="XLS">Excel (xls)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="button" class="btn_normal btn_grey btn_cancel_modal" value="Cancel" id="btn_cancel5" aria-label="Cancel Output Options" /></div>
+                    <div class="form_action_right"><input type="button" class="btn_normal btn_primary" value="Output File" id="btn_output_table" aria-label="Output Schedule File" /></div>
+                    <br class="clear"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+</div>
+
+                                	
+ 
+</body>
+</html>
+

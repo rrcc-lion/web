@@ -1,0 +1,532 @@
+<html lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Propagate Field Values -Austin Cricket | 360 Austin</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+<meta content="telephone=no" name="format-detection">
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/normalize.css">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<link rel="stylesheet" type="text/css" href="css/phase_2.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.dialog.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.datepicker.css">
+
+<!-- Theme -->
+<link id="theme" rel="stylesheet" type="text/css" href="themes/theme_360.css">
+
+<!-- Print Stylesheet -->
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print">
+
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="css/ie8_style.css" id="theme_ie8" />
+<![endif]-->
+
+<!-- Javascript -->
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.4.min.js"></script>
+
+<script type="text/javascript" src="js/respond.js"></script>
+
+<!-- Add Common Functions -->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        dropdownContainers();
+        resizeFonts();
+    });
+</script>
+
+
+<style type="text/css"></style></head>
+
+<body class="bg_color_2">
+
+<div id="page_container">
+    
+    <div id="page_header" class="bg_color_2">
+        <div class="logo_primary">
+            <div><a href="index.html" title="Company Logo" aria-label="Visit the Homepage">Company Name</a></div>
+        </div>
+        <div class="logo_secondary">
+            <div class="logo_container" title="Product Logo" aria-label="Product Name">Product Name</div>
+        </div>
+        
+        <div class="user_preferences">
+            <ul>
+                <li>
+                    <a href="javascript:void[0]" id="style_switcher" class="dd_link" title="Change Application Font Size">aA</a>
+                    <div id="style_switcher_options" style="display:none;" class="dd_option_panel">
+                        <div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Style Options">Close Style Options Panel</a></div>
+                        <h3 class="color_1">Font Size Options</h3>
+                        <ul>
+                            <li><a href="javascript:void(0)" id="font_increase" title="Increase Font Size">Large</a></li>
+                            <li><a href="javascript:void(0)" id="font_reset" title="Reset Font Size">Normal</a></li>
+                            <li><a href="javascript:void(0)" id="font_decrease" title="Decrease Font Size">Small</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="javascript:void[0]" id="user_preferences" class="dd_link" title="Current User">Zulifqar Ahmad</a>
+                    <div id="user_preferences_options" style="display: none;" class="dd_option_panel">
+                        <div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close User Preferences">Close User Options Panel</a></div>
+                        <h3 class="color_1">User Preferences</h3>
+                        <div class="user_profile_panel">
+                            <div class="info_user">Zulifqar Ahmad</div>
+                            <div class="info_location"><span>Role: </span>Programme Administrator</div>
+                            <div class="info_company"><span>Company: </span>Acme Holdings</div>
+                            <div class="info_structure"><span>Structure: </span>North America</div>
+                            <div class="info_cas"><span>CAS: </span>FDC <a href="javascript:void(0)" aria-label="Change CAS Selection" id="change_cas_link">(Change)</a></div>
+                        </div>
+                        <div class="info_history"><span>Last logged in at:</span> 14/03/2016, 20:05</div>
+                        <ul>
+                            <li><a href="javascript:void(0)">Change pa55word</a></li>
+                            <li><a href="javascript:void(0)">Change Username</a></li>
+                            <li><a href="javascript:void(0)">Language - English US</a></li>
+                            <li><a href="easy_transactions.html">Switch to Simplified View</a></li>
+                            <li><a href="javascript:void(0)">Timezone - EST (Eastern Standard Time)</a></li>
+                            <li><a href="javascript:void(0)">Email Notifications for card changes</a></li>
+                        </ul>
+                    </div>
+
+                </li>
+                <li>
+                    <a href="index.html" title="Logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="print_header" aria-hidden="true" style="display:none;">
+        <div class="logo_primary">
+            <div><img src="images/img_logo_dark_first_data_x2.png" alt="Austin Cricket Logo" title="Austin Cricket Logo"></div>
+        </div>
+        <div class="logo_secondary">
+            <div><img src="images/img_logo_dark_360Control_x2.png" alt="Product Specific Logo showing 360 Austin" title="360 Austin Logo"></div>
+        </div>
+        <br class="clear">
+    </div>
+        
+    <div id="page_nav" role="navigation">
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="transactions.html">Schedule</a></li>
+            <li><a href="statements.html">Scorecard</a></li>
+            <li><a href="cards.html">Cards</a></li>
+			<li><a href="inquiry.html" title="Statics">Statics</a></li>
+            <li class="current"><a href="javascript:void[0]" id="admin_panel" class="dd_link" title="View Administration Menu Options">Administration</a>
+                <div id="admin_panel_options" style="display:none;" class="dd_option_panel" role="dialog" aria-label="Administration Menu Options">
+                    <div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Player Switcher Options">Close Administrationg Menu Options</a></div>
+                    <h3 class="color_1">Administration Menu</h3>
+                    <ul>
+                        <li><a href="users_cards.html">Users &amp; Cards</a></li>
+                        <li><a href="billing_control_acc.html">Billing Control acc0untts</a></li>
+                        <li><a href="card_request_tracking.html">Card Request Tracking</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    <div id="page_body">
+
+        <div id="page_content">
+            <!-- Page Title -->
+            <div class="page_title">
+                <a href="users_cards.html" class="back_btn bg_color_2" title="Back to Previous Page">Back to Previous Page</a>
+                <h1>Propagate Field Values</h1>
+
+                <br class="clear">
+            </div>
+            
+
+
+            <div id="page_content_inner">
+
+                <div class="column_container column_3 clearfix">
+                    <div class="column width_3">
+                        <div class="column_inner">
+
+                                
+                                <div class="module_block ">
+										  
+                                    <!-- Pre-populated fields -->
+                                    <div class="drawer_panel">
+                                        <h4>
+                                            <a href="javascript:void[0]" class="drawer_toggle color_1 isOpen"><span class="drawer_status hidden_label">Collapse</span> Propagation Fields  </a>
+                                        </h4>
+                                        <div class="drawer_panel_details" style="display: block;" aria-hidden="false">
+                                          <div class="drawer_panel">
+										    <h4>
+											  <a href="javascript:void[0]" class="drawer_toggle color_1 isOpen"><span class="drawer_status hidden_label">Collapse</span>Contact Details</a>
+											</h4>
+											<div class="drawer_panel_details" style="display: block;" aria-hidden="false">
+												<!-- Business Address Line 1 -->
+												<div class="module_block" id="language">
+												<div class="module_content">
+													<div class="fd_form">
+														<div class="form_container clearfix">
+
+															<div class="form_row inline clearfix">
+																<div class="form_label">
+																	<label for="adrs_line_1">Business Address Line 1</label>
+																</div>
+																<div class="form_select form_input split_options">
+																	<ul>
+                            	
+																		<li>
+																			<input id="adrs_line_1" name="adrs_line_1" title="Business Address Line 1" aria-label="Business Address Line 1" type="text" value="XYZ.Ltd">
+																			<span class="hidden_label"><label for="adrs_line_1">Business Address Line 1</label></span>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												</div>
+												
+												<!-- Business Address Line 2 -->
+												<div class="module_block" id="language">
+												<div class="module_content">
+													<div class="fd_form">
+														<div class="form_container clearfix">
+
+															<div class="form_row inline clearfix">
+																<div class="form_label">
+																	<label for="adrs_line_2">Business Address Line 2</label>
+																</div>
+																<div class="form_select form_input split_options">
+																	<ul>
+                            	
+																		<li>
+																			<input id="adrs_line_2" name="adrs_line_2" title="Business Address Line 2" aria-label="Business Address Line 2" type="text" value="15 MAIN STREET, SPRINGFIELD AVENUE">
+																			<span class="hidden_label"><label for="adrs_line_2">Business Address Line 2</label></span>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												</div>
+												
+												<!-- Business City -->
+												<div class="module_block" id="language">
+												<div class="module_content">
+													<div class="fd_form">
+														<div class="form_container clearfix">
+
+															<div class="form_row inline clearfix">
+																<div class="form_label">
+																	<label for="bus_city">Business City</label>
+																</div>
+																<div class="form_select form_input split_options">
+																	<ul>
+                            	
+																		<li>
+																			<input id="bus_city" name="bus_city" title="Business City" aria-label="Business City" type="text" value="BEVERLY HILLS">
+																			<span class="hidden_label"><label for="bus_city">Business City</label></span>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												</div>
+												
+												<!-- Business State -->
+												<div class="module_block" id="language">
+												<div class="module_content">
+													<div class="fd_form">
+														<div class="form_container clearfix">
+
+															<div class="form_row inline clearfix">
+																<div class="form_label">
+																	<label for="bus_state">Business State</label>
+																</div>
+																<div class="form_select form_input split_options">
+																	<ul>
+                            	
+																		<li>
+																			<input id="bus_state" name="bus_state" title="Business State" aria-label="Business State" type="text" value="CA">
+																			<span class="hidden_label"><label for="bus_state">Business State</label></span>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												</div>
+												
+												<!--Business Postal Code  -->
+												<div class="module_block" id="language">
+												<div class="module_content">
+													<div class="fd_form">
+														<div class="form_container clearfix">
+
+															<div class="form_row inline clearfix">
+																<div class="form_label">
+																	<label for="bus_post_code">Business Postal Code</label>
+																</div>
+																<div class="form_select form_input split_options">
+																	<ul>
+                            	
+																		<li>
+																			<input id="bus_post_code" name="bus_post_code" title="Business Postal Code" aria-label="Business Postal Code" type="text" value="90210">
+																			<span class="hidden_label"><label for="bus_post_code">Business Postal Code</label></span>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												</div>
+												
+												<!-- Phone 1 Work -->
+												<div class="module_block" id="language">
+												<div class="module_content">
+													<div class="fd_form">
+														<div class="form_container clearfix">
+
+															<div class="form_row inline clearfix">
+																<div class="form_label">
+																	<label for="ph_1_wrk">Phone 1 Work</label>
+																</div>
+																<div class="form_select form_input split_options">
+																	<ul>
+                            	
+																		<li>
+																			<input id="ph_1_wrk" name="ph_1_wrk" title="Phone 1 Work" aria-label="Phone 1 Work" type="text" value="1234566789">
+																			<span class="hidden_label"><label for="ph_1_wrk">Phone 1 Work</label></span>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												</div>
+												
+								
+											</div>
+										  </div>
+										  
+										  <div class="drawer_panel">
+										    <h4>
+											  <a href="javascript:void[0]" class="drawer_toggle color_1 isOpen"><span class="drawer_status hidden_label">Collapse</span>Limit Details</a>
+											</h4>
+											<div class="drawer_panel_details" style="display: block;" aria-hidden="false">
+											  <!-- Cash Credit Limit -->
+												<div class="module_block" id="language">
+												<div class="module_content">
+													<div class="fd_form">
+														<div class="form_container clearfix">
+
+															<div class="form_row inline clearfix">
+																<div class="form_label">
+																	<label for="csh_cr_limiy">Cash Credit Limit</label>
+																</div>
+																<div class="form_select form_input split_options">
+																	<ul>
+                            	
+																		<li>
+																			<input id="csh_cr_limiy" name="csh_cr_limiy" title="Cash Credit Limit" aria-label="Cash Credit Limit" type="text" value="0">
+																			<span class="hidden_label"><label for="csh_cr_limiy">Cash Credit Limit</label></span>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												</div>
+												
+												<!-- Credit Limit -->
+												<div class="module_block" id="language">
+												<div class="module_content">
+													<div class="fd_form">
+														<div class="form_container clearfix">
+
+															<div class="form_row inline clearfix">
+																<div class="form_label">
+																	<label for="cr_limit">Credit Limit</label>
+																</div>
+																<div class="form_select form_input split_options">
+																	<ul>
+                            	
+																		<li>
+																			<input id="cr_limit" name="cr_limit" title="Credit Limit" aria-label="Credit Limit" type="text" value="0">
+																			<span class="hidden_label"><label for="cr_limit">Credit Limit</label></span>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												</div>
+											</div>
+										  </div>
+										  
+										  <!--Miscellaneous Fields-->
+								    <div class="drawer_panel">
+										    <h4>
+											  <a href="javascript:void[0]" class="drawer_toggle color_1 isOpen"><span class="drawer_status hidden_label">Collapse</span>Miscellaneous Fields</a>
+											</h4>
+											<div class="drawer_panel_details" style="display: block;" aria-hidden="false">
+											  <!-- TBD -->
+												<div class="module_block" id="language">
+												<div class="module_content">
+													<div class="fd_form">
+														<div class="form_container clearfix">
+
+															<div class="form_row inline clearfix">
+																<div class="form_label">
+																	<label for="csh_cr_limiy">TBD</label>
+																</div>
+																<div class="form_select form_input split_options">
+																	<ul>
+                            	
+																		<li>
+																			<input id="csh_cr_limiy" name="csh_cr_limiy" title="Cash Credit Limit" aria-label="Cash Credit Limit" type="text" value="0">
+																			<span class="hidden_label"><label for="csh_cr_limiy">Cash Credit Limit</label></span>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+												</div>
+												
+											</div>
+										  </div>
+                                        </div>
+                                    </div>
+
+                                    
+                                </div>
+                                
+                            
+                            <br class="clear">
+							
+							<div class="page_actions">
+                                <div class="page_actions_left">
+                                    <ul>
+                                        <li><input type="button" value="Cancel" id="btn_full_details" class="btn_normal btn_grey " onclick="goBack()" aria-label=""></li>
+                                    </ul>
+									<script>
+					function goBack() {
+								var myWindow = window.open("users_cards.html", "_self");
+								
+							}
+					</script>
+                                </div>
+                                <div class="page_actions_right">
+                                    <ul>
+
+                                        <li><input type="button" value="Update" id="" class="btn_normal btn_primary" aria-label=""></li>
+                                    </ul>
+                                </div>
+                                <br class="clear">
+                            </div>
+
+                            
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        
+    <div id="page_footer" class="bg_color_2">
+        <div class="footer_left">
+            <div class="footer_nav">
+                <ul>
+                    <li><a href="#">Help</a></li>
+                    
+                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <br class="clear">
+            </div>
+            <div class="footer_text">© 2008 - 2016Austin Cricket League. All Rights Reserved</div>
+        </div>
+        <div class="footer_right">
+            <div class="footer_nav">
+                <ul>
+                    <li style="position:relative;">
+                        <a href="javascript:void[0]" id="switch_theme" class="dd_link" title="Select Theme">Theme</a>
+                        <div id="switch_theme_options" style="display:none;" class="dd_option_panel" role="dialog" aria-label="Theme Switcher Options">
+                            <h3 class="color_1">Change Theme</h3>
+                            <div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Theme Switcher Options">Close Player Options Panel</a></div>
+                            <ul id="theme_list">
+                                <li><a href="#" rel="themes/theme_360.css">Default</a></li>
+                                <li><a href="#" rel="themes/theme_hsbc.css">HSBC</a></li>
+                                <li><a href="#" rel="themes/theme_wells_fargo.css">Wells Fargo</a></li>
+                                <li><a href="#" rel="themes/theme_first_tennessee.css">First Tennessee</a></li>
+                                <li><a href="#" rel="themes/theme_umb.css">UMB</a></li>
+                                <li><a href="#" rel="themes/theme_pnc.css">PNC</a></li>
+                                <li><a href="#" rel="themes/theme_citi.css">Citi</a></li>
+                                <li><a href="#" rel="themes/theme_abank.css">ABank</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Previous Version</a></li>
+                </ul>
+                <br class="clear">
+            </div>
+        </div>
+        <br class="clear">
+    </div>
+    
+</div>
+
+<!-- JQuery Datepicker -->
+<script type="text/javascript">
+    $(function() {
+        $('.date_picker:enabled').datepicker({
+            showOn:'button',
+            buttonText: 'Datepicker'
+        });
+    });
+</script>
+
+<!-- Script to Handle Drawers -->
+<script type="text/javascript">
+    // Script to Toggle the Drawers
+    $(document).ready(function(){
+        $(".drawer_toggle").click(function(event){
+            event.preventDefault();
+            if ($(this).hasClass("isOpen") ) {
+                $(this).parent().next('.drawer_panel_details').slideToggle('fast');
+                $(this).removeClass('isOpen');
+                $(this).parent().next('.drawer_panel_details').attr('aria-hidden','true');
+                $(this).find('.drawer_status').text('Expand');
+
+
+            } else {
+                $(this).parent().next('.drawer_panel_details').slideToggle('fast');
+                $(this).parent().next('.drawer_panel_details').attr('aria-hidden','false');
+                $(this).addClass('isOpen');
+                $(this).find('.drawer_status').text('Collapse');
+            }
+            return false;
+        });
+    });
+</script>
+</body>
+</html>

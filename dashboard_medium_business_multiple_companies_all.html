@@ -1,0 +1,1015 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Austin Cricket | 360 Austin</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
+<meta content="telephone=no" name="format-detection">
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/normalize.css">
+<link rel="stylesheet" type="text/css" href="css/layout.css">
+<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.dialog.css">
+<link rel="stylesheet" type="text/css" href="css/jquery.ui.datepicker.css">
+
+<!-- Theme -->
+<link id="theme" rel="stylesheet" type="text/css" href="themes/theme_360.css">
+
+<!-- Print Stylesheet -->
+<link rel="stylesheet" type="text/css" href="css/print.css" media="print">
+
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="css/ie8_style.css" id="theme_ie8" />
+<![endif]-->
+
+<!-- Javascript -->
+<script type="text/javascript" src="js/jquery-1.11.0.min.js" ></script>
+<script type="text/javascript" src="js/jquery-ui-1.10.4.min.js" ></script>
+
+<script type="text/javascript" src="js/respond.js" ></script>
+
+<!-- Add Common Functions -->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		dropdownContainers();
+		resizeFonts();
+	});
+</script>
+
+
+</head>
+
+<body class="bg_color_2">
+
+<div id="page_container">
+    
+    <div id="page_header" class="bg_color_2">
+    	<div class="logo_primary">
+        	<div><a href="index.html" title="Company Logo" aria-label="Visit the Homepage">Company Name</a></div>
+        </div>
+        <div class="logo_secondary">
+        	<div class="logo_container" title="Product Logo" aria-label="Product Name">Product Name</div>
+        </div>
+        
+        <div class="user_preferences">
+            <ul>
+            	<li>
+                	<a href="javascript:void[0]" id="style_switcher" class="dd_link" title="Change Application Font Size">aA</a>
+                    <div id="style_switcher_options" style="display:none;" class="dd_option_panel">
+                    	<div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Style Options">Close Style Options Panel</a></div>
+                        <h3 class="color_1">Font Size Options</h3>
+                    	<ul>
+                        	<li><a href="javascript:void(0)" id="font_increase" title="Increase Font Size">Large</a></li>
+                        	<li><a href="javascript:void(0)" id="font_reset" title="Reset Font Size">Normal</a></li>
+                        	<li><a href="javascript:void(0)" id="font_decrease" title="Decrease Font Size">Small</a></li>
+                        </ul>
+                    </div>
+                </li>
+            	<li>
+                	<a href="javascript:void[0]" id="user_preferences" class="dd_link" title="Current User">Zulifqar Ahmad</a>
+                    <div id="user_preferences_options" style="display:none;" class="dd_option_panel">
+                    	<div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close User Preferences">Close User Options Panel</a></div>
+                        <h3 class="color_1">User Preferences</h3>
+                        <div class="user_profile_panel">
+                        	<div class="info_user">Zulifqar Ahmad</div>
+                            <div class="info_location"><span>Role: </span>Programme Administrator</div>
+                            <div class="info_company"><span>Company: </span>Acme Holdings</div>
+                            <div class="info_structure"><span>Structure: </span>North America</div>
+                            <div class="info_cas"><span>CAS: </span>FDC <a href="javascript:void(0)" aria-label="Change CAS Selection" id="change_cas_link">(Change)</a></div>
+                        </div>
+                        <div class="info_history"><span>Last logged in at:</span> 14/03/2016, 20:05</div>
+                    	<ul>
+                        	<li><a href="javascript:void(0)">Change pa55word</a></li>
+                        	<li><a href="javascript:void(0)">Change Username</a></li>
+                        	<li><a href="javascript:void(0)">Language - English US</a></li>
+                        	<li><a href="easy_transactions.html">Switch to Simplified View</a></li>
+                        	<li><a href="javascript:void(0)">Timezone - EST (Eastern Standard Time)</a></li>
+                        	<li><a href="javascript:void(0)">Email Notifications for card changes</a></li>
+                        </ul>
+                    </div>
+
+                </li>
+                <li>
+                	<a href="index.html" title="Logout">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="print_header" aria-hidden="true" style="display:none;">
+        <div class="logo_primary">
+            <div><img src="images/img_logo_dark_first_data_x2.png" alt="Austin Cricket Logo" title="Austin Cricket Logo" /></div>
+        </div>
+        <div class="logo_secondary">
+            <div><img src="images/img_logo_dark_360Control_x2.png" alt="Product Specific Logo showing 360 Austin" title="360 Austin Logo" /></div>
+        </div>
+        <br class="clear"/>
+    </div>
+        
+    <div id="page_nav" role="navigation">
+        <ul>
+            <li class="current"><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="transactions.html">Schedule</a></li>
+            <li><a href="statements.html">Scorecard</a></li>
+            <li><a href="cards.html">Cards</a></li>
+        </ul>
+    </div>
+    
+    <div id="page_body">
+    	<div id="page_content">
+        	<!-- Page Title -->
+            <div class="page_title">
+                <h1>Dashboard</h1>
+                
+                <div class="card_switcher">
+                    <a href="javascript:void[0]" id="switch_cardholder" class="dd_link" title="Current User">All Members</a>
+                    <div id="switch_cardholder_options" style="display:none;" class="dd_option_panel">
+                        <div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Player Switcher Options">Close Player Options Panel</a></div>
+                        
+                        <ul class="card_list">
+                            <li><a href="#all_cardholders">All Companies</a></li>
+                            <li><div class="line_divider"></div></li>
+                            <li><a href="#my_card_1">My Card - 8379</a></li>
+                            <li><a href="#my_card_2">My Card - 7384</a></li>
+                            <li>&nbsp;</li>
+                            <li><a href="dashboard_cardholder.html">Dashboard - Player</a></li>
+                            <li><a href="dashboard_small_business_pa.html">Dashboard - Small Business PA</a></li>
+                            <li><a href="dashboard_small_business_no_workflow.html">Dashboard - Small Business / No Workflow</a></li>
+                            <li><a href="dashboard_medium_business_with_pa.html">Dashboard - Medium Business / PA</a></li>
+                            <li><a href="dashboard_medium_business_multiple_companies.html">Dashboard - Medium Business / Multiple Companies</a></li>
+                            <li><a href="dashboard_medium_business_multiple_companies_all.html">Dashboard - Medium Business / Multiple Companies / All Selected</a></li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <br class="clear">
+            </div>
+            
+			<div id="page_dashboard_content">
+            	<div class="dash_columns col_12">
+                	<div class="dash_column width_3">
+                    
+                        <!-- Workflow Summary --> 
+                    	<div class="portlet">
+                        	<div class="portlet_header bg_color_4">
+                            	<h3>Match Summary</h3><a href="javascript:void[0]" title="Place Info text here" class="info_icon">Match Summary Information</a>
+                                <div class="portlet_actions">
+                                	<div class="form_label hidden_label"><label for="workflow_period">Workflow Summary Period</label></div>
+                                    <div class="form_select"><select id="workflow_period" name="workflow_period" class="selectbox"><option value="current_period">Current Period</option></select></div>
+                                </div>
+                                <br class="clear"/>
+                            </div>
+                            <div class="portlet_content hasDate">
+                            	<div id="grid_view_easy">
+									<script type="text/javascript">
+                                        $(document).ready(function(){
+                                        
+                                            // add tabindex and id to all the relevant tr's & inputs to make them focusable
+                                            $(function() {
+                                                var tabIndexNumber = 2;
+                                                    $('tr.parent, tr.child').each(function() {
+                                                    $(this).attr('tabindex', tabIndexNumber);
+                                                    tabIndexNumber += 1;
+                                                });
+                                            
+                                                $('tr.parent ').each(function() {
+                                                    $(this).addClass('focusable');
+                                                });
+                                            });
+                                            
+                                            // add id to all the relevant tr's 
+                                            $(function() {
+                                                var idNumber = 1;
+                                                $('#grid_table tbody tr').each(function() {
+                                                    $(this).attr('id', 'row_' + idNumber);
+                                                    idNumber += 1;
+                                                });
+                                            });
+                
+                                            // Add unique ID to toggle switch for Table Row
+                                            $(function() {
+                                                var transNumber = 1;
+                                                $('#grid_table tbody tr input:button').each(function() {
+                                                    $(this).attr('id', 'trans_btn_' + transNumber);
+                                                    transNumber += 1;
+                                                });
+                                            });
+                                            
+                                            
+                                            // Add selected cloass to table row focused
+                                            $("#grid_table tbody tr").focusin(function (e) {
+                                                $(this).addClass('highlight');
+                                            });
+                                            
+                                            $("#grid_table tbody tr").focusout(function (e) {
+                                                $(this).removeClass('highlight');
+                                            });
+                                            
+                                            $("#grid_table tbody tr").mouseup(function (e) {
+                                                $(this).addClass('highlight');
+                                            });
+                                            
+                                            
+                                            // If you press enter it will toggle the checkbox status
+                                            $("#grid_table tbody tr").keydown(function (e) {
+                                                //Only apply logic if table row is focused
+                                                if ($(this).hasClass('highlight')) {
+                                                    
+                                                    //If you push the down arrow
+                                                    if (e.keyCode === 40) {
+                                                        var currentselected = $(this);
+                                                        var nextitem = $(currentselected).nextAll("tr.focusable:first");
+                                                        if (nextitem.length > 0) {
+                                                            $(currentselected).removeClass('highlight');
+                                                            $(nextitem).addClass('highlight').focus();
+                                                        }
+                                                        return false;
+                                                    }
+                                                
+                                                    //If you push the up arrow
+                                                    if (e.keyCode === 38) {
+                                                        var currentselected = $(this);
+                                                        var previtem = $(currentselected).prevAll("tr.focusable:first");
+                                                        if (previtem.length > 0) {
+                                                            $(currentselected).removeClass('highlight');
+                                                            $(previtem).addClass('highlight').focus();
+                                                        }
+                                                        return false;
+                                                    }
+                                                }
+                                            });
+                                            
+                                            
+                                            // **********************
+                                            // Manage Keyup Behaviors
+                                            // **********************
+                                            
+                                            // Show or hide row details when using side arrow
+                                            $(".parent").keydown(function(e){
+                                                if(e.keyCode==39){
+                                                    $(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').show();
+                                                    $(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').addClass('focusable');
+                                                    $(this).closest('tr.parent').children('td.toggle_cell').children('input').addClass('isOpen');
+                                                }
+                                                
+                                                if(e.keyCode==37){
+                                                    $(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').hide();
+                                                    $(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').removeClass('focusable');
+                                                    $(this).closest('tr.parent').children('td.toggle_cell').children('input').removeClass('isOpen');
+                                                }
+                                            });
+                                            
+                                            $(".child").keydown(function (e) {
+                                                if (e.keyCode == 37) {
+                                                    var currentselectedchild = $(this);
+                                                    var parentitem = $(currentselectedchild).prevAll("tr.parent.focusable:first");
+                                                    $(parentitem).nextUntil('tr.parent').not('tr.parent').hide();
+                                                    $(parentitem).nextUntil('tr.parent').not('tr.parent').removeClass('focusable').removeClass('highlight');
+                                                    $(parentitem).addClass('highlight').focus();
+                                                    $(parentitem).children('td.toggle_cell').children('input').removeClass('isOpen');
+                                                }
+                                            });
+                                            
+                                            
+                                            $(".btn_trans_toggle").click(function(event){
+                                                event.preventDefault();
+                                                if ($(this).hasClass("isOpen") ) {
+                                                    $(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').hide();
+                                                    $(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').removeClass('focusable');
+                                                    $(this).removeClass('isOpen');
+                                                } else {
+                                                    $(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').show();
+                                                    $(this).closest('tr.parent').nextUntil('tr.parent').not('tr.parent').addClass('focusable');
+                                                    $(this).addClass('isOpen');
+                                                }
+                                                return false;
+                                            });
+                                            
+                                            $(".btn_toggle_addendum").click(function(event){
+                                                event.preventDefault();
+                                                if ($(this).hasClass("isOpen") ) {
+                                                    $('tr.parent').nextUntil('tr.parent').not('tr.parent').hide();
+                                                    $('tr.parent').nextUntil('tr.parent').not('tr.parent').removeClass('focusable');
+                                                    $('.btn_trans_toggle').removeClass('isOpen');
+                                                    $(this).removeClass('isOpen');
+                                                } else {
+                                                    $('tr.parent').nextUntil('tr.parent').not('tr.parent').show();
+                                                    $('tr.parent').nextUntil('tr.parent').not('tr.parent').addClass('focusable');
+                                                    $('.btn_trans_toggle').addClass('isOpen');
+                                                    $(this).addClass('isOpen');
+                                                }
+                                                return false;
+                                            });
+                                            
+                                        });
+                                    </script>
+                                    
+                                    <!-- Schedule Grid -->
+                                    <table id="grid_table" class="grid_table wrap_allowed" aria-label="Schedule - All Members. To navigate between the table rows use the up and down arrow keys.">
+                                        <caption>Schedule - All Members</caption>
+                                        <thead>
+                                            <tr>
+                                                <th id="col_toggle_switch"><input type="button" value="toggle_addendum" class="btn_toggle_addendum" title="VToggle View Addendum Items" aria-label="Toggle View Addendum Items"></th>
+                                                <th id="col_company">Company </th>
+                                                <th id="col_merchant" class="text_right">Top Scorers – Billing Currency</th>
+                                                <th id="col_billing_amt" class="text_right">Total Schedule</th>
+                                                <th id="col_total_cards" class="text_right">Total Cards</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="parent">
+                                                <td class="toggle_cell"><input type="button" value="4" class="btn_trans_toggle" title="View Schedule Split / Line Items" aria-label="View Schedule Split / Line Items for this transaction" /></td>
+                                                <td>All</td>
+                                                <td class="value_cell"><span class="estimated" title="Total converted to USD using standard conversion rates.">Estimated 2,649,249.50 <span class="currency">USD</span></span></td>
+                                                <td class="value_cell">285</td>
+                                                <td class="value_cell">41</td>
+                                            </tr>
+                                            <tr class="child ">
+                                                <td class="toggle_cell"></td>
+                                                <td>ACME Limited - HQ</td>
+                                                <td class="value_cell">1,320,324.59 <span class="currency">USD</span></td>
+                                                <td class="value_cell">148</td>
+                                                <td class="value_cell">13</td>
+                                            </tr>
+                                            <tr class="child ">
+                                                <td class="toggle_cell"></td>
+                                                <td>ACME Limited - New York</td>
+                                                <td class="value_cell">679,675.41 <span class="currency">USD</span></td>
+                                                <td class="value_cell">60</td>
+                                                <td class="value_cell">7</td>
+                                            </tr>
+                                            <tr class="child ">
+                                                <td class="toggle_cell"></td>
+                                                <td>ACME Limited - Ontario</td>
+                                                <td class="value_cell">649,249.50 <span class="currency">CAD</span></td>
+                                                <td class="value_cell">52</td>
+                                                <td class="value_cell">12</td>
+                                            </tr>
+                                            <tr class="child ">
+                                                <td class="toggle_cell"></td>
+                                                <td>ACME Limited - Miami</td>
+                                                <td class="value_cell">990.00 <span class="currency">USD</span></td>
+                                                <td class="value_cell">25</td>
+                                                <td class="value_cell">9</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="last_updated">Last Updated 00:12 - 12/04/2016</div>
+                        </div>
+                        
+                        
+                        <div class="dash_column width_2">
+                        	<!-- Schedule Summary -->
+                            <div class="portlet">
+                                <div class="portlet_header bg_color_4">
+                                    <h3>Schedule Summary</h3>
+                                    <div class="portlet_actions">
+                                        <div class="form_label hidden_label"><label for="trans_summary">Select Period for MCC Summary</label></div>
+                                        <div class="form_select"><select id="trans_summary" name="trans_summary" class="selectbox"><option value="4_weeks">Last 4 Weeks</option></select></div>
+                                    </div>
+                                    <br class="clear"/>
+                                </div>
+                                <script type="text/javascript">
+                                    $(document).ready(function() {
+                                        var total = 0;
+                                        var currency = "USD";
+                                        
+                                        // Loop through each Summary Item
+                                        $(".trans_item").each(function() {
+                                            // add each value to the total
+                                            $(this).find(".trans_bar_value").each(function() {
+                                                total += parseFloat($(this).text());
+                                            });
+                                        });
+                                        
+                                        // Set the total value on the top of the page
+                                        var total_formatted = ReplaceNumberWithCommas(total);
+                                        $("#summary_value").html(total_formatted + ' ' + currency);
+                                        
+                                        // For each transaction item get the value percentage of the total and apply it to the bar
+                                        $(".trans_item").each(function() {
+                                            // add each value to the total
+                                            $(this).find(".trans_bar_value").each(function() {
+                                                var bar_width = 0
+                                                var count_value = $(this).text();
+                                                var count_formatted = ReplaceNumberWithCommas(count_value);
+                                                $(this).prev(".trans_bar").attr('title', count_formatted + ' ' + currency);
+                                            
+                                                // Get the percentage of the value in relation to the total
+                                                bar_width =  ((parseFloat($(this).text()) / total) * 100).toFixed(2);
+                                                
+                                                // append the percentage to the width of the bar and display it in the value container
+                                                $(this).prev(".trans_bar").css('width',(bar_width) + '%');
+                                                $(this).html(bar_width + '%');
+                                            });
+                                        });
+                                        
+                                        // Format Text with commas
+                                        function ReplaceNumberWithCommas(yourNumber) {
+                                            //Seperates the components of the number
+                                            var n= yourNumber.toString().split(".");
+                                            //Comma-fies the first part
+                                            n[0] = n[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                            //Combines the two sections
+                                            return n.join(".");
+                                        }
+                                        
+                                        // Search through all the values and get the highest value
+                                        var highestPercentage = -Infinity;
+                                        $(".trans_bar_value").each(function() {
+                                            highestPercentage = Math.max(highestPercentage, parseFloat($(this).text()));
+                                        });
+                                        
+                                        var division_value = 100 / highestPercentage;
+                                        
+                                        // Redraw the lines so that the heighest percentage uses 100% of the available space
+                                        $(this).find(".trans_bar_value").each(function() {
+                                            var current_width = (parseFloat($(this).text()));
+                                            $(this).prev(".trans_bar").css('width',((current_width * division_value) * 1.0) + '%');
+                                        });
+                                        
+                                    });
+                                </script>
+                                <div class="portlet_content hasDate">
+                                    <div class="summary_heading">
+                                        <span id="summary_title">Schedule Spend</span>
+                                        <span id="summary_value"></span>
+                                        <br class="clear"/>
+                                    </div>
+                                    <ul class="trans_summary">
+                                        <li class="trans_item">
+                                            <span class="trans_code">5812</span>
+                                            <span class="trans_desc">Eating Place / Restaurants</span>
+                                            <span class="trans_bar_container">
+                                                <span class="trans_bar bg_color_1"></span>
+                                                <span class="trans_bar_value">32350.50</span>
+                                            </span>
+                                        </li>
+                                        <li class="trans_item">
+                                            <span class="trans_code">5085</span>
+                                            <span class="trans_desc">Industrial Supplies</span>
+                                            <span class="trans_bar_container">
+                                                <span class="trans_bar bg_color_1"></span>
+                                                <span class="trans_bar_value">21200.40</span>
+                                            </span>
+                                        </li>
+                                        <li class="trans_item">
+                                            <span class="trans_code">5942</span>
+                                            <span class="trans_desc">Book Stores</span>
+                                            <span class="trans_bar_container">
+                                                <span class="trans_bar bg_color_1"></span>
+                                                <span class="trans_bar_value">16500.27</span>
+                                            </span>
+                                        </li>
+                                        <li class="trans_item">
+                                            <span class="trans_code">5111</span>
+                                            <span class="trans_desc">Stationery / Office Supplies / Printing &amp; Writing Paper</span>
+                                            <span class="trans_bar_container">
+                                                <span class="trans_bar bg_color_1"></span>
+                                                <span class="trans_bar_value">15000.20</span>
+                                            </span>
+                                        </li>
+                                        <li class="trans_item">
+                                            <span class="trans_code">5065</span>
+                                            <span class="trans_desc">Electrical Parts / Equipment</span>
+                                            <span class="trans_bar_container">
+                                                <span class="trans_bar bg_color_1"></span>
+                                                <span class="trans_bar_value">4500</span>
+                                            </span>
+                                        </li>
+                                        <li class="trans_item">
+                                            <span class="trans_code">5814</span>
+                                            <span class="trans_desc">Fast Food Restautants</span>
+                                            <span class="trans_bar_container">
+                                                <span class="trans_bar bg_color_1"></span>
+                                                <span class="trans_bar_value">3200</span>
+                                            </span>
+                                        </li>
+                                        <li class="trans_item">
+                                            <span class="trans_code">5969</span>
+                                            <span class="trans_desc">Direct Marketing - Combination Catalog</span>
+                                            <span class="trans_bar_container">
+                                                <span class="trans_bar bg_color_1"></span>
+                                                <span class="trans_bar_value">2700</span>
+                                            </span>
+                                        </li>
+                                        <li class="trans_item">
+                                            <span class="trans_code">5999</span>
+                                            <span class="trans_desc">Misc &amp; Speciality Retail</span>
+                                            <span class="trans_bar_container">
+                                                <span class="trans_bar bg_color_1"></span>
+                                                <span class="trans_bar_value">1500</span>
+                                            </span>
+                                        </li>
+                                        <li class="trans_item">
+                                            <span class="trans_code">45879</span>
+                                            <span class="trans_desc">Grocery Stores / Supermarkets</span>
+                                            <span class="trans_bar_container">
+                                                <span class="trans_bar bg_color_1"></span>
+                                                <span class="trans_bar_value">700</span>
+                                            </span>
+                                        </li>
+                                        <li class="trans_item">
+                                            <span class="trans_code"></span>
+                                            <span class="trans_desc">Others</span>
+                                            <span class="trans_bar_container">
+                                                <span class="trans_bar bg_color_1"></span>
+                                                <span class="trans_bar_value">1750</span>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="last_updated">Last Updated 00:12 - 12/04/2016</div>
+                            </div>
+                        </div>
+                        
+                        <div class="dash_column width_2">
+                        	<!-- Articles -->
+                            <div class="portlet">
+                                <div class="portlet_header bg_color_4">
+                                    <h3>Articles</h3>
+                                    <div class="portlet_actions">
+                                        <a href="messages.html">View All Articles</a>
+                                    </div>
+                                    <br class="clear"/>
+                                </div>
+                                <div class="portlet_content">
+                                    <ul class="msg_list fixed_height">
+                                        <li>
+                                            <div class="msg_container">
+                                                <span class="msg_priority msg_warning" aria-label="Message Status: Warning" title="Warning">Warning</span>
+                                                <span class="msg_date_time" title="Message Created Date and Time">12/04/14 23:04</span>
+                                                <span class="msg_details">
+                                                    <span class="msg_desc" title="Message Description">45: 1 New card need to be assigned.</span>
+                                                    <span class="msg_action" title="Message Action">1 Unassigned card created. Review 2 new cards</span>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="msg_container">
+                                                <span class="msg_priority msg_information" aria-label="Message Status: Informative" title="Informative">Informative</span>
+                                                <span class="msg_date_time" title="Message Created Date and Time">12/04/14 23:04</span>
+                                                <span class="msg_details">
+                                                    <span class="msg_desc" title="Message Description">New card ************3102 being assigned to existing user PRIMARY ...</span>
+                                                    <span class="msg_action" title="Message Action">Please review change.</span>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="msg_container">
+                                                <span class="msg_priority msg_information" aria-label="Message Status: Informative" title="Informative">Informative</span>
+                                                <span class="msg_date_time" title="Message Created Date and Time">12/04/14 23:04</span>
+                                                <span class="msg_details">
+                                                    <span class="msg_desc" title="Message Description">Card ************7940 has been reactivated.</span>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="msg_container">
+                                                <span class="msg_priority msg_information" aria-label="Message Status: Informative" title="Informative">Informative</span>
+                                                <span class="msg_date_time" title="Message Created Date and Time">12/04/14 23:04</span>
+                                                <span class="msg_details">
+                                                    <span class="msg_desc" title="Message Description">A new virtual card was created for Joe Bloggs</span>
+                                                    <span class="msg_action" title="Message Action">Please configure the cost allocation for this card</span>
+                                                </span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="msg_container">
+                                                <span class="msg_priority msg_information" aria-label="Message Status: Informative" title="Informative">Informative</span>
+                                                <span class="msg_date_time" title="Message Created Date and Time">12/04/14 23:04</span>
+                                                <span class="msg_details">
+                                                    <span class="msg_desc" title="Message Description">Card ************2205 has been replaced with card ************9705.</span>
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        
+                    </div>
+                	<div class="dash_column width_1">
+                    
+                    	<!-- Top Scorers -->
+                    	<div class="portlet">
+                        	<div class="portlet_header bg_color_4">
+                            	<h3>Top Scorers (USD)</h3>
+                                <br class="clear"/>
+                            </div>
+                            <div class="portlet_content hasDate">
+                            	<!-- Needed for screenreaders -->
+                            	<div class="total_spend_value">
+                                	<span>
+                                        <table id="grid_table" class="grid_table" aria-label="Top Scorers. This Table shows the Top Scorers per month">
+                                            <caption>This Table shows the Top Scorers per month</caption>
+                                            <tr>
+                                                <th>Jan 2016</th>
+                                                <td>432,315 USD</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Febraury 2016</th>
+                                                <td>522,533 USD</td>
+                                            </tr>
+                                            <tr>
+                                                <th>March 2016</th>
+                                                <td>242,335 USD</td>
+                                            </tr>
+                                            <tr>
+                                                <th>April 2016</th>
+                                                <td>423,522 USD</td>
+                                            </tr>
+                                            <tr>
+                                                <th>May 2016</th>
+                                                <td>262,256 USD</td>
+                                            </tr>
+                                            <tr>
+                                                <th>June 2016</th>
+                                                <td>211,241 USD</td>
+                                            </tr>
+                                        </table>
+                                    </span>
+                                </div>
+                                <div id="mychart" style=" height:200px;" class="chart_container"></div>
+                                <script type="text/javascript">
+									var divWidth = $('#mychart').width();
+									
+									$('#mychart').css('width', divWidth);
+								</script>
+                            </div>
+                            <div class="last_updated">Last Updated 00:12 - 12/04/2016</div>
+                        </div>
+                        
+                        
+                        <!-- Outputs --> 
+                        <div class="portlet">
+                            <div class="portlet_header bg_color_4">
+                                <h3>Outputs</h3>
+                                <br class="clear"/>
+                            </div>
+                            <div class="portlet_content">
+                                <ul class="output_list">
+                                    <li>
+                                        <a href="#" title="Unread Ouput file of Delinquent Players - EMEA" class="output_container output_excel output_new">
+                                            <span class="output_icon"></span>
+                                            <span class="output_details">
+                                                <span class="output_title" title="Output Document Title - Delinquent Players - EMEA">Delinquent Players - EMEA</span>
+                                                <span class="output_info">
+                                                    <span class="info_item" aria-label="Ouput File Created Date and Time">12/03/2016 13:05</span>
+                                                    <span class="info_item" aria-label="Ouput File Size">1.3Mb</span>
+                                                    <span class="info_item status" aria-label="Ouput File Status">Viewed</span>
+                                                    <br class="clear"/>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Unread Ouput file of Delinquent Players - Americas" class="output_container output_quickbooks output_new">
+                                            <span class="output_icon"></span>
+                                            <span class="output_details">
+                                                <span class="output_title" title="Output Document Title - Delinquent Players - Americas">Delinquent Players - Americas</span>
+                                                <span class="output_info">
+                                                    <span class="info_item" aria-label="Ouput File Created Date and Time">12/03/2016 13:05</span>
+                                                    <span class="info_item" aria-label="Ouput File Size">903kb</span>
+                                                    <span class="info_item status" aria-label="Ouput File Status">Downloaded</span>
+                                                    <br class="clear"/>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Unread Ouput file of Delinquent Players - Asia Pacific" class="output_container output_quicken output_new">
+                                            <span class="output_icon"></span>
+                                            <span class="output_details">
+                                                <span class="output_title" title="Output Document Title - Delinquent Players - Asia Pacific">Delinquent Players - Asia Pacific</span>
+                                                <span class="output_info">
+                                                    <span class="info_item" aria-label="Ouput File Created Date and Time">12/03/2016 13:05</span>
+                                                    <span class="info_item" aria-label="Ouput File Size">1.42Mb</span>
+                                                    <span class="info_item status" aria-label="Ouput File Status">Downloaded</span>
+                                                    <br class="clear"/>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Viewed Overdue Approvals" class="output_container output_excel">
+                                            <span class="output_icon"></span>
+                                            <span class="output_details">
+                                                <span class="output_title" title="Output Document Title - Overdue Approvals">Overdue Approvals</span>
+                                                <span class="output_info">
+                                                    <span class="info_item" aria-label="Ouput File Created Date and Time">12/03/2016 13:05</span>
+                                                    <span class="info_item" aria-label="Ouput File Size">1.3Mb</span>
+                                                    <span class="info_item status" aria-label="Ouput File Status">Viewed</span>
+                                                    <br class="clear"/>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Downloaded Ouput file of Delinquent Players - Americas" class="output_container output_quickbooks">
+                                            <span class="output_icon"></span>
+                                            <span class="output_details">
+                                                <span class="output_title" title="Output Document Title - Delinquent Players - Americas">Delinquent Players - Americas</span>
+                                                <span class="output_info">
+                                                    <span class="info_item" aria-label="Ouput File Created Date and Time">12/03/2016 13:05</span>
+                                                    <span class="info_item" aria-label="Ouput File Size">903kb</span>
+                                                    <span class="info_item status" aria-label="Ouput File Status">Downloaded</span>
+                                                    <br class="clear"/>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="Downloaded Ouput file of Delinquent Players - Asia Pacific" class="output_container output_quicken">
+                                            <span class="output_icon"></span>
+                                            <span class="output_details">
+                                                <span class="output_title" title="Output Document Title - Delinquent Players - Asia Pacific">Delinquent Players - Asia Pacific</span>
+                                                <span class="output_info">
+                                                    <span class="info_item" aria-label="Ouput File Created Date and Time">12/03/2016 13:05</span>
+                                                    <span class="info_item" aria-label="Ouput File Size">1.42Mb</span>
+                                                    <span class="info_item status" aria-label="Ouput File Status">Downloaded</span>
+                                                    <br class="clear"/>
+                                                </span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    <br class="clear"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        
+    <div id="page_footer" class="bg_color_2">
+    	<div class="footer_left">
+        	<div class="footer_nav">
+                <ul>
+                    <li><a href="#">Help</a></li>
+                    
+                    <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <br class="clear"/>
+            </div>
+            <div class="footer_text">&copy; 2008 - 2016Austin Cricket League. All Rights Reserved</div>
+        </div>
+        <div class="footer_right">
+        	<div class="footer_nav">
+                <ul>
+                	<li style="position:relative;">
+                        <a href="javascript:void[0]" id="switch_theme" class="dd_link" title="Select Theme">Theme</a>
+                        <div id="switch_theme_options" style="display:none;" class="dd_option_panel" role="dialog" aria-label="Theme Switcher Options">
+                            <h3 class="color_1">Change Theme</h3>
+                            <div class="dd_close_panel"><a href="javascript:void(0)" role="button" aria-label="Close Theme Switcher Options">Close Player Options Panel</a></div>
+                            <ul id="theme_list">
+                                <li><a href="#" rel="themes/theme_360.css">Default</a></li>
+                                <li><a href="#" rel="themes/theme_hsbc.css">HSBC</a></li>
+                                <li><a href="#" rel="themes/theme_wells_fargo.css">Wells Fargo</a></li>
+                                <li><a href="#" rel="themes/theme_first_tennessee.css">First Tennessee</a></li>
+                                <li><a href="#" rel="themes/theme_umb.css">UMB</a></li>
+                                <li><a href="#" rel="themes/theme_pnc.css">PNC</a></li>
+                                <li><a href="#" rel="themes/theme_citi.css">Citi</a></li>
+                                <li><a href="#" rel="themes/theme_abank.css">ABank</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">Previous Version</a></li>
+                </ul>
+                <br class="clear"/>
+            </div>
+        </div>
+        <br class="clear"/>
+    </div>
+    
+</div>
+
+<!-- Theme Switcher - Not Needed for Final -->
+<script type="text/javascript" language="javascript" src="themes/jquery.cookie.js"></script>
+<script type="text/javascript">
+	if($.cookie("css")) {
+		$("link#theme").attr("href",$.cookie("css"));
+	}
+	  
+	$(document).ready(function() { 
+		if(window.location.hash) {
+			var hash = window.location.hash.substr(1);
+			var path = 'themes/theme_' + hash + '.css';
+		} else {
+		  	var path = $.cookie("css",path);
+		}
+		$("link#theme").attr("href",path);
+		$.cookie("css",path, {expires: 365, path: '/'});
+		return false;
+	});
+	
+	$(document).ready(function() { 
+		$("#theme_list li a").click(function() { 
+			$("link#theme").attr("href",$(this).attr('rel'));
+			$.cookie("css",$(this).attr('rel'), {expires: 365, path: '/'});
+			return false;
+		});
+		
+	});
+</script>
+
+
+<!-- ****************************** -->
+<!-- 		Modal Windows 			-->
+<!-- ****************************** -->
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		// Change CAS Dialog Box
+		$("#change_cas_link" ).click(function() {
+			$( "#change_cas_dialog" ).dialog( "open" );
+		});
+		
+		$( "#change_cas_dialog" ).dialog({
+			autoOpen: false,
+			height: 'auto',
+			width: 400,
+			modal: true
+		});
+		
+		$(".close_modal").click(function(){
+			$(this).parent().parent().dialog('close');
+		});
+		
+		$(".btn_cancel_modal").click(function(){
+			$(this).closest('.dialog_content').parent().dialog('close');
+		});
+	});
+</script>
+
+<!-- Change CAS -->
+<div id="change_cas_dialog" title="Cost Allocation System" role="dialog" aria-labelledby="listCASTitle" aria-describedby="listCASDesc">
+	<div class="dialog_header">
+	    <h1 id="listCASTitle">Change Cost Allocation System</h1>
+    </div>
+    <div id="listCASDesc" class="dialog_desc">This Dialog allows you to view the receipt linked to a transaction.</div>
+    <div class="dialog_content">
+     	<form class="fd_form" action="#" id="change_cas_form">
+            <div class="form_container">
+            	<div class="modal_content_padding">
+                	<div class="form_row">
+                    	<div class="form_label"><label for="change_cas_select">Change CAS</label></div>
+                        <div class="form_select">
+                            <select class="selectbox" id="change_cas_select">
+                                <option value="option_1">UK Oracle</option>
+                                <option value="option_2">US Debit</option>
+                                <option value="option_3">US FDC</option>
+                                <option value="option_4" selected="selected">US FDR</option>
+                                <option value="option_5">US I-Procure</option>
+                                <option value="option_6">US Merchant Srvs</option>
+                                <option value="option_7">US Payment Srvs</option>
+                                <option value="option_8">US Telecheck</option>
+                                <option value="option_9">UK-lexpenses</option>
+                            </select>
+                            <br class="clear"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_actions form_actions_modal">
+                    <div class="form_action_left"><input type="button" class="btn_normal btn_grey btn_cancel_modal" value="Cancel" id="btn_cancel_cas" aria-label="Cancel Cost Allocation System Update" /></div>
+                    <div class="form_action_right"><input type="button" class="btn_normal btn_primary" value="Update CAS" id="btn_update_cas" aria-label="Update Cost Allocation System"  /></div>
+                    <br class="clear"/>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="dialog_close">
+        <a href="javascript:void(0)" class="close_modal">Close Dialog or press Escape to dismiss</a>
+    </div>
+</div>
+
+
+<!-- Load the Dojo Library -->
+<script type="text/javascript" src="Dojo/dojo/dojo.js" data-dojo-config="isDebug: 1, async: 1, parseOnLoad: 1"></script>
+
+
+<!-- Render Bar Chart -->
+<script type="text/javascript">
+	require([
+		"dojo/ready", 
+		"dojox/charting/Chart2D",
+		"dojox/charting/themes/FirstData",
+	], function(ready, Chart,theme) {
+    
+	ready(function() {
+        var mychart = Chart("mychart");
+
+        mychart.addPlot("column_plot", {
+            type: "Columns",
+            lines: true,
+            areas: true,
+            markers: true,
+			enableCache: true,
+			font: "normal normal 8pt Arial",
+			fontColor: "#333333",
+			labelWiring: "#333333",
+			gap: 5, 
+			maxBarSize: 30,
+			fontColor: "#333333"
+			
+        });
+
+		
+		mychart.addAxis("x", {
+			labels: [
+				{value: 1, text: "Jan-14"}, {value: 2, text: "Feb-14"},
+				{value: 3, text: "Mar-14"}, {value: 4, text: "Apr-14"},
+				{value: 5, text: "May-14"}, {value: 6, text: "Jun-14"},
+				{value: 7, text: "Jul-14"}, {value: 8, text: "Aug-14"},
+				{value: 9, text: "Sep-14"}, {value: 10, text: "Oct-14"},
+				{value: 11, text: "Nov-14"}, {value: 12, text: "Dec-14"}
+			],
+			min:0,
+			minorTicks: false, 
+			microTicks: false,
+			stroke: {color: "#e3e3e3", width: 1},
+			font: "normal normal normal 8pt Arial",
+			fontColor: "#454545",
+		});
+
+
+
+        mychart.addAxis("y", {
+            vertical: true,
+			min:0,
+			minorTicks: false, 
+			microTicks: false,
+			stroke: {color: "#e3e3e3", width: 1},
+			font: "normal normal normal 8pt Arial",
+			fontColor: "#454545"
+        });
+		
+        var column_data = [
+			{
+				y:432315,
+				x:1,
+				fill:'#007FB2',
+				stroke:    {color: "#FFFFFF"}
+			}, 
+			{
+				y:522533,
+				x:2,
+				fill:'#007FB2',
+				stroke:    {color: "#FFFFFF"}
+			}, 
+			{
+				y:242335,
+				x:3,
+				fill:'#007FB2',
+				stroke:    {color: "#FFFFFF"}
+			}, 
+			{
+				y:423522,
+				x:4,
+				fill:'#007FB2',
+				stroke:    {color: "#FFFFFF"}
+			}, 
+			{
+				y:262256,
+				x:5,
+				fill:'#007FB2',
+				stroke:    {color: "#FFFFFF"}
+			}, 
+			{
+				y:211241,
+				x:6,
+				fill:'#007FB2',
+				stroke:    {color: "#FFFFFF"}
+			}
+		];
+
+        mychart.addSeries("column_series", column_data, {
+            plot: "column_plot"
+        });
+
+        mychart.render();
+    });
+});
+</script>
+                                	
+ 
+</body>
+</html>

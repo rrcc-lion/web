@@ -1,0 +1,126 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.color_1 {color:#007FB1 !important;} /* Light Blue */
+.color_2 {color:#004165 !important;} /* Dark Blue */
+.color_3 {color:#FFFFFF !important;} /* Dark Blue */
+
+.bg_color_1 {background-color:#007FB1;} /* Light Blue */
+.bg_color_2 {background-color:#004165;} /* Dark Blue */
+.bg_color_3 {background-color:#C6EAFA;} /* Lighter Blue */
+.bg_color_4 {background-color:#e7e7e7;} /* Lighter Grey */
+.bg_color_5 {background-color:#C7EAFB;} /* Used for hover */
+.bg_color_6 {background-color:#f0f0f0;} /* Used for the bg of a header on an edit module */
+
+
+
+a:link, a:visited {}
+a:hover {}
+
+.btn_primary {}
+
+.btn_secondary {}
+
+.btn_grey {}
+
+.page_title h1 {
+	color:#004165;
+}
+
+.drawer_panel h4 a {
+	background-color:#c6eafa;
+	color:#454545 !important;
+}
+
+
+/* Primary Logo */
+#page_header .logo_primary > div a {
+	background: url(images/cric/Cricket-Betting-Strategy.jpg) 10px 10px no-repeat;
+	background: url(images/default/img_logo_first_data.png) 0px 0px no-repeat\9;
+	background-size:135px 30px;
+}
+
+/* Secondary Logo */
+#page_header .logo_secondary>.logo_container {
+	background: url(images/default/img_logo_360Control_x2.png) 0px 0px no-repeat;
+	background: url(images/default/img_logo_360Control.png) 0px 0px no-repeat\9;
+	background-size:120px 30px;
+}
+
+#page_header .logo_secondary 						{border-left:0px solid;}
+
+
+
+/* Page background Color */
+#page_body 											{}
+
+#page_body #page_content_inner 						{}
+.easy_view #page_body #page_content_inner 			{}
+
+/* Body Background Colour */
+body.bg_color_2										{}
+
+/* Body Background Colour for Easy View */
+body.bg_color_4.easy_view							{}
+
+/* Page Header */
+#page_header.bg_color_2 							{}
+
+/* Page Footer */
+#page_footer.bg_color_2 							{}
+
+
+
+
+
+
+
+/* Navigation Background */
+#page_nav 											{}
+
+/* Default Navigation Links */
+#page_nav ul li a 									{}
+
+/* Hover and Selected Navigation Links */	
+#page_nav ul li.current a,
+#page_nav ul li a:hover 							{color:#004165;}
+
+/* Header Bar Navigation colour */
+#page_header .user_preferences > ul > li > a		{}
+#page_header .user_preferences > ul > li > a.active	{}
+
+/* Easy View Side Panel */
+#page_slider_nav.bg_color_1							{}
+
+/* Easy View Header Background Colour */
+.easy_view #page_header								{}
+
+/* Easy View Side Panel Header */
+.easy_view #page_slider_nav .col_easy_nav			{}
+
+/* Easy View Side Panel headings */
+.easy_view #page_slider_nav .col_easy_nav h3		{}
+
+/* Easy View Side Panel each nav item*/
+.easy_view #page_slider_nav .col_easy_nav ul li		{}
+
+/* Easy View Side Panel Hyperlinks*/
+.easy_view #page_slider_nav .col_easy_nav ul li a	{}
+
+/* Easy View Side Panel Hyperlink Active */
+.easy_view #page_slider_nav .col_easy_nav ul li a.active {}
+
+/* Module Headers */
+.module_header.bg_color_5							{}
+
+/* Back Button Styling */
+.back_btn.bg_color_2								{}
+
+/* Background color for Statement Table Header */
+table.grid_overview_table thead tr > th 			{}
+
+/* Custom Styling for Dashboard Portlets */
+.dash_column .portlet				{}
+
+
+ul.comments li .comment_by {color:#004165 !important;}
